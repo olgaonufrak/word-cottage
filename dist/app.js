@@ -105,9 +105,9 @@ function bindSwipeGesture(card){
   };
   card.onpointermove=event=>{
     if(!drag||event.pointerId!==drag.id)return;
+    if(event.cancelable)event.preventDefault();
     const dx=event.clientX-drag.x,dy=event.clientY-drag.y;
     if(Math.abs(dx)<8||Math.abs(dx)<=Math.abs(dy)*1.2)return;
-    if(event.cancelable)event.preventDefault();
     card.style.transform=`translateX(${dx}px) rotate(${Math.max(-15,Math.min(15,dx/20))}deg)`;
     card.classList.toggle('is-learning',dx>0);card.classList.toggle('is-skipping',dx<0);
   };

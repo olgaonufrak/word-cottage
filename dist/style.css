@@ -29,8 +29,8 @@
 
 .swipe-panel{max-width:670px;padding-bottom:25px}
 .swipe-progress{margin-top:22px}.swipe-progress .track{margin-top:10px;height:6px}
-.swipe-stage{overflow:hidden;padding:25px 16px 20px;margin:0 -16px}
-.swipe-card{position:relative;min-height:310px;padding:45px 24px 30px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;border:1px solid var(--line);border-radius:10px;background:var(--paper);box-shadow:4px 5px 0 #e5ddc6;touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab;transition:transform .16s ease,opacity .16s ease;outline-offset:4px}
+.swipe-stage{overflow:hidden;padding:25px 16px 20px;margin:0 -16px;touch-action:pinch-zoom}
+.swipe-card{position:relative;min-height:310px;padding:45px 24px 30px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;border:1px solid var(--line);border-radius:10px;background:var(--paper);box-shadow:4px 5px 0 #e5ddc6;touch-action:pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab;transition:transform .16s ease,opacity .16s ease;outline-offset:4px}
 .swipe-card:focus-visible{outline:3px solid #b37128}
 .swipe-card.is-dragging{transition:none;cursor:grabbing}
 .swipe-english{font:52px/1.15 Georgia,serif;overflow-wrap:anywhere;max-width:100%}
