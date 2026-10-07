@@ -19,15 +19,29 @@
 .learned-entry:hover{border-color:var(--olive)}
 .word-list-panel{max-width:850px;margin:auto;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:32px}
 .word-list-panel h1{font-size:36px}
-.proposed-list,.learned-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:25px}
-.proposed-word,.learned-word{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:5px;padding:16px;background:var(--paper);min-width:0}
-.proposed-word{cursor:pointer}.proposed-word:hover{border-color:var(--olive)}
-.proposed-word input{width:22px;height:22px;flex-shrink:0;accent-color:var(--olive)}
+.learned-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:25px}
+.learned-word{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:5px;padding:16px;background:var(--paper);min-width:0}
 .word-details{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1;overflow-wrap:anywhere}
 .word-details strong{font:24px/1.2 Georgia,serif}.word-details>span{font-size:16px}.word-details small{font-size:12px;color:var(--muted);margin-top:3px}
-.study-choice{font-size:14px;color:var(--olive)}
-.proposed-word input:not(:checked)~.word-details{opacity:.55}.proposed-word input:not(:checked)~.study-choice{color:var(--muted)}
-.selection-actions{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:25px;padding-top:20px;border-top:1px solid var(--line)}
-.selection-total{font-size:16px;color:var(--muted)}.selection-actions .btn:disabled{opacity:.45;cursor:default}
+.selection-total{font-size:16px;color:var(--muted)}
 .learned-empty{margin-top:25px;padding:25px;background:var(--paper);border-radius:5px;color:var(--muted)}.learned-empty .btn{margin-top:18px}
-@media(max-width:700px){.word-list-panel{padding:25px 20px}.word-list-panel h1{font-size:32px}.proposed-list,.learned-list{grid-template-columns:1fr}.learned-entry{padding:20px}.selection-actions .btn{width:100%}.proposed-word,.learned-word{padding:14px}}
+@media(max-width:700px){.word-list-panel{padding:25px 20px}.word-list-panel h1{font-size:32px}.learned-list{grid-template-columns:1fr}.learned-entry{padding:20px}.learned-word{padding:14px}}
+
+.swipe-panel{max-width:670px;padding-bottom:25px}
+.swipe-progress{margin-top:22px}.swipe-progress .track{margin-top:10px;height:6px}
+.swipe-stage{overflow:hidden;padding:25px 16px 20px;margin:0 -16px}
+.swipe-card{position:relative;min-height:310px;padding:45px 24px 30px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;border:1px solid var(--line);border-radius:10px;background:var(--paper);box-shadow:4px 5px 0 #e5ddc6;touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab;transition:transform .16s ease,opacity .16s ease;outline-offset:4px}
+.swipe-card:focus-visible{outline:3px solid #b37128}
+.swipe-card.is-dragging{transition:none;cursor:grabbing}
+.swipe-english{font:52px/1.15 Georgia,serif;overflow-wrap:anywhere;max-width:100%}
+.swipe-translation{font-size:24px;line-height:1.4;margin-top:18px;overflow-wrap:anywhere;max-width:100%}
+.swipe-instruction{font-size:14px;color:var(--muted);margin-top:28px}
+.swipe-stamp{position:absolute;top:18px;border:2px solid;border-radius:5px;padding:5px 10px;font-size:14px;font-weight:bold;opacity:0}
+.stamp-learn{left:18px;color:var(--olive);transform:rotate(-10deg)}.stamp-skip{right:18px;color:var(--rust);transform:rotate(10deg)}
+.is-learning .stamp-learn,.swipe-out-right .stamp-learn,.is-skipping .stamp-skip,.swipe-out-left .stamp-skip{opacity:1}
+.swipe-out-right{transform:translateX(110%) rotate(12deg);opacity:0}.swipe-out-left{transform:translateX(-110%) rotate(-12deg);opacity:0}
+.swipe-actions{display:flex;gap:14px}.swipe-actions .btn{flex:1}.swipe-actions .btn:disabled{opacity:.5;cursor:default}
+.swipe-note{font-size:14px;color:var(--muted);text-align:center;margin-top:18px}
+.swipe-empty{margin-top:25px;padding:25px;background:var(--paper);border-radius:6px}.swipe-empty h2{font-size:28px}.swipe-empty p{margin:16px 0 22px;color:var(--muted)}
+@media(max-width:700px){.swipe-card{min-height:290px;padding:45px 18px 25px}.swipe-english{font-size:43px}.swipe-translation{font-size:22px}.swipe-stage{padding-top:20px}.swipe-panel{padding:25px 20px}.swipe-actions{gap:10px}}
+@media(prefers-reduced-motion:reduce){.swipe-card{transition:none}}
