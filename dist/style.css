@@ -51,9 +51,10 @@
 .word-search-controls{display:flex;gap:10px;align-items:stretch}
 .word-search-controls input,.add-word-form input{min-width:0;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);padding:12px;font:16px/1.4 Arial,sans-serif}
 .word-search-controls input{flex:1;width:100%}.word-search-form>p{font-size:14px;color:var(--muted);margin-top:10px}
-.search-panel .word-search-form{margin-top:25px}.search-local-title{font-size:25px}
+.search-panel .word-search-form{margin-top:25px;margin-bottom:18px}.search-local-title{font-size:18px;line-height:1.3}
+#local-search-results>.sub{font-size:14px;line-height:1.4;margin-top:6px}
 .search-results{display:grid;gap:12px;margin-top:18px}.search-word{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:5px;background:var(--paper)}
-.search-word .btn{flex-shrink:0}.online-word-section{margin-top:30px;padding-top:25px;border-top:1px solid var(--line)}
+.search-word .btn{flex-shrink:0}.online-word-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
 .search-notice{background:var(--paper);border-left:3px solid var(--olive);padding:15px;margin:18px 0;color:var(--ink);font-size:16px}
 .dictionary-definition{margin-top:20px}.dictionary-definition ol{padding-left:24px}.dictionary-definition li{margin-bottom:10px;overflow-wrap:anywhere}.dictionary-source{color:var(--muted);font-size:14px}
 .dictionary-source a,.translation-note a{color:var(--olive);text-decoration:underline;text-underline-offset:3px}
