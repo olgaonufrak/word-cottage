@@ -151,29 +151,51 @@ const w=s.queue[s.index],c=categories.find(c=>c.id===w.category),isUk=reversed!=
 box.innerHTML=`<div class="session-status"><span>${c.name}</span><span>${s.index+1} / ${s.queue.length}</span></div><div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="${s.flipped?'Показати слово':'Показати переклад'}"><div class="card-tag">${isUk?'Українська':'English'}</div><div class="word ${isUk?'uk':''}" lang="${isUk?'uk':'en'}">${escapeHTML(isUk?w.uk:w.en)}</div><div class="card-hint">${s.flipped?'Як добре пам’ятаєш це слово?':'Торкнись, щоб побачити переклад'}</div></div><div style="text-align:center"><button class="speak" id="speak" aria-label="Послухати англійську вимову">♫ Послухати вимову</button></div><div class="actions">${s.flipped?'<button class="btn repeat" id="repeat">Ще повторю</button><button class="btn" id="known">Знаю ✓</button>':'<button class="btn" id="reveal">Показати переклад</button>'}</div><div class="study-progress"><div class="track"><div class="fill" style="width:${s.index/s.queue.length*100}%"></div></div></div><p class="key-hint">Пробіл — перевернути · 1 — ще повторю · 2 — знаю</p>`;
 const flip=()=>{s.flipped=!s.flipped;renderCard();};document.getElementById('flashcard').onclick=flip;document.getElementById('flashcard').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();flip();}};const audioButton=document.getElementById('speak');audioButton.setAttribute('aria-label',isUk?'Послухати українську вимову':'Послухати англійську вимову');audioButton.onclick=()=>speak(isUk?w.uk:w.en,isUk?'uk':'en',isUk?w.ukAudio:w.audio);if(s.flipped){document.getElementById('repeat').onclick=()=>rate(false);document.getElementById('known').onclick=()=>rate(true);}else document.getElementById('reveal').onclick=flip;}
 function rate(known){if(!session||!session.flipped||session.index>=session.queue.length)return;const w=session.queue[session.index];if(known){learned.add(w.id);session.correct++;}else{learned.delete(w.id);session.review.push(w);}save();session.index++;session.flipped=false;renderCard();}
-let activeWordAudio=null,speechVersion=0;
+let activeWordAudio=null,speechVersion=0,cancelVoiceWait=null;
+function preferredWordVoice(voices,lang){
+  const locale=lang==='uk'?'uk-ua':'en-us';
+  const candidates=voices.filter(voice=>String(voice.lang||'').toLowerCase().replace(/_/g,'-').split('-')[0]===lang);
+  const score=voice=>{
+    const name=String(voice.name||'');
+    return (/google/i.test(name)?1000:0)+(/natural|neural|wavenet|chirp/i.test(name)?200:0)+(/premium|enhanced/i.test(name)?100:0)+(String(voice.lang).toLowerCase().replace(/_/g,'-')===locale?30:0)+(voice.localService===false?10:0)+(voice.default?1:0);
+  };
+  return candidates.sort((a,b)=>score(b)-score(a))[0]||null;
+}
 function speak(word,lang='en',audioURL=''){
   const version=++speechVersion;
+  cancelVoiceWait?.();cancelVoiceWait=null;
   if(activeWordAudio){activeWordAudio.pause();activeWordAudio=null;}
   window.speechSynthesis?.cancel();
+  const url=safeWordAudio(audioURL);
+  const unavailable=()=>{if(version===speechVersion)toast(lang==='uk'?'Українське озвучення недоступне. Додай український голос у налаштуваннях пристрою.':'Англійське озвучення недоступне. Перевір налаштування голосів пристрою.');};
+  const recording=()=>{
+    if(version!==speechVersion)return;
+    if(!url||!window.Audio){unavailable();return;}
+    const audio=new window.Audio(url);activeWordAudio=audio;
+    audio.onerror=unavailable;audio.onended=()=>{if(activeWordAudio===audio)activeWordAudio=null;};
+    try{audio.play()?.catch(unavailable);}catch{unavailable();}
+  };
   const browserVoice=()=>{
     if(version!==speechVersion)return;
-    if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){toast('Цей браузер не підтримує озвучення.');return;}
+    if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){recording();return;}
     const speech=window.speechSynthesis,u=new window.SpeechSynthesisUtterance(word);
-    u.lang=lang==='uk'?'uk-UA':'en-GB';u.rate=.8;
-    const voices=speech.getVoices();u.voice=voices.find(v=>v.lang.toLowerCase()===u.lang.toLowerCase())||voices.find(v=>v.lang.toLowerCase().startsWith(lang+'-')||v.lang.toLowerCase()===lang)||null;
-    if(voices.length&&!u.voice){toast(lang==='uk'?'Додай український голос у налаштуваннях озвучення пристрою.':'Додай англійський голос у налаштуваннях озвучення пристрою.');return;}
-    u.onerror=event=>{if(version===speechVersion&&event.error!=='interrupted'&&event.error!=='canceled')toast(lang==='uk'?'Українське озвучення недоступне. Додай український голос у налаштуваннях пристрою.':'Озвучення недоступне. Перевір налаштування голосів пристрою.');};
-    speech.speak(u);
+    const voices=speech.getVoices();u.voice=preferredWordVoice(voices,lang);
+    if(voices.length&&!u.voice){recording();return;}
+    u.lang=u.voice?.lang||(lang==='uk'?'uk-UA':'en-US');u.rate=.95;u.pitch=1;u.volume=1;
+    u.onerror=event=>{if(version===speechVersion&&event.error!=='interrupted'&&event.error!=='canceled')recording();};
+    try{speech.speak(u);}catch{recording();}
   };
-  const url=safeWordAudio(audioURL);
-  if(url&&window.Audio){
-    const audio=new window.Audio(url);activeWordAudio=audio;let failed=false;
-    const fallback=()=>{if(failed||version!==speechVersion)return;failed=true;activeWordAudio=null;browserVoice();};
-    audio.onerror=fallback;audio.onended=()=>{if(activeWordAudio===audio)activeWordAudio=null;};
-    try{audio.play()?.catch(fallback);}catch{fallback();}
+  const speech=window.speechSynthesis;
+  if(speech&&window.SpeechSynthesisUtterance&&!speech.getVoices().length&&speech.addEventListener){
+    let timer;
+    const cleanup=()=>{clearTimeout(timer);speech.removeEventListener('voiceschanged',ready);if(cancelVoiceWait===cleanup)cancelVoiceWait=null;};
+    const ready=()=>{if(!speech.getVoices().length)return;cleanup();browserVoice();};
+    cancelVoiceWait=cleanup;speech.addEventListener('voiceschanged',ready);
+    timer=setTimeout(()=>{cleanup();browserVoice();},700);
+    ready();
   }else browserVoice();
 }
+window.speechSynthesis?.getVoices();
 document.querySelector('.brand').onclick=e=>{e.preventDefault();home();};document.addEventListener('keydown',e=>{if(screen==='selection'&&selection){if(!['INPUT','SELECT','BUTTON','A'].includes(document.activeElement.tagName)&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){e.preventDefault();decideSwipe(e.key==='ArrowRight');}return;}if(screen!=='study'||!session||session.index>=session.queue.length||['INPUT','SELECT','BUTTON','A'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();session.flipped=!session.flipped;renderCard();}if(e.key==='1')rate(false);if(e.key==='2')rate(true);});
 home();
 if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'start_word_practice',description:'Почати вивчення слів із вибраних розділів. Не змінює вивчені слова.',inputSchema:{type:'object',properties:{categories:{type:'array',items:{type:'string',enum:categories.map(c=>c.id)},minItems:1},mixed:{type:'boolean'}},required:['categories'],additionalProperties:false},annotations:{readOnlyHint:false},execute(input){if(!input||typeof input!=='object'||(input.mixed!==undefined&&typeof input.mixed!=='boolean'))throw Error('Некоректні параметри');start(input.categories,Boolean(input.mixed));return{screen:'study',cards:session.queue.length,categories:session.ids};}})).catch(()=>{});}catch{}}
