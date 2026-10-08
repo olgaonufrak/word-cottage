@@ -8,7 +8,9 @@
 
 Репозиторій: https://github.com/olgaonufrak/word-cottage
 
-GitHub CLI авторизований, репозиторій створено. Перша публікація GitHub Pages виконується; адресу буде додано після перевірки результату.
+Адреса GitHub Pages: https://olgaonufrak.github.io/word-cottage/
+
+GitHub CLI авторизований, репозиторій створено, `origin` указує на GitHub. Режим GitHub Pages — GitHub Actions (`workflow`), HTTPS увімкнено. Статус актуальної публікації перевіряється у вкладці Actions репозиторію.
 
 `.github/workflows/pages.yml` запускає перевірки й публікує каталог `dist/` після push у `main`. Налаштування старого Sites hosting видалено за прямою вказівкою користувачки; надалі використовувати GitHub Pages.
 
