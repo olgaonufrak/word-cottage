@@ -26,7 +26,8 @@
 .selection-total{font-size:16px;color:var(--muted)}
 .word-list-tools{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 16px}.word-list-tools button:disabled{opacity:.45;cursor:default}
 .section-word-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.section-word-option{display:flex;align-items:center;gap:14px;min-height:76px;min-width:0;padding:16px;border:1px solid var(--line);border-radius:5px;background:var(--paper);cursor:pointer}
+.section-word-option{display:flex;align-items:center;gap:10px;min-height:76px;min-width:0;padding:16px;border:1px solid var(--line);border-radius:5px;background:var(--paper)}
+.section-word-choice{display:flex;align-items:center;gap:14px;flex:1;min-width:0;cursor:pointer}.section-word-audio{min-width:44px;min-height:44px}
 .section-word-option:has(input:checked){border-color:var(--olive);background:#e9ebdb}.section-word-option input{width:22px;height:22px;flex-shrink:0;accent-color:var(--olive)}
 .section-list-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;bottom:0;padding:18px 0 8px;margin-top:16px;background:var(--white);border-top:1px solid var(--line);z-index:1}.section-list-bottom p{font-size:14px;color:var(--muted)}.section-list-bottom .btn{flex-shrink:0}
 @media(max-width:700px){.section-word-list{grid-template-columns:1fr}.section-word-option{padding:14px}.section-list-bottom{flex-wrap:wrap;gap:10px;padding-bottom:12px}.section-list-bottom .btn{width:100%}}
