@@ -55,6 +55,10 @@
 @font-face{font-family:'Caveat';src:url('fonts/Caveat.ttf') format('truetype');font-style:normal;font-weight:400 700;font-display:swap}
 .search-panel>h1{font-size:27px;line-height:1.2;letter-spacing:-.4px;color:var(--olive)}
 #online-word-title{font:500 22px/1.25 'Caveat','Segoe Print',cursive;color:var(--olive)}
+.group-menu{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:24px auto}
+.group-card{display:flex;flex-direction:column;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:30px;background:var(--white);color:var(--ink);text-align:left;transition:transform .2s,box-shadow .2s}
+.group-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 #e4ddc9}.group-card .tile{margin-bottom:22px}.group-card h2{font:29px/1.2 Georgia,serif;color:var(--olive)}.group-card p{font-size:15px;color:var(--muted);margin-top:12px;margin-bottom:24px}.group-open{display:flex;justify-content:space-between;gap:30px;align-items:center;width:100%;margin-top:auto;font-weight:bold;font-size:14px;color:var(--olive)}
+@media(max-width:700px){.group-menu{grid-template-columns:1fr;gap:16px;margin:8px auto 20px}.group-card{padding:24px}.group-card .tile{margin-bottom:16px}.group-card h2{font-size:26px}.group-card p{margin-bottom:18px}}
 #local-search-results>.sub{font-size:14px;line-height:1.4;margin-top:6px}
 .search-results{display:grid;gap:12px;margin-top:18px}.search-word{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:5px;background:var(--paper)}
 .search-word .btn{flex-shrink:0}.online-word-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
