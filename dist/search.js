@@ -16,7 +16,7 @@ function cleanPersonalWord(value){
 }
 try{
   const stored=JSON.parse(localStorage.getItem(PERSONAL_WORDS_KEY)||'[]');
-  if(Array.isArray(stored))for(const value of stored){const word=cleanPersonalWord(value);if(word&&!words.some(existing=>normalizeWord(existing.en)===word.en&&categories.find(category=>category.id===existing.category)?.stage!==1)){ensurePersonalCategory();words.push(word);}}
+  if(Array.isArray(stored))for(const value of stored){const word=cleanPersonalWord(value);if(word&&!words.some(existing=>normalizeWord(existing.en)===word.en&&!categories.find(category=>category.id===existing.category)?.stage)){ensurePersonalCategory();words.push(word);}}
 }catch{}
 function addPersonalWord(value){
   const word=cleanPersonalWord(value);
