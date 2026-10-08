@@ -1,0 +1,12 @@
+# Local credentials and temporary files must not be pushed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.zip
+*.tar.gz
+node_modules/
+work/
+Thumbs.db
+desktop.ini
