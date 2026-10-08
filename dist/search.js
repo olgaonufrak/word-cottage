@@ -1,6 +1,8 @@
 'use strict';
 const PERSONAL_WORDS_KEY='word-cottage-personal-words';
 let wordSearch=null;
+const pronunciationCache=new Map();
+function safeWordAudio(value){try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='upload.wikimedia.org'?url.href:'';}catch{return '';}}
 function normalizeWord(text){return String(text).normalize('NFKC').trim().replace(/[’‘]/g,"'").replace(/[‐‑‒–—]/g,'-').replace(/\s+/g,' ').toLowerCase();}
 function validEnglishWord(text){return /^(?=.*\p{Script=Latin})[\p{Script=Latin}\p{M}0-9 .'-]{1,80}$/u.test(normalizeWord(text));}
 function personalWordId(en){return 'custom-'+encodeURIComponent(normalizeWord(en));}
@@ -10,7 +12,7 @@ function cleanPersonalWord(value){
   const en=normalizeWord(value.en),uk=value.uk.trim();
   if(!validEnglishWord(en)||!uk||uk.length>300)return null;
   const definition=typeof value.definition==='string'?value.definition.slice(0,1200):'';
-  return {id:personalWordId(en),en,uk,category:'custom',definition,dictionaryTerm:definition&&typeof value.dictionaryTerm==='string'&&validEnglishWord(value.dictionaryTerm)?value.dictionaryTerm:''};
+  return {id:personalWordId(en),en,uk,category:'custom',definition,dictionaryTerm:definition&&typeof value.dictionaryTerm==='string'&&validEnglishWord(value.dictionaryTerm)?value.dictionaryTerm:'',ipa:typeof value.ipa==='string'?value.ipa.slice(0,200):'',audio:safeWordAudio(value.audio),ukIpa:typeof value.ukIpa==='string'?value.ukIpa.slice(0,200):'',ukAudio:safeWordAudio(value.ukAudio)};
 }
 try{
   const stored=JSON.parse(localStorage.getItem(PERSONAL_WORDS_KEY)||'[]');
@@ -48,8 +50,27 @@ function showSearch(query='',lookup=false){
 function renderLocalSearch(){
   if(screen!=='search'||!wordSearch)return;
   const results=matchingWords(wordSearch.query),box=document.getElementById('local-search-results');
-  box.innerHTML=`<h2 class="search-local-title">У твоєму словнику${wordSearch.query.trim()?` · ${results.length}`:''}</h2>${results.length?`<div class="search-results">${results.map(word=>`<div class="search-word">${wordDetails(word)}<button type="button" class="btn secondary" data-study-word="${escapeHTML(word.id)}">Вчити</button></div>`).join('')}</div>`:`<p class="sub">${wordSearch.query.trim()?'У збережених словах збігів немає. Спробуй онлайн-пошук нижче.':'Введи слово, щоб знайти його серед усіх розділів і доданих слів.'}</p>`}`;
+  const shown=results.slice(0,20);
+  box.innerHTML=`<h2 class="search-local-title">У твоєму словнику${wordSearch.query.trim()?` · ${results.length}`:''}</h2>${results.length?`<div class="search-results">${shown.map(word=>`<div class="search-word"><div id="pronunciation-${escapeHTML(word.id)}">${searchWordDetails(word)}</div><button type="button" class="btn secondary" data-study-word="${escapeHTML(word.id)}">Вчити</button></div>`).join('')}</div>${results.length>shown.length?'<p class="sub">Показано перші 20 слів. Уточни пошук, щоб побачити потрібне.</p>':''}`:`<p class="sub">${wordSearch.query.trim()?'У збережених словах збігів немає. Спробуй онлайн-пошук нижче.':'Введи слово, щоб знайти його серед усіх розділів і доданих слів.'}</p>`}`;
   box.querySelectorAll('[data-study-word]').forEach(button=>button.onclick=()=>learnSearchWord(button.dataset.studyWord));
+  bindWordAudio(box);
+}
+function searchWordDetails(word){
+  const enPron=pronunciationCache.get('en:'+normalizeWord(word.en))||word;
+  const ukPron=pronunciationCache.get('uk:'+normalizeWord(word.uk))||{ipa:word.ukIpa,audio:word.ukAudio};
+  return `<div class="search-word-pair">${[['en',word.en,enPron],['uk',word.uk,ukPron]].map(([lang,text,pron])=>`<div class="search-language"><div><strong lang="${lang}">${escapeHTML(text)}</strong><span class="word-ipa">${escapeHTML(pron.ipa||'Транскрипція недоступна')}</span>${pron.ipa||pron.audio?`<small class="pronunciation-source"><a href="https://en.wiktionary.org/wiki/${encodeURIComponent(normalizeWord(text))}#${lang==='en'?'English':'Ukrainian'}" target="_blank" rel="noopener noreferrer">Wiktionary</a>${pron.ipa?' · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>':''}</small>`:''}</div><button type="button" class="word-audio" data-audio-text="${escapeHTML(text)}" data-audio-lang="${lang}" data-audio-url="${escapeHTML(pron.audio||'')}" aria-label="${lang==='en'?'Послухати англійською':'Послухати українською'}">♫ Послухати</button></div>`).join('')}</div>`;
+}
+function bindWordAudio(root){root.querySelectorAll('[data-audio-text]').forEach(button=>button.onclick=()=>speak(button.dataset.audioText,button.dataset.audioLang,button.dataset.audioUrl));}
+async function hydrateLocalPronunciations(state,version){
+  const current=()=>screen==='search'&&wordSearch===state&&state.version===version&&!state.controller.signal.aborted;
+  const queue=matchingWords(state.query).slice(0,20);
+  async function worker(){while(queue.length&&current()){
+    const word=queue.shift();
+    await Promise.allSettled([pronunciationWord(word.en,'en',state.controller.signal),pronunciationWord(word.uk,'uk',state.controller.signal)]);
+    if(!current())return;
+    const box=document.getElementById('pronunciation-'+word.id);if(box){box.innerHTML=searchWordDetails(word);bindWordAudio(box);}
+  }}
+  await Promise.all([worker(),worker(),worker()]);
 }
 function learnSearchWord(id){const word=words.find(entry=>entry.id===id);if(!word)return;cancelWordSearch();start([word.category],false,false,1,[word.id]);}
 function plainDictionaryText(text){
@@ -78,12 +99,25 @@ async function translateWord(text,pair,signal){
   if(!translated||translated.length>300||normalizeWord(translated)===normalizeWord(text))throw Error('Переклад не знайдено.');
   return translated;
 }
-async function dictionaryWord(en,signal){
-  const data=await wordJSON('https://en.wiktionary.org/api/rest_v1/page/definition/'+encodeURIComponent(en),signal);
-  if(!Array.isArray(data?.en))return null;
-  const definitions=data.en.flatMap(entry=>Array.isArray(entry.definitions)?entry.definitions.map(item=>plainDictionaryText(item.definition)):[]).filter(Boolean);
-  if(!definitions.length)return null;
-  return {en,definitions:[...new Set(definitions)].slice(0,3).map(text=>text.slice(0,600))};
+function parseWordPronunciation(html,lang){
+  const language=lang==='uk'?'Ukrainian':'English';
+  const heading=new RegExp('<h2\\b[^>]*\\bid="'+language+'"[^>]*>','i').exec(html);
+  if(!heading)return null;
+  const rest=html.slice(heading.index+heading[0].length),end=rest.search(/<h2\b/i),section=end<0?rest:rest.slice(0,end);
+  const ipaMatch=section.match(/<span\b[^>]*class="[^"]*\bIPA\b[^"]*"[^>]*>([\s\S]*?)<\/span>/i);
+  const ipa=ipaMatch?plainDictionaryText(ipaMatch[1]).slice(0,200):'';
+  const audioBlock=section.match(/<audio\b[^>]*>[\s\S]*?<\/audio>/i)?.[0]||'';
+  const sources=[...audioBlock.matchAll(/<source\b[^>]*\bsrc="([^"]+)"[^>]*>/gi)];
+  const audioMatch=sources.find(match=>/audio\/mpeg/i.test(match[0]))||sources[0];
+  const audio=audioMatch?safeWordAudio(plainDictionaryText(audioMatch[1]).replace(/^\/\//,'https://')):'';
+  return {ipa,audio};
+}
+async function pronunciationWord(term,lang,signal){
+  const key=lang+':'+normalizeWord(term);if(pronunciationCache.has(key))return pronunciationCache.get(key);
+  const data=await wordJSON('https://en.wiktionary.org/w/api.php?action=parse&prop=text&format=json&formatversion=2&origin=*&page='+encodeURIComponent(normalizeWord(term)),signal);
+  const result=typeof data?.parse?.text==='string'?parseWordPronunciation(data.parse.text,lang):null;
+  if(!signal?.aborted&&result)pronunciationCache.set(key,result);
+  return result;
 }
 async function lookupWord(raw){
   const state=wordSearch;if(screen!=='search'||!state)return;
@@ -93,7 +127,8 @@ async function lookupWord(raw){
   const query=normalizeWord(state.query);
   if(!query){panel.innerHTML='<p class="sub">Введи слово для пошуку.</p>';return;}
   const exact=words.find(word=>normalizeWord(word.en)===query||word.uk.split(/[;,]/).some(text=>normalizeWord(text)===query));
-  if(exact){panel.innerHTML='<p class="sub">Це слово вже є у твоєму словнику. Натисни «Вчити» біля нього вище.</p>';return;}
+  if(exact){panel.innerHTML='';await hydrateLocalPronunciations(state,version);return;}
+  hydrateLocalPronunciations(state,version);
   const ukrainian=/[а-яіїєґ]/i.test(query);
   if(!validEnglishWord(query)&&!ukrainian){renderOnlineWord({en:'',uk:'',notice:'Введи слово англійською або українською.'});return;}
   panel.innerHTML='<p class="sub" role="status">Шукаємо слово й переклад…</p>';
@@ -102,26 +137,30 @@ async function lookupWord(raw){
     try{en=normalizeWord(await translateWord(query,'uk|en',signal));if(!validEnglishWord(en))throw Error('Не знайдено англійський відповідник.');}
     catch{if(current())renderOnlineWord({en:'',uk:state.query,notice:'Не вдалося знайти англійський відповідник. Можеш додати слово вручну.'});return;}
   }
-  const requests=await Promise.allSettled([dictionaryWord(en,signal),ukrainian?Promise.resolve(state.query):translateWord(en,'en|uk',signal)]);
+  const requests=await Promise.allSettled([pronunciationWord(en,'en',signal),ukrainian?Promise.resolve(state.query):translateWord(en,'en|uk',signal)]);
   if(!current())return;
   const dictionary=requests[0].status==='fulfilled'?requests[0].value:null;
   const uk=requests[1].status==='fulfilled'?requests[1].value:'';
+  const ukPron=uk?await pronunciationWord(uk,'uk',signal).catch(()=>null):null;
+  if(!current())return;
   let notice=dictionary?'':requests[0].status==='rejected'?'Словник зараз недоступний. Можеш додати слово з власним перекладом.':'Словник не знайшов цього слова. Перевір написання або додай слово вручну.';
   if(!uk)notice+=(notice?' ':'')+'Автоматичний переклад недоступний — введи його нижче.';
-  renderOnlineWord({en,uk,dictionary,notice});
+  renderOnlineWord({en,uk,dictionary,ukPron,notice});
 }
-function renderOnlineWord({en,uk,dictionary=null,notice=''}){
+function renderOnlineWord({en,uk,dictionary=null,ukPron=null,notice=''}){
   if(screen!=='search'||!wordSearch)return;
   const panel=document.getElementById('online-word-result');
   const source=dictionary?'https://en.wiktionary.org/wiki/'+encodeURIComponent(en):'';
-  panel.innerHTML=`${notice?`<p class="search-notice" role="status">${escapeHTML(notice)}</p>`:''}${dictionary?`<div class="dictionary-definition"><h3 lang="en">${escapeHTML(en)}</h3><ol>${dictionary.definitions.map(text=>`<li lang="en">${escapeHTML(text)}</li>`).join('')}</ol><p class="dictionary-source">Значення: <a href="${source}" target="_blank" rel="noopener noreferrer">Wiktionary</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p></div>`:''}<form id="add-word-form" class="add-word-form"><h3>${dictionary?'Додати до навчання':'Додати своє слово'}</h3><label for="new-word-en">Англійське слово</label><input id="new-word-en" required maxlength="80" value="${escapeHTML(en)}" lang="en" autocomplete="off"><label for="new-word-uk">Переклад українською</label><input id="new-word-uk" required maxlength="300" value="${escapeHTML(uk)}" lang="uk" autocomplete="off"><p class="sub translation-note">Перевір переклад і за потреби виправ його. Автоматичний переклад: <a href="https://mymemory.translated.net/" target="_blank" rel="noopener noreferrer">MyMemory</a>.</p><p class="error" id="add-word-error" role="alert"></p><div class="add-word-actions"><button class="btn" type="submit" value="save">Додати до моїх слів</button><button class="btn secondary" type="submit" value="study">Додати й вчити</button></div></form>`;
+  panel.innerHTML=`${notice?`<p class="search-notice" role="status">${escapeHTML(notice)}</p>`:''}${en&&uk?searchWordDetails({en,uk,ipa:dictionary?.ipa,audio:dictionary?.audio,ukIpa:ukPron?.ipa,ukAudio:ukPron?.audio}):''}<form id="add-word-form" class="add-word-form"><details ${!en||!uk?'open':''}><summary>${en&&uk?'Виправити слово або переклад':'Додати своє слово'}</summary><label for="new-word-en">Англійське слово</label><input id="new-word-en" required maxlength="80" value="${escapeHTML(en)}" lang="en" autocomplete="off"><label for="new-word-uk">Переклад українською</label><input id="new-word-uk" required maxlength="300" value="${escapeHTML(uk)}" lang="uk" autocomplete="off"></details><p class="error" id="add-word-error" role="alert"></p><div class="add-word-actions"><button class="btn" type="submit" value="save">Додати до моїх слів</button><button class="btn secondary" type="submit" value="study">Додати й вчити</button></div></form><p class="dictionary-source">${dictionary?`Вимова: <a href="${source}" target="_blank" rel="noopener noreferrer">Wiktionary</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. `:''}Переклад: <a href="https://mymemory.translated.net/" target="_blank" rel="noopener noreferrer">MyMemory</a>.</p>`;
+  bindWordAudio(panel);
   const form=document.getElementById('add-word-form');
   form.onsubmit=event=>{
     event.preventDefault();
     try{
       const inputEn=document.getElementById('new-word-en').value,inputUk=document.getElementById('new-word-uk').value;
       const sameTerm=normalizeWord(inputEn)===normalizeWord(en);
-      const word=addPersonalWord({en:inputEn,uk:inputUk,definition:sameTerm&&dictionary?dictionary.definitions.join('\n'):'',dictionaryTerm:sameTerm&&dictionary?en:''});
+      const sameUk=normalizeWord(inputUk)===normalizeWord(uk);
+      const word=addPersonalWord({en:inputEn,uk:inputUk,ipa:sameTerm?dictionary?.ipa:'',audio:sameTerm?dictionary?.audio:'',ukIpa:sameUk?ukPron?.ipa:'',ukAudio:sameUk?ukPron?.audio:''});
       if(event.submitter?.value==='study'){learnSearchWord(word.id);return;}
       wordSearch.query=word.en;document.getElementById('word-search-input').value=word.en;renderLocalSearch();
       panel.innerHTML='<p class="search-notice" role="status">Слово збережено. Натисни «Вчити» вище або знайди наступне слово. Усі додані слова є в розділі «Мої слова».</p>';
