@@ -18,12 +18,12 @@ async function main(){
     for(const word of list){assert.ok(word.en.trim());assert.match(word.uk,/[а-яіїєґ]/);assert.ok(word.id.startsWith(section.id+'-'));}
   }
   assert.equal(run('new Set(words.map(w=>w.id)).size'),run('words.length'));
-  assert.equal(run('words.length'),401+total+run("words.filter(w=>w.category.startsWith('a2-')).length"));
+  assert.equal(run('words.length'),401+total+run("words.filter(w=>categories.find(c=>c.id===w.category)?.stage>1).length"));
   assert.equal(run("words.filter(w=>w.category==='a1-days').length"),11);
   assert.equal(run("words.filter(w=>w.category==='a1-months').length"),18);
   assert.equal(run("words.find(w=>w.category==='a1-numbers'&&w.en==='forty').uk"),'сорок');
   assert.equal(run("words.find(w=>w.category==='a1-time'&&w.en==='half past two').uk"),'пів на третю');
-  element('everyday-group').onclick();assert.equal(run('screen'),'daily-stages');assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,2);
+  element('everyday-group').onclick();assert.equal(run('screen'),'daily-stages');assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,1);
   element('open-stage-one').onclick();assert.equal(run('screen'),'stage-one');assert.equal((element('app').innerHTML.match(/class="stage-section"/g)||[]).length,29);
   for(const section of sections){assert.ok(element('app').innerHTML.includes(section.name));assert.ok(element('app').innerHTML.includes(section.ukTitle));}
   element('section-a1-greetings').onclick();assert.equal(run('screen'),'section-words');element('learn-section').onclick();assert.equal(run('screen'),'amount');assert.match(element('app').innerHTML,/знайомство та привітання/);

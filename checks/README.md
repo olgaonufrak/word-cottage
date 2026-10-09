@@ -5,6 +5,7 @@
 ```text
 node checks/verify-stage-one.cjs
 node checks/verify-stage-two.cjs
+node checks/verify-stage-three.cjs
 node checks/verify-section-list.cjs
 node checks/verify-swipe-selection.cjs
 node checks/verify-natural-voice.cjs
