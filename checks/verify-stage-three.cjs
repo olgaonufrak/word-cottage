@@ -24,7 +24,7 @@ async function main(){
   }
   // Dictionary scripts must finish before personal-word restoration and learned progress.
   const index=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');
-  assert.deepEqual([...index.matchAll(/<script src="([^"]+)" defer><\/script>/g)].map(match=>match[1]),['data.js','stage1-data.js','stage2-data.js','stage3-data.js','search.js','app.js']);
+  assert.deepEqual([...index.matchAll(/<script src="([^"]+)" defer><\/script>/g)].map(match=>match[1].split('?')[0]),['data.js','stage1-data.js','stage2-data.js','stage3-data.js','search.js','app.js']);
   assert.match(index,/id="word-total">2580/);
   assert.equal((element('app').innerHTML.match(/class="group-card"/g)||[]).length,2);
   element('everyday-group').onclick();
