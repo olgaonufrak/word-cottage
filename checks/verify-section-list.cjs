@@ -23,18 +23,18 @@ async function main(){
     assert.equal((element('app').innerHTML.match(/class="section-word-option"/g)||[]).length,expected);
     element('back').onclick();assert.equal(run('screen'),'stage-one');
   }
-  // Empty Stage 4 topics open safely, keep progress, and return to their stage.
+  // Stage 4 lists open before quantity choice and keep their return route.
   const savedWords=run('words.length'),savedProgress=JSON.stringify([...storage]);
   run('showDailyStages()');element('open-stage-four').onclick();
   assert.equal(run('screen'),'stage-four');assert.equal(run('dailyView'),'stage4');
-  const emptySections=JSON.parse(run('JSON.stringify(stageFourSections)'));
-  assert.equal(emptySections.length,15);
+  const stageFour=JSON.parse(run('JSON.stringify(stageFourSections)'));
+  assert.equal(stageFour.length,15);
   assert.equal((element('app').innerHTML.match(/class="stage-section"/g)||[]).length,15);
-  for(const section of emptySections){
+  for(const section of stageFour){
     element('section-'+section.id).onclick();assert.equal(run('screen'),'section-words');
-    assert.match(element('app').innerHTML,/поки немає слів/);
+    assert.equal((element('app').innerHTML.match(/class="section-word-option"/g)||[]).length,30);
     assert.match(element('app').innerHTML,/‹ Розділи Етапу 4/);
-    assert.doesNotMatch(element('app').innerHTML,/id="(?:learn-section|word-count|select-all-words)"|section-word-option/);
+    assert.doesNotMatch(element('app').innerHTML,/id="word-count"/);assert.match(element('app').innerHTML,/id="learn-section"/);
     assert.equal(run('session'),null);assert.equal(run('selection'),null);
     element('back').onclick();assert.equal(run('screen'),'stage-four');
   }
@@ -42,6 +42,12 @@ async function main(){
   element('stage-four-back').onclick();assert.equal(run('screen'),'daily-stages');
   element('open-stage-three').onclick();assert.equal(run('screen'),'stage-three');
   run('showBasics();picker()');assert.doesNotMatch(element('app').innerHTML,/Materials and Fabrics/);
+  // The existing empty-list guard still works for a personal dictionary without words.
+  const empty=fixture(new Map(),undefined,true);
+  empty.run("ensurePersonalCategory();showSectionWords(['custom'])");
+  assert.match(empty.element('app').innerHTML,/поки немає слів/);
+  assert.doesNotMatch(empty.element('app').innerHTML,/id="(?:learn-section|word-count)"/);
+  assert.equal(empty.run('session'),null);empty.element('back').onclick();assert.equal(empty.run('screen'),'home');
   // English audio is independent of checkbox selection and study direction, in every list.
   run(`window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};window.speechSynthesis={cancel(){},getVoices(){return [{name:'Google українська',lang:'uk-UA'},{name:'Google US English',lang:'en-US'}]},speak(u){window.lastSpeech=u}};reversed=true`);
   for(const ids of [['nouns'],['a1-greetings'],['custom'],['nouns','verbs']]){

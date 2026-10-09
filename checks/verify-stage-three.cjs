@@ -12,8 +12,8 @@ async function main(){
   assert.equal(run('new Set(words.map(w=>w.id)).size'),run('words.length'));
   assert.equal(run('basicCategories().length'),5);
   for(const [stage,total] of [[1,649],[2,781],[3,750]])assert.equal(run(`words.filter(w=>categories.find(c=>c.id===w.category)?.stage===${stage}).length`),total);
-  assert.equal(run('words.length'),2581);
-  assert.equal(run('words.some(w=>categories.find(c=>c.id===w.category)?.stage===4)'),false);
+  assert.equal(run('words.length'),3031);
+  assert.equal(run('words.filter(w=>categories.find(c=>c.id===w.category)?.stage===4).length'),450);
   for(const section of sections){
     assert.equal(section.ukTitle,section.ukTitle.toLowerCase());assert.match(section.ukTitle,/[а-яіїєґ]/);
     assert.equal(run(`categories.find(c=>c.id===${JSON.stringify(section.id)}).stage`),3);
@@ -25,11 +25,11 @@ async function main(){
   // Dictionary scripts must finish before personal-word restoration and learned progress.
   const index=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');
   assert.deepEqual([...index.matchAll(/<script src="([^"]+)" defer><\/script>/g)].map(match=>match[1].split('?')[0]),['data.js','stage1-data.js','stage2-data.js','stage3-data.js','stage4-data.js','search.js','app.js']);
-  assert.match(index,/id="word-total">2580/);
+  assert.match(index,/id="word-total">3030/);
   assert.equal((element('app').innerHTML.match(/class="group-card"/g)||[]).length,2);
   element('everyday-group').onclick();
   assert.equal((element('app').innerHTML.match(/class="daily-stage stage-ready"/g)||[]).length,4);
-  assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,1);
+  assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,0);
   element('open-stage-three').onclick();assert.equal(run('screen'),'stage-three');assert.equal(run('dailyView'),'stage3');
   assert.equal((element('app').innerHTML.match(/class="stage-section"/g)||[]).length,25);
   let lastPosition=-1;
@@ -75,6 +75,6 @@ async function main(){
   element('stage-three-back').onclick();element('open-stage-one').onclick();assert.equal(run('screen'),'stage-one');
   element('stage-one-back').onclick();element('open-stage-two').onclick();assert.equal(run('screen'),'stage-two');
   run('showBasics();picker()');assert.equal(element('app').querySelectorAll('.pick-options input').length,5);assert.doesNotMatch(element('app').innerHTML,/Personality Traits/);
-  console.log('Passed: 25 ordered bilingual Stage 3 sections, 750 translated cards, stable unique IDs, all complete lists/audio/manual-choice/count/swipe routes, five-card study in both directions, repetition, Stage 3 return navigation, search, preserved personal words and learned progress, unchanged Stages 1–2 and Stage 4 without vocabulary.');
+  console.log('Passed: 25 ordered bilingual Stage 3 sections, 750 translated cards, stable unique IDs, all complete lists/audio/manual-choice/count/swipe routes, five-card study in both directions, repetition, Stage 3 return navigation, search, preserved personal words and learned progress, unchanged Stages 1–2 and 450 Stage 4 cards.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

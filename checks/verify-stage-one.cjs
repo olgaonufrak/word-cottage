@@ -23,7 +23,7 @@ async function main(){
   assert.equal(run("words.filter(w=>w.category==='a1-months').length"),18);
   assert.equal(run("words.find(w=>w.category==='a1-numbers'&&w.en==='forty').uk"),'сорок');
   assert.equal(run("words.find(w=>w.category==='a1-time'&&w.en==='half past two').uk"),'пів на третю');
-  element('everyday-group').onclick();assert.equal(run('screen'),'daily-stages');assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,1);
+  element('everyday-group').onclick();assert.equal(run('screen'),'daily-stages');assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,0);
   element('open-stage-one').onclick();assert.equal(run('screen'),'stage-one');assert.equal((element('app').innerHTML.match(/class="stage-section"/g)||[]).length,29);
   for(const section of sections){assert.ok(element('app').innerHTML.includes(section.name));assert.ok(element('app').innerHTML.includes(section.ukTitle));}
   element('section-a1-greetings').onclick();assert.equal(run('screen'),'section-words');element('learn-section').onclick();assert.equal(run('screen'),'amount');assert.match(element('app').innerHTML,/знайомство та привітання/);

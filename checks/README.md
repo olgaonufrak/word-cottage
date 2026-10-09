@@ -6,6 +6,7 @@
 node checks/verify-stage-one.cjs
 node checks/verify-stage-two.cjs
 node checks/verify-stage-three.cjs
+node checks/verify-stage-four.cjs
 node checks/verify-section-list.cjs
 node checks/verify-swipe-selection.cjs
 node checks/verify-natural-voice.cjs
@@ -13,6 +14,6 @@ node checks/verify-natural-voice.cjs
 
 Перевірки охоплюють словники, навігацію, повні списки й ручний вибір слів, обмеження кількості, свайпи, навчання, відновлення прогресу та підбір голосів. Це перевірка логіки через імітацію DOM і браузерних API, а не перевірка зовнішнього вигляду чи реального звучання аудіо.
 
-`verify-section-list.cjs` також перевіряє порожні теми Етапу 4: відкриття й повернення до свого етапу, відсутність запуску навчання без слів та збереження прогресу.
+`verify-stage-four.cjs` перевіряє всі 15 тем і 450 карток Етапу 4, вибір слів, аудіо, свайпи, обидва напрямки навчання, повторення, пошук і збереження прогресу. `verify-section-list.cjs` перевіряє також повернення зі списків Етапу 4 і порожній особистий словник без запуску навчання.
 
 `fixture.cjs` — спільна модель браузера для цих перевірок; окремо її запускати не потрібно.
