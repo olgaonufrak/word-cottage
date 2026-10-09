@@ -20,7 +20,7 @@ async function main(){
   assert.equal(added,781);assert.equal(run('words.length'),1831+run("words.filter(w=>categories.find(c=>c.id===w.category)?.stage===3).length"));
   const index=fs.readFileSync(require('node:path').join(__dirname,'../dist',"index.html"),'utf8');
   assert.ok(index.indexOf('stage2-data.js')<index.indexOf('stage3-data.js'));assert.ok(index.indexOf('stage3-data.js')<index.indexOf('search.js'));assert.match(index,/id="word-total">2580/);
-  element('everyday-group').onclick();assert.equal((element('app').innerHTML.match(/class="daily-stage stage-ready"/g)||[]).length,3);assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,1);
+  element('everyday-group').onclick();assert.equal((element('app').innerHTML.match(/class="daily-stage stage-ready"/g)||[]).length,4);assert.equal((element('app').innerHTML.match(/Поки без слів/g)||[]).length,1);
   element('open-stage-two').onclick();assert.equal(run('screen'),'stage-two');assert.equal(run('dailyView'),'stage2');
   assert.equal((element('app').innerHTML.match(/class="stage-section"/g)||[]).length,29);
   for(const section of sections){assert.ok(element('app').innerHTML.includes(section.name));assert.ok(element('app').innerHTML.includes(section.ukTitle));}
@@ -52,7 +52,7 @@ async function main(){
   assert.equal(fixture(storage,undefined,true).run('learned.size'),4);
   element('stage-two-back').onclick();element('open-stage-one').onclick();assert.equal(run('screen'),'stage-one');
   run('showBasics();picker()');assert.equal(element('app').querySelectorAll('.pick-options input').length,5);assert.doesNotMatch(element('app').innerHTML,/Prepositions/);
-  assert.equal(run('categories.some(c=>c.stage===4)'),false);
-  console.log('Passed: 29 ordered bilingual Stage 2 sections, 781 translated cards, stable unique IDs, all list/audio/manual-choice/count/swipe routes, five-word target and progress, correct Stage 2 return navigation, search, personal-word migration, unchanged Stage 1 and empty Stage 4.');
+  assert.equal(run('words.some(w=>categories.find(c=>c.id===w.category)?.stage===4)'),false);
+  console.log('Passed: 29 ordered bilingual Stage 2 sections, 781 translated cards, stable unique IDs, all list/audio/manual-choice/count/swipe routes, five-word target and progress, correct Stage 2 return navigation, search, personal-word migration, unchanged Stage 1 and Stage 4 without vocabulary.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

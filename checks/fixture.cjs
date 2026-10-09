@@ -5,7 +5,7 @@ function fixture(storage=new Map(),fetchImpl=()=>Promise.reject(Error('offline')
   function element(id){if(!elements.has(id))elements.set(id,makeElement(id));return elements.get(id);}
   const context=vm.createContext({console,URL,AbortController,fetch:fetchImpl,setTimeout,clearTimeout,window:{},document:{getElementById:element,querySelector:element,activeElement:{tagName:'BODY'},addEventListener(){}},localStorage:{getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)}});
   const run=code=>vm.runInContext(code,context);
-  for(const file of ['data.js',...(includeStageOne?['stage1-data.js','stage2-data.js','stage3-data.js']:[]),'search.js','app.js'])run(fs.readFileSync(require('node:path').join(__dirname,'../dist',file),'utf8'));
+  for(const file of ['data.js',...(includeStageOne?['stage1-data.js','stage2-data.js','stage3-data.js','stage4-data.js']:[]),'search.js','app.js'])run(fs.readFileSync(require('node:path').join(__dirname,'../dist',file),'utf8'));
   return {run,element,storage};
 }
 module.exports={fixture};
