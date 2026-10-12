@@ -14,7 +14,7 @@ function sentenceWordMarkup(sentence,scope,output=scope+'-translation'){
 }
 function sentenceTranslationOutput(id){return `<p id="${id}" class="sentence-word-translation" role="status" aria-live="polite" hidden></p>`;}
 function exampleMarkup(sentence,translation,scope){return `<div class="lesson-example"><p lang="en">${sentenceWordMarkup(sentence,scope)}</p><p lang="uk">${escapeHTML(translation)}</p>${sentenceTranslationOutput(scope+'-translation')}</div>`;}
-function exerciseAudioMarkup(){return `<div class="lesson-audio-controls"><div class="lesson-audio-row"><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak audio-slow" id="exercise-audio-slow" aria-label="Послухати слово вдвічі повільніше">×0,5</button></div><div class="lesson-audio-row"><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button><button type="button" class="speak audio-slow" id="example-audio-slow" aria-label="Послухати приклад вдвічі повільніше">×0,5</button></div></div>`;}
+function exerciseAudioMarkup(){return `<div class="lesson-audio-controls"><div class="lesson-audio-row"><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak audio-slow" id="exercise-audio-slow" aria-label="Послухати слово зі швидкістю 0,35">×0,35</button></div><div class="lesson-audio-row"><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button><button type="button" class="speak audio-slow" id="example-audio-slow" aria-label="Послухати приклад зі швидкістю 0,35">×0,35</button></div></div>`;}
 function localSentenceTranslation(token,lesson){
   const key=normalizeWord(token);
   if(key===normalizeWord(lesson.word.en))return lesson.word.uk;
@@ -155,9 +155,9 @@ function renderExercise(){
   document.getElementById('exercise-next').onclick=()=>{if(step===0)e.answered=true;nextExercise();};
   if(step===0){
     document.getElementById('exercise-audio').onclick=()=>speak(word.en,'en',word.audio);
-    document.getElementById('exercise-audio-slow').onclick=()=>speak(word.en,'en',word.audio,.5);
+    document.getElementById('exercise-audio-slow').onclick=()=>speak(word.en,'en',word.audio,.35);
     document.getElementById('example-audio').onclick=()=>speak(lesson.sentence,'en');
-    document.getElementById('example-audio-slow').onclick=()=>speak(lesson.sentence,'en','',.5);
+    document.getElementById('example-audio-slow').onclick=()=>speak(lesson.sentence,'en','',.35);
   }
   else document.getElementById('exercise-hint').onclick=exerciseHint;
   if(step===1)e.options.forEach((option,index)=>document.getElementById('exercise-option-'+index).onclick=()=>{

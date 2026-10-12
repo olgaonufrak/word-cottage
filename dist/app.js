@@ -234,7 +234,7 @@ function preferredWordVoice(voices,lang){
   return candidates.sort((a,b)=>score(b)-score(a))[0]||null;
 }
 function speak(word,lang='en',audioURL='',speed=1){
-  const playbackSpeed=speed===.5 ? .5 : 1;
+  const playbackSpeed=speed===.35 ? .35 : 1;
   const version=++speechVersion;
   cancelVoiceWait?.();cancelVoiceWait=null;
   if(activeWordAudio){activeWordAudio.pause();activeWordAudio=null;}
