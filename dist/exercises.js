@@ -18,7 +18,7 @@ function startExercises(s){
 function recognitionOptions(lesson,s){
   const target=lesson.word,options=[target],seen=new Set([normalizeAnswer(target.en)]),meanings=new Set([normalizeAnswer(target.uk.split(';')[0])]);
   // Prefer words just introduced; a one-word lesson still gets distinct options.
-  for(const candidate of [...shuffle(s.queue),...shuffle(words)]){
+  for(const candidate of [...shuffle(s.queue),...shuffle(words.filter(word=>word.category===target.category)),...shuffle(words)]){
     const english=normalizeAnswer(candidate.en),meaning=normalizeAnswer(candidate.uk.split(';')[0]);
     if(seen.has(english)||meanings.has(meaning))continue;
     seen.add(english);meanings.add(meaning);options.push(candidate);
@@ -146,7 +146,7 @@ function renderExerciseDone(){
   const s=session,e=s.exercise;
   if(!e.lessons.length){app.innerHTML=`<section class="exercise-panel exercise-done"><h1>Немає слів для цього заняття</h1><p>Можна обрати інші слова або повторити вже вивчені.</p><button type="button" class="btn" id="exercise-home">До розділів</button></section>`;document.getElementById('exercise-home').onclick=home;return;}
   const review=s.queue.filter(word=>e.difficult.has(word.id));
-  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button></div><section class="exercise-panel exercise-done"><div class="eyebrow">Заняття завершено</div><h1>Шість кроків пройдено!</h1><p>Виконано вправи для ${e.lessons.length} ${wordLabel(e.lessons.length)}.</p><p>Перевірені знайомі конструкції: ${e.completed.size}. Для повторення: ${review.length}.</p>${e.selfChecked.size?`<p>Самостійно перевірені речення: ${e.selfChecked.size}. Ці слова не позначено автоматично вивченими.</p>`:''}<div class="exercise-actions">${review.length?'<button type="button" class="btn" id="exercise-review">Повторити складні</button>':''}<button type="button" class="btn secondary" id="exercise-restart">Пройти ще раз</button><button type="button" class="btn secondary" id="exercise-home">До розділів</button></div></section>`;
+  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button></div><section class="exercise-panel exercise-done"><div class="eyebrow">Заняття завершено</div><h1>Шість кроків пройдено!</h1><p>У занятті: ${e.lessons.length} ${wordLabel(e.lessons.length)}.</p><p>Перевірені знайомі конструкції: ${e.completed.size}. Для повторення: ${review.length}.</p>${e.selfChecked.size?`<p>Самостійно перевірені речення: ${e.selfChecked.size}. Ці слова не позначено автоматично вивченими.</p>`:''}<div class="exercise-actions">${review.length?'<button type="button" class="btn" id="exercise-review">Повторити складні</button>':''}<button type="button" class="btn secondary" id="exercise-restart">Пройти ще раз</button><button type="button" class="btn secondary" id="exercise-home">До розділів</button></div></section>`;
   document.getElementById('back').onclick=home;document.getElementById('exercise-home').onclick=home;
   document.getElementById('exercise-restart').onclick=()=>start(s.ids,s.mixed,false,s.limit,s.selectedIds,'steps');
   if(review.length)document.getElementById('exercise-review').onclick=()=>start(s.ids,s.mixed,false,review.length,review.map(word=>word.id),'steps');

@@ -93,6 +93,7 @@ async function main(){
   assert.equal(run('wordLesson(words.find(w=>w.id==="verbs-0")).sentence'),'I want to be happy.');
   assert.match(run('wordLesson(words.find(w=>w.category==="custom")).sentence'),/^I say/);
   assert.equal(run('wordLesson({en:"orange",uk:"помаранчевий",category:"a1-colors"}).sentence'),'This bag is orange.');
+  assert.equal(run('recognitionOptions(wordLesson(words.find(w=>w.id==="a1-fruit-apple")),{queue:[words.find(w=>w.id==="a1-fruit-apple")]}).every(w=>w.category==="a1-fruit")'),true,'A one-word lesson uses distractors from the same topic before unrelated vocabulary');
 
   // Unrecognized but familiar-word sentences get explicit self-assessment,
   // without pretending local checks can evaluate arbitrary English grammar.
