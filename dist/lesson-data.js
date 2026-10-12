@@ -250,16 +250,27 @@ function wordLesson(word){
   if(key==='orange'&&!/апельсин/.test(word.uk))entry={pattern:'This bag is {word}.',uk:'Ця сумка помаранчева.'};
   if(key==='like'&&!/подоба/.test(word.uk))entry=null;
   if(key==='close'&&/близьк/.test(word.uk))entry={pattern:'My school is {word} to home.',uk:'Моя школа близько до дому.'};
-  if(word.category==='custom')entry=null;
-  // Unreviewed vocabulary uses a literal quoted utterance, not invented grammar
-  // or an automatic translation. This also covers custom words and word pairs.
-  const fallback={pattern:'I say “{word}”.',uk:`Я кажу «${word.en}» (${word.uk}).`,emoji:''};
+  const known=words.find(item=>item.category!=='custom'&&item.en.toLowerCase()===key&&item.uk===word.uk);
+  if(word.category==='custom'&&!known)entry=null;
+  entry=contextualLessons[word.id]||contextualLessons[known?.id]||entry;
+  // New personal vocabulary can reuse an existing example. For a new entry,
+  // use its supplied Ukrainian part of speech to choose a short construction.
+  const meaning=word.uk.split(';')[0].trim(),first=meaning.split(' ')[0];
+  const fallback=/(?:ти|тися)$/.test(first)
+    ?{pattern:'I can {word}.',uk:`Я можу ${meaning}.`}
+    :/(?:ий|ій)$/.test(first)
+      ?{pattern:'It is {word}.',uk:`Це ${meaning}.`}
+      :{pattern:/^(?:my|your|his|her|our|their|a|an|the|this|that) /i.test(word.en)?'Here is {word}.':'Here is the {word}.',uk:`Ось ${meaning}.`};
   const example=entry||fallback,[before,after]=example.pattern.split('{word}');
-  const sentence=before+word.en+after;
-  const alternative=/^I /.test(sentence)?sentence.replace(/^I am /,'You are ').replace(/^I /,'You '):'';
+  const target=example.target||word.en;
+  const sentence=before+target+after;
+  const extra=(example.extra||[]).map(item=>({sentence:item.pattern.replace('{word}',item.target),translation:item.uk,target:item.target}));
+  const alternative=/^I /.test(sentence)?sentence.replace(/^I am /,'You are ').replace(/^I was /,'You were ').replace(/^I /,'You '):'';
   const foodForm=entry&&lessonFoodForms[key]&&(key!=='orange'||/апельсин/.test(word.uk))?lessonFoodForms[key]:'';
   const preference=foodForm?`I like ${foodForm}.`:'';
-  return {word,before,after,sentence,translation:example.uk,emoji:example.emoji||'',quoted:!entry,
-    forms:foodForm?[word.en,foodForm]:[word.en],preference,foodForm,
-    variants:[...new Set([sentence,alternative,preference,preference.replace(/^I /,'You ')].filter(Boolean))]};
+  const forms=[...new Set([word.en,target,...extra.map(item=>item.target),foodForm].filter(Boolean))];
+  const containsForm=sentence=>forms.some(form=>new RegExp('(^|[^\\p{L}\\p{N}])'+form.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'([^\\p{L}\\p{N}]|$)','iu').test(sentence));
+  return {word,before,after,target,sentence,extra,translation:example.uk,emoji:example.emoji||'',quoted:false,
+    forms,preference,foodForm,
+    variants:[...new Set([sentence,...extra.map(item=>item.sentence),alternative,preference,preference.replace(/^I /,'You ')].filter(item=>item&&containsForm(item)))]};
 }

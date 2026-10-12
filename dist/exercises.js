@@ -2,6 +2,44 @@
 function normalizeAnswer(value){return String(value).normalize('NFKC').toLowerCase().replace(/[’‘`]/g,"'").replace(/[“”«»"]/g,'').replace(/[.,!?;:]/g,'').replace(/\s+/g,' ').trim();}
 function sentenceTokens(value){return value.match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu)||[];}
 function normalizeSentence(value){return sentenceTokens(value).map(normalizeAnswer).join(' ');}
+const sentenceTranslationCache=new Map();
+let sentenceTranslationRequest=0;
+function sentenceWordMarkup(sentence,scope,output=scope+'-translation'){
+  let index=0,last=0,html='';
+  for(const match of sentence.matchAll(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu)){
+    html+=escapeHTML(sentence.slice(last,match.index))+`<button type="button" class="example-word" id="${scope}-word-${index++}" data-sentence-word="${escapeHTML(match[0])}" data-translation-output="${output}" aria-label="Перекласти слово ${escapeHTML(match[0])}" aria-controls="${output}" aria-pressed="false" lang="en">${escapeHTML(match[0])}</button>`;
+    last=match.index+match[0].length;
+  }
+  return html+escapeHTML(sentence.slice(last));
+}
+function sentenceTranslationOutput(id){return `<p id="${id}" class="sentence-word-translation" role="status" aria-live="polite" hidden></p>`;}
+function exampleMarkup(sentence,translation,scope){return `<div class="lesson-example"><p lang="en">${sentenceWordMarkup(sentence,scope)}</p><p lang="uk">${escapeHTML(translation)}</p>${sentenceTranslationOutput(scope+'-translation')}</div>`;}
+function localSentenceTranslation(token,lesson){
+  const key=normalizeWord(token);
+  if(key===normalizeWord(lesson.word.en))return lesson.word.uk;
+  return sentenceGlosses[key]||words.find(word=>normalizeWord(word.en)===key)?.uk||'';
+}
+async function showSentenceTranslation(token,outputId,lesson){
+    const output=document.getElementById(outputId);
+    if(!output)return;
+    const state=session?.exercise,step=state?.step,index=state?.index,request=++sentenceTranslationRequest;
+    output.dataset.request=String(request);output.hidden=false;
+    const local=localSentenceTranslation(token,lesson)||sentenceTranslationCache.get(normalizeWord(token));
+    if(local){output.textContent=token+' — '+local;return;}
+    output.textContent=token+' — …';
+    const current=()=>screen==='exercises'&&session?.exercise===state&&state.step===step&&state.index===index&&document.getElementById(output.id)===output&&output.dataset.request===String(request);
+    try{
+      const translation=await translateWord(token,'en|uk');
+      sentenceTranslationCache.set(normalizeWord(token),translation);
+      if(current())output.textContent=token+' — '+translation;
+    }catch{if(current())output.textContent=token+' — переклад зараз недоступний';}
+}
+function bindSentenceWords(root,lesson){
+  root.querySelectorAll('[data-sentence-word]').forEach(button=>button.onclick=()=>{
+    root.querySelectorAll('[data-sentence-word]').forEach(word=>word.setAttribute('aria-pressed',String(word===button)));
+    return showSentenceTranslation(button.dataset.sentenceWord,button.dataset.translationOutput,lesson);
+  });
+}
 function startExercises(s){
   screen='exercises';
   s.exercise={step:0,index:0,lessons:s.queue.map(wordLesson),difficult:new Set(),selfChecked:new Set(),completed:new Set(),hint:false,answered:false};
@@ -56,9 +94,10 @@ function exerciseHint(){
   const s=session,e=s.exercise,lesson=e.lessons[e.index];
   if(e.answered)return;
   e.hint=true;e.difficult.add(lesson.word.id);
-  document.getElementById('exercise-hint-content').innerHTML=`<strong lang="en">${escapeHTML(lesson.word.en)}</strong>${wordIpaMarkup(lesson.word)} — ${escapeHTML(lesson.word.uk)}<p lang="en">${escapeHTML(lesson.sentence)}</p><p>${escapeHTML(lesson.translation)}</p>`;
+  document.getElementById('exercise-hint-content').innerHTML=`<strong lang="en">${escapeHTML(lesson.word.en)}</strong>${wordIpaMarkup(lesson.word)} — ${escapeHTML(lesson.word.uk)}<p lang="en">${sentenceWordMarkup(lesson.sentence,'hint')}</p><p>${escapeHTML(lesson.translation)}</p>${sentenceTranslationOutput('hint-translation')}`;
   document.getElementById('exercise-hint-content').hidden=false;
   hydrateWordIpa(document.getElementById('exercise-hint-content'));
+  bindSentenceWords(document.getElementById('exercise-hint-content'),lesson);
   exerciseFeedback('');
 }
 function checkExercise(){
@@ -67,7 +106,7 @@ function checkExercise(){
   let correct=false;
   if(e.step===2||e.step===3){
     if(!input.value.trim()){exerciseFeedback('Спочатку напиши відповідь.');return;}
-    correct=normalizeAnswer(input.value)===normalizeAnswer(lesson.word.en);
+    correct=normalizeAnswer(input.value)===normalizeAnswer(e.step===3?lesson.target:lesson.word.en);
   }else if(e.step===4){
     if(e.picked.length!==e.tokens.length){exerciseFeedback('Використай усі слова, а потім перевір речення.');return;}
     correct=normalizeSentence(e.picked.map(index=>e.tokens[index]).join(' '))===normalizeSentence(lesson.sentence);
@@ -88,8 +127,8 @@ function renderSentenceBuilder(){
   const e=session.exercise;
   document.getElementById('sentence-answer').innerHTML=e.picked.length?e.picked.map((index,position)=>`<button type="button" class="sentence-token" id="chosen-token-${position}" lang="en" aria-label="Прибрати слово ${escapeHTML(e.tokens[index])}">${escapeHTML(e.tokens[index])} <span aria-hidden="true">×</span></button>`).join(''):'<span class="sentence-placeholder">Твоє речення</span>';
   document.getElementById('sentence-bank').innerHTML=e.tokens.map((token,index)=>`<button type="button" class="sentence-token" id="bank-token-${index}" lang="en" ${e.picked.includes(index)?'disabled':''}>${escapeHTML(token)}</button>`).join('');
-  e.tokens.forEach((_,index)=>{const button=document.getElementById('bank-token-'+index);button.disabled=e.answered||e.picked.includes(index);button.onclick=()=>{if(e.answered||e.picked.includes(index))return;e.picked.push(index);renderSentenceBuilder();exerciseFeedback('');};});
-  e.picked.forEach((_,position)=>document.getElementById('chosen-token-'+position).onclick=()=>{if(e.answered)return;e.picked.splice(position,1);renderSentenceBuilder();exerciseFeedback('');});
+  e.tokens.forEach((_,index)=>{const button=document.getElementById('bank-token-'+index);button.disabled=e.answered||e.picked.includes(index);button.onclick=()=>{if(e.answered||e.picked.includes(index))return;e.picked.push(index);renderSentenceBuilder();exerciseFeedback('');return showSentenceTranslation(e.tokens[index],'builder-translation',e.lessons[e.index]);};});
+  e.picked.forEach((index,position)=>document.getElementById('chosen-token-'+position).onclick=()=>{if(e.answered)return;e.picked.splice(position,1);renderSentenceBuilder();exerciseFeedback('');return showSentenceTranslation(e.tokens[index],'builder-translation',e.lessons[e.index]);});
 }
 function renderExercise(){
   const s=session,e=s.exercise;
@@ -97,16 +136,16 @@ function renderExercise(){
   const lesson=e.lessons[e.index],word=lesson.word,step=e.step;
   const progress=(step*e.lessons.length+e.index)/(6*e.lessons.length)*100;
   let content='';
-  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p><div class="lesson-example"><p lang="en">${escapeHTML(lesson.sentence)}</p><p lang="uk">${escapeHTML(lesson.translation)}</p></div><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button></div>`;
+  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}<button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button></div>`;
   if(step===1){
     e.options=e.options||recognitionOptions(lesson,s);
     content=`<h2 id="exercise-title" tabindex="-1">Обери англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p><div class="recognition-options">${e.options.map((option,index)=>`<button type="button" class="recognition-option" id="exercise-option-${index}" lang="en">${escapeHTML(option.en)}${wordIpaMarkup(option)}</button>`).join('')}</div>`;
   }
   if(step===2)content=`<h2 id="exercise-title" tabindex="-1">Напиши англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p>${exerciseInput('Напиши англійське слово або вираз')}`;
-  if(step===3)content=`<h2 id="exercise-title" tabindex="-1">Встав пропущене</h2><p class="exercise-prompt" lang="en">${escapeHTML(lesson.before)}<span class="sentence-gap">____</span>${escapeHTML(lesson.after)}</p><p lang="uk">${escapeHTML(word.uk)}</p>${exerciseInput('Напиши пропущене англійською')}`;
+  if(step===3)content=`<h2 id="exercise-title" tabindex="-1">Встав пропущене</h2><p class="exercise-prompt" lang="en">${sentenceWordMarkup(lesson.before,'gap-before','gap-translation')}<span class="sentence-gap">____</span>${sentenceWordMarkup(lesson.after,'gap-after','gap-translation')}</p>${sentenceTranslationOutput('gap-translation')}<p lang="uk">${escapeHTML(lesson.target.toLowerCase()===word.en.toLowerCase()?word.uk:sentenceGlosses[normalizeWord(lesson.target)]||word.uk)}</p>${exerciseInput('Напиши пропущене англійською')}`;
   if(step===4){
     if(!e.tokens){e.tokens=shuffle(sentenceTokens(lesson.sentence));e.picked=[];if(normalizeAnswer(e.tokens.join(' '))===normalizeAnswer(lesson.sentence))e.tokens.reverse();}
-    content=`<h2 id="exercise-title" tabindex="-1">Склади речення</h2><p class="exercise-prompt" lang="uk">${escapeHTML(lesson.translation)}</p><div id="sentence-answer" class="sentence-answer" aria-label="Твоє речення"></div><div id="sentence-bank" class="sentence-bank" aria-label="Слова для складання речення"></div><button type="button" class="btn secondary" id="sentence-clear">Очистити</button><button type="button" class="btn" id="exercise-check">Перевірити</button>`;
+    content=`<h2 id="exercise-title" tabindex="-1">Склади речення</h2><p class="exercise-prompt" lang="uk">${escapeHTML(lesson.translation)}</p><div id="sentence-answer" class="sentence-answer" aria-label="Твоє речення"></div><div id="sentence-bank" class="sentence-bank" aria-label="Слова для складання речення"></div>${sentenceTranslationOutput('builder-translation')}<button type="button" class="btn secondary" id="sentence-clear">Очистити</button><button type="button" class="btn" id="exercise-check">Перевірити</button>`;
   }
   if(step===5)content=`<h2 id="exercise-title" tabindex="-1">Напиши речення</h2><p class="exercise-prompt">Використай: <span lang="uk">${escapeHTML(word.uk)}</span></p><details class="known-vocabulary"><summary>Слова</summary><p lang="en">${escapeHTML([...new Set(e.lessons.flatMap(item=>item.variants.flatMap(sentenceTokens)))].join(' · '))}</p></details>${exerciseInput('Напиши завершене речення англійською',true)}<div id="exercise-self-check" hidden><button type="button" class="btn secondary" id="confirm-self-check">Перевірено самостійно</button></div>`;
   app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button><span>${step*e.lessons.length+e.index+1} / ${6*e.lessons.length}</span></div><section class="exercise-panel" aria-label="Вправа"><div class="exercise-content">${content}<div id="exercise-hint-content" class="lesson-example" hidden></div><p id="exercise-feedback" class="exercise-feedback" role="status" aria-live="polite"></p><div class="exercise-actions">${step?'<button type="button" class="btn secondary" id="exercise-hint">Підказка</button>':''}<button type="button" class="btn" id="exercise-next">${step===5&&e.index===e.lessons.length-1?'Завершити':'Далі →'}</button></div></div><div class="exercise-progress" role="progressbar" aria-label="Прогрес заняття" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress}%"></span></div></section>`;
@@ -133,6 +172,7 @@ function renderExercise(){
   if(step===4){renderSentenceBuilder();document.getElementById('exercise-check').onclick=checkExercise;document.getElementById('sentence-clear').onclick=()=>{if(e.answered)return;e.picked=[];renderSentenceBuilder();exerciseFeedback('');};}
   document.getElementById('exercise-title').focus?.({preventScroll:true});
   hydrateWordIpa(app);
+  bindSentenceWords(app,lesson);
   app.scrollIntoView?.({block:'start'});
 }
 function exerciseInput(label,sentence=false){return `<form id="exercise-form" class="exercise-form"><${sentence?'textarea':'input'} id="exercise-answer" ${sentence?'rows="3"':'type="text"'} lang="en" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-describedby="exercise-feedback" aria-label="${escapeHTML(label)}" placeholder="${sentence?'Твоє речення':'Відповідь'}">${sentence?'</textarea>':''}<button type="submit" class="btn" id="exercise-check">Перевірити</button></form>`;}

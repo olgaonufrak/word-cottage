@@ -80,7 +80,7 @@ async function main(){
   // a solvable gap, builder and own-sentence model with no invented translation.
   run(`for(const word of words){
     const lesson=wordLesson(word),state={exercise:{lessons:[lesson]}};
-    if(lesson.before+word.en+lesson.after!==lesson.sentence)throw Error('Broken gap '+word.id);
+    if(lesson.before+lesson.target+lesson.after!==lesson.sentence)throw Error('Broken gap '+word.id);
     if(!/[а-яіїєґ]/i.test(lesson.translation))throw Error('Missing Ukrainian '+word.id);
     for(const variant of lesson.variants){if(ownSentenceResult(variant,lesson,state).kind!=='correct')throw Error('Unsolvable own sentence '+word.id);}
     if(normalizeSentence(sentenceTokens(lesson.sentence).join(' '))!==normalizeSentence(lesson.sentence))throw Error('Unsolvable builder '+word.id);
@@ -88,8 +88,8 @@ async function main(){
   assert.equal(run('normalizeAnswer("  I’M   FINE! ")'),"i'm fine");
   assert.equal(run('wordLesson(words.find(w=>w.en==="apple")).sentence'),'I eat an apple.');
   assert.equal(run('wordLesson(words.find(w=>w.id==="verbs-0")).sentence'),'I want to be happy.');
-  assert.match(run('wordLesson(words.find(w=>w.category==="custom")).sentence'),/^I say/);
-  assert.equal(run('wordLesson({en:"orange",uk:"помаранчевий",category:"a1-colors"}).sentence'),'This bag is orange.');
+  assert.equal(run('wordLesson(words.find(w=>w.category==="custom")).sentence'),'Here is my special word.');
+  assert.equal(run('wordLesson({en:"orange",uk:"помаранчевий",category:"a1-colors"}).sentence'),'This cup is orange.');
   assert.equal(run('recognitionOptions(wordLesson(words.find(w=>w.id==="a1-fruit-apple")),{queue:[words.find(w=>w.id==="a1-fruit-apple")]}).every(w=>w.category==="a1-fruit")'),true,'A one-word lesson uses distractors from the same topic before unrelated vocabulary');
 
   // Unrecognized but familiar-word sentences get explicit self-assessment,
