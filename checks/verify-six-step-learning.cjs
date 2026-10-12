@@ -40,7 +40,7 @@ async function main(){
         const options=JSON.parse(run('JSON.stringify(session.exercise.options)'));
         assert.equal(new Set(options.map(word=>word.en.toLowerCase())).size,options.length);
         const correct=run('session.exercise.options.findIndex(w=>w.id===session.exercise.lessons[session.exercise.index].word.id)');
-        options.forEach((_,i)=>assert.notEqual(element('exercise-option-'+i).attributes['aria-invalid'],'true','A new question has no previous errors'));
+        options.forEach((_,i)=>{assert.notEqual(element('exercise-option-'+i).attributes['aria-invalid'],'true','A new question has no previous errors');assert.notEqual(element('exercise-option-'+i).attributes['data-correct'],'true','A new question has no previous correct highlight');});
         if(index===0){
           const wrong=element('exercise-option-'+((correct+1)%options.length));
           wrong.onclick();
@@ -51,6 +51,9 @@ async function main(){
           challengedId=run('session.exercise.lessons[0].word.id');
         }
         element('exercise-option-'+correct).onclick();assert.equal(element('exercise-next').disabled,false);
+        assert.equal(element('exercise-option-'+correct).attributes['data-correct'],'true');assert.match(element('exercise-option-'+correct).attributes['aria-label'],/— правильна відповідь/);
+        options.forEach((_,i)=>{assert.equal(element('exercise-option-'+i).disabled,true);if(i!==correct)assert.notEqual(element('exercise-option-'+i).attributes['data-correct'],'true');});
+        assert.match(element('exercise-feedback').className,/visually-hidden/);assert.equal(run('learned.size'),2);
       }
       if(step===2||step===3){
         assert.doesNotMatch(element('app').innerHTML,new RegExp('lang="en">'+answer+'<'),'No answer leak before recall');

@@ -162,7 +162,14 @@ function renderExercise(){
   else document.getElementById('exercise-hint').onclick=exerciseHint;
   if(step===1)e.options.forEach((option,index)=>document.getElementById('exercise-option-'+index).onclick=()=>{
     if(e.answered)return;
-    if(option.id===word.id){exerciseFeedback('Правильно!','correct');finishExerciseAnswer();e.options.forEach((_,i)=>document.getElementById('exercise-option-'+i).disabled=true);}
+    if(option.id===word.id){
+      const button=document.getElementById('exercise-option-'+index);
+      button.setAttribute('data-correct','true');
+      button.setAttribute('aria-label',option.en+' — правильна відповідь');
+      exerciseFeedback('Правильно!','visually-hidden');
+      finishExerciseAnswer();
+      e.options.forEach((_,i)=>document.getElementById('exercise-option-'+i).disabled=true);
+    }
     else{
       e.difficult.add(word.id);
       const button=document.getElementById('exercise-option-'+index);
