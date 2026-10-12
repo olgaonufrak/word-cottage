@@ -14,6 +14,7 @@ function sentenceWordMarkup(sentence,scope,output=scope+'-translation'){
 }
 function sentenceTranslationOutput(id){return `<p id="${id}" class="sentence-word-translation" role="status" aria-live="polite" hidden></p>`;}
 function exampleMarkup(sentence,translation,scope){return `<div class="lesson-example"><p lang="en">${sentenceWordMarkup(sentence,scope)}</p><p lang="uk">${escapeHTML(translation)}</p>${sentenceTranslationOutput(scope+'-translation')}</div>`;}
+function exerciseAudioMarkup(){return `<div class="lesson-audio-controls"><div class="lesson-audio-row"><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak audio-slow" id="exercise-audio-slow" aria-label="Послухати слово вдвічі повільніше">×0,5</button></div><div class="lesson-audio-row"><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button><button type="button" class="speak audio-slow" id="example-audio-slow" aria-label="Послухати приклад вдвічі повільніше">×0,5</button></div></div>`;}
 function localSentenceTranslation(token,lesson){
   const key=normalizeWord(token);
   if(key===normalizeWord(lesson.word.en))return lesson.word.uk;
@@ -136,7 +137,7 @@ function renderExercise(){
   const lesson=e.lessons[e.index],word=lesson.word,step=e.step;
   const progress=(step*e.lessons.length+e.index)/(6*e.lessons.length)*100;
   let content='';
-  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}<button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button></div>`;
+  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}${exerciseAudioMarkup()}</div>`;
   if(step===1){
     e.options=e.options||recognitionOptions(lesson,s);
     content=`<h2 id="exercise-title" tabindex="-1">Обери англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p><div class="recognition-options">${e.options.map((option,index)=>`<button type="button" class="recognition-option" id="exercise-option-${index}" lang="en">${escapeHTML(option.en)}${wordIpaMarkup(option)}</button>`).join('')}</div>`;
@@ -152,7 +153,12 @@ function renderExercise(){
   document.getElementById('back').onclick=home;
   document.getElementById('exercise-next').disabled=step!==0;
   document.getElementById('exercise-next').onclick=()=>{if(step===0)e.answered=true;nextExercise();};
-  if(step===0){document.getElementById('exercise-audio').onclick=()=>speak(word.en,'en',word.audio);document.getElementById('example-audio').onclick=()=>speak(lesson.sentence,'en');}
+  if(step===0){
+    document.getElementById('exercise-audio').onclick=()=>speak(word.en,'en',word.audio);
+    document.getElementById('exercise-audio-slow').onclick=()=>speak(word.en,'en',word.audio,.5);
+    document.getElementById('example-audio').onclick=()=>speak(lesson.sentence,'en');
+    document.getElementById('example-audio-slow').onclick=()=>speak(lesson.sentence,'en','',.5);
+  }
   else document.getElementById('exercise-hint').onclick=exerciseHint;
   if(step===1)e.options.forEach((option,index)=>document.getElementById('exercise-option-'+index).onclick=()=>{
     if(e.answered)return;

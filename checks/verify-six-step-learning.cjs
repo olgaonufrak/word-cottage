@@ -23,6 +23,11 @@ async function main(){
   run('window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};window.speechSynthesis={cancel(){},getVoices(){return [{name:"Google English",lang:"en-US"}]},speak(u){window.lastSpeech=u}}');
   element('example-audio').onclick();assert.equal(run('window.lastSpeech.text'),run('session.exercise.lessons[0].sentence'));
   element('exercise-audio').onclick();assert.equal(run('window.lastSpeech.text'),run('session.queue[0].en'));
+  element('exercise-audio-slow').onclick();assert.equal(run('window.lastSpeech.text'),run('session.queue[0].en'));assert.equal(run('window.lastSpeech.rate'),.95*.5);
+  element('example-audio-slow').onclick();assert.equal(run('window.lastSpeech.text'),run('session.exercise.lessons[0].sentence'));assert.equal(run('window.lastSpeech.rate'),.95*.5);
+  element('example-audio').onclick();assert.equal(run('window.lastSpeech.rate'),.95);
+  element('exercise-audio').onclick();assert.equal(run('window.lastSpeech.rate'),.95);
+  assert.equal(run('session.exercise.step'),0);assert.equal(run('session.exercise.index'),0);assert.equal(run('learned.size'),2,'Audio controls do not advance or save the exercise');
   let challengedId='';
   for(let step=0;step<6;step++){
     for(let index=0;index<2;index++){

@@ -233,7 +233,8 @@ function preferredWordVoice(voices,lang){
   };
   return candidates.sort((a,b)=>score(b)-score(a))[0]||null;
 }
-function speak(word,lang='en',audioURL=''){
+function speak(word,lang='en',audioURL='',speed=1){
+  const playbackSpeed=speed===.5 ? .5 : 1;
   const version=++speechVersion;
   cancelVoiceWait?.();cancelVoiceWait=null;
   if(activeWordAudio){activeWordAudio.pause();activeWordAudio=null;}
@@ -244,6 +245,7 @@ function speak(word,lang='en',audioURL=''){
     if(version!==speechVersion)return;
     if(!url||!window.Audio){unavailable();return;}
     const audio=new window.Audio(url);activeWordAudio=audio;
+    audio.playbackRate=playbackSpeed;audio.preservesPitch=true;
     audio.onerror=unavailable;audio.onended=()=>{if(activeWordAudio===audio)activeWordAudio=null;};
     try{audio.play()?.catch(unavailable);}catch{unavailable();}
   };
@@ -253,7 +255,7 @@ function speak(word,lang='en',audioURL=''){
     const speech=window.speechSynthesis,u=new window.SpeechSynthesisUtterance(word);
     const voices=speech.getVoices();u.voice=preferredWordVoice(voices,lang);
     if(voices.length&&!u.voice){recording();return;}
-    u.lang=u.voice?.lang||(lang==='uk'?'uk-UA':'en-US');u.rate=.95;u.pitch=1;u.volume=1;
+    u.lang=u.voice?.lang||(lang==='uk'?'uk-UA':'en-US');u.rate=.95*playbackSpeed;u.pitch=1;u.volume=1;
     u.onerror=event=>{if(version===speechVersion&&event.error!=='interrupted'&&event.error!=='canceled')recording();};
     try{speech.speak(u);}catch{recording();}
   };
