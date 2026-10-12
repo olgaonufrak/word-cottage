@@ -24,7 +24,7 @@ async function main(){
   }
   // Dictionary scripts must finish before personal-word restoration and learned progress.
   const index=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');
-  assert.deepEqual([...index.matchAll(/<script src="([^"]+)" defer><\/script>/g)].map(match=>match[1].split('?')[0]),['data.js','stage1-data.js','stage2-data.js','stage3-data.js','stage4-data.js','search.js','app.js']);
+  assert.deepEqual([...index.matchAll(/<script src="([^"]+)" defer><\/script>/g)].map(match=>match[1].split('?')[0]),['data.js','stage1-data.js','stage2-data.js','stage3-data.js','stage4-data.js','search.js','lesson-data.js','exercises.js','app.js']);
   assert.match(index,/id="word-total">3030/);
   assert.equal((element('app').innerHTML.match(/class="group-card"/g)||[]).length,2);
   element('everyday-group').onclick();
@@ -48,7 +48,7 @@ async function main(){
     assert.equal(element('section-word-0').checked,true);assert.equal(element('list-choice-count').textContent,status);
     element('learn-section').onclick();assert.equal(element('word-count').textContent,1);assert.equal(element('count-plus').disabled,true);
     element('back').onclick();assert.equal(element('section-word-0').checked,true);
-    element('learn-section').onclick();element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
+    element('learn-section').onclick();element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
     assert.equal(run('selection.deck[0].category'),section.id);
     run('home()');assert.equal(run('screen'),'stage-three');
   }
@@ -56,7 +56,7 @@ async function main(){
   element('section-a3-phrasal-verbs').onclick();element('learn-section').onclick();
   assert.match(element('count-available').textContent,/30/);
   element('app').querySelectorAll('[data-count]').find(button=>button.dataset.count==='5').onclick();
-  element('start-session').onclick();assert.equal(run('selection.deck.length'),30);
+  element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),30);
   for(let i=0;i<5;i++){element('swipe-learn').onclick();await new Promise(resolve=>setTimeout(resolve,210));assert.equal(run('screen'),i<4?'selection':'study');}
   assert.equal(run('session.queue.length'),5);assert.equal(run("session.queue.every(w=>w.category==='a3-phrasal-verbs')"),true);
   assert.match(element('app').innerHTML,/id="back">‹ Розділи Етапу 3/);

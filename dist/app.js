@@ -45,7 +45,7 @@ function showBasics(){
   learningGroup='basics';
   cancelWordSearch();screen='home';session=null;selection=null;
   const listCategories=basicCategories(),basicWordCount=words.filter(word=>listCategories.some(category=>category.id===word.category)).length;
-  app.innerHTML=`<div class="study-top"><button class="back" id="basics-back">‹ Дві групи</button></div><div class="intro"><div><div class="eyebrow">Твій маленький словник</div><h1>Час для <em>нових слів.</em></h1><p class="sub">Обери розділ і почни з однієї картки.</p></div><p class="note">Чашка чаю.<br>Кілька слів.<br>Ще один маленький крок.</p></div><div class="home-layout"><section>${searchForm()}<div class="section-label"><h2>На що сьогодні настрій?</h2><span>${listCategories.length} ${listCategories.length===4?'розділи':'розділів'} · ${basicWordCount} ${wordLabel(basicWordCount)}</span></div><div class="category-grid">${listCategories.map((c,i)=>{const size=words.filter(word=>word.category===c.id).length;return `<button class="category ${c.color}" data-category="${c.id}"><div class="cat-top">${tile(c)}<span class="cat-number">${String(i+1).padStart(2,'0')}</span></div><h3>${c.name}</h3><div class="en">${c.en} · ${size} ${wordLabel(size)}</div><p>${c.note}</p><div class="progress-row"><div class="track"><div class="fill" style="width:${size?count(c.id)/size*100:0}%"></div></div><span>${count(c.id)} / ${size}</span></div></button>`;}).join('')}</div><div class="mix"><span class="mix-symbol" aria-hidden="true">✳</span><div><h3>Змішано</h3><p>Збери слова з різних розділів.</p></div><button class="btn" id="mixed">Перемішати</button></div><button class="learned-entry" id="learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button><p class="bottom-note">Торкнись картки, щоб побачити переклад. Повторюй, доки слово не стане знайомим.</p></section><aside class="side-art" aria-label="Затишна клаптикова ілюстрація з вашого фото"><div class="art-label">Little words,<br>little wonders.<small>ОДНЕ СЛОВО ЗА РАЗ</small></div></aside></div>`;
+  app.innerHTML=`<div class="study-top"><button class="back" id="basics-back">‹ Дві групи</button></div><div class="intro"><div><div class="eyebrow">Твій маленький словник</div><h1>Час для <em>нових слів.</em></h1><p class="sub">Обери розділ і почни з однієї картки.</p></div><p class="note">Чашка чаю.<br>Кілька слів.<br>Ще один маленький крок.</p></div><div class="home-layout"><section>${searchForm()}<div class="section-label"><h2>На що сьогодні настрій?</h2><span>${listCategories.length} ${listCategories.length===4?'розділи':'розділів'} · ${basicWordCount} ${wordLabel(basicWordCount)}</span></div><div class="category-grid">${listCategories.map((c,i)=>{const size=words.filter(word=>word.category===c.id).length;return `<button class="category ${c.color}" data-category="${c.id}"><div class="cat-top">${tile(c)}<span class="cat-number">${String(i+1).padStart(2,'0')}</span></div><h3>${c.name}</h3><div class="en">${c.en} · ${size} ${wordLabel(size)}</div><p>${c.note}</p><div class="progress-row"><div class="track"><div class="fill" style="width:${size?count(c.id)/size*100:0}%"></div></div><span>${count(c.id)} / ${size}</span></div></button>`;}).join('')}</div><div class="mix"><span class="mix-symbol" aria-hidden="true">✳</span><div><h3>Змішано</h3><p>Збери слова з різних розділів.</p></div><button class="btn" id="mixed">Перемішати</button></div><button class="learned-entry" id="learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button><p class="bottom-note">Обери вправи у шість кроків або звичайні картки. Повторюй у своєму ритмі.</p></section><aside class="side-art" aria-label="Затишна клаптикова ілюстрація з вашого фото"><div class="art-label">Little words,<br>little wonders.<small>ОДНЕ СЛОВО ЗА РАЗ</small></div></aside></div>`;
   document.getElementById('basics-back').onclick=landing;
   app.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>showSectionWords([button.dataset.category]));
   document.getElementById('mixed').onclick=()=>picker();document.getElementById('learned-words').onclick=showLearned;
@@ -100,12 +100,15 @@ function chooseAmount(ids,mixed=false,initialAmount=10,selectedIds=null){
   const available=sectionWordPool(ids,selectedIds);
   screen='amount';session=null;selection=null;
   const category=categories.find(c=>c.id===ids[0]);
-  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="mix-picker amount-picker"><div class="eyebrow">${mixed?'Змішано':category.en}</div><h1>${practiceTitle(category,mixed)}</h1>${category.ukTitle?`<p class="section-uk-title" lang="uk">${category.ukTitle}</p>`:''}${amountControls()}<button class="btn" id="start-session">Почати</button></section>`;
+  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="mix-picker amount-picker"><div class="eyebrow">${mixed?'Змішано':category.en}</div><h1>${practiceTitle(category,mixed)}</h1>${category.ukTitle?`<p class="section-uk-title" lang="uk">${category.ukTitle}</p>`:''}<div class="practice-mode-picker"><label for="practice-mode">Як будемо вчити?</label><select id="practice-mode"><option value="steps">Вправи у 6 кроків</option><option value="cards">Звичайні картки · обидва напрямки</option></select><p>Від знайомства зі словом до власного речення. На кожному кроці підказок стає менше.</p><label class="check"><input type="checkbox" id="practice-only-new"> Лише невивчені слова</label></div>${amountControls()}<button class="btn" id="start-session">Почати</button></section>`;
+  document.getElementById('practice-mode').value='steps';
   document.getElementById('back').textContent='‹ До списку слів';
   document.getElementById('back').onclick=()=>showSectionWords(ids,mixed,selectedIds||[]);
   const button=document.getElementById('start-session');
   const amount=bindAmount(available.length,button,initialAmount);
-  button.onclick=()=>suggestWords(ids,mixed,amount.value(),selectedIds);
+  const onlyNew=document.getElementById('practice-only-new');
+  onlyNew.onchange=()=>amount.setMaximum(available.filter(word=>!onlyNew.checked||!learned.has(word.id)).length);
+  button.onclick=()=>{const pool=onlyNew.checked?available.filter(word=>!learned.has(word.id)).map(word=>word.id):selectedIds;if(onlyNew.checked&&!pool.length)return;suggestWords(ids,mixed,amount.value(),pool,document.getElementById('practice-mode').value);};
 }
 function picker(initialIds=basicCategories().map(c=>c.id)){
   screen='picker';session=null;selection=null;
@@ -121,15 +124,15 @@ function picker(initialIds=basicCategories().map(c=>c.id)){
 function shuffle(items){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function escapeHTML(text){return String(text).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));}
 function wordDetails(word){const category=categories.find(c=>c.id===word.category);return `<span class="word-details"><strong lang="en">${escapeHTML(word.en)}</strong><span lang="uk">${escapeHTML(word.uk)}</span><small>${category.name}${learned.has(word.id)?' · Вивчено':''}</small></span>`;}
-function suggestWords(ids,mixed,amount,selectedIds=null){
+function suggestWords(ids,mixed,amount,selectedIds=null,mode='cards'){
   if(!Array.isArray(ids)||!Number.isInteger(amount)||amount<1||!ids.length||ids.some(id=>!categories.some(c=>c.id===id)))throw Error('Некоректні параметри вибору слів');
   const available=sectionWordPool(ids,selectedIds);
   if(amount>available.length)throw Error('Недостатньо слів у вибраних розділах');
   const deck=[...shuffle(available.filter(word=>!learned.has(word.id))),...shuffle(available.filter(word=>learned.has(word.id)))];
-  selection={ids:[...ids],mixed,target:amount,selectedIds:selectedIds===null?null:[...selectedIds],deck,index:0,chosen:[],skipped:[],busy:false};
+  selection={ids:[...ids],mixed,mode,target:amount,selectedIds:selectedIds===null?null:[...selectedIds],deck,index:0,chosen:[],skipped:[],busy:false};
   screen='selection';session=null;
   app.innerHTML=`<div class="study-top"><button class="back" id="back">‹ Змінити кількість</button></div><section class="word-list-panel swipe-panel"><div class="eyebrow">${mixed?'Змішано':categories.find(c=>c.id===ids[0]).name}</div><h1>Обери свої слова</h1><p class="sub">Вправо — вчити. Вліво — не вчити.</p><div class="swipe-progress"><p id="selected-total" class="selection-total" role="status" aria-live="polite"></p><div class="track"><div class="fill" id="selection-fill"></div></div></div><div id="swipe-content"></div></section>`;
-  document.getElementById('back').onclick=()=>chooseAmount(ids,mixed,amount,selectedIds);
+  document.getElementById('back').onclick=()=>{chooseAmount(ids,mixed,amount,selectedIds);document.getElementById('practice-mode').value=mode;};
   renderSwipeCard();
 }
 function renderSwipeCard(){
@@ -160,7 +163,7 @@ function decideSwipe(accepted){
     const word=s.deck[s.index++];
     if(accepted)s.chosen.push(word);else s.skipped.push(word);
     s.busy=false;
-    if(s.chosen.length===s.target){selection=null;start(s.ids,s.mixed,false,s.target,s.chosen.map(word=>word.id));return;}
+    if(s.chosen.length===s.target){selection=null;start(s.ids,s.mixed,false,s.target,s.chosen.map(word=>word.id),s.mode);return;}
     renderSwipeCard();
   },160);
 }
@@ -194,11 +197,12 @@ function bindSwipeGesture(card){
 function showLearned(){
   cancelWordSearch();screen='learned';session=null;selection=null;
   const list=words.filter(word=>learned.has(word.id));
-  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі.`:'Тут з’являться слова, які ти позначиш кнопкою «Знаю» під час навчання.'}</p>${list.length?`<div class="learned-list">${list.map(word=>`<div class="learned-word">${wordDetails(word)}</div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
+  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі.`:'Тут з’являться слова після шести кроків із перевіреною відповіддю або позначки «Знаю» на картці.'}</p>${list.length?`<div class="learned-list">${list.map(word=>`<div class="learned-word">${wordDetails(word)}</div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
   document.getElementById('back').onclick=home;
   if(!list.length)document.getElementById('learned-start').onclick=home;
 }
-function start(ids,mixed=false,onlyNew=false,limit=null,selectedIds=null){
+function start(ids,mixed=false,onlyNew=false,limit=null,selectedIds=null,mode='cards'){
+  if(!['cards','steps'].includes(mode))throw Error('Невідомий режим навчання');
   if(!Array.isArray(ids)||!ids.length||ids.some(id=>!categories.some(c=>c.id===id)))throw Error('Невідомий розділ');
   if(limit!==null&&(!Number.isInteger(limit)||limit<1))throw Error('Некоректна кількість слів');
   if(selectedIds!==null&&(!Array.isArray(selectedIds)||!selectedIds.length||new Set(selectedIds).size!==selectedIds.length||selectedIds.some(id=>!words.some(word=>word.id===id&&ids.includes(word.category)))))throw Error('Некоректний список слів');
@@ -206,7 +210,8 @@ function start(ids,mixed=false,onlyNew=false,limit=null,selectedIds=null){
   if(onlyNew)list=list.filter(word=>!learned.has(word.id));
   if(mixed&&selectedIds===null)list=shuffle(list);
   if(limit!==null)list=list.slice(0,limit);
-  session={ids,mixed,onlyNew,limit,selectedIds,queue:list,index:0,flipped:false,correct:0,review:[],initial:list.length};
+  session={ids,mixed,onlyNew,limit,selectedIds,mode,queue:list,index:0,flipped:false,correct:0,review:[],initial:list.length};
+  if(mode==='steps'){startExercises(session);return;}
   screen='study';renderStudy();
 }
 function renderStudy(){const s=session;const c=categories.find(c=>c.id===s.ids[0]);app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button><span class="en">${s.queue.length} ${wordLabel(s.queue.length)} у цій сесії</span></div><div class="study-layout"><aside class="study-aside">${tile(c)}<div class="eyebrow">${s.mixed?'Mix & learn':c.en}</div><h1>${s.mixed?'Змішано':practiceTitle(c)}</h1><p class="sub">Не поспішай. Дай слову час.</p><div class="settings"><label for="direction">Напрямок</label><select id="direction"><option value="en">English → Українська</option><option value="uk">Українська → English</option></select><label class="check"><input id="only-new" type="checkbox" ${s.onlyNew?'checked':''}> Лише невивчені</label></div></aside><section class="study-main" id="study-content"></section></div>`;document.getElementById('back').onclick=home;const d=document.getElementById('direction');d.value=reversed?'uk':'en';d.onchange=()=>{reversed=d.value==='uk';s.flipped=false;renderCard();};document.getElementById('only-new').onchange=e=>start(s.ids,s.mixed,e.target.checked,s.limit,s.selectedIds);renderCard();}

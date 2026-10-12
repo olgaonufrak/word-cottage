@@ -35,12 +35,12 @@ async function main(){
     assert.equal(run('window.lastSpeech.text'),run(`words.find(w=>w.category===${JSON.stringify(section.id)}).en`));
     element('section-word-0').checked=true;element('section-word-0').onchange();
     element('learn-section').onclick();assert.equal(element('word-count').textContent,1);
-    element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
+    element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
     assert.equal(run('selection.deck[0].category'),section.id);
     run('home()');assert.equal(run('screen'),'stage-two');
   }
   element('section-a2-animals').onclick();element('learn-section').onclick();
-  const preset=element('app').querySelectorAll('[data-count]').find(button=>button.dataset.count==='5');preset.onclick();element('start-session').onclick();
+  const preset=element('app').querySelectorAll('[data-count]').find(button=>button.dataset.count==='5');preset.onclick();element('practice-mode').value='cards';element('start-session').onclick();
   for(let i=0;i<5;i++){element('swipe-learn').onclick();await new Promise(resolve=>setTimeout(resolve,210));assert.equal(run('screen'),i<4?'selection':'study');}
   assert.equal(run('session.queue.length'),5);assert.equal(run("session.queue.every(w=>w.category==='a2-animals')"),true);
   assert.match(element('app').innerHTML,/id="back">‹ Розділи Етапу 2/);

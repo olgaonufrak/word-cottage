@@ -49,13 +49,13 @@ async function main(){
     assert.equal(element('section-word-0').checked,true);assert.equal(element('list-choice-count').textContent,status);
     element('learn-section').onclick();assert.equal(element('word-count').textContent,1);assert.equal(element('count-plus').disabled,true);
     element('back').onclick();assert.equal(element('section-word-0').checked,true);
-    element('learn-section').onclick();element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
+    element('learn-section').onclick();element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
     assert.equal(run('selection.deck[0].id'),list[0].id);run('home()');assert.equal(run('screen'),'stage-four');
   }
   // Full pool: skipping cannot start study; five accepted cards trigger exactly a five-card session.
   element('section-a4-office').onclick();element('learn-section').onclick();
   for(const number of [5,10,20]){element('app').querySelectorAll('[data-count]').find(b=>Number(b.dataset.count)===number).onclick();assert.equal(element('word-count').textContent,number);}
-  element('app').querySelectorAll('[data-count]').find(b=>b.dataset.count==='5').onclick();element('start-session').onclick();
+  element('app').querySelectorAll('[data-count]').find(b=>b.dataset.count==='5').onclick();element('practice-mode').value='cards';element('start-session').onclick();
   assert.equal(run('selection.deck.length'),30);const skipped=run('selection.deck[0].id');
   element('swipe-skip').onclick();await new Promise(r=>setTimeout(r,210));assert.equal(run('session'),null);
   for(let i=0;i<5;i++){element('swipe-learn').onclick();await new Promise(r=>setTimeout(r,210));assert.equal(run('screen'),i<4?'selection':'study');}

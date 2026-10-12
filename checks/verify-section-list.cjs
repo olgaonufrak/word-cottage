@@ -73,10 +73,10 @@ async function main(){
   element('learn-section').onclick();assert.equal(element('word-count').textContent,3);assert.equal(element('count-plus').disabled,true);
   assert.equal(element('app').querySelectorAll('[data-count]').every(button=>button.disabled),true);
   element('back').onclick();assert.equal(element('section-word-0').checked,true);assert.equal(element('section-word-3').checked,false);
-  element('learn-section').onclick();element('count-minus').onclick();element('start-session').onclick();
+  element('learn-section').onclick();element('count-minus').onclick();element('practice-mode').value='cards';element('start-session').onclick();
   assert.equal(run('selection.target'),2);assert.deepEqual(JSON.parse(run('JSON.stringify(selection.deck.map(w=>w.id).sort())')),ids.slice().sort());
   element('back').onclick();assert.equal(element('word-count').textContent,2);
-  element('start-session').onclick();element('swipe-skip').onclick();await pause();
+  element('practice-mode').value='cards';element('start-session').onclick();element('swipe-skip').onclick();await pause();
   element('swipe-learn').onclick();await pause();assert.equal(run('screen'),'selection');
   element('swipe-learn').onclick();await pause();assert.equal(run('screen'),'study');
   assert.equal(run('session.queue.length'),2);assert.equal(run('session.queue.every(w=>'+JSON.stringify(ids)+'.includes(w.id))'),true);
@@ -87,14 +87,14 @@ async function main(){
   element('clear-word-choice').onclick();assert.equal(element('section-word-99').checked,false);
   element('learn-section').onclick();assert.match(element('count-available').textContent,/100/);
   for(const n of [5,10,20]){const preset=element('app').querySelectorAll('[data-count]').find(button=>Number(button.dataset.count)===n);preset.onclick();assert.equal(element('word-count').textContent,n);}
-  element('start-session').onclick();assert.equal(run('selection.deck.length'),100);
+  element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),100);
   // Mixed: category selection -> full list -> size -> exact manually selected pool.
   run('showBasics();picker()');assert.doesNotMatch(element('app').innerHTML,/id="word-count"/);
   const inputs=element('app').querySelectorAll('.pick-options input');inputs.forEach(input=>input.checked=false);inputs[0].onchange();assert.equal(element('start-mix').disabled,true);
   inputs.filter(input=>['nouns','verbs'].includes(input.value)).forEach(input=>input.checked=true);inputs[0].onchange();element('start-mix').onclick();
   assert.equal(run('screen'),'section-words');assert.equal((element('app').innerHTML.match(/class="section-word-option"/g)||[]).length,200);
   for(const index of [0,100]){element('section-word-'+index).checked=true;element('section-word-'+index).onchange();}
-  element('learn-section').onclick();element('start-session').onclick();assert.equal(run('selection.mixed'),true);assert.equal(run('selection.deck.length'),2);
+  element('learn-section').onclick();element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.mixed'),true);assert.equal(run('selection.deck.length'),2);
   assert.equal(run("new Set(selection.deck.map(w=>w.category)).size"),2);
   // Exact-card search still starts directly; unsafe custom translations are escaped in the list.
   run("addPersonalWord({en:'safeexample',uk:'<img src=x onerror=alert(1)>'});showSectionWords(['custom'])");
