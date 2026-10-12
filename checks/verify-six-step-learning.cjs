@@ -21,8 +21,8 @@ async function main(){
   assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),2);
   assert.equal(run('learned.size'),2,'Introduction must not mark anything learned');
   assert.equal(run('session.exercise.lessons[0].quoted'),false);
-  assert.match(element('app').innerHTML,/Слова та підказки до конструкції/);
-  assert.match(element('app').innerHTML,/aria-current="step"/);
+  assert.doesNotMatch(element('app').innerHTML,/Знайомство зі словом|Знайома конструкція|Тренуємо вимову|lesson-foundation/);
+  assert.match(element('app').innerHTML,/role="progressbar"/);
   run('window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};window.speechSynthesis={cancel(){},getVoices(){return [{name:"Google English",lang:"en-US"}]},speak(u){window.lastSpeech=u}}');
   element('example-audio').onclick();assert.equal(run('window.lastSpeech.text'),run('session.exercise.lessons[0].sentence'));
   element('exercise-audio').onclick();assert.equal(run('window.lastSpeech.text'),run('session.queue[0].en'));
@@ -71,7 +71,7 @@ async function main(){
     }
   }
   assert.equal(run('session.exercise.step'),6);assert.equal(run('learned.size'),4);
-  assert.ok(element('app').innerHTML.includes('Шість кроків пройдено'));
+  assert.ok(element('app').innerHTML.includes('Готово!'));
   assert.equal(storage.get('word-cottage-personal-words'),originalPersonal);
   assert.ok(JSON.parse(storage.get('word-cottage-learned')).includes(challengedId));
   const reload=fixture(storage,undefined,true);assert.equal(reload.run('learned.size'),4);
@@ -103,7 +103,7 @@ async function main(){
   const sizeBefore=run('learned.size');element('confirm-self-check').onclick();element('exercise-next').onclick();
   assert.equal(run('learned.size'),sizeBefore);assert.equal(run('session.exercise.completed.size'),0);
   assert.equal(run('session.exercise.selfChecked.size'),1);
-  assert.match(element('app').innerHTML,/не позначено автоматично/);
+  assert.match(element('app').innerHTML,/залишилися для повторення/);
 
   run('showSectionWords(["a1-fruit"]);chooseAmount(["a1-fruit"])');
   element('practice-only-new').checked=true;element('practice-only-new').onchange();
