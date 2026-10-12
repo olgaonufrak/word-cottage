@@ -163,7 +163,14 @@ function renderExercise(){
   if(step===1)e.options.forEach((option,index)=>document.getElementById('exercise-option-'+index).onclick=()=>{
     if(e.answered)return;
     if(option.id===word.id){exerciseFeedback('Правильно!','correct');finishExerciseAnswer();e.options.forEach((_,i)=>document.getElementById('exercise-option-'+i).disabled=true);}
-    else{e.difficult.add(word.id);exerciseFeedback('Спробуй ще раз.','retry');document.getElementById('exercise-option-'+index).disabled=true;}
+    else{
+      e.difficult.add(word.id);
+      const button=document.getElementById('exercise-option-'+index);
+      button.setAttribute('aria-invalid','true');
+      button.setAttribute('aria-label',option.en+' — неправильна відповідь');
+      button.disabled=true;
+      exerciseFeedback('Неправильна відповідь.','visually-hidden');
+    }
   });
   if(step===2||step===3||step===5){
     document.getElementById('exercise-form').onsubmit=event=>{event.preventDefault();checkExercise();};

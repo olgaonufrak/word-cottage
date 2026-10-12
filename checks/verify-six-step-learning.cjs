@@ -40,9 +40,14 @@ async function main(){
         const options=JSON.parse(run('JSON.stringify(session.exercise.options)'));
         assert.equal(new Set(options.map(word=>word.en.toLowerCase())).size,options.length);
         const correct=run('session.exercise.options.findIndex(w=>w.id===session.exercise.lessons[session.exercise.index].word.id)');
+        options.forEach((_,i)=>assert.notEqual(element('exercise-option-'+i).attributes['aria-invalid'],'true','A new question has no previous errors'));
         if(index===0){
-          element('exercise-option-'+((correct+1)%options.length)).onclick();
-          assert.equal(element('exercise-next').disabled,true);assert.match(element('exercise-feedback').textContent,/Спробуй ще раз/);
+          const wrong=element('exercise-option-'+((correct+1)%options.length));
+          wrong.onclick();
+          assert.equal(element('exercise-next').disabled,true);assert.equal(wrong.disabled,true);
+          assert.equal(wrong.attributes['aria-invalid'],'true');assert.match(wrong.attributes['aria-label'],/неправильна відповідь/);
+          assert.doesNotMatch(element('exercise-feedback').textContent,/Спробуй ще раз/);assert.match(element('exercise-feedback').className,/visually-hidden/);
+          assert.notEqual(element('exercise-option-'+correct).attributes['aria-invalid'],'true');assert.equal(run('learned.size'),2);
           challengedId=run('session.exercise.lessons[0].word.id');
         }
         element('exercise-option-'+correct).onclick();assert.equal(element('exercise-next').disabled,false);
