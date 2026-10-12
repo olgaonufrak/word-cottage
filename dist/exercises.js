@@ -56,8 +56,9 @@ function exerciseHint(){
   const s=session,e=s.exercise,lesson=e.lessons[e.index];
   if(e.answered)return;
   e.hint=true;e.difficult.add(lesson.word.id);
-  document.getElementById('exercise-hint-content').innerHTML=`<strong lang="en">${escapeHTML(lesson.word.en)}</strong> — ${escapeHTML(lesson.word.uk)}<p lang="en">${escapeHTML(lesson.sentence)}</p><p>${escapeHTML(lesson.translation)}</p>`;
+  document.getElementById('exercise-hint-content').innerHTML=`<strong lang="en">${escapeHTML(lesson.word.en)}</strong>${wordIpaMarkup(lesson.word)} — ${escapeHTML(lesson.word.uk)}<p lang="en">${escapeHTML(lesson.sentence)}</p><p>${escapeHTML(lesson.translation)}</p>`;
   document.getElementById('exercise-hint-content').hidden=false;
+  hydrateWordIpa(document.getElementById('exercise-hint-content'));
   exerciseFeedback('');
 }
 function checkExercise(){
@@ -96,10 +97,10 @@ function renderExercise(){
   const lesson=e.lessons[e.index],word=lesson.word,step=e.step;
   const progress=(step*e.lessons.length+e.index)/(6*e.lessons.length)*100;
   let content='';
-  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2><p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p><div class="lesson-example"><p lang="en">${escapeHTML(lesson.sentence)}</p><p lang="uk">${escapeHTML(lesson.translation)}</p></div><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button></div>`;
+  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p><div class="lesson-example"><p lang="en">${escapeHTML(lesson.sentence)}</p><p lang="uk">${escapeHTML(lesson.translation)}</p></div><button type="button" class="speak" id="exercise-audio">♫ Послухати слово</button><button type="button" class="speak" id="example-audio">♫ Послухати приклад</button></div>`;
   if(step===1){
     e.options=e.options||recognitionOptions(lesson,s);
-    content=`<h2 id="exercise-title" tabindex="-1">Обери англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p><div class="recognition-options">${e.options.map((option,index)=>`<button type="button" class="recognition-option" id="exercise-option-${index}" lang="en">${escapeHTML(option.en)}</button>`).join('')}</div>`;
+    content=`<h2 id="exercise-title" tabindex="-1">Обери англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p><div class="recognition-options">${e.options.map((option,index)=>`<button type="button" class="recognition-option" id="exercise-option-${index}" lang="en">${escapeHTML(option.en)}${wordIpaMarkup(option)}</button>`).join('')}</div>`;
   }
   if(step===2)content=`<h2 id="exercise-title" tabindex="-1">Напиши англійською</h2><p class="exercise-prompt" lang="uk">${escapeHTML(word.uk)}</p>${exerciseInput('Напиши англійське слово або вираз')}`;
   if(step===3)content=`<h2 id="exercise-title" tabindex="-1">Встав пропущене</h2><p class="exercise-prompt" lang="en">${escapeHTML(lesson.before)}<span class="sentence-gap">____</span>${escapeHTML(lesson.after)}</p><p lang="uk">${escapeHTML(word.uk)}</p>${exerciseInput('Напиши пропущене англійською')}`;
@@ -131,6 +132,7 @@ function renderExercise(){
   }
   if(step===4){renderSentenceBuilder();document.getElementById('exercise-check').onclick=checkExercise;document.getElementById('sentence-clear').onclick=()=>{if(e.answered)return;e.picked=[];renderSentenceBuilder();exerciseFeedback('');};}
   document.getElementById('exercise-title').focus?.({preventScroll:true});
+  hydrateWordIpa(app);
   app.scrollIntoView?.({block:'start'});
 }
 function exerciseInput(label,sentence=false){return `<form id="exercise-form" class="exercise-form"><${sentence?'textarea':'input'} id="exercise-answer" ${sentence?'rows="3"':'type="text"'} lang="en" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-describedby="exercise-feedback" aria-label="${escapeHTML(label)}" placeholder="${sentence?'Твоє речення':'Відповідь'}">${sentence?'</textarea>':''}<button type="submit" class="btn" id="exercise-check">Перевірити</button></form>`;}

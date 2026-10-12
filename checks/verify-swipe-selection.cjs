@@ -13,6 +13,7 @@ const run=code=>vm.runInContext(code,context);
 run(fs.readFileSync(require('node:path').join(__dirname,'../dist',"data.js"),'utf8'));
 storage.set('word-cottage-learned',JSON.stringify(run("words.filter(w=>w.category==='nouns').slice(0,10).map(w=>w.id)")));
 run(fs.readFileSync(require('node:path').join(__dirname,'../dist',"search.js"),'utf8'));
+run(fs.readFileSync(require('node:path').join(__dirname,'../dist',"pronunciation.js"),'utf8'));
 run(fs.readFileSync(require('node:path').join(__dirname,'../dist',"app.js"),'utf8'));
 function flush(){while(timers.length)timers.shift()();}
 function click(id){assert.equal(Boolean(element(id).disabled),false,id);element(id).onclick();flush();}

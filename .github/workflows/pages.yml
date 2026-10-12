@@ -34,6 +34,7 @@ jobs:
           node checks/verify-swipe-selection.cjs
           node checks/verify-natural-voice.cjs
           node checks/verify-six-step-learning.cjs
+          node checks/verify-transcription.cjs
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
