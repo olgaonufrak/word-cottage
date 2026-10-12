@@ -93,3 +93,4 @@
 @media(max-width:700px){.search-word{align-items:stretch;flex-direction:column}.search-word>.btn{align-self:flex-start}.search-language{gap:10px}.search-language strong{font-size:24px}.word-audio{font-size:13px;padding:10px}.word-ipa{font-size:15px}}
 
 .word-details .word-ipa{font:15px/1.4 Arial,sans-serif;margin:2px 0 4px}.flashcard>.word-ipa,.swipe-card>.word-ipa{font-size:20px;margin:12px 0 3px}.lesson-intro>.word-ipa{font-size:20px;margin:8px 0 12px}.recognition-option .word-ipa{margin-top:5px}footer a{text-decoration:underline;text-underline-offset:2px}
+.section-list-bottom{flex-wrap:wrap}.list-practice-mode{flex-basis:100%;align-items:center;gap:12px}.list-practice-mode:not([hidden]){display:flex}.list-practice-mode label{font-size:14px;color:var(--muted)}.list-practice-mode select{min-width:0;flex:1;padding:10px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font:14px Arial,sans-serif}

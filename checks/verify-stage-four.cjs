@@ -47,10 +47,9 @@ async function main(){
     element('section-word-0').checked=true;element('section-word-0').onchange();
     const status=element('list-choice-count').textContent;element('section-audio-0').onclick();
     assert.equal(element('section-word-0').checked,true);assert.equal(element('list-choice-count').textContent,status);
-    element('learn-section').onclick();assert.equal(element('word-count').textContent,1);assert.equal(element('count-plus').disabled,true);
-    element('back').onclick();assert.equal(element('section-word-0').checked,true);
-    element('learn-section').onclick();element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
-    assert.equal(run('selection.deck[0].id'),list[0].id);run('home()');assert.equal(run('screen'),'stage-four');
+    element('list-study-mode').value='cards';element('learn-section').onclick();
+    assert.equal(run('screen'),'study');assert.equal(run('selection'),null);assert.equal(run('session.queue.length'),1);
+    assert.equal(run('session.queue[0].id'),list[0].id);run('home()');assert.equal(run('screen'),'stage-four');
   }
   // Full pool: skipping cannot start study; five accepted cards trigger exactly a five-card session.
   element('section-a4-office').onclick();element('learn-section').onclick();

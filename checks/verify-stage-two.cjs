@@ -34,9 +34,9 @@ async function main(){
     element('section-audio-0').onclick();assert.equal(run('window.lastSpeech.lang'),'en-US');
     assert.equal(run('window.lastSpeech.text'),run(`words.find(w=>w.category===${JSON.stringify(section.id)}).en`));
     element('section-word-0').checked=true;element('section-word-0').onchange();
-    element('learn-section').onclick();assert.equal(element('word-count').textContent,1);
-    element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),1);
-    assert.equal(run('selection.deck[0].category'),section.id);
+    element('list-study-mode').value='cards';element('learn-section').onclick();
+    assert.equal(run('screen'),'study');assert.equal(run('selection'),null);
+    assert.equal(run('session.queue.length'),1);assert.equal(run('session.queue[0].category'),section.id);
     run('home()');assert.equal(run('screen'),'stage-two');
   }
   element('section-a2-animals').onclick();element('learn-section').onclick();

@@ -1,6 +1,5 @@
 const {fixture}=require('./fixture.cjs');
 const assert=require('node:assert/strict');
-const pause=()=>new Promise(resolve=>setTimeout(resolve,200));
 async function main(){
   const storage=new Map([['word-cottage-personal-words',JSON.stringify([{en:'myword',uk:'моє слово'},{en:'otherword',uk:'інше слово'}])]]);
   const f=fixture(storage,undefined,true),{run,element}=f;
@@ -65,42 +64,47 @@ async function main(){
     assert.equal(element('section-word-0').checked,true);assert.equal(element('section-word-1').checked,false);
     assert.equal(element('list-choice-count').textContent,status);assert.equal(run('learned.size'),0);
   }
-  // Manual choices are bounded, survive Back, and restrict every swipe and study card.
+  // Checked words start directly, include the full selection, and preserve list order.
   run("showSectionWords(['a1-days'])");
   const ids=JSON.parse(run("JSON.stringify(words.filter(w=>w.category==='a1-days').slice(0,3).map(w=>w.id))"));
   for(let i=0;i<3;i++){element('section-word-'+i).checked=true;element('section-word-'+i).onchange();}
   assert.match(element('list-choice-count').textContent,/Обрано: 3/);assert.equal(run('learned.size'),0);
-  element('learn-section').onclick();assert.equal(element('word-count').textContent,3);assert.equal(element('count-plus').disabled,true);
-  assert.equal(element('app').querySelectorAll('[data-count]').every(button=>button.disabled),true);
-  element('back').onclick();assert.equal(element('section-word-0').checked,true);assert.equal(element('section-word-3').checked,false);
-  element('learn-section').onclick();element('count-minus').onclick();element('practice-mode').value='cards';element('start-session').onclick();
-  assert.equal(run('selection.target'),2);assert.deepEqual(JSON.parse(run('JSON.stringify(selection.deck.map(w=>w.id).sort())')),ids.slice().sort());
-  element('back').onclick();assert.equal(element('word-count').textContent,2);
-  element('practice-mode').value='cards';element('start-session').onclick();element('swipe-skip').onclick();await pause();
-  element('swipe-learn').onclick();await pause();assert.equal(run('screen'),'selection');
-  element('swipe-learn').onclick();await pause();assert.equal(run('screen'),'study');
-  assert.equal(run('session.queue.length'),2);assert.equal(run('session.queue.every(w=>'+JSON.stringify(ids)+'.includes(w.id))'),true);
-  run('session.flipped=true;rate(true);session.flipped=true;rate(false)');
-  element('restart').onclick();assert.equal(run('session.queue.length'),2);assert.equal(run('session.queue.every(w=>'+JSON.stringify(ids)+'.includes(w.id))'),true);
+  assert.equal(element('list-practice-mode').hidden,false);
+  element('list-study-mode').value='cards';element('learn-section').onclick();
+  assert.equal(run('screen'),'study');assert.equal(run('selection'),null);
+  assert.doesNotMatch(element('app').innerHTML,/id="(?:word-count|swipe-card|start-session)"/);
+  assert.deepEqual(JSON.parse(run('JSON.stringify(session.queue.map(w=>w.id))')),ids);
+  assert.equal(run('learned.size'),0,'Opening selected words must not mark them learned');
+  run('session.flipped=true;rate(true);session.flipped=true;rate(false);session.flipped=true;rate(false)');
+  element('restart').onclick();assert.deepEqual(JSON.parse(run('JSON.stringify(session.queue.map(w=>w.id))')),ids);
+  // Select all means all 100 cards; clearing all restores quantity and swipe selection.
+  run("showSectionWords(['nouns'])");assert.equal(element('list-practice-mode').hidden,true);
+  element('select-all-words').onclick();element('learn-section').onclick();
+  assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),100);assert.equal(run('selection'),null);
   // Selecting / clearing all restores the whole-section mode.
   run("showSectionWords(['nouns'])");element('select-all-words').onclick();assert.equal(element('section-word-99').checked,true);
   element('clear-word-choice').onclick();assert.equal(element('section-word-99').checked,false);
+  assert.equal(element('list-practice-mode').hidden,true);
   element('learn-section').onclick();assert.match(element('count-available').textContent,/100/);
   for(const n of [5,10,20]){const preset=element('app').querySelectorAll('[data-count]').find(button=>Number(button.dataset.count)===n);preset.onclick();assert.equal(element('word-count').textContent,n);}
   element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.deck.length'),100);
-  // Mixed: category selection -> full list -> size -> exact manually selected pool.
+  // Mixed: category selection -> full list -> immediate study of the checked words.
   run('showBasics();picker()');assert.doesNotMatch(element('app').innerHTML,/id="word-count"/);
   const inputs=element('app').querySelectorAll('.pick-options input');inputs.forEach(input=>input.checked=false);inputs[0].onchange();assert.equal(element('start-mix').disabled,true);
   inputs.filter(input=>['nouns','verbs'].includes(input.value)).forEach(input=>input.checked=true);inputs[0].onchange();element('start-mix').onclick();
   assert.equal(run('screen'),'section-words');assert.equal((element('app').innerHTML.match(/class="section-word-option"/g)||[]).length,200);
   for(const index of [0,100]){element('section-word-'+index).checked=true;element('section-word-'+index).onchange();}
-  element('learn-section').onclick();element('practice-mode').value='cards';element('start-session').onclick();assert.equal(run('selection.mixed'),true);assert.equal(run('selection.deck.length'),2);
-  assert.equal(run("new Set(selection.deck.map(w=>w.category)).size"),2);
+  element('learn-section').onclick();assert.equal(run('screen'),'exercises');assert.equal(run('session.mixed'),true);assert.equal(run('session.queue.length'),2);
+  assert.equal(run("new Set(session.queue.map(w=>w.category)).size"),2);assert.equal(run('selection'),null);
+  // Personal words use the same direct route with no quantity prompt.
+  run("showSectionWords(['custom'])");element('section-word-1').checked=true;element('section-word-1').onchange();
+  const personalId=run("sectionWordPool(['custom'])[1].id");element('learn-section').onclick();
+  assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),1);assert.equal(run('session.queue[0].id'),personalId);
   // Exact-card search still starts directly; unsafe custom translations are escaped in the list.
   run("addPersonalWord({en:'safeexample',uk:'<img src=x onerror=alert(1)>'});showSectionWords(['custom'])");
   assert.doesNotMatch(element('app').innerHTML,/<img/);assert.match(element('app').innerHTML,/&lt;img/);
   run("learnSearchWord('custom-myword')");assert.equal(run('session.queue.length'),1);
   assert.throws(()=>run("suggestWords(['nouns'],false,1,['verbs-0'])"));
-  console.log('Passed: complete bilingual section lists, A1/basic/personal/mixed navigation, manual choice persistence, bounded quantities and presets, exact swipe/study/restart pools, unchanged progress, safe rendering, direct search study.');
+  console.log('Passed: bilingual lists, direct study of every checked word in either mode, select-all and cleared choices, personal and mixed sets, quantity and swipes for unselected lists, exact restart pools, safe rendering and progress.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

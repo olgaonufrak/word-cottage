@@ -12,12 +12,9 @@ async function main(){
   const appleIndex=run('sectionWordPool(["a1-fruit"]).findIndex(w=>w.en==="apple")');
   const bananaIndex=run('sectionWordPool(["a1-fruit"]).findIndex(w=>w.en==="banana")');
   for(const index of [appleIndex,bananaIndex]){element('section-word-'+index).checked=true;element('section-word-'+index).onchange();}
-  element('learn-section').onclick();assert.equal(element('practice-mode').value,'steps');
-  assert.equal(element('word-count').textContent,2);
-  element('start-session').onclick();assert.equal(run('selection.mode'),'steps');
-  element('swipe-learn').onclick();await new Promise(resolve=>setTimeout(resolve,190));
-  assert.equal(run('screen'),'selection');assert.equal(run('session'),null);
-  element('swipe-learn').onclick();await new Promise(resolve=>setTimeout(resolve,190));
+  assert.equal(element('list-study-mode').value,'steps');
+  element('learn-section').onclick();assert.equal(run('selection'),null);
+  assert.doesNotMatch(element('app').innerHTML,/id="(?:word-count|swipe-card)"/);
   assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),2);
   assert.equal(run('learned.size'),2,'Introduction must not mark anything learned');
   assert.equal(run('session.exercise.lessons[0].quoted'),false);
