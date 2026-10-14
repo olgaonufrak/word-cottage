@@ -19,6 +19,15 @@ const cottagePictures=[
   {src:'images/cottage-3.jpg',rows:6},
   {src:'images/cottage-4.jpg',rows:6}
 ];
+const welcomePictures=[
+  {picture:0,x:183,y:228,width:171,height:230}, // Cottage
+  {picture:1,x:184,y:897,width:168,height:153}, // Teacup
+  {picture:2,x:182,y:990,width:174,height:280}, // Hare
+  {picture:3,x:184,y:389,width:170,height:197} // Lavender
+];
+function welcomePicture(crop){
+  return `<span class="gallery-picture" style="background-image:url('${cottagePictures[crop.picture].src}');background-size:${720/crop.width*100}% ${1280/crop.height*100}%;background-position:${crop.x/(720-crop.width)*100}% ${crop.y/(1280-crop.height)*100}%;aspect-ratio:${crop.width}/${crop.height}"></span>`;
+}
 function cottageTile(pictureIndex,cell=0){
   const picture=cottagePictures[pictureIndex],row=Math.floor(cell/4)%picture.rows,column=cell%4;
   return `<span class="tile" style="background-image:url('${picture.src}');background-size:400% ${picture.rows*100}%;background-position:${column/3*100}% ${row/(picture.rows-1)*100}%" aria-hidden="true"></span>`;
@@ -30,7 +39,7 @@ function tile(c){
 }
 function landing(){
   cancelWordSearch();screen='landing';session=null;selection=null;
-  app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${cottagePictures.map(picture=>`<img src="${picture.src}" alt="" width="720" height="1280" decoding="async">`).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span><span aria-hidden="true">✳</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-1.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button><button type="button" class="group-card" id="basics-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-4.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button></section>`;
+  app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${welcomePictures.map(welcomePicture).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span><span aria-hidden="true">✳</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-1.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button><button type="button" class="group-card" id="basics-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-4.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button></section>`;
   document.getElementById('everyday-group').onclick=showDailyStages;
   document.getElementById('basics-group').onclick=showBasics;
   updateTotal();resetPageScroll();
