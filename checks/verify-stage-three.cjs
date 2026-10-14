@@ -46,8 +46,8 @@ async function main(){
     element('section-audio-0').onclick();assert.equal(run('window.lastSpeech.lang'),'en-US');
     assert.equal(run('window.lastSpeech.text'),run(`words.find(w=>w.category===${JSON.stringify(section.id)}).en`));
     assert.equal(element('section-word-0').checked,true);assert.equal(element('list-choice-count').textContent,status);
-    element('list-study-mode').value='cards';element('learn-section').onclick();
-    assert.equal(run('screen'),'study');assert.equal(run('selection'),null);
+    assert.doesNotMatch(element('app').innerHTML,/id="list-study-mode"/);element('learn-section').onclick();
+    assert.equal(run('screen'),'exercises');assert.equal(run('session.mode'),'steps');assert.equal(run('selection'),null);
     assert.equal(run('session.queue.length'),1);assert.equal(run('session.queue[0].category'),section.id);
     run('home()');assert.equal(run('screen'),'stage-three');
   }

@@ -12,7 +12,7 @@ async function main(){
   const appleIndex=run('sectionWordPool(["a1-fruit"]).findIndex(w=>w.en==="apple")');
   const bananaIndex=run('sectionWordPool(["a1-fruit"]).findIndex(w=>w.en==="banana")');
   for(const index of [appleIndex,bananaIndex]){element('section-word-'+index).checked=true;element('section-word-'+index).onchange();}
-  assert.equal(element('list-study-mode').value,'steps');
+  assert.doesNotMatch(element('app').innerHTML,/id="(?:list-study-mode|list-practice-mode)"/);
   element('learn-section').onclick();assert.equal(run('selection'),null);
   assert.doesNotMatch(element('app').innerHTML,/id="(?:word-count|swipe-card)"/);
   assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),2);
