@@ -137,7 +137,7 @@ function renderExercise(){
   const lesson=e.lessons[e.index],word=lesson.word,step=e.step;
   const progress=(step*e.lessons.length+e.index)/(6*e.lessons.length)*100;
   let content='';
-  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" class="exercise-focus" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation exercise-focus" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}${exerciseAudioMarkup()}</div>`;
+  if(step===0)content=`<div class="lesson-intro">${lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:''}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}${exerciseAudioMarkup()}</div>`;
   if(step===1){
     e.options=e.options||recognitionOptions(lesson,s);
     content=`<h2 id="exercise-title" tabindex="-1">Обери англійською</h2><p class="exercise-prompt exercise-focus" lang="uk">${escapeHTML(word.uk)}</p><div class="recognition-options">${e.options.map((option,index)=>`<button type="button" class="recognition-option" id="exercise-option-${index}" lang="en">${escapeHTML(option.en)}${wordIpaMarkup(option)}</button>`).join('')}</div>`;
