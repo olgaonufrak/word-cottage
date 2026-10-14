@@ -12,6 +12,7 @@ function save(){try{localStorage.setItem('word-cottage-learned',JSON.stringify([
 function updateTotal(){document.getElementById('total').textContent=learned.size;document.getElementById('word-total').textContent=words.length;}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.className='toast-show';clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.className='',4000);}
 function count(cat){return words.filter(w=>w.category===cat&&learned.has(w.id)).length;}
+function resetPageScroll(){window.scrollTo?.({top:0,behavior:'instant'});}
 const cottagePictures=[
   {src:'images/cottage-1.jpg',rows:5},
   {src:'images/cottage-2.jpg',rows:7},
@@ -32,13 +33,14 @@ function landing(){
   app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${cottagePictures.map(picture=>`<img src="${picture.src}" alt="" width="720" height="1280" decoding="async">`).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span><span aria-hidden="true">✳</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-1.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button><button type="button" class="group-card" id="basics-group"><span class="group-cover" aria-hidden="true"><img src="images/cottage-4.jpg" alt="" width="720" height="1280" decoding="async"></span><span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити <span aria-hidden="true">↗</span></span></span></button></section>`;
   document.getElementById('everyday-group').onclick=showDailyStages;
   document.getElementById('basics-group').onclick=showBasics;
-  updateTotal();
+  updateTotal();resetPageScroll();
 }
 function showDailyStages(){
   cancelWordSearch();learningGroup='daily';dailyView='stages';screen='daily-stages';session=null;selection=null;
   app.innerHTML=`<div class="study-top"><button type="button" class="back" id="daily-back">‹ Дві групи</button></div><section class="daily-stages-panel stage-overview" aria-labelledby="daily-title"><p class="eyebrow">Твій шлях до нових слів</p><h1 id="daily-title">Слова на кожен день</h1><p class="sub">Обери свій етап. Кожен маленький крок має значення.</p><div class="daily-stages">${dailyStages.map((stage,index)=>stage.sections.length?`<button type="button" class="daily-stage stage-ready" id="open-stage-${stage.key}"><img class="stage-cover" src="${cottagePictures[index].src}" alt="" width="720" height="1280" decoding="async"><span class="stage-content"><span class="group-kicker">Колекція ${String(index+1).padStart(2,'0')}</span><h2>${stage.title}</h2><p>${stage.description}</p><span class="stage-status">${stage.sections.length} розділів · ${stage.sections.some(section=>words.some(word=>word.category===section.id))?'':'Поки без слів · '}Відкрити →</span></span></button>`:`<article class="daily-stage" aria-labelledby="daily-stage-${index+1}"><img class="stage-cover" src="${cottagePictures[index].src}" alt="" width="720" height="1280" decoding="async"><span class="stage-content"><h2 id="daily-stage-${index+1}">${stage.title}</h2><p>${stage.description}</p><span class="stage-status">Поки без слів</span></span></article>`).join('')}</div></section>`;
   document.getElementById('daily-back').onclick=landing;
   dailyStages.forEach((stage,index)=>{if(stage.sections.length)document.getElementById('open-stage-'+stage.key).onclick=()=>showDailyStage(index+1);});
+  resetPageScroll();
 }
 function showStageOne(){showDailyStage(1);}
 function showStageTwo(){showDailyStage(2);}
@@ -49,6 +51,7 @@ function showDailyStage(stageNumber){
   app.innerHTML=`<div class="study-top"><button type="button" class="back" id="stage-${stageKey}-back">‹ Усі етапи</button></div><section class="stage-sections-panel"><div class="collection-heading"><div><p class="eyebrow">Колекція ${String(stageNumber).padStart(2,'0')}</p><h1>${dailyStages[stageNumber-1].title}</h1><p class="sub">Обери тему для сьогоднішнього навчання.</p></div><img src="${cottagePictures[stageNumber-1].src}" alt="" width="720" height="1280" decoding="async"></div><div class="stage-section-grid">${sections.map((section,index)=>{const size=words.filter(word=>word.category===section.id).length;return `<button type="button" class="stage-section" id="section-${section.id}"><span class="section-art-row">${cottageTile(stageNumber-1,index)}<span class="cat-number">${String(index+1).padStart(2,'0')}</span></span><h2 lang="en">${section.name}</h2><small lang="uk" class="section-uk-title">${section.ukTitle}</small><span class="section-word-count">${size} ${wordLabel(size)}</span><span class="progress-row"><span class="track"><span class="fill" style="width:${size?count(section.id)/size*100:0}%"></span></span><span>${count(section.id)} / ${size}</span></span></button>`;}).join('')}</div></section>`;
   document.getElementById('stage-'+stageKey+'-back').onclick=showDailyStages;
   sections.forEach(section=>document.getElementById('section-'+section.id).onclick=()=>showSectionWords([section.id]));
+  resetPageScroll();
 }
 function basicCategories(){return categories.filter(category=>!category.stage);}
 function dailyStageNumber(){return Number(dailyView.slice(5))||1;}
@@ -64,7 +67,7 @@ function showBasics(){
   app.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>showSectionWords([button.dataset.category]));
   document.getElementById('mixed').onclick=()=>picker();document.getElementById('learned-words').onclick=showLearned;
   document.getElementById('word-search-form').onsubmit=event=>{event.preventDefault();showSearch(document.getElementById('word-search-input').value,true);};
-  updateTotal();
+  updateTotal();resetPageScroll();
 }
 function amountControls(){return `<fieldset class="word-count-picker"><legend>Скільки слів цього разу?</legend><div class="word-stepper"><button type="button" class="step-btn" id="count-minus" aria-label="Зменшити кількість слів">−</button><output id="word-count" aria-live="polite" aria-label="Кількість слів">10</output><button type="button" class="step-btn" id="count-plus" aria-label="Збільшити кількість слів">+</button></div><div class="count-presets" aria-label="Швидкий вибір кількості">${[5,10,20].map(n=>`<button type="button" class="btn secondary count-preset" data-count="${n}" aria-pressed="${n===10}">${n} слів</button>`).join('')}</div><p class="count-available" id="count-available"></p></fieldset>`;}
 function bindAmount(maximum,startButton,initialAmount=10){
@@ -97,6 +100,7 @@ function showSectionWords(ids,mixed=false,chosenIds=[]){
   if(!list.length){
     app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${mixed?'‹ Обрати розділи':groupBackLabel()}</button></div><section class="word-list-panel section-words-panel"><h1>${escapeHTML(practiceTitle(category,mixed))}</h1>${!mixed&&category.ukTitle?`<p class="section-uk-title" lang="uk">${escapeHTML(category.ukTitle)}</p>`:''}<div class="learned-empty"><p>У цій темі поки немає слів. Додамо їх пізніше.</p></div></section>`;
     document.getElementById('back').onclick=()=>mixed?picker(ids):home();
+    resetPageScroll();
     return;
   }
   app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${mixed?'‹ Обрати розділи':groupBackLabel()}</button></div><section class="word-list-panel section-words-panel"><div class="eyebrow">Усі слова розділу</div><h1>${escapeHTML(practiceTitle(category,mixed))}</h1>${!mixed&&category.ukTitle?`<p class="section-uk-title" lang="uk">${escapeHTML(category.ukTitle)}</p>`:''}<p class="sub">${list.length} ${wordLabel(list.length)}. Познач слова, які хочеш вчити. Якщо нічого не позначено, доступний увесь список.</p><div class="word-list-tools"><button type="button" class="btn secondary" id="select-all-words">Обрати всі</button><button type="button" class="btn secondary" id="clear-word-choice">Зняти вибір</button></div><div class="section-word-list">${list.map((word,index)=>`<div class="section-word-option"><label class="section-word-choice"><input type="checkbox" id="section-word-${index}" ${chosen.has(word.id)?'checked':''}>${wordDetails(word)}</label><button type="button" class="word-audio section-word-audio" id="section-audio-${index}" title="Послухати англійською" aria-label="Послухати англійською: ${escapeHTML(word.en)}"><span aria-hidden="true">♫</span></button></div>`).join('')}</div><div class="section-list-bottom"><p id="list-choice-count" role="status" aria-live="polite"></p><button type="button" class="btn" id="learn-section">Почати вчити</button></div></section>`;
@@ -108,7 +112,7 @@ function showSectionWords(ids,mixed=false,chosenIds=[]){
   document.getElementById('select-all-words').onclick=()=>{inputs.forEach(({word,input})=>{input.checked=true;chosen.add(word.id);});update();};
   document.getElementById('clear-word-choice').onclick=()=>{inputs.forEach(({input})=>input.checked=false);chosen.clear();update();};
   document.getElementById('learn-section').onclick=()=>{if(!list.length)return;if(chosen.size){start(ids,mixed,false,null,list.filter(word=>chosen.has(word.id)).map(word=>word.id),'steps');}else chooseAmount(ids,mixed);};
-  update();hydrateWordIpa(app);
+  update();hydrateWordIpa(app);resetPageScroll();
 }
 function chooseAmount(ids,mixed=false,initialAmount=10,selectedIds=null){
   const available=sectionWordPool(ids,selectedIds);
