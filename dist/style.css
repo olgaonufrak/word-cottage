@@ -157,6 +157,7 @@ main{padding-top:32px;min-height:calc(100vh - 226px)}
 .stage-section:hover{transform:translateY(-2px);box-shadow:0 7px 20px #51442b12}
 .section-art-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:15px}
 .tile{display:block;width:76px;height:76px;border:3px solid var(--paper);border-radius:8px;background-image:url('images/cottage-1.jpg?v=20261018');background-size:500% 500%;box-shadow:0 0 0 1px var(--line)}
+.tile,.gallery-picture,.group-cover,.stage-cover,.collection-cover{background-repeat:no-repeat;background-clip:padding-box}
 .cat-number{font-size:20px;color:#8a8069}
 .category{border-radius:11px;padding:23px;box-shadow:var(--shadow)}
 .category h3{font-size:27px}

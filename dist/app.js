@@ -14,25 +14,30 @@ function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t
 function count(cat){return words.filter(w=>w.category===cat&&learned.has(w.id)).length;}
 function resetPageScroll(){window.scrollTo?.({top:0,behavior:'instant'});}
 const cottagePictures=[
-  {src:'images/cottage-1.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254},
-  {src:'images/cottage-2.jpg?v=20261018',columns:5,rows:5,width:1253,height:1226},
-  {src:'images/cottage-3.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254},
-  {src:'images/cottage-4.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254}
+  {src:'images/cottage-1.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254,columnEdges:[0,248,497,754,1005,1254],rowEdges:[0,247,498,743,986,1254]},
+  {src:'images/cottage-2.jpg?v=20261018',columns:5,rows:5,width:1253,height:1226,columnEdges:[0,269,528,767,997,1253],rowEdges:[0,253,503,739,974,1226]},
+  {src:'images/cottage-3.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254,columnEdges:[0,251,501,755,1006,1254],rowEdges:[0,249,499,740,984,1254]},
+  {src:'images/cottage-4.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254,columnEdges:[0,255,502,751,1002,1254],rowEdges:[0,249,497,729,975,1254]}
 ];
 const welcomePictures=[
-  {picture:0,x:256,y:255,width:234,height:237}, // Cottage
-  {picture:1,x:275,y:982,width:247,height:233}, // Teacup
-  {picture:2,x:1012,y:747,width:236,height:233}, // Hare
-  {picture:3,x:261,y:504,width:235,height:222} // Lavender
+  {picture:0,cell:6}, // Cottage
+  {picture:1,cell:21}, // Teacup
+  {picture:2,cell:19}, // Hare
+  {picture:3,cell:11} // Lavender
 ];
 const stageCoverCells=[0,6,11,0];
-function welcomePicture(crop){
-  const picture=cottagePictures[crop.picture];
-  return `<span class="gallery-picture" style="background-image:url('${picture.src}');background-size:${picture.width/crop.width*100}% ${picture.height/crop.height*100}%;background-position:${crop.x/(picture.width-crop.width)*100}% ${crop.y/(picture.height-crop.height)*100}%;aspect-ratio:${crop.width}/${crop.height}"></span>`;
+function welcomePicture(item){return cottageTile(item.picture,item.cell,'gallery-picture');}
+function cottageCrop(pictureIndex,cell=0){
+  const picture=cottagePictures[pictureIndex],column=cell%picture.columns,row=Math.floor(cell/picture.columns)%picture.rows;
+  // Measured dividers are uneven; stay inside their edges before taking a centered square.
+  const inset=8,left=picture.columnEdges[column]+inset,top=picture.rowEdges[row]+inset;
+  const width=picture.columnEdges[column+1]-inset-left,height=picture.rowEdges[row+1]-inset-top;
+  const size=Math.min(width,height);
+  return {picture,x:left+(width-size)/2,y:top+(height-size)/2,size};
 }
 function cottageTile(pictureIndex,cell=0,cssClass='tile'){
-  const picture=cottagePictures[pictureIndex],row=Math.floor(cell/picture.columns)%picture.rows,column=cell%picture.columns;
-  return `<span class="${cssClass}" style="background-image:url('${picture.src}');background-size:${picture.columns*100}% ${picture.rows*100}%;background-position:${column/(picture.columns-1)*100}% ${row/(picture.rows-1)*100}%" aria-hidden="true"></span>`;
+  const {picture,x,y,size}=cottageCrop(pictureIndex,cell);
+  return `<span class="${cssClass}" style="background-image:url('${picture.src}');background-size:${picture.width/size*100}% ${picture.height/size*100}%;background-position:${x/(picture.width-size)*100}% ${y/(picture.height-size)*100}%;aspect-ratio:1" aria-hidden="true"></span>`;
 }
 function tile(c){
   const basicPictures={nouns:[0,6],verbs:[1,14],adjectives:[2,13],common:[3,13],personal:[3,12]};
