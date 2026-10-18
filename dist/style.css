@@ -128,7 +128,6 @@ main{padding-top:32px;min-height:calc(100vh - 226px)}
 .cottage-gallery .gallery-picture:nth-child(4){transform:rotate(4deg) translateY(-8px)}
 .landing-label{display:flex;align-items:center;gap:18px;font:italic 19px Georgia,serif;color:var(--muted);margin:5px 0 20px}
 .landing-label:after{content:'';height:1px;background:var(--line);flex:1}
-.landing-label>span:last-child{color:var(--olive);font-size:22px}
 .group-menu{max-width:none;margin:0 0 20px;gap:24px}
 .group-card{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:stretch;padding:10px;border-radius:14px;gap:0;box-shadow:var(--shadow);overflow:hidden}
 .group-card:hover{box-shadow:0 9px 24px #51442b15;border-color:#a5ab8c;transform:translateY(-3px)}
@@ -138,7 +137,6 @@ main{padding-top:32px;min-height:calc(100vh - 226px)}
 .group-card h2{font-size:28px;line-height:1.2;letter-spacing:-.5px}
 .group-card p{font-size:14px;line-height:1.65;margin:12px 0 22px}
 .group-open{border-top:1px solid var(--line);padding-top:14px;font-size:13px}
-.group-open>span{width:29px;height:29px;border:1px solid #b9c0a2;border-radius:50%;display:grid;place-items:center;font:19px Georgia,serif}
 .stage-overview,.stage-sections-panel{max-width:1060px}
 .stage-overview>h1{font-size:39px;color:var(--ink);letter-spacing:-1px}
 .stage-overview .daily-stages{gap:22px;margin-top:30px}
