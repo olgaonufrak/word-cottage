@@ -38,6 +38,37 @@ async function main(){
   run("speak('час','uk')");assert.match(element('toast').textContent,/український голос/);
   // An empty voice list has a bounded wait and still attempts the requested language.
   run("window.voices=[];window.spoken=[];speak('timeout','en')");await new Promise(resolve=>setTimeout(resolve,760));assert.equal(run('window.spoken.length'),1);assert.equal(run('window.spoken[0].lang'),'en-US');assert.equal(run('window.listeners.size'),0);
-  console.log('Passed: voice priority, normal and slow speed at 0.35x, delayed voices, rapid-click cancellation, recorded fallback with pitch preservation, and missing voices.');
+  // Voice settings overlay preserves the current lesson and both existing storage keys.
+  run(`window.voices=[{name:'Google US English',lang:'en-US',voiceURI:'auto-en'},{name:'British voice',lang:'en-GB',voiceURI:'chosen-en'},{name:'Google українська',lang:'uk-UA',voiceURI:'auto-uk'},{name:'Інший голос',lang:'uk-UA',voiceURI:'chosen-uk'},{name:'Other language',lang:'ru-RU',voiceURI:'other'}];
+    voiceSettings.showModal=function(){this.open=true};voiceSettings.close=function(){this.open=false;this.onclose()};
+    start(['nouns'],false,false,1);window.originalSession=session;window.originalScreen=screen;window.originalMarkup=app.innerHTML;
+    localStorage.setItem('word-cottage-learned','[]');localStorage.setItem('word-cottage-personal-words','[]');`);
+  element('open-voice-settings').onclick();
+  assert.equal(run('voiceSettings.open'),true);assert.equal(run('siteMenu.open'),false);
+  assert.equal(run('session===window.originalSession&&screen===window.originalScreen&&app.innerHTML===window.originalMarkup'),true);
+  assert.match(element('voice-en').innerHTML,/British voice/);assert.doesNotMatch(element('voice-en').innerHTML,/Інший голос|Other language/);
+  element('voice-en').onchange({target:{value:'chosen-en'}});
+  element('voice-test-en').onclick();assert.equal(run('window.spoken.at(-1).voice.voiceURI'),'chosen-en');
+  element('voice-slow-en').onclick();assert.equal(run('window.spoken.at(-1).rate'),.95*.35);
+  element('voice-uk').onchange({target:{value:'chosen-uk'}});
+  element('voice-test-uk').onclick();assert.equal(run('window.spoken.at(-1).voice.voiceURI'),'chosen-uk');
+  assert.deepEqual(JSON.parse(f.storage.get('word-cottage-voices')),{en:'chosen-en',uk:'chosen-uk'});
+  const beforeStop=run('window.canceled');element('voice-stop').onclick();assert.equal(run('window.canceled'),beforeStop+1);
+  element('close-voice-settings').onclick();assert.equal(run('voiceSettings.open'),false);
+  assert.equal(run('session===window.originalSession&&screen===window.originalScreen&&app.innerHTML===window.originalMarkup'),true);
+  assert.equal(f.storage.get('word-cottage-learned'),'[]');assert.equal(f.storage.get('word-cottage-personal-words'),'[]');
+  const restored=fixture(new Map(f.storage));
+  restored.run(`window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};window.spoken=[];
+    window.speechSynthesis={getVoices:()=>[{name:'Google US English',lang:'en-US',voiceURI:'auto-en'},{name:'British voice',lang:'en-GB',voiceURI:'chosen-en'}],cancel(){},speak(u){window.spoken.push(u)}};speak('restored','en')`);
+  assert.equal(restored.run('window.spoken.at(-1).voice.voiceURI'),'chosen-en','The selected voice survives reload');
+  restored.run("window.speechSynthesis.getVoices=()=>[{name:'Google US English',lang:'en-US',voiceURI:'auto-en'}];speak('fallback','en');refreshVoiceSettings()");
+  assert.equal(restored.run('window.spoken.at(-1).voice.voiceURI'),'auto-en');
+  assert.match(restored.element('voice-status-en').textContent,/Збережений голос недоступний/);
+  element('voice-en').onchange({target:{value:''}});run("speak('automatic again','en')");assert.equal(run('window.spoken.at(-1).voice.voiceURI'),'auto-en');
+  run('window.voices=[];refreshVoiceSettings()');assert.equal(element('voice-en').disabled,true);
+  run("window.voices=[{name:'Loaded voice',lang:'en-US',voiceURI:'late'}];refreshVoiceSettings()");assert.equal(element('voice-en').disabled,false);
+  run('window.speechSynthesis=null;refreshVoiceSettings()');assert.equal(element('voice-test-en').disabled,true);assert.match(element('voice-status-uk').textContent,/недоступне/);
+  const invalid=fixture(new Map([['word-cottage-voices','null']]));assert.equal(invalid.run("wordVoiceChoices.en"),'');
+  console.log('Passed: voice priority, normal and slow speed at 0.35x, delayed voices, cancellation, recording fallback, voice settings without losing a lesson, persisted choices, automatic fallback, and missing voices.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});
