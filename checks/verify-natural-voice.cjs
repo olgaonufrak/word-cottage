@@ -69,6 +69,27 @@ async function main(){
   run("window.voices=[{name:'Loaded voice',lang:'en-US',voiceURI:'late'}];refreshVoiceSettings()");assert.equal(element('voice-en').disabled,false);
   run('window.speechSynthesis=null;refreshVoiceSettings()');assert.equal(element('voice-test-en').disabled,true);assert.match(element('voice-status-uk').textContent,/недоступне/);
   const invalid=fixture(new Map([['word-cottage-voices','null']]));assert.equal(invalid.run("wordVoiceChoices.en"),'');
-  console.log('Passed: voice priority, normal and slow speed at 0.35x, delayed voices, cancellation, recording fallback, voice settings without losing a lesson, persisted choices, automatic fallback, and missing voices.');
+  // Every voice shown in the user's iOS screenshots is excluded from the menu and playback.
+  const excluded=fixture(new Map([['word-cottage-voices',JSON.stringify({en:'com.apple.speech.synthesis.voice.Fred',uk:''})]]));
+  const names=['Albert','Bad News','Bahh','Bells','Boing','Bubbles','Cellos','Wobble','Fred','Good News','Hysterical','Junior','Kathy','Organ','Superstar','Ralph','Trinoids','Whisper','Zarvox'];
+  const localized=['Альберт','Погані новини','Бахх','Дзвони','Пружина','Бульбашки','Віолончель','Вібрато','Фред','Хороші новини','Істеричний','Підліток','Кеті','Орган','Суперзірка','Ральф','Триноїди','Шепіт','Зарвокс'];
+  for(const name of [...names,...localized])assert.equal(excluded.run(`isExcludedWordVoice({name:${JSON.stringify(name)},lang:'en-US'})`),true,name);
+  for(const name of names)assert.equal(excluded.run(`isExcludedWordVoice({name:'Localized label',voiceURI:${JSON.stringify('com.apple.speech.synthesis.voice.'+name.toLowerCase().replace(/ /g,''))},lang:'en-US'})`),true,'Stable Apple URI: '+name);
+  for(const name of ['Samantha','Alex','Daniel','Google US English','Microsoft Zira','Alberto'])assert.equal(excluded.run(`isExcludedWordVoice({name:${JSON.stringify(name)},lang:'en-US'})`),false,name);
+  const screenshotVoices=names.map(name=>({name,lang:'en-US',voiceURI:'com.apple.speech.synthesis.voice.'+name.replace(/ /g,'')}));
+  excluded.run(`window.voices=${JSON.stringify(screenshotVoices)};window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};window.spoken=[];
+    window.speechSynthesis={getVoices:()=>window.voices,cancel(){},speak(u){window.spoken.push(u)}};
+    window.voices.push({name:'Samantha',lang:'en-US',voiceURI:'samantha'},{name:'Lesya',lang:'uk-UA',voiceURI:'lesya'});
+    refreshVoiceSettings();speak('time','en');`);
+  assert.equal(excluded.run('window.spoken.at(-1).voice.name'),'Samantha','A saved excluded voice falls back to an allowed voice');
+  for(const name of names)assert.doesNotMatch(excluded.element('voice-en').innerHTML,new RegExp('>'+name+' ·'));
+  assert.match(excluded.element('voice-en').innerHTML,/Samantha/);assert.match(excluded.element('voice-uk').innerHTML,/Lesya/);
+  excluded.run(`window.voices=window.voices.filter(voice=>isExcludedWordVoice(voice));window.spoken=[];refreshVoiceSettings();
+    window.Audio=class{constructor(url){this.url=url;window.lastAudio=this}pause(){}play(){return Promise.resolve()}};
+    speak('time','en','https://upload.wikimedia.org/time.mp3',.35)`);
+  assert.equal(excluded.element('voice-en').disabled,true);assert.equal(excluded.run('window.spoken.length'),0,'Excluded voices never become the browser default fallback');
+  assert.equal(excluded.run('window.lastAudio.url'),'https://upload.wikimedia.org/time.mp3');assert.equal(excluded.run('window.lastAudio.playbackRate'),.35);
+  excluded.run("speak('time','en')");assert.equal(excluded.run('window.spoken.length'),0);assert.match(excluded.element('toast').textContent,/недоступне/);
+  console.log('Passed: voice priority, normal and slow playback, delayed voices, cancellation, recording fallback, preserved lessons and settings, and exclusion of all screenshot voices by English/Ukrainian name or Apple URI.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

@@ -260,9 +260,16 @@ function rate(known){if(!session||!session.flipped||session.index>=session.queue
 let activeWordAudio=null,speechVersion=0,cancelVoiceWait=null;
 const siteMenu=document.getElementById('site-menu'),voiceSettings=document.getElementById('voice-settings');
 function wordVoiceId(voice){return voice.voiceURI||`${voice.lang}:${voice.name}`;}
+// Voices excluded by the user, including their Ukrainian display names on iOS.
+const excludedWordVoices=new Set(['Albert','Bad News','Bahh','Bells','Boing','Bubbles','Cellos','Wobble','Fred','Good News','Hysterical','Junior','Kathy','Organ','Superstar','Ralph','Trinoids','Whisper','Zarvox','Альберт','Погані новини','Бахх','Дзвони','Пружина','Бульбашки','Віолончель','Вібрато','Фред','Хороші новини','Істеричний','Підліток','Кеті','Орган','Суперзірка','Ральф','Триноїди','Шепіт','Зарвокс'].map(name=>name.toLowerCase().replace(/[\s._-]+/g,'')));
+function isExcludedWordVoice(voice){
+  const name=String(voice.name||'').toLowerCase().replace(/[\s._-]+/g,'');
+  return excludedWordVoices.has(name)||String(voice.voiceURI||'').toLowerCase().split(/[.:/#?&=_-]+/).some(part=>excludedWordVoices.has(part));
+}
+function wordVoicesForLanguage(voices,lang){return voices.filter(voice=>!isExcludedWordVoice(voice)&&String(voice.lang||'').toLowerCase().replace(/_/g,'-').split('-')[0]===lang);}
 function preferredWordVoice(voices,lang){
   const locale=lang==='uk'?'uk-ua':'en-us';
-  const candidates=voices.filter(voice=>String(voice.lang||'').toLowerCase().replace(/_/g,'-').split('-')[0]===lang);
+  const candidates=wordVoicesForLanguage(voices,lang);
   const chosen=candidates.find(voice=>wordVoiceId(voice)===wordVoiceChoices[lang]);
   if(chosen)return chosen;
   const score=voice=>{
@@ -314,7 +321,7 @@ function speak(word,lang='en',audioURL='',speed=1){
 function refreshVoiceSettings(){
   const voices=window.speechSynthesis?.getVoices()||[],supported=Boolean(window.speechSynthesis&&window.SpeechSynthesisUtterance);
   for(const lang of ['en','uk']){
-    const available=voices.filter(voice=>String(voice.lang||'').toLowerCase().replace(/_/g,'-').split('-')[0]===lang);
+    const available=wordVoicesForLanguage(voices,lang);
     const select=document.getElementById('voice-'+lang),status=document.getElementById('voice-status-'+lang);
     select.innerHTML='<option value="">Автоматично — рекомендований голос</option>'+available.map(voice=>`<option value="${escapeHTML(wordVoiceId(voice))}">${escapeHTML(voice.name)} · ${escapeHTML(voice.lang)}</option>`).join('');
     const found=available.some(voice=>wordVoiceId(voice)===wordVoiceChoices[lang]);
