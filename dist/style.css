@@ -157,7 +157,7 @@ main{padding-top:32px;min-height:calc(100vh - 226px)}
 .stage-section{border-radius:11px;padding:22px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
 .stage-section:hover{transform:translateY(-2px);box-shadow:0 7px 20px #51442b12}
 .section-art-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:15px}
-.tile{display:block;width:76px;height:76px;border:3px solid var(--paper);border-radius:8px;background-image:url('images/cottage-1.jpg');background-size:400% 500%;box-shadow:0 0 0 1px var(--line)}
+.tile{display:block;width:76px;height:76px;border:3px solid var(--paper);border-radius:8px;background-image:url('images/cottage-1.jpg?v=20261018');background-size:500% 500%;box-shadow:0 0 0 1px var(--line)}
 .cat-number{font-size:20px;color:#8a8069}
 .category{border-radius:11px;padding:23px;box-shadow:var(--shadow)}
 .category h3{font-size:27px}
@@ -168,7 +168,7 @@ main{padding-top:32px;min-height:calc(100vh - 226px)}
 .track{background:#e9e3d3;height:5px}
 .fill{border-radius:8px}
 .home-layout{grid-template-columns:minmax(0,1fr) 280px;gap:28px}
-.side-art{background-image:url('images/cottage-4.jpg');background-repeat:repeat-y;min-height:550px;border:8px solid var(--white);border-radius:140px 140px 12px 12px;box-shadow:0 0 0 1px var(--line),var(--shadow)}
+.side-art{background-image:url('images/cottage-4.jpg?v=20261018');background-repeat:repeat-y;min-height:550px;border:8px solid var(--white);border-radius:140px 140px 12px 12px;box-shadow:0 0 0 1px var(--line),var(--shadow)}
 .art-label{background:var(--white);padding:24px 10px;border:1px solid var(--line);color:var(--olive);border-radius:3px}
 .mix{border-radius:11px;background:#565e39}
 .learned-entry,.word-search-form{border-radius:11px;box-shadow:var(--shadow)}
