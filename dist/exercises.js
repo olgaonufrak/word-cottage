@@ -50,7 +50,7 @@ function bindSentenceWords(root,lesson){
 }
 function startExercises(s){
   screen='exercises';
-  s.exercise={step:0,index:0,lessons:s.queue.map(wordLesson),difficult:new Set(),selfChecked:new Set(),completed:new Set(),hint:false,answered:false};
+  s.exercise={step:0,index:0,lessons:s.queue.map(wordLesson),difficult:new Set(),selfChecked:new Set(),completed:new Set(),history:new Map(),hint:false,answered:false,rejected:[],picked:[]};
   renderExercise();
 }
 function recognitionOptions(lesson,s){
@@ -78,6 +78,7 @@ function ownSentenceResult(answer,lesson,s){
   return {kind:'manual',message:'Потрібна самоперевірка.'};
 }
 function exerciseFeedback(message,kind='neutral'){
+  session.exercise.feedback={message,kind};
   const box=document.getElementById('exercise-feedback');box.textContent=message;box.className='exercise-feedback '+kind;
 }
 function finishExerciseAnswer(){
@@ -87,25 +88,52 @@ function finishExerciseAnswer(){
   const input=document.getElementById('exercise-answer');if(input)input.disabled=true;
   document.getElementById('exercise-next').focus?.();
 }
+function rememberExercise(){
+  const e=session.exercise;
+  if(e.step>=6)return;
+  e.history.set(e.step+':'+e.index,{
+    hint:e.hint,answered:e.answered,options:e.options,tokens:e.tokens,
+    picked:[...(e.picked||[])],rejected:[...(e.rejected||[])],
+    answer:document.getElementById('exercise-answer')?.value||'',
+    feedback:e.feedback,selfCheck:!!e.selfCheck
+  });
+}
+function restoreExercise(){
+  const e=session.exercise,saved=e.history.get(e.step+':'+e.index);
+  Object.assign(e,{hint:false,answered:false,options:null,tokens:null,picked:[],rejected:[],answer:'',feedback:null,selfCheck:false},saved);
+  // Keep the saved draft independent of the editable current selection.
+  e.picked=[...e.picked];e.rejected=[...e.rejected];
+  renderExercise();
+}
+function previousExercise(){
+  const e=session?.exercise;
+  if(screen!=='exercises'||!e||!e.lessons.length||e.step===0&&e.index===0)return;
+  stopWordSpeech();rememberExercise();
+  if(e.index===0){e.step--;e.index=e.lessons.length-1;}else e.index--;
+  restoreExercise();
+}
 function nextExercise(){
   const s=session,e=s?.exercise;if(screen!=='exercises'||!e||!e.answered)return;
+  stopWordSpeech();rememberExercise();
   if(e.step===5){
     const word=e.lessons[e.index].word;
-    if(!e.selfChecked.has(word.id)){learned.add(word.id);e.completed.add(word.id);save();}
+    if(!e.selfChecked.has(word.id)&&!e.completed.has(word.id)){learned.add(word.id);e.completed.add(word.id);save();}
   }
   e.index++;
   if(e.index===e.lessons.length){e.index=0;e.step++;}
-  e.hint=false;e.answered=false;e.options=null;e.tokens=null;e.picked=[];
-  renderExercise();
+  restoreExercise();
+}
+function renderExerciseHint(lesson){
+  document.getElementById('exercise-hint-content').innerHTML=`<strong class="exercise-focus" lang="en">${escapeHTML(lesson.word.en)}</strong>${wordIpaMarkup(lesson.word)} — <span class="exercise-focus" lang="uk">${escapeHTML(lesson.word.uk)}</span><p lang="en">${sentenceWordMarkup(lesson.sentence,'hint')}</p><p>${escapeHTML(lesson.translation)}</p>${sentenceTranslationOutput('hint-translation')}`;
+  document.getElementById('exercise-hint-content').hidden=false;
+  hydrateWordIpa(document.getElementById('exercise-hint-content'));
+  bindSentenceWords(document.getElementById('exercise-hint-content'),lesson);
 }
 function exerciseHint(){
   const s=session,e=s.exercise,lesson=e.lessons[e.index];
   if(e.answered)return;
   e.hint=true;e.difficult.add(lesson.word.id);
-  document.getElementById('exercise-hint-content').innerHTML=`<strong class="exercise-focus" lang="en">${escapeHTML(lesson.word.en)}</strong>${wordIpaMarkup(lesson.word)} — <span class="exercise-focus" lang="uk">${escapeHTML(lesson.word.uk)}</span><p lang="en">${sentenceWordMarkup(lesson.sentence,'hint')}</p><p>${escapeHTML(lesson.translation)}</p>${sentenceTranslationOutput('hint-translation')}`;
-  document.getElementById('exercise-hint-content').hidden=false;
-  hydrateWordIpa(document.getElementById('exercise-hint-content'));
-  bindSentenceWords(document.getElementById('exercise-hint-content'),lesson);
+  renderExerciseHint(lesson);
   exerciseFeedback('');
 }
 function checkExercise(){
@@ -122,6 +150,7 @@ function checkExercise(){
     const result=ownSentenceResult(input.value,lesson,s);
     if(result.kind==='manual'){
       exerciseFeedback(result.message);
+      e.selfCheck=true;
       document.getElementById('exercise-self-check').hidden=false;
       return;
     }
@@ -136,12 +165,12 @@ function renderSentenceBuilder(){
   document.getElementById('sentence-answer').innerHTML=e.picked.length?e.picked.map((index,position)=>`<button type="button" class="sentence-token" id="chosen-token-${position}" lang="en" aria-label="Прибрати слово ${escapeHTML(e.tokens[index])}">${escapeHTML(e.tokens[index])} <span aria-hidden="true">×</span></button>`).join(''):'<span class="sentence-placeholder">Твоє речення</span>';
   document.getElementById('sentence-bank').innerHTML=e.tokens.map((token,index)=>`<button type="button" class="sentence-token" id="bank-token-${index}" lang="en" ${e.picked.includes(index)?'disabled':''}>${escapeHTML(token)}</button>`).join('');
   e.tokens.forEach((_,index)=>{const button=document.getElementById('bank-token-'+index);button.disabled=e.answered||e.picked.includes(index);button.onclick=()=>{if(e.answered||e.picked.includes(index))return;e.picked.push(index);renderSentenceBuilder();exerciseFeedback('');return showSentenceTranslation(e.tokens[index],'builder-translation',e.lessons[e.index]);};});
-  e.picked.forEach((index,position)=>document.getElementById('chosen-token-'+position).onclick=()=>{if(e.answered)return;e.picked.splice(position,1);renderSentenceBuilder();exerciseFeedback('');return showSentenceTranslation(e.tokens[index],'builder-translation',e.lessons[e.index]);});
+  e.picked.forEach((index,position)=>{const button=document.getElementById('chosen-token-'+position);button.disabled=e.answered;button.onclick=()=>{if(e.answered)return;e.picked.splice(position,1);renderSentenceBuilder();exerciseFeedback('');return showSentenceTranslation(e.tokens[index],'builder-translation',e.lessons[e.index]);};});
 }
 function renderExercise(){
   const s=session,e=s.exercise;
   if(!e.lessons.length||e.step===6){renderExerciseDone();return;}
-  const lesson=e.lessons[e.index],word=lesson.word,step=e.step;
+  const lesson=e.lessons[e.index],word=lesson.word,step=e.step,index=e.index;
   const progress=(step*e.lessons.length+e.index)/(6*e.lessons.length)*100;
   let content='';
   if(step===0)content=`<div class="lesson-intro">${lessonVisualMarkup(lesson)}<h2 id="exercise-title" tabindex="-1" lang="en">${escapeHTML(word.en)}</h2>${wordIpaMarkup(word)}<p class="lesson-translation" lang="uk">${escapeHTML(word.uk)}</p>${exampleMarkup(lesson.sentence,lesson.translation,'example')}${lesson.extra.map((item,index)=>exampleMarkup(item.sentence,item.translation,'extra-'+index)).join('')}${exerciseAudioMarkup()}</div>`;
@@ -156,10 +185,12 @@ function renderExercise(){
     content=`<h2 id="exercise-title" tabindex="-1">Склади речення</h2><p class="exercise-prompt exercise-focus" lang="uk">${escapeHTML(lesson.translation)}</p><div id="sentence-answer" class="sentence-answer" aria-label="Твоє речення"></div><div id="sentence-bank" class="sentence-bank" aria-label="Слова для складання речення"></div>${sentenceTranslationOutput('builder-translation')}<button type="button" class="btn secondary" id="sentence-clear">Очистити</button><button type="button" class="btn" id="exercise-check">Перевірити</button>`;
   }
   if(step===5)content=`<h2 id="exercise-title" tabindex="-1">Напиши речення</h2><p class="exercise-prompt">Використай: <span class="exercise-focus" lang="uk">${escapeHTML(word.uk)}</span></p><details class="known-vocabulary"><summary>Слова</summary><p lang="en">${escapeHTML([...new Set(e.lessons.flatMap(item=>item.variants.flatMap(sentenceTokens)))].join(' · '))}</p></details>${exerciseInput('Напиши завершене речення англійською',true)}<div id="exercise-self-check" hidden><button type="button" class="btn secondary" id="confirm-self-check">Перевірено самостійно</button></div>`;
-  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button><span>${step*e.lessons.length+e.index+1} / ${6*e.lessons.length}</span></div><section class="exercise-panel" aria-label="Вправа"><div class="exercise-content">${content}<div id="exercise-hint-content" class="lesson-example" hidden></div><p id="exercise-feedback" class="exercise-feedback" role="status" aria-live="polite"></p><div class="exercise-actions">${step?'<button type="button" class="btn secondary" id="exercise-hint">Підказка</button>':''}<button type="button" class="btn" id="exercise-next">${step===5&&e.index===e.lessons.length-1?'Завершити':'Далі →'}</button></div></div><div class="exercise-progress" role="progressbar" aria-label="Прогрес заняття" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress}%"></span></div></section>`;
+  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button><span>${step*e.lessons.length+e.index+1} / ${6*e.lessons.length}</span></div><section class="exercise-panel" aria-label="Вправа"><div class="exercise-content">${content}<div id="exercise-hint-content" class="lesson-example" hidden></div><p id="exercise-feedback" class="exercise-feedback" role="status" aria-live="polite"></p>${step?'<div class="exercise-help"><button type="button" class="btn secondary" id="exercise-hint">Підказка</button></div>':''}<div class="exercise-actions exercise-navigation"><button type="button" class="btn secondary" id="exercise-prev" aria-label="Повернутися до попереднього завдання">← Назад</button><button type="button" class="btn" id="exercise-next">${step===5&&e.index===e.lessons.length-1?'Завершити':'Далі →'}</button></div></div><div class="exercise-progress" role="progressbar" aria-label="Прогрес заняття" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress}%"></span></div></section>`;
   document.getElementById('back').onclick=home;
-  document.getElementById('exercise-next').disabled=step!==0;
-  document.getElementById('exercise-next').onclick=()=>{if(step===0)e.answered=true;nextExercise();};
+  document.getElementById('exercise-prev').disabled=step===0&&index===0;
+  document.getElementById('exercise-prev').onclick=previousExercise;
+  document.getElementById('exercise-next').disabled=step!==0&&!e.answered;
+  document.getElementById('exercise-next').onclick=()=>{if(session?.exercise!==e||e.step!==step||e.index!==index)return;if(step===0)e.answered=true;nextExercise();};
   if(step===0){
     document.getElementById('exercise-audio').onclick=()=>speak(word.en,'en',word.audio);
     document.getElementById('exercise-audio-slow').onclick=()=>speak(word.en,'en',word.audio,.35);
@@ -179,6 +210,7 @@ function renderExercise(){
     }
     else{
       e.difficult.add(word.id);
+      e.rejected.push(index);
       const button=document.getElementById('exercise-option-'+index);
       button.setAttribute('aria-invalid','true');
       button.setAttribute('aria-label',option.en+' — неправильна відповідь');
@@ -189,7 +221,7 @@ function renderExercise(){
   if(step===2||step===3||step===5){
     document.getElementById('exercise-form').onsubmit=event=>{event.preventDefault();checkExercise();};
     if(step===5){
-      document.getElementById('exercise-answer').oninput=()=>{document.getElementById('exercise-self-check').hidden=true;exerciseFeedback('');};
+      document.getElementById('exercise-answer').oninput=()=>{e.selfCheck=false;document.getElementById('exercise-self-check').hidden=true;exerciseFeedback('');};
       document.getElementById('confirm-self-check').onclick=()=>{
         if(e.answered||ownSentenceResult(document.getElementById('exercise-answer').value,lesson,s).kind!=='manual')return;
         e.selfChecked.add(word.id);e.difficult.add(word.id);exerciseFeedback('Додано до повторення.');finishExerciseAnswer();
@@ -197,6 +229,16 @@ function renderExercise(){
     }
   }
   if(step===4){renderSentenceBuilder();document.getElementById('exercise-check').onclick=checkExercise;document.getElementById('sentence-clear').onclick=()=>{if(e.answered)return;e.picked=[];renderSentenceBuilder();exerciseFeedback('');};}
+  if(step===1)e.options.forEach((option,index)=>{
+    const button=document.getElementById('exercise-option-'+index);
+    if((e.rejected||[]).includes(index)){button.disabled=true;button.setAttribute('aria-invalid','true');button.setAttribute('aria-label',option.en+' — неправильна відповідь');}
+    if(e.answered){button.disabled=true;if(option.id===word.id){button.setAttribute('data-correct','true');button.setAttribute('aria-label',option.en+' — правильна відповідь');}}
+  });
+  if(step===2||step===3||step===5){document.getElementById('exercise-answer').value=e.answer||'';document.getElementById('exercise-answer').disabled=e.answered;}
+  if(step===5){document.getElementById('exercise-self-check').hidden=!e.selfCheck;document.getElementById('confirm-self-check').disabled=e.answered;}
+  if(e.answered){const check=document.getElementById('exercise-check');if(check)check.disabled=true;if(step)document.getElementById('exercise-hint').disabled=true;if(step===4)document.getElementById('sentence-clear').disabled=true;}
+  if(e.hint)renderExerciseHint(lesson);
+  exerciseFeedback(e.feedback?.message||'',e.feedback?.kind||'neutral');
   document.getElementById('exercise-title').focus?.({preventScroll:true});
   hydrateWordIpa(app);
   bindSentenceWords(app,lesson);
@@ -207,7 +249,8 @@ function renderExerciseDone(){
   const s=session,e=s.exercise;
   if(!e.lessons.length){app.innerHTML=`<section class="exercise-panel exercise-done"><h1>Немає слів для цього заняття</h1><p>Можна обрати інші слова або повторити вже вивчені.</p><button type="button" class="btn" id="exercise-home">До розділів</button></section>`;document.getElementById('exercise-home').onclick=home;return;}
   const review=s.queue.filter(word=>e.difficult.has(word.id));
-  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button></div><section class="exercise-panel exercise-done"><h1>Готово!</h1><p>У занятті: ${e.lessons.length} ${wordLabel(e.lessons.length)}.</p><p>Вивчено: ${e.completed.size}. Повторити: ${review.length}.</p>${e.selfChecked.size?`<p>Самоперевірка: ${e.selfChecked.size}. Ці слова залишилися для повторення.</p>`:''}<div class="exercise-actions">${review.length?'<button type="button" class="btn" id="exercise-review">Повторити складні</button>':''}<button type="button" class="btn secondary" id="exercise-restart">Пройти ще раз</button><button type="button" class="btn secondary" id="exercise-home">До розділів</button></div></section>`;
+  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="back">${groupBackLabel()}</button></div><section class="exercise-panel exercise-done"><h1>Готово!</h1><p>У занятті: ${e.lessons.length} ${wordLabel(e.lessons.length)}.</p><p>Вивчено: ${e.completed.size}. Повторити: ${review.length}.</p>${e.selfChecked.size?`<p>Самоперевірка: ${e.selfChecked.size}. Ці слова залишилися для повторення.</p>`:''}<div class="exercise-actions"><button type="button" class="btn secondary" id="exercise-prev" aria-label="Повернутися до попереднього завдання">← Назад</button>${review.length?'<button type="button" class="btn" id="exercise-review">Повторити складні</button>':''}<button type="button" class="btn secondary" id="exercise-restart">Пройти ще раз</button><button type="button" class="btn secondary" id="exercise-home">До розділів</button></div></section>`;
+  document.getElementById('exercise-prev').onclick=previousExercise;
   document.getElementById('back').onclick=home;document.getElementById('exercise-home').onclick=home;
   document.getElementById('exercise-restart').onclick=()=>start(s.ids,s.mixed,false,s.limit,s.selectedIds,'steps');
   if(review.length)document.getElementById('exercise-review').onclick=()=>start(s.ids,s.mixed,false,review.length,review.map(word=>word.id),'steps');

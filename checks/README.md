@@ -11,6 +11,7 @@ node checks/verify-section-list.cjs
 node checks/verify-swipe-selection.cjs
 node checks/verify-natural-voice.cjs
 node checks/verify-six-step-learning.cjs
+node checks/verify-exercise-back.cjs
 node checks/verify-transcription.cjs
 node checks/verify-context-examples.cjs
 node checks/verify-illustrations.cjs
@@ -23,6 +24,8 @@ node checks/verify-illustrations.cjs
 `verify-section-list.cjs` також перевіряє запуск усіх позначених слів одразу у вправах без вибору режиму, кількості та свайпів, вибір усіх слів, очищення вибору, особисті та змішані набори. Без позначок перевіряються кількість і свайпи.
 
 `fixture.cjs` — спільна модель браузера для цих перевірок; окремо її запускати не потрібно.
+
+`verify-exercise-back.cjs` перевіряє повернення між словами й кроками та з екрана завершення, неактивну кнопку на першому завданні, відновлення варіантів, помилок, підказок, чернеток, складених речень і самоперевірки, блокування перевірених відповідей та відсутність повторного запису прогресу.
 
 `verify-natural-voice.cjs` перевіряє стандартний і повільний темп ×0,35, збереження швидкості при відкладеному завантаженні голосів та помилках синтезу, швидкість резервного аудіозапису й збереження висоти голосу. `verify-six-step-learning.cjs` також перевіряє кнопки «×0,35» для слова та прикладу, повернення до звичайного темпу й незмінність прогресу після прослуховування.
 
