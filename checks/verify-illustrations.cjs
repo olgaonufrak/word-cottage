@@ -5,20 +5,32 @@ const {run,element}=fixture(storage,undefined,true),saved=JSON.stringify([...sto
 const pictures=(en,uk)=>JSON.parse(run(`JSON.stringify(lessonIllustrations(${JSON.stringify({en,uk})}))`));
 assert.equal(pictures('apple','яблуко')[0].alt,'Яблуко');
 assert.equal(pictures('bread','хліб')[0].type,'cottage');
+assert.match(pictures('table','стіл')[0].src,/home-table\.svg$/);
+assert.match(pictures('desk','письмовий стіл')[0].src,/home-desk\.svg$/);
+assert.match(pictures('time','час')[0].src,/learn-clock\.svg$/);
+assert.notEqual(pictures('table','стіл')[0].src,pictures('desk','письмовий стіл')[0].src);
+assert.notEqual(pictures('second','другий')[0].src,pictures('second','секунда')[0].src,'Order and time units keep their own meaning');
+assert.notEqual(pictures('study','кабінет (кімната)')[0].src,pictures('research','дослідження')[0].src);
+assert.deepEqual(pictures('table','таблиця'),[],'A table of data is not a dining table');
 assert.notEqual(pictures('orange','апельсин')[0].src,pictures('orange','помаранчевий')[0].src);
 assert.notEqual(pictures('mouse','миша')[0].src,pictures('mouse','комп’ютерна миша')[0].src);
 assert.notEqual(pictures('chicken','курятина')[0].src,pictures('chicken','курка')[0].src);
 for(const [en,uk] of [['information','інформація'],['fly','літати'],['train','тренувати'],['book','бронювати'],['glass','скло'],['key','ключовий'],['unknownword','невідоме слово'],['apple juice','яблуко']])assert.deepEqual(pictures(en,uk),[],`${en}: do not guess an image for another meaning`);
 assert.equal(pictures('red / green','червоний / зелений').length,2);
+assert.equal(pictures('happy — sad','щасливий — сумний').length,2);
+assert.equal(pictures('tall — short','високий — невисокий (про зріст)').length,2);
+assert.notEqual(pictures('short','короткий')[0].src,pictures('short','невисокий (про людину)')[0].src);
 assert.deepEqual(pictures('apple / unknown','яблуко / невідоме'),[]);
 assert.equal(pictures('apple','яблуко').length,1,'Personal vocabulary can use the same exact meaning');
 const all=JSON.parse(run('JSON.stringify(words.map(word=>({word,pictures:lessonIllustrations(word)})))'));
-assert.ok(all.filter(entry=>entry.pictures.length).length>=340);
+assert.ok(all.filter(entry=>entry.pictures.length).length>=900,'Cover objects and clear visual associations across the dictionaries');
+for(const category of ['a1-furniture','a2-body'])assert.ok(all.filter(entry=>entry.word.category===category).every(entry=>entry.pictures.length),`${category}: every concrete item has an illustration`);
+for(const category of ['a1-numbers','a1-days','a1-months','a1-colors'])assert.ok(all.filter(entry=>entry.word.category===category).every(entry=>entry.pictures.length),`${category}: complete visual set`);
 const files=new Set();
 for(const {pictures} of all)for(const picture of pictures){
   assert.ok(picture.alt.length>1);
   if(picture.type==='svg'){
-    assert.match(picture.src,/^images\/vocabulary\/[a-f0-9-]+\.svg$/);
+    assert.match(picture.src,/^images\/vocabulary\/[a-z0-9-]+\.svg$/);
     const file=path.join(__dirname,'../dist',picture.src);
     assert.ok(fs.existsSync(file),picture.src);files.add(file);
     const svg=fs.readFileSync(file,'utf8');assert.match(svg,/<svg\b/);
@@ -30,7 +42,7 @@ for(const {pictures} of all)for(const picture of pictures){
     assert.ok(fs.existsSync(path.join(__dirname,'../dist',crop.picture.src.split('?')[0])));
   }
 }
-assert.ok(files.size>200);
+assert.ok(files.size>500);
 const index=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');
 assert.ok(index.indexOf('illustrations.js')<index.indexOf('exercises.js'));
 assert.ok(fs.existsSync(path.join(__dirname,'../dist/images/vocabulary/LICENSE-GRAPHICS.txt')));
