@@ -315,18 +315,14 @@ footer{padding-top:24px;gap:18px}
   #app:has(>.exercise-panel[aria-label="Вправа"]) .study-top>span{font-size:13px;white-space:nowrap}
   .exercise-content{padding:14px;line-height:1.4}
   .exercise-content h2{font-size:26px;line-height:1.2;margin-bottom:10px}
-  .lesson-lead:has(.lesson-pictures){display:grid;grid-template-columns:80px minmax(0,1fr);column-gap:12px;align-items:center;text-align:left}
-  .lesson-lead:has(.lesson-pictures)>h2,.lesson-lead:has(.lesson-pictures)>.word-ipa,.lesson-lead:has(.lesson-pictures)>.lesson-translation{grid-column:2}
-  .lesson-lead .lesson-pictures{grid-column:1;grid-row:1 / span 3;margin:0;gap:4px}
-  .lesson-lead .lesson-picture{width:80px;height:80px}
-  .lesson-lead .lesson-picture-icon{padding:8px}
+  .lesson-lead .lesson-pictures{margin:0 0 6px;gap:12px}
+  .lesson-lead .lesson-picture{width:136px;height:136px}
+  .lesson-lead .lesson-picture-icon{padding:16px}
   .lesson-intro h2{font-size:30px;line-height:1.15;margin:0 0 4px}
   .lesson-intro .lesson-lead>.word-ipa{font-size:16px;line-height:1.3;margin:0 0 4px}
   .lesson-translation{font-size:19px;line-height:1.3}
-  .lesson-lead:has(.lesson-pictures-pair){display:block;text-align:center}
-  .lesson-lead .lesson-pictures-pair{margin-bottom:6px}
-  .lesson-pictures-pair .lesson-picture{width:60px;height:60px}
-  .lesson-example{margin-top:10px;padding:10px}
+  .lesson-pictures-pair .lesson-picture{width:112px;height:112px}
+  .lesson-example{margin-top:8px;padding:10px}
   .lesson-example p:first-child{font-size:20px;line-height:1.3}
   .lesson-example p+p{font-size:16px;line-height:1.3;margin-top:5px}
   .lesson-audio-controls{margin-top:10px;gap:6px}
@@ -342,7 +338,7 @@ footer{padding-top:24px;gap:18px}
   .exercise-form input,.exercise-form textarea{font-size:18px;line-height:1.3;padding:10px}
   .exercise-form textarea{min-height:84px}
   .exercise-content .btn{min-height:44px;padding:8px 12px}
-  .exercise-navigation{margin-top:12px;gap:8px}
+  .exercise-navigation{margin-top:10px;gap:8px}
   .exercise-navigation .btn{font-size:13px;padding:8px 6px}
   .exercise-feedback{font-size:15px;min-height:0;margin-top:10px}
   .sentence-answer{min-height:52px;padding:8px;gap:6px}
@@ -357,15 +353,17 @@ footer{padding-top:24px;gap:18px}
 @media(max-width:700px) and (max-height:600px){
   .exercise-content{padding:10px}
   .exercise-content h2{font-size:24px;margin-bottom:8px}
-  .lesson-lead:has(.lesson-pictures){grid-template-columns:64px minmax(0,1fr);column-gap:10px}
-  .lesson-lead .lesson-picture{width:64px;height:64px}
   .lesson-intro h2{font-size:26px;margin-bottom:3px}
   .lesson-intro .lesson-lead>.word-ipa{font-size:15px;margin-bottom:3px}
   .lesson-translation{font-size:17px}
-  .lesson-pictures-pair .lesson-picture{width:48px;height:48px}
   .lesson-example{padding:8px;margin-top:8px}
   .lesson-example p:first-child{font-size:18px;line-height:1.25}
   .lesson-example p+p{font-size:15px;line-height:1.25;margin-top:4px}
   .exercise-prompt{font-size:21px;margin:8px 0}
   .exercise-navigation{margin-top:8px}
+  .lesson-audio-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .lesson-audio-row{min-width:0;gap:4px}
+  .lesson-audio-row .speak{min-width:0;padding:8px 6px;flex:1}
+  .lesson-audio-row .audio-slow{min-width:44px;flex:0 0 44px}
+  .lesson-audio-row .audio-full-label{display:none}
 }
