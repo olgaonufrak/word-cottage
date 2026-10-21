@@ -295,7 +295,7 @@ footer{padding-top:24px;gap:18px}
   .stage-section-grid{grid-template-columns:1fr}
 }
 
-.lesson-pictures{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}.lesson-picture{display:block;width:156px;height:156px;max-width:100%;border:1px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden}.lesson-picture-icon{object-fit:contain;padding:16px}.vocabulary-art{display:block;width:100%;height:100%;background-repeat:no-repeat}.lesson-pictures-pair .lesson-picture{width:136px;height:136px}@media(max-width:700px){.lesson-picture{width:136px;height:136px}.lesson-pictures-pair .lesson-picture{width:112px;height:112px}}
+.lesson-pictures{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}.lesson-picture{display:block;width:156px;height:156px;max-width:100%;border:1px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden}.lesson-picture-icon{object-fit:contain;padding:0}.vocabulary-art{display:block;width:100%;height:100%;background-repeat:no-repeat}.lesson-pictures-pair .lesson-picture{width:136px;height:136px}@media(max-width:700px){.lesson-picture{width:136px;height:136px}.lesson-pictures-pair .lesson-picture{width:112px;height:112px}}
 
 .exercise-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.exercise-navigation:has(#exercise-hint){grid-template-columns:repeat(3,minmax(0,1fr))}.exercise-navigation .btn{min-width:0;padding-left:12px;padding-right:12px}
 
@@ -317,7 +317,7 @@ footer{padding-top:24px;gap:18px}
   .exercise-content h2{font-size:26px;line-height:1.2;margin-bottom:10px}
   .lesson-lead .lesson-pictures{margin:0 0 6px;gap:12px}
   .lesson-lead .lesson-picture{width:136px;height:136px}
-  .lesson-lead .lesson-picture-icon{padding:16px}
+  .lesson-lead .lesson-picture-icon{padding:0}
   .lesson-intro h2{font-size:30px;line-height:1.15;margin:0 0 4px}
   .lesson-intro .lesson-lead>.word-ipa{font-size:16px;line-height:1.3;margin:0 0 4px}
   .lesson-translation{font-size:19px;line-height:1.3}
