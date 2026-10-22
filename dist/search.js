@@ -32,20 +32,40 @@ function matchingWords(query){
   if(!term)return [];
   return words.filter(word=>normalizeWord(word.en).includes(term)||normalizeWord(word.uk).includes(term)).sort((a,b)=>Number(normalizeWord(b.en)===term)-Number(normalizeWord(a.en)===term));
 }
-function cancelWordSearch(){if(wordSearch){wordSearch.version++;wordSearch.controller?.abort();wordSearch=null;}}
-function searchForm(query=''){return `<form id="word-search-form" class="word-search-form"><label for="word-search-input">Пошук слів</label><div class="word-search-controls"><input id="word-search-input" type="search" maxlength="80" required autocomplete="off" placeholder="Наприклад, time або час" value="${escapeHTML(query)}"><button class="btn" type="submit">Знайти</button></div><p>Англійською або українською — у твоєму словнику та онлайн.</p></form>`;}
+function cancelWordSearch(){if(wordSearch){clearTimeout(wordSearch.timer);wordSearch.version++;wordSearch.controller?.abort();wordSearch=null;}}
+function searchForm(query=''){return `<form id="word-search-form" class="word-search-form" role="search"><label for="word-search-input">Пошук слів</label><div class="word-search-controls"><input id="word-search-input" type="search" maxlength="80" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" aria-describedby="word-search-help" placeholder="Наприклад, time або час" value="${escapeHTML(query)}"></div><p id="word-search-help">Введи слово англійською або українською — переклад з’явиться автоматично.</p></form>`;}
+function bindWordSearchForm(){
+  const input=document.getElementById('word-search-input');
+  let composing=false;
+  const update=(immediate=false)=>{
+    if(screen==='search'){scheduleWordLookup(input.value,immediate,composing);return;}
+    if(composing||!input.value.trim())return;
+    const start=input.selectionStart,end=input.selectionEnd;
+    showSearch(input.value,immediate);
+    const next=document.getElementById('word-search-input');
+    next.focus?.({preventScroll:true});next.setSelectionRange?.(start,end);
+  };
+  document.getElementById('word-search-form').onsubmit=event=>{event.preventDefault();if(!composing)update(true);};
+  input.oninput=event=>{if(event?.isComposing){if(screen==='search')scheduleWordLookup(input.value,false,true);return;}update();};
+  input.oncompositionstart=()=>{composing=true;if(screen==='search')scheduleWordLookup(input.value,false,true);};
+  input.oncompositionend=()=>{composing=false;update();};
+}
+function scheduleWordLookup(raw,immediate=false,composing=false){
+  const state=wordSearch;if(screen!=='search'||!state)return;
+  clearTimeout(state.timer);state.timer=null;state.version++;state.controller?.abort();state.query=raw;
+  renderLocalSearch();
+  const panel=document.getElementById('online-word-result');
+  if(!raw.trim()||composing){panel.innerHTML='<p class="sub">Введи слово — переклад з’явиться автоматично.</p>';return;}
+  panel.innerHTML='<p class="sub" role="status">Шукаємо слово й переклад…</p>';
+  if(immediate){lookupWord(raw);return;}
+  state.timer=setTimeout(()=>{state.timer=null;if(screen==='search'&&wordSearch===state)lookupWord(raw);},400);
+}
 function showSearch(query='',lookup=false){
   cancelWordSearch();screen='search';session=null;selection=null;
-  wordSearch={query,version:0,controller:null};
-  app.innerHTML=`<div class="study-top"><button class="back" id="back">‹ Усі розділи</button></div><section class="word-list-panel search-panel"><h1>Знайди нове слово</h1>${searchForm(query)}<div id="local-search-results"></div><section class="online-word-section" aria-labelledby="online-word-title"><h2 id="online-word-title">Онлайн-словник</h2><div id="online-word-result" aria-live="polite"><p class="sub">Введи слово та натисни «Знайти». Пошук охоплює слова поза початковими розділами.</p></div></section></section>`;
+  wordSearch={query,version:0,controller:null,timer:null};
+  app.innerHTML=`<div class="study-top"><button class="back" id="back">‹ Усі розділи</button></div><section class="word-list-panel search-panel"><h1>Знайди нове слово</h1>${searchForm(query)}<div id="local-search-results"></div><section class="online-word-section" aria-labelledby="online-word-title"><h2 id="online-word-title">Онлайн-словник</h2><div id="online-word-result" aria-live="polite"></div></section></section>`;
   document.getElementById('back').onclick=home;
-  document.getElementById('word-search-form').onsubmit=event=>{event.preventDefault();lookupWord(document.getElementById('word-search-input').value);};
-  document.getElementById('word-search-input').oninput=()=>{
-    const state=wordSearch;if(!state||screen!=='search')return;
-    state.version++;state.controller?.abort();state.query=document.getElementById('word-search-input').value;
-    renderLocalSearch();document.getElementById('online-word-result').innerHTML='<p class="sub">Натисни «Знайти», щоб перевірити слово в онлайн-словнику.</p>';
-  };
-  renderLocalSearch();if(lookup&&query.trim())lookupWord(query);
+  bindWordSearchForm();scheduleWordLookup(query,lookup);
 }
 function renderLocalSearch(){
   if(screen!=='search'||!wordSearch)return;
@@ -121,6 +141,7 @@ async function pronunciationWord(term,lang,signal){
 }
 async function lookupWord(raw){
   const state=wordSearch;if(screen!=='search'||!state)return;
+  clearTimeout(state.timer);state.timer=null;
   state.controller?.abort();state.controller=new AbortController();state.query=raw.trim();const version=++state.version,signal=state.controller.signal;
   const current=()=>screen==='search'&&wordSearch===state&&state.version===version&&!signal.aborted;
   renderLocalSearch();const panel=document.getElementById('online-word-result');

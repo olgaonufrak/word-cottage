@@ -84,7 +84,7 @@ function showBasics(){
   document.getElementById('basics-back').onclick=landing;
   app.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>showSectionWords([button.dataset.category]));
   document.getElementById('mixed').onclick=()=>picker();document.getElementById('learned-words').onclick=showLearned;
-  document.getElementById('word-search-form').onsubmit=event=>{event.preventDefault();showSearch(document.getElementById('word-search-input').value,true);};
+  bindWordSearchForm();
   updateTotal();resetPageScroll();
 }
 function amountControls(){return `<fieldset class="word-count-picker"><legend>Скільки слів цього разу?</legend><div class="word-stepper"><button type="button" class="step-btn" id="count-minus" aria-label="Зменшити кількість слів">−</button><output id="word-count" aria-live="polite" aria-label="Кількість слів">10</output><button type="button" class="step-btn" id="count-plus" aria-label="Збільшити кількість слів">+</button></div><div class="count-presets" aria-label="Швидкий вибір кількості">${[5,10,20].map(n=>`<button type="button" class="btn secondary count-preset" data-count="${n}" aria-pressed="${n===10}">${n} слів</button>`).join('')}</div><p class="count-available" id="count-available"></p></fieldset>`;}
