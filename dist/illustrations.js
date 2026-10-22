@@ -796,7 +796,7 @@ const vocabularyPictures=new Map();
 for(const row of vocabularyPictureRows){
   const fields=row.split('|'),names=fields.shift().split(','),alt=fields.pop(),source=fields.pop(),meaning=new RegExp(fields.join('|'),'iu');
   const [type,first,second]=source.split(':');
-  const picture=type==='c'?{type:'cottage',picture:Number(first),cell:Number(second),alt}:{type:'svg',src:`images/vocabulary-folk/${first}.svg`,alt};
+  const picture=type==='c'?{type:'cottage',picture:Number(first),cell:Number(second),alt}:{type:'svg',src:`images/vocabulary-folk/${first}.svg?v=20261022-detail`,alt};
   for(const name of names){const key=name.toLowerCase();if(!vocabularyPictures.has(key))vocabularyPictures.set(key,[]);vocabularyPictures.get(key).push({meaning,picture});}
 }
 function lessonIllustrations(word){

@@ -5,9 +5,9 @@ const {run,element}=fixture(storage,undefined,true),saved=JSON.stringify([...sto
 const pictures=(en,uk)=>JSON.parse(run(`JSON.stringify(lessonIllustrations(${JSON.stringify({en,uk})}))`));
 assert.equal(pictures('apple','яблуко')[0].alt,'Яблуко');
 assert.equal(pictures('bread','хліб')[0].type,'cottage');
-assert.match(pictures('table','стіл')[0].src,/home-table\.svg$/);
-assert.match(pictures('desk','письмовий стіл')[0].src,/home-desk\.svg$/);
-assert.match(pictures('time','час')[0].src,/learn-clock\.svg$/);
+assert.match(pictures('table','стіл')[0].src,/home-table\.svg\?v=20261022-detail$/);
+assert.match(pictures('desk','письмовий стіл')[0].src,/home-desk\.svg\?v=20261022-detail$/);
+assert.match(pictures('time','час')[0].src,/learn-clock\.svg\?v=20261022-detail$/);
 assert.notEqual(pictures('table','стіл')[0].src,pictures('desk','письмовий стіл')[0].src);
 assert.notEqual(pictures('second','другий')[0].src,pictures('second','секунда')[0].src,'Order and time units keep their own meaning');
 assert.notEqual(pictures('study','кабінет (кімната)')[0].src,pictures('research','дослідження')[0].src);
@@ -30,8 +30,8 @@ const files=new Set();
 for(const {pictures} of all)for(const picture of pictures){
   assert.ok(picture.alt.length>1);
   if(picture.type==='svg'){
-    assert.match(picture.src,/^images\/vocabulary-folk\/[a-z0-9-]+\.svg$/,'Lessons use the illustrated edition, rather than the original flat assets');
-    const file=path.join(__dirname,'../dist',picture.src);
+    assert.match(picture.src,/^images\/vocabulary-folk\/[a-z0-9-]+\.svg\?v=20261022-detail$/,'The detailed artwork has its own browser cache version');
+    const file=path.join(__dirname,'../dist',picture.src.split('?')[0]);
     assert.ok(fs.existsSync(file),picture.src);files.add(file);
     const svg=fs.readFileSync(file,'utf8');assert.match(svg,/<svg\b/);
     assert.doesNotMatch(svg,/<script|foreignObject|\bon\w+=|javascript:|<image|<use|<iframe/i);
@@ -51,6 +51,7 @@ const folkSVG=new Map();
 for(const name of sourceNames){
   const svg=fs.readFileSync(path.join(folkDirectory,name),'utf8');folkSVG.set(name,svg);
   assert.match(svg,/<svg\b[^>]*\bdata-style="cottage-folk"/,`${name}: artwork edition marker`);
+  assert.match(svg,/<svg\b[^>]*\bdata-edition="detailed"/,`${name}: detailed artwork edition`);
   assert.doesNotMatch(svg,/<script|foreignObject|\bon\w+=|javascript:|<image|<use|<iframe|<!DOCTYPE|<!ENTITY|\b(?:xlink:)?href\s*=/i,`${name}: standalone safe SVG`);
   const ids=[...svg.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
   assert.equal(new Set(ids).size,ids.length,`${name}: no duplicate local filter or clipping IDs`);
@@ -59,6 +60,7 @@ for(const name of sourceNames){
     assert.ok(reference.startsWith('#')&&ids.includes(reference.slice(1)),`${name}: references only its own texture or clipping definitions`);
   }
 }
+assert.equal([...folkSVG.values()].filter(svg=>svg.includes('data-object-details="true"')).length,200,'All individually detailed objects are included in the published artwork');
 // Numbers and calendar labels remain legible, exact teaching content.
 for(const name of sourceNames.filter(name=>/^learn-(?:number-|ordinal-|month-|weekday-|week|weekend|year|day)/.test(name))){
   const source=fs.readFileSync(path.join(sourceDirectory,name),'utf8'),svg=folkSVG.get(name);
@@ -97,7 +99,7 @@ assert.match(index,/href="illustrations-sources.txt"/);
 run('showSectionWords(["a1-fruit"])');
 const apple=run('sectionWordPool(["a1-fruit"]).findIndex(word=>word.en==="apple")');
 element('section-word-'+apple).checked=true;element('section-word-'+apple).onchange();element('learn-section').onclick();
-assert.match(element('app').innerHTML,/<div class="lesson-lead">[\s\S]*<div class="lesson-pictures">[\s\S]*<img[^>]+class="lesson-picture lesson-picture-icon"[^>]+src="images\/vocabulary-folk\/1f34e.svg"[^>]+alt="Яблуко"[^>]+width="156"[^>]+height="156"/,'The introduction retains its large accessible image before the word');
+assert.match(element('app').innerHTML,/<div class="lesson-lead">[\s\S]*<div class="lesson-pictures">[\s\S]*<img[^>]+class="lesson-picture lesson-picture-icon"[^>]+src="images\/vocabulary-folk\/1f34e.svg\?v=20261022-detail"[^>]+alt="Яблуко"[^>]+width="156"[^>]+height="156"/,'The introduction retains its large accessible image before the word');
 assert.equal(JSON.stringify([...storage]),saved,'Illustrations never change saved words or progress');
 element('exercise-next').onclick();
 assert.doesNotMatch(element('app').innerHTML,/lesson-pictures|images\/vocabulary(?:-folk)?\//,'Recognition has no image answer leak');
