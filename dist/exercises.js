@@ -14,11 +14,20 @@ function sentenceWordMarkup(sentence,scope,output=scope+'-translation'){
 }
 function sentenceTranslationOutput(id){return `<p id="${id}" class="sentence-word-translation" role="status" aria-live="polite" hidden></p>`;}
 function exampleMarkup(sentence,translation,scope){return `<div class="lesson-example"><p lang="en">${sentenceWordMarkup(sentence,scope)}</p><p lang="uk">${escapeHTML(translation)}</p>${sentenceTranslationOutput(scope+'-translation')}</div>`;}
+function paintedVocabularyMarkup(picture){
+  const x=picture.cell%5*25,y=Math.floor(picture.cell/5)*25;
+  return `<span class="lesson-picture lesson-picture-art lesson-picture-painted" role="img" aria-label="${escapeHTML(picture.alt)}"><span class="vocabulary-art vocabulary-art-painted" style="background-image:url('${picture.src}');background-position:${x}% ${y}%"></span></span>`;
+}
+function preciseVocabularyMarkup(picture){
+  const x=(picture.paper.cell%5)*25,y=Math.floor(picture.paper.cell/5)*25;
+  return `<span class="lesson-picture lesson-picture-diagram" role="img" aria-label="${escapeHTML(picture.alt)}"><span class="vocabulary-art vocabulary-art-painted" style="background-image:url('${picture.paper.src}');background-position:${x}% ${y}%"></span><img class="lesson-diagram-foreground" src="${picture.src}" alt="" aria-hidden="true" width="156" height="156" decoding="async"></span>`;
+}
 function lessonVisualMarkup(lesson){
   const pictures=lessonIllustrations(lesson.word);
   if(!pictures.length)return lesson.emoji?`<div class="lesson-emoji" aria-hidden="true">${lesson.emoji}</div>`:'';
   return `<div class="lesson-pictures${pictures.length>1?' lesson-pictures-pair':''}">${pictures.map(picture=>picture.type==='cottage'
     ?`<span class="lesson-picture lesson-picture-art" role="img" aria-label="${escapeHTML(picture.alt)}">${cottageTile(picture.picture,picture.cell,'vocabulary-art')}</span>`
+    :picture.type==='painted'?paintedVocabularyMarkup(picture):picture.paper?preciseVocabularyMarkup(picture)
     :`<img class="lesson-picture lesson-picture-icon" src="${picture.src}" alt="${escapeHTML(picture.alt)}" width="156" height="156" decoding="async">`).join('')}</div>`;
 }
 function exerciseAudioMarkup(){return `<div class="lesson-audio-controls"><div class="lesson-audio-row"><button type="button" class="speak" id="exercise-audio" aria-label="Послухати слово">♫ <span class="audio-full-label">Послухати </span>слово</button><button type="button" class="speak audio-slow" id="exercise-audio-slow" aria-label="Послухати слово зі швидкістю 0,35">×0,35</button></div><div class="lesson-audio-row"><button type="button" class="speak" id="example-audio" aria-label="Послухати приклад">♫ <span class="audio-full-label">Послухати </span>приклад</button><button type="button" class="speak audio-slow" id="example-audio-slow" aria-label="Послухати приклад зі швидкістю 0,35">×0,35</button></div></div>`;}

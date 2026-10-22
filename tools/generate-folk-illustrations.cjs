@@ -142,7 +142,7 @@ function shadeShapes(body,root,name,protectedPaint) {
   }).join('');
   return {body,root,defs};
 }
-async function styleSvg(svg,name,sharp,details='') {
+async function styleSvg(svg,name,sharp,details='',options={}) {
   const source=parseSource(svg,name),{body,root}=source,b=await boundsOf(source,sharp);
   const seed=seedFor(name),colour=COLOUR_SWATCHES.has(name)?'#ebd9ba':PAPER[seed%PAPER.length];
   const text=/<text\b/.test(body),precise=text||PRESERVE_COLOURS.has(name)||/^learn-(?:clock|minute|midnight|noon|oclock|half-past|quarter-)/.test(name);
@@ -164,8 +164,8 @@ async function styleSvg(svg,name,sharp,details='') {
 <linearGradient id="light" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#fff7dc" stop-opacity=".15"/><stop offset=".55" stop-color="#fff7dc" stop-opacity="0"/><stop offset="1" stop-color="#4e4930" stop-opacity=".06"/></linearGradient>${mask}
 <filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="${seed%97+4}" result="grain"/><feColorMatrix in="grain" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".15"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
 <filter id="gouache" x="-3%" y="-3%" width="106%" height="106%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".045 .31" numOctaves="3" seed="${seed%97+8}" result="fibres"/><feDiffuseLighting in="fibres" surfaceScale=".65" diffuseConstant=".9" lighting-color="#fff5da" result="raised"><feDistantLight azimuth="225" elevation="55"/></feDiffuseLighting><feComposite in="raised" in2="SourceGraphic" operator="in" result="lit"/><feComposite in="SourceGraphic" in2="lit" operator="arithmetic" k1="0" k2="${1-Number(soft)}" k3="${soft}" k4="0" result="painted"/><feTurbulence type="fractalNoise" baseFrequency=".15" numOctaves="3" seed="${seed%97+5}" result="edge"/><feDisplacementMap in="painted" in2="edge" scale="${edge}" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
-<path d="M2 3Q42 1 101 3L197 2L198 197Q128 199 74 197L3 198Z" fill="${colour}"/><path d="M5 6Q82 4 147 6L194 5L194 194L6 195Z" fill="none" stroke="#f8e9c8" stroke-opacity=".58" stroke-width="1.2"/><g filter="url(#paper)"><rect x="5" y="5" width="190" height="190" fill="${colour}"/></g>${paperFlecks(seed+91)}${art}
-${extraPaint?`<g mask="url(#paint-mask)"><rect width="200" height="200" fill="url(#light)"/>${brush(seed+37)}</g>`:''}<g filter="url(#gouache)">${sprig(14,41,-25,seed%2)}${sprig(182,162,155,(seed+1)%2)}</g></svg>\n`;
+${options.foregroundOnly?'':`<path d="M2 3Q42 1 101 3L197 2L198 197Q128 199 74 197L3 198Z" fill="${colour}"/><path d="M5 6Q82 4 147 6L194 5L194 194L6 195Z" fill="none" stroke="#f8e9c8" stroke-opacity=".58" stroke-width="1.2"/><g filter="url(#paper)"><rect x="5" y="5" width="190" height="190" fill="${colour}"/></g>${paperFlecks(seed+91)}`}${art}
+${extraPaint?`<g mask="url(#paint-mask)"><rect width="200" height="200" fill="url(#light)"/>${brush(seed+37)}</g>`:''}${options.foregroundOnly?'':`<g filter="url(#gouache)">${sprig(14,41,-25,seed%2)}${sprig(182,162,155,(seed+1)%2)}</g>`}</svg>\n`;
 }
 function loadSharp(modulePath) {
   try{return require(modulePath?path.resolve(modulePath):'sharp');}catch(error){throw new Error('Install the developer-only sharp package or pass --sharp /absolute/path/to/sharp (or WORD_COTTAGE_SHARP_MODULE). '+error.message);}

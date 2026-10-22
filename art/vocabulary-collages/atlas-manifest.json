@@ -1,0 +1,5426 @@
+{
+  "version": 2,
+  "columns": 5,
+  "rows": 5,
+  "method": "Built-in imagegen; user cottage-1.jpg used only as the style reference",
+  "atlases": {
+    "painted-01": {
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "fa4850c0b3b6faa7bf6955649c30c1c60487a7220d29fa8ba44079c4cbbba7e3",
+      "sourceEdges": {
+        "x": [
+          0,
+          252,
+          499,
+          754,
+          1005,
+          1254
+        ],
+        "y": [
+          0,
+          251,
+          500,
+          742,
+          971,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-02": {
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "93ec418038e034fee2de301df757d2579ecef8ba11763aadb9c3921209c71839",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          499,
+          753,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          243,
+          479,
+          711,
+          948,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-03": {
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "b63d1d57c582ee1321daddc94719b6c4006d51909e14b84638c48d55c750095f",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          495,
+          755,
+          1004,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          489,
+          732,
+          977,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-04": {
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "198629bc503a788b47c9c5698e5b51491e82e213d76ba9d71af78be9b5234968",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          499,
+          754,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          245,
+          496,
+          741,
+          984,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-05": {
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "d235a680ff4f995700b44b603369b59c2cdc9762948adf3546786bce8efef372",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          499,
+          753,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          240,
+          484,
+          722,
+          963,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {
+        "1f35f": {
+          "sourceSha256": "5605832e2edc09559c56dcbe5d1cc350fbcc47059633256b846facc5d8fbf21e",
+          "width": 1254,
+          "height": 1254
+        }
+      }
+    },
+    "painted-06": {
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "d652d45fe570f50e4f9485f4039e941cd5492cb849f1f11cf09be60e07738539",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          499,
+          753,
+          1005,
+          1254
+        ],
+        "y": [
+          0,
+          249,
+          490,
+          735,
+          982,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-07": {
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "cc1ae134f3977fb30ce973f421a2be89d2d19fd78dd3a2cee03bccdfd5e38ab8",
+      "sourceEdges": {
+        "x": [
+          0,
+          252,
+          499,
+          753,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          497,
+          745,
+          985,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-08": {
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "ddf753a4c44df3592277bd4f3c2a8c197dd4c4556898bb57814c69d7cce82b52",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          498,
+          755,
+          1005,
+          1254
+        ],
+        "y": [
+          0,
+          249,
+          490,
+          730,
+          971,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-09": {
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "f7afd79ba943813cab03d7e9464384254a3d937adfe7f7e7c7853cf2ccb4b773",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          494,
+          758,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          248,
+          493,
+          736,
+          975,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-10": {
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "87ba29e3ef0c7f5c6f9d06b9c914493304470f704c1c6ec1bd8294a66f6f0db9",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          497,
+          755,
+          1004,
+          1254
+        ],
+        "y": [
+          0,
+          240,
+          484,
+          720,
+          960,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-11": {
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "3dad86a534596252f6b2eb22b79395b026efaef35ae51a7bfd63719a4b968661",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          496,
+          755,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          491,
+          730,
+          973,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-12": {
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "ec34282ea44cfd8626812398ac8ad371f317229efd38fc79fee8cd961e50f215",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          506,
+          751,
+          1008,
+          1254
+        ],
+        "y": [
+          0,
+          246,
+          486,
+          726,
+          972,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-13": {
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "24da01c28fef9ea339067504b6dca7a2c88a84562cd9988729f2a9613bdbd563",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          494,
+          757,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          245,
+          487,
+          725,
+          953,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-14": {
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "1c90d17175f2ef9203ead10c4614e272aa6f5bb90a3df3a4a0be3af1f7d1356e",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          496,
+          757,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          489,
+          736,
+          971,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-15": {
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "b91258dee25142661e213e6799e80a93aed526a3a8c83f8353ea94632cc55215",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          494,
+          758,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          499,
+          743,
+          983,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {
+        "1f4cb": {
+          "sourceSha256": "dfc7c729195323d883acfc725883e2c2652b580f4c5f8fe98c6b410674872954",
+          "width": 1254,
+          "height": 1254
+        }
+      }
+    },
+    "painted-16": {
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "5e5fef4f039ad7cdbdb7132348fedb0f090c2e9e4fd2d7fcc002d7c92f805631",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          494,
+          755,
+          1003,
+          1254
+        ],
+        "y": [
+          0,
+          242,
+          489,
+          733,
+          968,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-17": {
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "11376d66ffff9d90e29ea58bd30cdaba06c6ae20586e8992f1f0b56eb4a1d381",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          500,
+          754,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          248,
+          487,
+          725,
+          958,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-18": {
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "17ce859936010eecf00efbc7272253a92584f0308034fd55da720b0378d069e4",
+      "sourceEdges": {
+        "x": [
+          0,
+          250,
+          497,
+          753,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          246,
+          485,
+          728,
+          965,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {
+        "1f3f8": {
+          "sourceSha256": "ee8e356c1b4df9bc801f92c24404fc179bcb055f3cfb6e843d2dae19286b36c1",
+          "width": 1254,
+          "height": 1254
+        },
+        "1f4f8": {
+          "sourceSha256": "2a12d8990218bbf706e9b8c7850cde8cea4318b44c97258b8803fe1ce341b0bc",
+          "width": 1254,
+          "height": 1254
+        }
+      }
+    },
+    "painted-19": {
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "aaf01ef00712834c1e6436f7d1abda8929d339ca2c0b6841aa3a5cf47d3fc3a5",
+      "sourceEdges": {
+        "x": [
+          0,
+          250,
+          499,
+          753,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          249,
+          496,
+          740,
+          979,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-20": {
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "8435823381aa8da34f3569877a13f01201a8cbbe8f6fd1a4248fb835bbcc3489",
+      "sourceEdges": {
+        "x": [
+          0,
+          248,
+          493,
+          753,
+          1007,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          490,
+          737,
+          979,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {
+        "1f388": {
+          "sourceSha256": "3f08cee2662aebdb052793879a1f8174a84908cdaea85fd4d76ca4f158ede4d3",
+          "width": 1254,
+          "height": 1254
+        }
+      }
+    },
+    "painted-21": {
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "1aa9d94eba7c5ead28f07bba9e2d84cf7f5cda59b1b583538af78210c1ef0835",
+      "sourceEdges": {
+        "x": [
+          0,
+          249,
+          502,
+          753,
+          1006,
+          1254
+        ],
+        "y": [
+          0,
+          248,
+          495,
+          744,
+          986,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "painted-22": {
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "5d9b5dffd2eea8aa9b638739ae483aecdfe12ca1b3dacafbcbec15c43f7f215f",
+      "sourceEdges": {
+        "x": [
+          0,
+          252,
+          507,
+          748,
+          1003,
+          1254
+        ],
+        "y": [
+          0,
+          247,
+          490,
+          723,
+          956,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    }
+  },
+  "pictures": {
+    "2328": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Клавіатура"
+    },
+    "2600": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сонце"
+    },
+    "2601": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хмара"
+    },
+    "2602": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Парасоля"
+    },
+    "2604": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Комета"
+    },
+    "2615": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чашка кави"
+    },
+    "2693": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Якір"
+    },
+    "2696": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Терези"
+    },
+    "2697": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лабораторна колба"
+    },
+    "2702": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ножиці"
+    },
+    "2708": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Літак"
+    },
+    "2709": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лист"
+    },
+    "2744": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сніжинка"
+    },
+    "2764": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Серце"
+    },
+    "1f303": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Нічне небо"
+    },
+    "1f305": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ранковий світанок"
+    },
+    "1f307": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вечірній захід сонця"
+    },
+    "1f308": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Веселка"
+    },
+    "1f309": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Міст"
+    },
+    "1f30a": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хвиля"
+    },
+    "1f30b": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вулкан"
+    },
+    "1f30c": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зоряне небо та Чумацький Шлях"
+    },
+    "1f30d": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Земна куля"
+    },
+    "1f319": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Місяць"
+    },
+    "1f321": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Термометр"
+    },
+    "1f324": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Денне сонце"
+    },
+    "1f325": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сонце за хмарою"
+    },
+    "1f327": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дощова хмара"
+    },
+    "1f328": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хмара зі снігом"
+    },
+    "1f32b": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Туман"
+    },
+    "1f32c": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вітер"
+    },
+    "1f331": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Паросток"
+    },
+    "1f332": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сосна"
+    },
+    "1f333": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дерево"
+    },
+    "1f337": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тюльпан"
+    },
+    "1f338": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Весняне цвітіння"
+    },
+    "1f339": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Троянда"
+    },
+    "1f33b": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Соняшник"
+    },
+    "1f33d": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кукурудза"
+    },
+    "1f341": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кленовий листок"
+    },
+    "1f342": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Осіннє листя"
+    },
+    "1f343": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Листок"
+    },
+    "1f344": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гриби"
+    },
+    "1f345": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Помідор"
+    },
+    "1f346": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Баклажан"
+    },
+    "1f347": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Виноград"
+    },
+    "1f348": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Диня"
+    },
+    "1f349": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кавун"
+    },
+    "1f34a": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Апельсин"
+    },
+    "1f34c": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Банан"
+    },
+    "1f34d": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ананас"
+    },
+    "1f34e": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Яблуко"
+    },
+    "1f351": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Персик"
+    },
+    "1f354": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гамбургер"
+    },
+    "1f355": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Піца"
+    },
+    "1f357": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Курятина"
+    },
+    "1f35a": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рис"
+    },
+    "1f35d": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Спагеті"
+    },
+    "1f35f": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Картопля фрі"
+    },
+    "1f368": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Морозиво"
+    },
+    "1f36a": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Печиво"
+    },
+    "1f36b": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шоколад"
+    },
+    "1f36f": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мед"
+    },
+    "1f372": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Суп"
+    },
+    "1f373": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сковорода"
+    },
+    "1f374": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Виделка та ніж"
+    },
+    "1f375": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зелений чай"
+    },
+    "1f377": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вино"
+    },
+    "1f37a": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пиво"
+    },
+    "1f37d": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тарілка"
+    },
+    "1f37e": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пляшка"
+    },
+    "1f381": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Подарунок"
+    },
+    "1f382": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Торт"
+    },
+    "1f388": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Повітряна кулька"
+    },
+    "1f392": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рюкзак"
+    },
+    "1f3a4": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мікрофон"
+    },
+    "1f3a7": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Навушники"
+    },
+    "1f3a8": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Палітра та пензлик"
+    },
+    "1f3ab": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Квиток"
+    },
+    "1f3ac": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кінохлопавка"
+    },
+    "1f3ae": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ігровий контролер"
+    },
+    "1f3b2": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гральний кубик"
+    },
+    "1f3b7": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Саксофон"
+    },
+    "1f3b8": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гітара"
+    },
+    "1f3b9": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Клавіші фортепіано"
+    },
+    "1f3ba": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Труба"
+    },
+    "1f3bb": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скрипка"
+    },
+    "1f3be": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тенісна ракетка й м’яч"
+    },
+    "1f3c0": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Баскетбольний м’яч"
+    },
+    "1f3c3": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина біжить"
+    },
+    "1f3c6": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кубок переможця"
+    },
+    "1f3ca": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина пливе"
+    },
+    "1f3cb": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина піднімає штангу"
+    },
+    "1f3cd": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мотоцикл"
+    },
+    "1f3d0": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Волейбольний м’яч"
+    },
+    "1f3d3": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ракетка й м'яч для настільного тенісу"
+    },
+    "1f3d4": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Засніжена гора з льодовиком"
+    },
+    "1f3d5": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Намет серед дерев"
+    },
+    "1f3d6": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пляж"
+    },
+    "1f3d8": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Будинки селища"
+    },
+    "1f3d9": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Місто"
+    },
+    "1f3dc": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пустеля"
+    },
+    "1f3dd": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Острів"
+    },
+    "1f3e2": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Офісна будівля"
+    },
+    "1f3e5": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лікарня"
+    },
+    "1f3e6": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Банк"
+    },
+    "1f3e8": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Готель"
+    },
+    "1f3eb": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Школа"
+    },
+    "1f3f0": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Замок"
+    },
+    "1f3f8": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ракетка та волан для бадмінтону"
+    },
+    "1f400": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Щур"
+    },
+    "1f401": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Миша"
+    },
+    "1f404": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Корова"
+    },
+    "1f405": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тигр"
+    },
+    "1f407": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кролик"
+    },
+    "1f408": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кіт"
+    },
+    "1f40a": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Крокодил"
+    },
+    "1f40b": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кит"
+    },
+    "1f40d": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Змія"
+    },
+    "1f40e": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кінь"
+    },
+    "1f410": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коза"
+    },
+    "1f411": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вівця"
+    },
+    "1f412": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мавпа"
+    },
+    "1f414": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Курка"
+    },
+    "1f415": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Собака"
+    },
+    "1f416": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Свиня"
+    },
+    "1f418": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Слон"
+    },
+    "1f419": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Восьминіг"
+    },
+    "1f41a": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мушля"
+    },
+    "1f41b": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гусениця"
+    },
+    "1f41c": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мураха"
+    },
+    "1f41d": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Бджола"
+    },
+    "1f41e": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сонечко"
+    },
+    "1f41f": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Риба"
+    },
+    "1f422": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Черепаха"
+    },
+    "1f427": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пінгвін"
+    },
+    "1f42c": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дельфін"
+    },
+    "1f438": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жаба"
+    },
+    "1f43a": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вовк"
+    },
+    "1f43b": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ведмідь"
+    },
+    "1f440": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Очі"
+    },
+    "1f441": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Око"
+    },
+    "1f442": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вухо"
+    },
+    "1f443": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ніс"
+    },
+    "1f444": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рот"
+    },
+    "1f445": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Язик"
+    },
+    "1f446": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Піднятий вказівний палець"
+    },
+    "1f44b": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рука махає на привітання"
+    },
+    "1f44d": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Великий палець руки"
+    },
+    "1f452": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Капелюх"
+    },
+    "1f453": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Окуляри"
+    },
+    "1f455": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Футболка"
+    },
+    "1f456": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Штани"
+    },
+    "1f457": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сукня"
+    },
+    "1f45b": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гаманець"
+    },
+    "1f45c": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сумка"
+    },
+    "1f45e": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Черевик"
+    },
+    "1f45f": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кросівки"
+    },
+    "1f460": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Туфля на підборах"
+    },
+    "1f461": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Босоніжка"
+    },
+    "1f465": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Група людей"
+    },
+    "1f466": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хлопчик"
+    },
+    "1f467": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дівчинка"
+    },
+    "1f468": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чоловік"
+    },
+    "1f468-200d-1f37c": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тато з немовлям"
+    },
+    "1f469": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жінка"
+    },
+    "1f469-200d-1f37c": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мама з немовлям"
+    },
+    "1f46a": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Родина"
+    },
+    "1f46e": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Поліцейський"
+    },
+    "1f471": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина зі світлим волоссям"
+    },
+    "1f474": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дідусь"
+    },
+    "1f475": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Бабуся"
+    },
+    "1f476": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Немовля"
+    },
+    "1f477": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Будівельник у касці"
+    },
+    "1f483": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина танцює"
+    },
+    "1f489": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шприц"
+    },
+    "1f48a": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пігулка"
+    },
+    "1f48d": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Каблучка"
+    },
+    "1f48e": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Діамант"
+    },
+    "1f4a1": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лампочка"
+    },
+    "1f4a6": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Краплі води"
+    },
+    "1f4a7": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вода"
+    },
+    "1f4aa": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зігнута в лікті рука"
+    },
+    "1f4ae": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Печатка"
+    },
+    "1f4b3": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Платіжна картка"
+    },
+    "1f4b5": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гроші"
+    },
+    "1f4bb": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ноутбук"
+    },
+    "1f4be": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дискета для збереження файлу"
+    },
+    "1f4c1": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Папка"
+    },
+    "1f4c4": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Документ"
+    },
+    "1f4c5": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Календар"
+    },
+    "1f4cb": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Список покупок"
+    },
+    "1f4ce": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скріпка"
+    },
+    "1f4cf": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лінійка"
+    },
+    "1f4d3": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зошит"
+    },
+    "1f4d6": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Розгорнута книжка"
+    },
+    "1f4da": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Книжки"
+    },
+    "1f4dc": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Документ договору"
+    },
+    "1f4de": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Телефонна слухавка"
+    },
+    "1f4e6": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коробка"
+    },
+    "1f4e7": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Електронний лист"
+    },
+    "1f4ee": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Поштова скринька"
+    },
+    "1f4f0": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Газета"
+    },
+    "1f4f1": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Телефон"
+    },
+    "1f4f7": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Фотоапарат"
+    },
+    "1f4f8": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Фотоапарат зі спалахом"
+    },
+    "1f4fa": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Телевізор"
+    },
+    "1f4fb": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Радіо"
+    },
+    "1f50a": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Динамік зі звуковими хвилями"
+    },
+    "1f50b": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Батарейка"
+    },
+    "1f50c": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Електрична вилка"
+    },
+    "1f512": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Замок"
+    },
+    "1f514": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дзвінок сповіщення"
+    },
+    "1f525": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вогонь"
+    },
+    "1f527": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гайковий ключ"
+    },
+    "1f528": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Молоток"
+    },
+    "1f529": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гайка й болт"
+    },
+    "1f52a": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ніж"
+    },
+    "1f52c": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мікроскоп"
+    },
+    "1f52d": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Телескоп"
+    },
+    "1f54a": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Голуб"
+    },
+    "1f56f": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Свічка"
+    },
+    "1f570": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Настільний годинник"
+    },
+    "1f576": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сонцезахисні окуляри"
+    },
+    "1f577": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Павук"
+    },
+    "1f58a": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ручка"
+    },
+    "1f58d": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Восковий олівець"
+    },
+    "1f5a5": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Комп’ютер"
+    },
+    "1f5a8": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Принтер"
+    },
+    "1f5b1": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Комп’ютерна миша"
+    },
+    "1f5d1": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Відро для сміття"
+    },
+    "1f5e3": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина говорить"
+    },
+    "1f5fa": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мапа"
+    },
+    "1f600": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Радісне обличчя"
+    },
+    "1f606": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, що сміється"
+    },
+    "1f60c": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Спокійне розслаблене обличчя"
+    },
+    "1f61e": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Розчароване обличчя"
+    },
+    "1f61f": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стурбоване обличчя"
+    },
+    "1f620": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сердите обличчя"
+    },
+    "1f622": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сумне обличчя зі сльозою"
+    },
+    "1f628": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Налякане обличчя"
+    },
+    "1f62a": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сонне обличчя"
+    },
+    "1f62b": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Втомлене обличчя"
+    },
+    "1f62e": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Здивоване обличчя"
+    },
+    "1f630": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Схвильоване обличчя"
+    },
+    "1f633": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зніяковіле обличчя"
+    },
+    "1f634": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Спляче обличчя"
+    },
+    "1f64f": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Складені долоні на знак вдячності"
+    },
+    "1f680": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ракета"
+    },
+    "1f681": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гелікоптер"
+    },
+    "1f686": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Поїзд"
+    },
+    "1f687": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Метро"
+    },
+    "1f68b": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Трамвай"
+    },
+    "1f68c": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Автобус"
+    },
+    "1f68f": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Автобусна зупинка"
+    },
+    "1f691": {
+      "type": "painted",
+      "atlas": "painted-18",
+      "src": "images/vocabulary-painted/painted-18.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Швидка допомога"
+    },
+    "1f692": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пожежна машина"
+    },
+    "1f695": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Таксі"
+    },
+    "1f697": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Автомобіль"
+    },
+    "1f69a": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вантажівка"
+    },
+    "1f69c": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Трактор"
+    },
+    "1f6a2": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Корабель"
+    },
+    "1f6a3": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Човен"
+    },
+    "1f6a8": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сигнальний маячок"
+    },
+    "1f6a9": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Прапор"
+    },
+    "1f6aa": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Двері"
+    },
+    "1f6b2": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Велосипед"
+    },
+    "1f6b4": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина їде велосипедом"
+    },
+    "1f6b6": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина йде пішки"
+    },
+    "1f6bd": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Туалет"
+    },
+    "1f6bf": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Душ"
+    },
+    "1f6c0": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина приймає ванну"
+    },
+    "1f6c1": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ванна"
+    },
+    "1f6cb": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Диван"
+    },
+    "1f6cc": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина в ліжку"
+    },
+    "1f6cd": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сумки для покупок"
+    },
+    "1f6cf": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ліжко"
+    },
+    "1f6d2": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Візок із покупками"
+    },
+    "1f6d7": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ліфт"
+    },
+    "1f6e3": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дорога"
+    },
+    "1f6eb": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Літак злітає"
+    },
+    "1f6ec": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Літак приземляється"
+    },
+    "1f6f0": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Супутник"
+    },
+    "1f912": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хворе обличчя з термометром"
+    },
+    "1f914": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина замислилася"
+    },
+    "1f915": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина з пов'язкою на голові"
+    },
+    "1f922": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, якому нудить"
+    },
+    "1f927": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя з носовою хустинкою"
+    },
+    "1f929": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, захоплене радістю"
+    },
+    "1f92b": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жест тиші"
+    },
+    "1f941": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Барабан"
+    },
+    "1f944": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ложка"
+    },
+    "1f950": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Круасан"
+    },
+    "1f951": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Авокадо"
+    },
+    "1f952": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Огірок"
+    },
+    "1f954": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Картопля"
+    },
+    "1f955": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Морква"
+    },
+    "1f957": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Овочевий салат"
+    },
+    "1f95a": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Яйце"
+    },
+    "1f95b": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Молоко"
+    },
+    "1f95d": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ківі"
+    },
+    "1f95e": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Млинці"
+    },
+    "1f963": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Миска"
+    },
+    "1f964": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Напій із соломинкою"
+    },
+    "1f965": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кокос"
+    },
+    "1f966": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Броколі"
+    },
+    "1f967": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пиріг"
+    },
+    "1f969": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "М’ясо"
+    },
+    "1f96a": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сендвіч"
+    },
+    "1f96c": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Листовий салат"
+    },
+    "1f96d": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Манго"
+    },
+    "1f971": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, що позіхає"
+    },
+    "1f975": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, якому спекотно"
+    },
+    "1f976": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя, якому холодно"
+    },
+    "1f97e": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чобіт"
+    },
+    "1f980": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Краб"
+    },
+    "1f981": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лев"
+    },
+    "1f985": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Орел"
+    },
+    "1f986": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Качка"
+    },
+    "1f987": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кажан"
+    },
+    "1f988": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Акула"
+    },
+    "1f989": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сова"
+    },
+    "1f98a": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лисиця"
+    },
+    "1f98b": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Метелик"
+    },
+    "1f990": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Креветка"
+    },
+    "1f992": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жирафа"
+    },
+    "1f993": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зебра"
+    },
+    "1f997": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Цвіркун"
+    },
+    "1f99c": {
+      "type": "painted",
+      "atlas": "painted-06",
+      "src": "images/vocabulary-painted/painted-06.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Папуга"
+    },
+    "1f99e": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Омар"
+    },
+    "1f99f": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Комар"
+    },
+    "1f9b4": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кістка"
+    },
+    "1f9b5": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Нога"
+    },
+    "1f9b6": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стопа"
+    },
+    "1f9b7": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зуб"
+    },
+    "1f9c0": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сир"
+    },
+    "1f9c2": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сіль"
+    },
+    "1f9c3": {
+      "type": "painted",
+      "atlas": "painted-05",
+      "src": "images/vocabulary-painted/painted-05.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сік"
+    },
+    "1f9c4": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Часник"
+    },
+    "1f9c5": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Цибуля"
+    },
+    "1f9c8": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вершкове масло"
+    },
+    "1f9cd": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина на повний зріст"
+    },
+    "1f9d1": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Доросла людина"
+    },
+    "1f9d1-200d-1f33e": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Фермер"
+    },
+    "1f9d1-200d-1f373": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухар"
+    },
+    "1f9d1-200d-1f393": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Студент у випускній шапці"
+    },
+    "1f9d1-200d-1f3a4": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Співак із мікрофоном"
+    },
+    "1f9d1-200d-1f3a8": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Художник із палітрою"
+    },
+    "1f9d1-200d-1f3eb": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Учитель біля дошки"
+    },
+    "1f9d1-200d-1f4bb": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Програміст за комп'ютером"
+    },
+    "1f9d1-200d-1f527": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Механік"
+    },
+    "1f9d1-200d-1f52c": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Науковець"
+    },
+    "1f9d1-200d-1f680": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Астронавт"
+    },
+    "1f9d1-200d-1f692": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пожежник"
+    },
+    "1f9d1-200d-1f91d-200d-1f9d1": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Друзі тримаються за руки"
+    },
+    "1f9d1-200d-2695-fe0f": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Медичний працівник"
+    },
+    "1f9d1-200d-2708-fe0f": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пілот"
+    },
+    "1f9d2": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дитина"
+    },
+    "1f9d3": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Літня людина"
+    },
+    "1f9d4": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина з бородою"
+    },
+    "1f9d7": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина піднімається скелею"
+    },
+    "1f9d8": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Людина в позі для йоги"
+    },
+    "1f9e0": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мозок"
+    },
+    "1f9e2": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кепка"
+    },
+    "1f9e3": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шарф"
+    },
+    "1f9e4": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рукавички"
+    },
+    "1f9e5": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пальто"
+    },
+    "1f9e6": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шкарпетки"
+    },
+    "1f9e9": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пазл"
+    },
+    "1f9ea": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пробірка"
+    },
+    "1f9ed": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Компас"
+    },
+    "1f9ef": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вогнегасник"
+    },
+    "1f9f1": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Цегла"
+    },
+    "1f9f2": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Магніт"
+    },
+    "1f9f3": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Валіза"
+    },
+    "1f9f5": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Нитка"
+    },
+    "1f9f6": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Клубок вовни"
+    },
+    "1f9f7": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Англійська шпилька"
+    },
+    "1f9f9": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мітла"
+    },
+    "1f9fa": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кошик для білизни"
+    },
+    "1f9fb": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Туалетний папір"
+    },
+    "1f9fc": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мило"
+    },
+    "1f9fd": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Губка"
+    },
+    "1f9fe": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чек або рахунок"
+    },
+    "1fa79": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пластир"
+    },
+    "1fa7a": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стетоскоп"
+    },
+    "1fa7c": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Милиця"
+    },
+    "1fa90": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Планета з кільцями"
+    },
+    "1fa91": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стілець"
+    },
+    "1fa92": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Бритва"
+    },
+    "1fa93": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сокира"
+    },
+    "1fa99": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Монета"
+    },
+    "1fa9a": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пилка"
+    },
+    "1fa9b": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Викрутка"
+    },
+    "1fa9c": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Драбина"
+    },
+    "1faa1": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Швейна голка"
+    },
+    "1faa3": {
+      "type": "painted",
+      "atlas": "painted-11",
+      "src": "images/vocabulary-painted/painted-11.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Відро"
+    },
+    "1faa5": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зубна щітка"
+    },
+    "1faa8": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Камінь"
+    },
+    "1fab0": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Муха"
+    },
+    "1fab1": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Черв’як"
+    },
+    "1fab2": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жук"
+    },
+    "1fab3": {
+      "type": "painted",
+      "atlas": "painted-07",
+      "src": "images/vocabulary-painted/painted-07.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тарган"
+    },
+    "1fab4": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рослина"
+    },
+    "1fab5": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Деревина"
+    },
+    "1fab6": {
+      "type": "painted",
+      "atlas": "painted-19",
+      "src": "images/vocabulary-painted/painted-19.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Перо"
+    },
+    "1fab8": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Корал"
+    },
+    "1faba": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пташине гніздо"
+    },
+    "1fac1": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Легені"
+    },
+    "1fad1": {
+      "type": "painted",
+      "atlas": "painted-04",
+      "src": "images/vocabulary-painted/painted-04.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Солодкий перець"
+    },
+    "231a": {
+      "type": "painted",
+      "atlas": "painted-14",
+      "src": "images/vocabulary-painted/painted-14.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наручний годинник"
+    },
+    "23f0": {
+      "type": "painted",
+      "atlas": "painted-13",
+      "src": "images/vocabulary-painted/painted-13.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Будильник"
+    },
+    "265f": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шахова фігура"
+    },
+    "267f": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Інвалідний візок"
+    },
+    "26a1": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Блискавка"
+    },
+    "26bd": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Футбольний м’яч"
+    },
+    "26c4": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сніговик"
+    },
+    "26c8": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Грозова хмара"
+    },
+    "26ea": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Церква"
+    },
+    "26f0": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гора"
+    },
+    "26f1": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Парасоля від сонця"
+    },
+    "26f2": {
+      "type": "painted",
+      "atlas": "painted-21",
+      "src": "images/vocabulary-painted/painted-21.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Фонтан"
+    },
+    "26f5": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вітрильник"
+    },
+    "26f7": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лижник"
+    },
+    "26f8": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ковзан"
+    },
+    "26fa": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Намет"
+    },
+    "270b": {
+      "type": "painted",
+      "atlas": "painted-17",
+      "src": "images/vocabulary-painted/painted-17.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кисть руки"
+    },
+    "270d": {
+      "type": "painted",
+      "atlas": "painted-16",
+      "src": "images/vocabulary-painted/painted-16.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рука пише ручкою"
+    },
+    "270f": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Олівець"
+    },
+    "2b50": {
+      "type": "painted",
+      "atlas": "painted-08",
+      "src": "images/vocabulary-painted/painted-08.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зірка"
+    },
+    "appliance-air-conditioner": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кондиціонер"
+    },
+    "appliance-air-fryer": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Аерофритюрниця"
+    },
+    "appliance-blender": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Блендер"
+    },
+    "appliance-coffee-maker": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кавоварка"
+    },
+    "appliance-cooker": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухонна плита"
+    },
+    "appliance-dishwasher": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Посудомийна машина"
+    },
+    "appliance-electric-kettle": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Електричний чайник"
+    },
+    "appliance-extractor-fan": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухонна витяжка"
+    },
+    "appliance-fan": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вентилятор"
+    },
+    "appliance-food-processor": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухонний комбайн"
+    },
+    "appliance-freezer": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Морозильна камера"
+    },
+    "appliance-fridge": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Холодильник"
+    },
+    "appliance-hair-dryer": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Фен"
+    },
+    "appliance-heater": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обігрівач"
+    },
+    "appliance-hob": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Варильна поверхня"
+    },
+    "appliance-humidifier": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зволожувач повітря"
+    },
+    "appliance-iron": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Праска"
+    },
+    "appliance-microwave": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мікрохвильова піч"
+    },
+    "appliance-mixer": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Міксер"
+    },
+    "appliance-oven": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Духовка"
+    },
+    "appliance-remote-control": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пульт дистанційного керування"
+    },
+    "appliance-robot-vacuum": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Робот-пилосос"
+    },
+    "appliance-toaster": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тостер"
+    },
+    "appliance-tumble-dryer": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сушильна машина"
+    },
+    "appliance-vacuum-cleaner": {
+      "type": "painted",
+      "atlas": "painted-02",
+      "src": "images/vocabulary-painted/painted-02.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пилосос"
+    },
+    "appliance-washing-machine": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пральна машина"
+    },
+    "body-arm": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рука (від плеча до кисті)"
+    },
+    "body-back": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Спина; задня частина"
+    },
+    "body-body": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тіло"
+    },
+    "body-cheek": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Щока"
+    },
+    "body-chest": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Груди"
+    },
+    "body-chin": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Підборіддя"
+    },
+    "body-elbow": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лікоть"
+    },
+    "body-face": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обличчя"
+    },
+    "body-finger": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Палець руки"
+    },
+    "body-forehead": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лоб"
+    },
+    "body-hair": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Волосся"
+    },
+    "body-head": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Голова"
+    },
+    "body-knee": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коліно"
+    },
+    "body-lip": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Губа"
+    },
+    "body-neck": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шия"
+    },
+    "body-shoulder": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Плече"
+    },
+    "body-stomach": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Живіт; шлунок"
+    },
+    "body-thumb": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Великий палець руки"
+    },
+    "body-toe": {
+      "type": "painted",
+      "atlas": "painted-22",
+      "src": "images/vocabulary-painted/painted-22.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Палець ноги"
+    },
+    "home-armchair": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Крісло"
+    },
+    "home-balcony": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Балкон"
+    },
+    "home-bed-sheet": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Простирадло"
+    },
+    "home-bedside-table": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тумбочка біля ліжка"
+    },
+    "home-blanket": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ковдра"
+    },
+    "home-blinds": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Жалюзі"
+    },
+    "home-bookcase": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Книжкова шафа"
+    },
+    "home-carpet": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Килим"
+    },
+    "home-ceiling": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стеля"
+    },
+    "home-chopping-board": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дошка для нарізання"
+    },
+    "home-coat-hanger": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вішак для одягу"
+    },
+    "home-colander": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Друшляк"
+    },
+    "home-cupboard": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шафа для посуду або речей"
+    },
+    "home-curtain": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Штора"
+    },
+    "home-desk": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Письмовий стіл"
+    },
+    "home-doormat": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Килимок біля дверей"
+    },
+    "home-drawer": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шухляда"
+    },
+    "home-dustpan": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Совок для сміття"
+    },
+    "home-extension-lead": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Електричний подовжувач"
+    },
+    "home-floor": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Підлога"
+    },
+    "home-furniture": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Меблі"
+    },
+    "home-garage": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гараж"
+    },
+    "home-grater": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тертка"
+    },
+    "home-kitchen-scales": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухонні ваги"
+    },
+    "home-ladle": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ополоник"
+    },
+    "home-lamp": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Лампа"
+    },
+    "home-mattress": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Матрац"
+    },
+    "home-mop": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Швабра"
+    },
+    "home-picture-frame": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рамка для фотографії або картини"
+    },
+    "home-pillow": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Подушка"
+    },
+    "home-rolling-pin": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Качалка"
+    },
+    "home-roof": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дах"
+    },
+    "home-shelf": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Полиця"
+    },
+    "home-socket": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Розетка"
+    },
+    "home-stairs": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сходи"
+    },
+    "home-table": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стіл"
+    },
+    "home-towel": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рушник"
+    },
+    "home-vase": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ваза"
+    },
+    "home-wall": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Стіна"
+    },
+    "home-wardrobe": {
+      "type": "painted",
+      "atlas": "painted-01",
+      "src": "images/vocabulary-painted/painted-01.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Шафа для одягу"
+    },
+    "home-whisk": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Збивати вінчиком"
+    },
+    "learn-apartment": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Багатоквартирний будинок"
+    },
+    "learn-barley": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ячмінний колос"
+    },
+    "learn-clock": {
+      "type": "painted",
+      "atlas": "painted-10",
+      "src": "images/vocabulary-painted/painted-10.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Годинник — час"
+    },
+    "learn-meteorite": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Метеорит на землі"
+    },
+    "learn-oats": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вівсяне колосся"
+    },
+    "learn-seasons": {
+      "type": "painted",
+      "atlas": "painted-20",
+      "src": "images/vocabulary-painted/painted-20.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чотири пори року"
+    },
+    "learn-seed": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Насінина"
+    },
+    "learn-wheat": {
+      "type": "painted",
+      "atlas": "painted-09",
+      "src": "images/vocabulary-painted/painted-09.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пшеничний колос"
+    },
+    "room-attic": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Горище"
+    },
+    "room-basement": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Підвал"
+    },
+    "room-bathroom": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ванна кімната"
+    },
+    "room-bedroom": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Спальня"
+    },
+    "room-dining-room": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Їдальня"
+    },
+    "room-guest-room": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Гостьова кімната"
+    },
+    "room-hall": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Передпокій"
+    },
+    "room-kitchen": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кухня"
+    },
+    "room-living-room": {
+      "type": "painted",
+      "atlas": "painted-03",
+      "src": "images/vocabulary-painted/painted-03.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вітальня"
+    },
+    "room-room": {
+      "type": "painted",
+      "atlas": "painted-12",
+      "src": "images/vocabulary-painted/painted-12.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кімната"
+    },
+    "room-study": {
+      "type": "painted",
+      "atlas": "painted-15",
+      "src": "images/vocabulary-painted/painted-15.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кабінет"
+    }
+  }
+}
