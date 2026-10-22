@@ -48,9 +48,10 @@ function tile(c){
 }
 function landing(){
   cancelWordSearch();screen='landing';session=null;selection=null;
-  app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${welcomePictures.map(welcomePicture).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group">${cottageTile(0,6,'group-cover')}<span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити</span></span></button><button type="button" class="group-card" id="basics-group">${cottageTile(3,13,'group-cover')}<span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити</span></span></button></section>`;
+  app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${welcomePictures.map(welcomePicture).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group">${cottageTile(0,6,'group-cover')}<span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити</span></span></button><button type="button" class="group-card" id="basics-group">${cottageTile(3,13,'group-cover')}<span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити</span></span></button></section><button type="button" class="learned-entry" id="landing-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button>`;
   document.getElementById('everyday-group').onclick=showDailyStages;
   document.getElementById('basics-group').onclick=showBasics;
+  document.getElementById('landing-learned-words').onclick=()=>showLearned(landing);
   updateTotal();resetPageScroll();
 }
 function showDailyStages(){
@@ -232,15 +233,17 @@ function bindSwipeGesture(card){
   };
   card.onpointercancel=reset;card.onlostpointercapture=reset;
 }
-function showLearned(){
+function showLearned(backTo=home){
   cancelWordSearch();screen='learned';session=null;selection=null;
+  const returnTo=typeof backTo==='function'?backTo:home;
   const list=words.filter(word=>learned.has(word.id));
   app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі. Натисни «Видалити», щоб вчити слово знову.`:'Тут з’являться слова після шести кроків із перевіреною відповіддю або позначки «Знаю» на картці.'}</p>${list.length?`<div class="learned-list">${list.map((word,index)=>`<div class="learned-word">${wordDetails(word)}<button type="button" class="btn secondary remove-learned" id="remove-learned-${index}" aria-label="Видалити з вивчених: ${escapeHTML(word.en)}">Видалити</button></div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
-  document.getElementById('back').onclick=home;
-  if(!list.length)document.getElementById('learned-start').onclick=home;
+  document.getElementById('back').onclick=returnTo;
+  if(returnTo===landing)document.getElementById('back').textContent='‹ На головну';
+  if(!list.length)document.getElementById('learned-start').onclick=returnTo;
   list.forEach((word,index)=>document.getElementById('remove-learned-'+index).onclick=()=>{
     if(!learned.delete(word.id))return;
-    save();showLearned();
+    save();showLearned(returnTo);
     const next=Math.min(index,list.length-2);
     (document.getElementById(next>=0?'remove-learned-'+next:'learned-start'))?.focus?.({preventScroll:true});
   });

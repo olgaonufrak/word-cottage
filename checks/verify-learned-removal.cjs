@@ -1,6 +1,24 @@
 const {fixture}=require('./fixture.cjs');
 const assert=require('node:assert/strict');
 async function main(){
+  // The landing entry preserves its return route through removal, empty state and prior daily navigation.
+  const mainStorage=new Map([['word-cottage-learned','["nouns-0","nouns-1"]']]);
+  const main=fixture(mainStorage,undefined,true);
+  assert.equal((main.element('app').innerHTML.match(/class="group-card"/g)||[]).length,2);
+  assert.match(main.element('app').innerHTML,/id="landing-learned-words"/);
+  assert.match(main.element('app').innerHTML,/<span class="learned-count">2<\/span>/);
+  main.element('landing-learned-words').onclick();assert.equal(main.run('screen'),'learned');
+  assert.equal(main.element('back').textContent,'‹ На головну');
+  main.element('remove-learned-0').onclick();main.element('back').onclick();assert.equal(main.run('screen'),'landing');
+  assert.match(main.element('app').innerHTML,/<span class="learned-count">1<\/span>/);
+  const mainReload=fixture(mainStorage,undefined,true);assert.match(mainReload.element('app').innerHTML,/<span class="learned-count">1<\/span>/);
+  main.element('everyday-group').onclick();main.element('open-stage-four').onclick();
+  main.element('stage-four-back').onclick();main.element('daily-back').onclick();
+  main.element('landing-learned-words').onclick();main.element('remove-learned-0').onclick();
+  main.element('learned-start').onclick();assert.equal(main.run('screen'),'landing');
+  assert.match(main.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
+  main.element('basics-group').onclick();main.element('learned-words').onclick({type:'click'});
+  main.element('back').onclick();assert.equal(main.run('screen'),'home');
   const ids=['nouns-0','nouns-1','a1-fruit-apple','a2-money-money','a3-health-health','a4-office-workplace','custom-myword'];
   const storage=new Map([
     ['word-cottage-learned',JSON.stringify(ids)],
