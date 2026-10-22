@@ -19,6 +19,15 @@ async function main(){
   assert.match(main.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
   main.element('basics-group').onclick();main.element('learned-words').onclick({type:'click'});
   main.element('back').onclick();assert.equal(main.run('screen'),'home');
+  // Daily overview and all four stages keep their origin after removal and from an empty learned list.
+  for(const stage of [0,1,2,3,4]){
+    const daily=fixture(new Map([['word-cottage-learned','["nouns-0"]']]),undefined,true);
+    daily.run(stage?`showDailyStage(${stage})`:'showDailyStages()');const origin=daily.run('screen');
+    daily.element('daily-learned-words').onclick();daily.element('remove-learned-0').onclick();
+    daily.element('back').onclick();assert.equal(daily.run('screen'),origin);
+    assert.match(daily.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
+    daily.element('daily-learned-words').onclick();daily.element('learned-start').onclick();assert.equal(daily.run('screen'),origin);
+  }
   const ids=['nouns-0','nouns-1','a1-fruit-apple','a2-money-money','a3-health-health','a4-office-workplace','custom-myword'];
   const storage=new Map([
     ['word-cottage-learned',JSON.stringify(ids)],

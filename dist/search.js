@@ -115,6 +115,7 @@ function showSearch(query='',lookup=false){
   wordSearch={query,version:0,controller:null,timer:null};
   app.innerHTML=`<div class="study-top"><button class="back" id="back">‹ Усі розділи</button></div><section class="word-list-panel search-panel"><h1>Знайди нове слово</h1>${searchForm(query)}<div id="local-search-results"></div><section class="online-word-section" aria-labelledby="online-word-title"><h2 id="online-word-title">Онлайн-словник</h2><div id="online-word-result" aria-live="polite"></div></section></section>`;
   document.getElementById('back').onclick=home;
+  document.getElementById('back').textContent=groupBackLabel();
   bindWordSearchForm();scheduleWordLookup(query,lookup);
 }
 function renderLocalSearch(){

@@ -54,10 +54,17 @@ function landing(){
   document.getElementById('landing-learned-words').onclick=()=>showLearned(landing);
   updateTotal();resetPageScroll();
 }
+function dailyWordTools(){
+  return `<div class="daily-word-tools"><div class="daily-word-search">${searchForm()}</div><button type="button" class="learned-entry" id="daily-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button></div>`;
+}
+function bindDailyWordTools(){
+  bindWordSearchForm();document.getElementById('daily-learned-words').onclick=showLearned;
+}
 function showDailyStages(){
   cancelWordSearch();learningGroup='daily';dailyView='stages';screen='daily-stages';session=null;selection=null;
-  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="daily-back">‹ Дві групи</button></div><section class="daily-stages-panel stage-overview" aria-labelledby="daily-title"><p class="eyebrow">Твій шлях до нових слів</p><h1 id="daily-title">Слова на кожен день</h1><p class="sub">Обери свій етап. Кожен маленький крок має значення.</p><div class="daily-stages">${dailyStages.map((stage,index)=>stage.sections.length?`<button type="button" class="daily-stage stage-ready" id="open-stage-${stage.key}">${cottageTile(index,stageCoverCells[index],'stage-cover')}<span class="stage-content"><span class="group-kicker">Колекція ${String(index+1).padStart(2,'0')}</span><h2>${stage.title}</h2><p>${stage.description}</p><span class="stage-status">${stage.sections.length} розділів · ${stage.sections.some(section=>words.some(word=>word.category===section.id))?'':'Поки без слів · '}Відкрити →</span></span></button>`:`<article class="daily-stage" aria-labelledby="daily-stage-${index+1}">${cottageTile(index,stageCoverCells[index],'stage-cover')}<span class="stage-content"><h2 id="daily-stage-${index+1}">${stage.title}</h2><p>${stage.description}</p><span class="stage-status">Поки без слів</span></span></article>`).join('')}</div></section>`;
+  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="daily-back">‹ Дві групи</button></div><section class="daily-stages-panel stage-overview" aria-labelledby="daily-title"><p class="eyebrow">Твій шлях до нових слів</p><h1 id="daily-title">Слова на кожен день</h1><p class="sub">Обери свій етап. Кожен маленький крок має значення.</p>${dailyWordTools()}<div class="daily-stages">${dailyStages.map((stage,index)=>stage.sections.length?`<button type="button" class="daily-stage stage-ready" id="open-stage-${stage.key}">${cottageTile(index,stageCoverCells[index],'stage-cover')}<span class="stage-content"><span class="group-kicker">Колекція ${String(index+1).padStart(2,'0')}</span><h2>${stage.title}</h2><p>${stage.description}</p><span class="stage-status">${stage.sections.length} розділів · ${stage.sections.some(section=>words.some(word=>word.category===section.id))?'':'Поки без слів · '}Відкрити →</span></span></button>`:`<article class="daily-stage" aria-labelledby="daily-stage-${index+1}">${cottageTile(index,stageCoverCells[index],'stage-cover')}<span class="stage-content"><h2 id="daily-stage-${index+1}">${stage.title}</h2><p>${stage.description}</p><span class="stage-status">Поки без слів</span></span></article>`).join('')}</div></section>`;
   document.getElementById('daily-back').onclick=landing;
+  bindDailyWordTools();
   dailyStages.forEach((stage,index)=>{if(stage.sections.length)document.getElementById('open-stage-'+stage.key).onclick=()=>showDailyStage(index+1);});
   resetPageScroll();
 }
@@ -67,15 +74,16 @@ function showStageThree(){showDailyStage(3);}
 function showDailyStage(stageNumber){
   const {sections,key:stageKey}=dailyStages[stageNumber-1];
   cancelWordSearch();learningGroup='daily';dailyView='stage'+stageNumber;screen='stage-'+stageKey;session=null;selection=null;
-  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="stage-${stageKey}-back">‹ Усі етапи</button></div><section class="stage-sections-panel"><div class="collection-heading"><div><p class="eyebrow">Колекція ${String(stageNumber).padStart(2,'0')}</p><h1>${dailyStages[stageNumber-1].title}</h1><p class="sub">Обери тему для сьогоднішнього навчання.</p></div>${cottageTile(stageNumber-1,stageCoverCells[stageNumber-1],'collection-cover')}</div><div class="stage-section-grid">${sections.map((section,index)=>{const size=words.filter(word=>word.category===section.id).length;return `<button type="button" class="stage-section" id="section-${section.id}"><span class="section-art-row">${cottageTile(stageNumber-1,index)}<span class="cat-number">${String(index+1).padStart(2,'0')}</span></span><h2 lang="en">${section.name}</h2><small lang="uk" class="section-uk-title">${section.ukTitle}</small><span class="section-word-count">${size} ${wordLabel(size)}</span><span class="progress-row"><span class="track"><span class="fill" style="width:${size?count(section.id)/size*100:0}%"></span></span><span>${count(section.id)} / ${size}</span></span></button>`;}).join('')}</div></section>`;
+  app.innerHTML=`<div class="study-top"><button type="button" class="back" id="stage-${stageKey}-back">‹ Усі етапи</button></div><section class="stage-sections-panel"><div class="collection-heading"><div><p class="eyebrow">Колекція ${String(stageNumber).padStart(2,'0')}</p><h1>${dailyStages[stageNumber-1].title}</h1><p class="sub">Обери тему для сьогоднішнього навчання.</p></div>${cottageTile(stageNumber-1,stageCoverCells[stageNumber-1],'collection-cover')}</div>${dailyWordTools()}<div class="stage-section-grid">${sections.map((section,index)=>{const size=words.filter(word=>word.category===section.id).length;return `<button type="button" class="stage-section" id="section-${section.id}"><span class="section-art-row">${cottageTile(stageNumber-1,index)}<span class="cat-number">${String(index+1).padStart(2,'0')}</span></span><h2 lang="en">${section.name}</h2><small lang="uk" class="section-uk-title">${section.ukTitle}</small><span class="section-word-count">${size} ${wordLabel(size)}</span><span class="progress-row"><span class="track"><span class="fill" style="width:${size?count(section.id)/size*100:0}%"></span></span><span>${count(section.id)} / ${size}</span></span></button>`;}).join('')}</div></section>`;
   document.getElementById('stage-'+stageKey+'-back').onclick=showDailyStages;
+  bindDailyWordTools();
   sections.forEach(section=>document.getElementById('section-'+section.id).onclick=()=>showSectionWords([section.id]));
   resetPageScroll();
 }
 function basicCategories(){return categories.filter(category=>!category.stage);}
 function dailyStageNumber(){return Number(dailyView.slice(5))||1;}
 function home(){learningGroup==='daily'?(dailyView==='stages'?showDailyStages():showDailyStage(dailyStageNumber())):showBasics();}
-function groupBackLabel(){return learningGroup==='daily'?`‹ Розділи Етапу ${dailyStageNumber()}`:'‹ Усі розділи';}
+function groupBackLabel(){return learningGroup==='daily'?(dailyView==='stages'?'‹ Усі етапи':`‹ Розділи Етапу ${dailyStageNumber()}`):'‹ Усі розділи';}
 function practiceTitle(category,mixed=false){return mixed?'Слова з різних розділів':category.name;}
 function showBasics(){
   learningGroup='basics';

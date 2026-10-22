@@ -74,6 +74,20 @@ async function main(){
   composingSearch.oncompositionstart();composingSearch.value='moon';composingSearch.oninput({isComposing:true});await advance(800);
   assert.equal(requests.length,beforeComposition);composingSearch.value='moonlight';composingSearch.oncompositionend();await advance(400);
   assert.match(element('online-word-result').innerHTML,/місячне світло/);
+  // Shared daily tools preserve the overview or exact stage through automatic search and history recall.
+  for(const stage of [0,1,2,3,4]){
+    run(stage?`showDailyStage(${stage})`:'showDailyStages()');
+    const expected=run('screen'),label=stage?`‹ Розділи Етапу ${stage}`:'‹ Усі етапи';
+    assert.match(element('app').innerHTML,/id="daily-learned-words"/);
+    assert.match(element('app').innerHTML,/id="word-search-input"/);
+    input('moonlight');assert.equal(run('screen'),'search');assert.equal(element('back').textContent,label);
+    await advance(400);assert.match(element('online-word-result').innerHTML,/місячне світло/);
+    element('back').onclick();assert.equal(run('screen'),expected);
+    element('search-history-query-0').onclick();await flush();assert.equal(element('back').textContent,label);
+    element('back').onclick();assert.equal(run('screen'),expected);
+    element('daily-learned-words').onclick();assert.equal(run('screen'),'learned');
+    element('back').onclick();assert.equal(run('screen'),expected);
+  }
   run('cancelWordSearch()');assert.deepEqual([...storage].filter(([key])=>key!=='word-cottage-search-history'),saved);
   console.log('Passed: automatic search from both screens without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
 }
