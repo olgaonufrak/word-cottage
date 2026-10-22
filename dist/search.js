@@ -1,5 +1,7 @@
 'use strict';
 const PERSONAL_WORDS_KEY='word-cottage-personal-words';
+const SEARCH_HISTORY_KEY='word-cottage-search-history',SEARCH_HISTORY_LIMIT=20;
+let searchHistory=[],searchHistoryVersion=0;
 let wordSearch=null;
 const pronunciationCache=new Map();
 function safeWordAudio(value){try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='upload.wikimedia.org'?url.href:'';}catch{return '';}}
@@ -32,8 +34,54 @@ function matchingWords(query){
   if(!term)return [];
   return words.filter(word=>normalizeWord(word.en).includes(term)||normalizeWord(word.uk).includes(term)).sort((a,b)=>Number(normalizeWord(b.en)===term)-Number(normalizeWord(a.en)===term));
 }
+function cleanSearchHistory(values){
+  if(!Array.isArray(values))return [];
+  const seen=new Set(),result=[];
+  for(const value of values){
+    if(typeof value!=='string')continue;
+    const query=value.trim().replace(/\s+/g,' '),key=normalizeWord(query);
+    if(!query||query.length>80||!/[\p{Script=Latin}\p{Script=Cyrillic}]/u.test(query)||/[<>\u0000-\u001f\u007f]/.test(query)||seen.has(key))continue;
+    seen.add(key);result.push(query);if(result.length===SEARCH_HISTORY_LIMIT)break;
+  }
+  return result;
+}
+try{searchHistory=cleanSearchHistory(JSON.parse(localStorage.getItem(SEARCH_HISTORY_KEY)||'[]'));}catch{}
+function saveSearchHistory(){try{localStorage.setItem(SEARCH_HISTORY_KEY,JSON.stringify(searchHistory));}catch{}}
+function rememberSearchQuery(query,version=searchHistoryVersion){
+  if(version!==searchHistoryVersion)return;
+  const next=cleanSearchHistory([query,...searchHistory]);
+  if(JSON.stringify(next)===JSON.stringify(searchHistory))return;
+  searchHistory=next;saveSearchHistory();renderSearchHistory();
+}
+function removeSearchHistory(query){
+  searchHistoryVersion++;searchHistory=searchHistory.filter(value=>normalizeWord(value)!==normalizeWord(query));
+  saveSearchHistory();renderSearchHistory();
+}
+function clearSearchHistory(){
+  searchHistoryVersion++;searchHistory=[];saveSearchHistory();renderSearchHistory();toast('Історію пошуку очищено.');
+  document.getElementById('word-search-input')?.focus?.({preventScroll:true});
+}
+function recallSearchQuery(query){
+  if(screen==='search'){document.getElementById('word-search-input').value=query;lookupWord(query);}else showSearch(query,true);
+  const input=document.getElementById('word-search-input');input.focus?.({preventScroll:true});input.setSelectionRange?.(query.length,query.length);
+}
+function renderSearchHistory(){
+  const box=document.getElementById('search-history');if(!box)return;
+  const previous=document.getElementById('search-history-details'),open=typeof previous?.open==='boolean'?previous.open:!wordSearch?.query.trim();
+  if(!searchHistory.length){box.innerHTML='';return;}
+  const entries=[...searchHistory];
+  box.innerHTML=`<details id="search-history-details" ${open?'open':''}><summary>Історія пошуку <span>· ${entries.length}</span></summary><div class="search-history-toolbar"><small>Останні пошуки в цьому браузері</small><button type="button" id="clear-search-history">Очистити історію</button></div><ul class="search-history-list" aria-label="Останні пошуки">${entries.map((query,index)=>`<li><button type="button" class="search-history-query" id="search-history-query-${index}">${escapeHTML(query)}</button><button type="button" class="search-history-remove" id="search-history-remove-${index}" aria-label="Видалити з історії: ${escapeHTML(query)}">×</button></li>`).join('')}</ul></details>`;
+  document.getElementById('clear-search-history').onclick=clearSearchHistory;
+  entries.forEach((query,index)=>{
+    document.getElementById('search-history-query-'+index).onclick=()=>recallSearchQuery(query);
+    document.getElementById('search-history-remove-'+index).onclick=()=>{
+      removeSearchHistory(query);
+      (document.getElementById('search-history-remove-'+Math.min(index,searchHistory.length-1))||document.getElementById('word-search-input'))?.focus?.({preventScroll:true});
+    };
+  });
+}
 function cancelWordSearch(){if(wordSearch){clearTimeout(wordSearch.timer);wordSearch.version++;wordSearch.controller?.abort();wordSearch=null;}}
-function searchForm(query=''){return `<form id="word-search-form" class="word-search-form" role="search"><label for="word-search-input">Пошук слів</label><div class="word-search-controls"><input id="word-search-input" type="search" maxlength="80" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" aria-describedby="word-search-help" placeholder="Наприклад, time або час" value="${escapeHTML(query)}"></div><p id="word-search-help">Введи слово англійською або українською — переклад з’явиться автоматично.</p></form>`;}
+function searchForm(query=''){return `<form id="word-search-form" class="word-search-form" role="search"><label for="word-search-input">Пошук слів</label><div class="word-search-controls"><input id="word-search-input" type="search" maxlength="80" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" aria-describedby="word-search-help" placeholder="Наприклад, time або час" value="${escapeHTML(query)}"></div><p id="word-search-help">Введи слово англійською або українською — переклад з’явиться автоматично.</p></form><div class="search-history" id="search-history"></div>`;}
 function bindWordSearchForm(){
   const input=document.getElementById('word-search-input');
   let composing=false;
@@ -49,6 +97,7 @@ function bindWordSearchForm(){
   input.oninput=event=>{if(event?.isComposing){if(screen==='search')scheduleWordLookup(input.value,false,true);return;}update();};
   input.oncompositionstart=()=>{composing=true;if(screen==='search')scheduleWordLookup(input.value,false,true);};
   input.oncompositionend=()=>{composing=false;update();};
+  renderSearchHistory();
 }
 function scheduleWordLookup(raw,immediate=false,composing=false){
   const state=wordSearch;if(screen!=='search'||!state)return;
@@ -58,7 +107,8 @@ function scheduleWordLookup(raw,immediate=false,composing=false){
   if(!raw.trim()||composing){panel.innerHTML='<p class="sub">Введи слово — переклад з’явиться автоматично.</p>';return;}
   panel.innerHTML='<p class="sub" role="status">Шукаємо слово й переклад…</p>';
   if(immediate){lookupWord(raw);return;}
-  state.timer=setTimeout(()=>{state.timer=null;if(screen==='search'&&wordSearch===state)lookupWord(raw);},400);
+  const historyVersion=searchHistoryVersion;
+  state.timer=setTimeout(()=>{state.timer=null;if(screen==='search'&&wordSearch===state)lookupWord(raw,historyVersion);},400);
 }
 function showSearch(query='',lookup=false){
   cancelWordSearch();screen='search';session=null;selection=null;
@@ -139,7 +189,7 @@ async function pronunciationWord(term,lang,signal){
   if(!signal?.aborted&&result)pronunciationCache.set(key,result);
   return result;
 }
-async function lookupWord(raw){
+async function lookupWord(raw,historyVersion=searchHistoryVersion){
   const state=wordSearch;if(screen!=='search'||!state)return;
   clearTimeout(state.timer);state.timer=null;
   state.controller?.abort();state.controller=new AbortController();state.query=raw.trim();const version=++state.version,signal=state.controller.signal;
@@ -148,7 +198,7 @@ async function lookupWord(raw){
   const query=normalizeWord(state.query);
   if(!query){panel.innerHTML='<p class="sub">Введи слово для пошуку.</p>';return;}
   const exact=words.find(word=>normalizeWord(word.en)===query||word.uk.split(/[;,]/).some(text=>normalizeWord(text)===query));
-  if(exact){panel.innerHTML='';await hydrateLocalPronunciations(state,version);return;}
+  if(exact){panel.innerHTML='';rememberSearchQuery(state.query,historyVersion);await hydrateLocalPronunciations(state,version);return;}
   hydrateLocalPronunciations(state,version);
   const ukrainian=/[а-яіїєґ]/i.test(query);
   if(!validEnglishWord(query)&&!ukrainian){renderOnlineWord({en:'',uk:'',notice:'Введи слово англійською або українською.'});return;}
@@ -166,6 +216,7 @@ async function lookupWord(raw){
   if(!current())return;
   let notice=dictionary?'':requests[0].status==='rejected'?'Словник зараз недоступний. Можеш додати слово з власним перекладом.':'Словник не знайшов цього слова. Перевір написання або додай слово вручну.';
   if(!uk)notice+=(notice?' ':'')+'Автоматичний переклад недоступний — введи його нижче.';
+  if(uk)rememberSearchQuery(state.query,historyVersion);
   renderOnlineWord({en,uk,dictionary,ukPron,notice});
 }
 function renderOnlineWord({en,uk,dictionary=null,ukPron=null,notice=''}){

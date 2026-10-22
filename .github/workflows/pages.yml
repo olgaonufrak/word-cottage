@@ -37,6 +37,7 @@ jobs:
           node checks/verify-exercise-back.cjs
           node checks/verify-transcription.cjs
           node checks/verify-live-search.cjs
+          node checks/verify-search-history.cjs
           node checks/verify-context-examples.cjs
           node checks/verify-illustrations.cjs
 

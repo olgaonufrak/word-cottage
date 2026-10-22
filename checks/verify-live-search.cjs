@@ -74,7 +74,7 @@ async function main(){
   composingSearch.oncompositionstart();composingSearch.value='moon';composingSearch.oninput({isComposing:true});await advance(800);
   assert.equal(requests.length,beforeComposition);composingSearch.value='moonlight';composingSearch.oncompositionend();await advance(400);
   assert.match(element('online-word-result').innerHTML,/місячне світло/);
-  run('cancelWordSearch()');assert.deepEqual([...storage],saved);
+  run('cancelWordSearch()');assert.deepEqual([...storage].filter(([key])=>key!=='word-cottage-search-history'),saved);
   console.log('Passed: automatic search from both screens without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});
