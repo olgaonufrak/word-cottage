@@ -235,9 +235,15 @@ function bindSwipeGesture(card){
 function showLearned(){
   cancelWordSearch();screen='learned';session=null;selection=null;
   const list=words.filter(word=>learned.has(word.id));
-  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі.`:'Тут з’являться слова після шести кроків із перевіреною відповіддю або позначки «Знаю» на картці.'}</p>${list.length?`<div class="learned-list">${list.map(word=>`<div class="learned-word">${wordDetails(word)}</div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
+  app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі. Натисни «Видалити», щоб вчити слово знову.`:'Тут з’являться слова після шести кроків із перевіреною відповіддю або позначки «Знаю» на картці.'}</p>${list.length?`<div class="learned-list">${list.map((word,index)=>`<div class="learned-word">${wordDetails(word)}<button type="button" class="btn secondary remove-learned" id="remove-learned-${index}" aria-label="Видалити з вивчених: ${escapeHTML(word.en)}">Видалити</button></div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
   document.getElementById('back').onclick=home;
   if(!list.length)document.getElementById('learned-start').onclick=home;
+  list.forEach((word,index)=>document.getElementById('remove-learned-'+index).onclick=()=>{
+    if(!learned.delete(word.id))return;
+    save();showLearned();
+    const next=Math.min(index,list.length-2);
+    (document.getElementById(next>=0?'remove-learned-'+next:'learned-start'))?.focus?.({preventScroll:true});
+  });
   hydrateWordIpa(app);
 }
 function start(ids,mixed=false,onlyNew=false,limit=null,selectedIds=null,mode='cards'){
