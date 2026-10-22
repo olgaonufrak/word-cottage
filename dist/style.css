@@ -52,8 +52,8 @@
 .section-word-option{display:flex;align-items:center;gap:10px;min-height:76px;min-width:0;padding:16px;border:1px solid var(--line);border-radius:5px;background:var(--paper)}
 .section-word-choice{display:flex;align-items:center;gap:14px;flex:1;min-width:0;cursor:pointer}.section-word-audio{min-width:44px;min-height:44px}
 .section-word-option:has(input:checked){border-color:var(--olive);background:#e9ebdb}.section-word-option input{width:22px;height:22px;flex-shrink:0;accent-color:var(--olive)}
-.section-list-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;bottom:0;padding:18px 0 8px;margin-top:16px;background:var(--white);border-top:1px solid var(--line);z-index:1}.section-list-bottom p{font-size:14px;color:var(--muted)}.section-list-bottom .btn{flex-shrink:0}
-@media(max-width:700px){.section-word-list{grid-template-columns:1fr}.section-word-option{padding:14px}.section-list-bottom{flex-wrap:wrap;gap:10px;padding-bottom:12px}.section-list-bottom .btn{width:100%}}
+.section-list-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;bottom:0;padding:18px 0 8px;margin-top:16px;background:var(--white);border-top:1px solid var(--line);z-index:1}.section-list-bottom p{font-size:14px;color:var(--muted)}.section-list-bottom .btn{flex-shrink:0}.section-list-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:700px){.section-word-list{grid-template-columns:1fr}.section-word-option{padding:14px}.section-list-bottom{flex-wrap:wrap;gap:10px;padding-bottom:12px}.section-list-bottom .btn{width:100%}.section-list-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}.section-list-actions .btn{min-width:0;min-height:44px;padding:10px 8px;font-size:14px}}
 .learned-empty{margin-top:25px;padding:25px;background:var(--paper);border-radius:5px;color:var(--muted)}.learned-empty .btn{margin-top:18px}
 @media(max-width:700px){.word-list-panel{padding:25px 20px}.word-list-panel h1{font-size:32px}.learned-list{grid-template-columns:1fr}.learned-entry{padding:20px}.learned-word{padding:14px}}
 

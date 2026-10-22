@@ -79,7 +79,10 @@ async function main(){
   element('exercise-restart').onclick();assert.deepEqual(JSON.parse(run('JSON.stringify(session.queue.map(w=>w.id))')),ids);
   // Select all means all 100 cards; clearing all restores quantity and swipe selection.
   run("showSectionWords(['nouns'])");assert.doesNotMatch(element('app').innerHTML,/id="(?:list-study-mode|list-practice-mode)"/);
-  element('select-all-words').onclick();element('learn-section').onclick();
+  assert.match(element('app').innerHTML,/<div class="section-list-actions">[\s\S]*id="select-all-words-bottom"[\s\S]*id="learn-section"/);
+  element('select-all-words-bottom').onclick();assert.equal(element('section-word-99').checked,true);
+  assert.match(element('list-choice-count').textContent,/Обрано: 100/);
+  element('learn-section').onclick();
   assert.equal(run('screen'),'exercises');assert.equal(run('session.queue.length'),100);assert.equal(run('selection'),null);
   // Selecting / clearing all restores the whole-section mode.
   run("showSectionWords(['nouns'])");element('select-all-words').onclick();assert.equal(element('section-word-99').checked,true);
