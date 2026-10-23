@@ -41,6 +41,7 @@ jobs:
           node checks/verify-search-history.cjs
           node checks/verify-context-examples.cjs
           node checks/verify-illustrations.cjs
+          node checks/verify-additional-illustrations.cjs
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

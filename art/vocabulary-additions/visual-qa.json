@@ -1,0 +1,773 @@
+{
+  "version": 1,
+  "method": "Every finished tile was visually reviewed on its normalized labelled contact sheet for subject, meaning, cottage gouache style and cropping.",
+  "drawingsReviewed": 925,
+  "acceptedAtlases": [
+    "additional-01",
+    "additional-02",
+    "additional-03",
+    "additional-04",
+    "additional-05",
+    "additional-06",
+    "additional-07",
+    "additional-08",
+    "additional-09",
+    "additional-10",
+    "additional-11",
+    "additional-12",
+    "additional-13",
+    "additional-14",
+    "additional-15",
+    "additional-16",
+    "additional-17",
+    "additional-18",
+    "additional-19",
+    "additional-20",
+    "additional-21",
+    "additional-31",
+    "additional-32",
+    "additional-33",
+    "additional-34",
+    "additional-35",
+    "additional-36",
+    "additional-37",
+    "additional-38",
+    "additional-39",
+    "additional-40",
+    "additional-41",
+    "additional-42",
+    "additional-43",
+    "additional-44",
+    "additional-45",
+    "additional-46"
+  ],
+  "corrections": [
+    "add-traffic-lane: car moved fully inside its lane; original source and replacement hashes preserved in atlas manifest."
+  ],
+  "reviews": [
+    {
+      "file": "qa-additional-01-02.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of both labelled 25-tile contact sheets after import, including subject order, shape, fine material detail, style and crop boundaries.",
+        "batches": [
+          {
+            "id": "additional-01",
+            "status": "accepted with minor observation",
+            "reviewedTiles": 25,
+            "style": "Detailed botanical cottage gouache, matching warm cream gutters and sage, dusty blue, coral and ochre palette; textile stitches, plant veins, fruit flesh and ceramic motifs are visible.",
+            "crop": "All 25 row-major subjects are isolated correctly. No neighbouring panel or chopped principal subject.",
+            "observations": [
+              {
+                "key": "add-flour",
+                "severity": "minor",
+                "detail": "The sack and wheat clearly indicate baking flour, but white flour is painted with comparatively coarse clumps that could look grain-like. No crop problem. A softer powdered replacement would improve literal clarity if desired."
+              }
+            ]
+          },
+          {
+            "id": "additional-02",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Consistent detailed cottage gouache; cotton seams, wool stitches, brass, leather, ceramic patterns and stationery materials are distinct.",
+            "crop": "All 25 correct subjects, ordered and isolated. Pencil shafts extend toward the tile edge as a close still life; points and all distinguishing features remain visible.",
+            "observations": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-03-04.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of each labelled 25-tile contact sheet after import; full row-major subjects, species distinctions, botanical/anatomical features, material detail, style and crop boundaries.",
+        "batches": [
+          {
+            "id": "additional-03",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with individually painted feathers, bird markings, bark, root branches, leaf veins, rose petal texture and restrained botanical frames.",
+            "semantics": "All bird species have characteristic silhouettes and colours. Crow/raven, hawk/falcon, stork/heron and nightingale/blackbird are distinguished. Wing includes feathered and insect forms; beak, root, stem, bud, petal and soil match their subjects.",
+            "crop": "All 25 correct ordered subjects are isolated; long bird legs and wings stay within their intended panels. No neighbouring tile leakage.",
+            "observations": []
+          },
+          {
+            "id": "additional-04",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Rich botanical gouache with petal veins, birch bark, insect segmentation, translucent wings, cocoon silk, hive wood and delicate underwater plant details.",
+            "semantics": "All 25 requested subjects appear in order. Wasp/hornet and flea/louse/termite are visually distinguished. Antennae and stinger are visible in the relevant close studies; hive is a wooden beehive and swarm a hanging bee cluster.",
+            "crop": "Correct square isolation throughout. Close botanical and insect compositions intentionally extend near edges without losing identifying details or introducing neighbouring subjects.",
+            "observations": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-05.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "id": "additional-05",
+        "status": "accepted",
+        "reviewedTiles": 25,
+        "method": "Visual inspection of all 25 labelled tile crops after import.",
+        "style": "Consistent richly detailed cottage gouache. Individual woven threads, denim stitches, lace loops, pile, leather grain, brushed metal, glass transparency and stone aggregate are visible.",
+        "semantics": "All requested material and textile subjects are in exact row-major order, including the distinction between glass material and a drinking glass. Waterproof shows droplets on coated cloth and breathable shows airy loose weave.",
+        "crop": "All squares isolated correctly with complete distinguishing features and no neighbouring panel leakage.",
+        "observations": []
+      }
+    },
+    {
+      "file": "qa-additional-06-09-11-13.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of all 25 labelled tile crops in each finished atlas, with original-source review and measured per-row gutter boundaries for sheets 09 and 13.",
+        "batches": [
+          {
+            "id": "additional-06",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with polished metal, fine sieve mesh, woven cloth, glass, rubber glove folds, duvet stitching, wicker and brass.",
+            "semantics": "All requested utensils, cleaning items, bed linen and device accessories are in correct order and visually distinct.",
+            "crop": "Every panel isolated correctly; complete identifying features; no accidental neighbouring panel fragments.",
+            "observations": []
+          },
+          {
+            "id": "additional-09",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed geography landscapes and antique globes with delicate terrain, foliage, coastline, rock layers and water reflections.",
+            "semantics": "All 25 subjects correct. Equator/latitude/longitude, peninsula/archipelago/mainland, plain/plateau/valley/canyon, altitude/sea level and river/lake are distinguished.",
+            "crop": "The source shifts its first column between rows. Measured xByRow arrays and actual horizontal gutters were used, with four-pixel inset; all 25 final crops preserve proportions and exclude neighbouring panels.",
+            "observations": []
+          },
+          {
+            "id": "additional-11",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Highly detailed rural cottage gouache with stonework, barn timber, pasture animals, meadow flowers, farm tools, vegetable beds and individual soil clumps.",
+            "semantics": "All 25 requested countryside/farming subjects appear correctly, including livestock/poultry, irrigation, greenhouse, crop, plough, rake, hoe, shovel, weeding and pruning.",
+            "crop": "All panels isolated correctly with distinguishing tool heads, roots, blades and subjects visible.",
+            "observations": []
+          },
+          {
+            "id": "additional-13",
+            "status": "accepted with minor source observation",
+            "reviewedTiles": 25,
+            "style": "Detailed space and travel cottage gouache: crater texture, atmospheric glow, nebula gas, astronaut suit fittings, passport stamping motifs, maps, baggage and aircraft seat weaving.",
+            "semantics": "All 25 requested subjects correctly ordered, including the seven-star constellation, orbital path, gravity association, eclipse, black hole, passport/visa, insurance, travel guide/agency, route/destination and luggage types.",
+            "crop": "Measured per-row x boundaries plus actual y gutters and four-pixel inset preserve the real unequal source cells. All identifying features are visible.",
+            "observations": [
+              {
+                "key": "add-travel-agency",
+                "severity": "minor",
+                "detail": "The original travel-guide map at the left extends a small triangular paper corner across the painted gutter into the adjacent agency panel. The final agency crop retains this small map-like corner at its lower left; it reads consistently as another brochure on the travel desk and does not obscure the agency subjects. Replacing this tile is optional if absolute independence of source panel ornament is required."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-07.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "id": "additional-07",
+        "status": "accepted",
+        "reviewedTiles": 25,
+        "method": "Visual inspection of all 25 labelled tile crops after import.",
+        "style": "Highly detailed cottage gouache scenes with individual stonework, window frames, books, theatre trim, fabric folds, railway roof ironwork, swimming-pool tiles and flowering foliage.",
+        "semantics": "All requested urban places and street concepts are in exact row-major order. Neighbourhood/suburb, pavement/crossing/traffic, pharmacy/post office/police/fire station, library/museum/cinema/theatre and railway station/airport are distinguished clearly.",
+        "crop": "All 25 panels isolated correctly. Buildings, rooms and streets use intentional scene framing; all principal identifying features remain visible and there are no neighbouring panels or accidental grid seams.",
+        "observations": []
+      }
+    },
+    {
+      "file": "qa-additional-08-10-15.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of all 25 labelled tile crops in each finished atlas.",
+        "batches": [
+          {
+            "id": "additional-08",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with ornate shopfronts, individual food and shop goods, miniature toys, flowers, ceramic glazing, folded textiles and carved furniture.",
+            "semantics": "All 25 requested shopping and dining subjects are correct and ordered. Shop types are visually differentiated; checkout/counter, cash machine/contactless payment/bank account/price and menu/napkin/table for two each have distinct compositions.",
+            "crop": "All panels isolated correctly; complete subject features and no accidental neighbouring tile fragments.",
+            "observations": []
+          },
+          {
+            "id": "additional-10",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with diverse ecology, finely painted animals and flowers, industrial structures, water, tree rings, metal, glass and organic soil textures.",
+            "semantics": "All 25 environment and sustainability subjects are correct and ordered. Clean ecosystems, conservation, pollution/emissions, drought/flood/deforestation, renewable/fossil energy, extinction/endangerment and reusing/composting/biodegrading are clearly represented.",
+            "crop": "Correct independent panel crops throughout, including taller figures and whole-footprint graphics. No accidental neighbouring subjects.",
+            "observations": []
+          },
+          {
+            "id": "additional-15",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with expressive natural people, carefully painted work tools and clothing, office objects, electronics, cables, memory chips and copier surfaces.",
+            "semantics": "All 25 requested professions, workplace roles and devices are correct and ordered. Dentist/engineer/driver, shop assistant/waiter/waitress, electrician/hairdresser/accountant/lawyer, employer/employee/colleague/client and individual computer devices are clearly distinguished by context and equipment.",
+            "crop": "All principal subjects and distinguishing tools stay within their intended panels with no accidental neighbouring art.",
+            "observations": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-12-14-16.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of all 25 labelled tile crops in each finished atlas.",
+        "batches": [
+          {
+            "id": "additional-12",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with layered coastal rocks, sea foam, forest foliage, moss, ridged bark and detailed mountain relief.",
+            "semantics": "All requested coast, mountain and forest concepts are in order and recognizable. Bay/cove, harbour/pier, ridge/slope/cliff/foothills/pass, clearing/undergrowth/moss/bark are distinguished. The solar system shows all eight planets in their correct order.",
+            "crop": "Every panel isolated correctly with complete distinguishing features and no accidental neighbouring panel fragments.",
+            "observations": []
+          },
+          {
+            "id": "additional-14",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with terminal glazing, airplane upholstery, carved wood, hotel textiles, food surfaces and wicker textures.",
+            "semantics": "All 25 subjects correct and ordered. Airport services, window/aisle seat, connecting flight/layover, single/double/twin rooms, hotel facilities and food/groceries/fruit/berries/vegetables are distinguished accurately.",
+            "crop": "All panel boundaries correct; main subjects remain intact with no neighbouring tile leakage.",
+            "observations": []
+          },
+          {
+            "id": "additional-16",
+            "status": "accepted after correction",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with office furniture, appliance surfaces, individual hair strands, paintings, ornate stonework, carved souvenirs and street details.",
+            "semantics": "Twenty-four subjects are clearly correct and ordered. Distinct long/short/dark hair, gallery/monument/palace/old town/resort, recipe/ingredients and office/travel subjects.",
+            "crop": "All 25 panels are isolated correctly, without accidental neighbouring art or clipped identifying features.",
+            "observations": [
+              {
+                "key": "add-traffic-lane",
+                "index": 20,
+                "severity": "resolved",
+                "detail": "Replaced the original car-over-divider image with a new detailed cottage road scene. The car is now clearly inside the right-hand lane, bounded by the dashed centre line on its left and the solid edge line on its right. Original atlas source d5618ad0079e6425 remains preserved in import metadata; the exact full original and replacement SHA-256 hashes are stored there. Other 24 subjects remain unchanged."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-17-19-20.json",
+      "review": {
+        "reviewer": "extend_art_pipeline",
+        "method": "Visual inspection of every labelled tile after import, including direction arrows, highlighted sides, cardinal letters and all semantic subject distinctions.",
+        "batches": [
+          {
+            "id": "additional-17",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with natural family expressions, hair and textile detail, warm classroom objects, history/science still lifes and carefully painted street scenes.",
+            "semantics": "All family and school scenes are correct and ordered. Traffic-jam, roadworks, detour, one-way street and dead-end each have the intended distinct layout; detour visibly bypasses the closure and dead-end stops at a wall.",
+            "crop": "All 25 subjects correctly isolated; people, school objects and main street boundaries visible.",
+            "observations": []
+          },
+          {
+            "id": "additional-19",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with carved stone and timber, natural figures, botanical framing, elegant antique compass roses and detailed maps.",
+            "semantics": "All 25 directions correct: left/right turns, highlighted left/right cottages, upstairs/downstairs figures and near/far views agree with their meanings. Each of the four compasses has N at top, E at right, S at bottom and W at left, with exactly the requested north/up, south/down, east/right or west/left arrow highlighted red. Exit and navigation paths are clear.",
+            "crop": "All panels isolated correctly, with complete arrows, compass letters, maps and direction landmarks.",
+            "observations": []
+          },
+          {
+            "id": "additional-20",
+            "status": "accepted",
+            "reviewedTiles": 25,
+            "style": "Detailed cottage gouache with fine glass reflections, linen weave, carved nesting dolls, gears, transport, offices, paper and embroidered bookmark details.",
+            "semantics": "All 25 miscellaneous subjects correct and ordered. Shape and size are visibly distinct; information uses a clear i emblem, system shows interlocking machinery, stain/mess differ, and record sleeve/playing track/playlist each have distinct compositions.",
+            "crop": "Every identifying feature stays in its correct isolated panel, with no neighbouring image leakage.",
+            "observations": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-18-21.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batches": [
+          "additional-18",
+          "additional-21"
+        ],
+        "tilesReviewed": 50,
+        "accepted": true,
+        "reports": [
+          "qa-additional-18.json",
+          "qa-additional-21.json"
+        ],
+        "minorNotes": [
+          "additional18 entrance doorway is valid for noun entrance but outward walker weakens the enter/exit action contrast. Root informed."
+        ],
+        "measuredEdges": "work/additional-art/additional-18-edges.json",
+        "measurementEvidence": "work/additional-art/additional-18-gutter-measurements.json"
+      }
+    },
+    {
+      "file": "qa-additional-18.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-18",
+        "tilesReviewed": 25,
+        "accepted": true,
+        "method": "Viewed original generated source plus all25 labelled normalized crops at original image detail; checked subject order, sense, cottage gouache style, clipping and neighbour leakage.",
+        "sourceSha256": "47522de2234974300f4da01243c40a598837788786172b9a57006dc1966967c4",
+        "atlas": "images/vocabulary-painted/additional-18.webp",
+        "review": "work/additional-art/imported/reviews/additional-18-contact.png",
+        "sourceEdges": {
+          "x": [
+            0,
+            251,
+            498,
+            755,
+            1006,
+            1254
+          ],
+          "y": [
+            0,
+            244,
+            490,
+            739,
+            981,
+            1254
+          ],
+          "yByColumn": [
+            [
+              0,
+              251,
+              488,
+              736,
+              979,
+              1254
+            ],
+            [
+              0,
+              247,
+              490,
+              736,
+              980,
+              1254
+            ],
+            [
+              0,
+              244,
+              490,
+              739,
+              979,
+              1254
+            ],
+            [
+              0,
+              246,
+              490,
+              734,
+              983,
+              1254
+            ],
+            [
+              0,
+              247,
+              491,
+              735,
+              983,
+              1254
+            ]
+          ]
+        },
+        "sourceInset": 4,
+        "acceptedKeys": [
+          "add-smoke",
+          "add-smoke-detector",
+          "add-emergency-exit",
+          "add-evacuation",
+          "add-emergency-shelter",
+          "add-rescue",
+          "add-first-aid",
+          "add-first-aid-kit",
+          "add-accident",
+          "add-theft",
+          "add-missing-person",
+          "add-emergency",
+          "add-safety",
+          "add-call-help",
+          "add-call-ambulance",
+          "add-stay-calm",
+          "add-keep-away",
+          "add-report-accident",
+          "add-road-sign",
+          "add-speed-limit",
+          "add-entrance",
+          "add-exit",
+          "add-address",
+          "add-postcode",
+          "add-housekeeping"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects match their row-major locations.",
+          "Measured source cream gutters instead of assuming a uniform source grid; independent yByColumn boundaries preserve each painted row, with inset4.",
+          "Normalized crops retain main objects and do not show adjacent panels.",
+          "Emergency smoke/detector/exit, evacuation, civil shelter, rescue, first aid/kit, accident/theft/missing-person and protective barriers are recognizable.",
+          "Speed limit is exactly30, address plaque17 and postcode01234.",
+          "Minor semantic note: entrance depicts an actual entrance doorway but its walker faces outdoors; doorway is a valid entrance noun image, while the entering-versus-exiting action contrast is weaker than requested subject text. Root informed for optional single-tile correction."
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-21.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-21",
+        "tilesReviewed": 25,
+        "accepted": true,
+        "method": "Viewed original generated source plus all25 labelled normalized crops at original image detail; checked subject order, sense, cottage gouache style, clipping and neighbour leakage.",
+        "sourceSha256": "487662bff119a2490d1e2b5e9ed668a5b8da4ba2c3f10f469073c83bd46f4b3c",
+        "atlas": "images/vocabulary-painted/additional-21.webp",
+        "review": "work/additional-art/imported/reviews/additional-21-contact.png",
+        "sourceEdges": {
+          "x": [
+            0,
+            248,
+            492,
+            749,
+            1002,
+            1254
+          ],
+          "y": [
+            0,
+            235,
+            487,
+            739,
+            981,
+            1254
+          ]
+        },
+        "sourceInset": 2,
+        "acceptedKeys": [
+          "add-football-player",
+          "add-football-match",
+          "add-starter",
+          "add-main-course",
+          "add-dessert",
+          "add-tour-guide",
+          "add-guided-tour",
+          "add-gardening",
+          "add-baking",
+          "add-resident",
+          "add-peaceful",
+          "add-live-off-land",
+          "add-move-countryside",
+          "add-awake",
+          "add-stay-up-late",
+          "add-oversleep",
+          "add-room-service",
+          "add-hungry",
+          "add-thirsty",
+          "add-opening-hours",
+          "add-deposit",
+          "add-entrance-fee",
+          "add-passenger",
+          "add-delay",
+          "add-miss-train"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects match their row-major locations and all crops retain the main subject.",
+          "Player/match are distinct team-football scenes; starter/main course/dessert have appropriate portions and types.",
+          "Guide/tour, gardening/baking, rural resident/peaceful pond/harvest/moving home are recognizable.",
+          "Awake is a stretching upright person, oversleep is sleeping in bright morning, and stay-up-late is reading at night with both clock hands at12.",
+          "Hungry has an empty plate and hand on stomach; thirsty reaches for water.",
+          "Opening-hours sign reads09:00 and18:00 correctly. Deposit, museum entry payment, train passenger, waiting with clock and receding missed train are distinct."
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-40.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-40",
+        "tilesReviewed": 25,
+        "method": "Viewed every tile in the labelled normalized contact sheet at original image detail; compared to the saved exact subject labels. Checked subject order, semantic cues, cottage gouache style, clipping and neighbouring-cell leakage.",
+        "accepted": true,
+        "sourceSha256": "35e9c5fadc76124a73fdf2e8320658a5d81d0d9da64fb78234a666afe762a1fc",
+        "atlas": "images/vocabulary-painted/additional-40.webp",
+        "review": "work/additional-art/imported/reviews/additional-40-contact.png",
+        "acceptedKeys": [
+          "add-phone-voice-message",
+          "add-video-call",
+          "add-charging-phone",
+          "add-ending-call",
+          "add-cannot-hear-call",
+          "add-phone-contacts",
+          "add-internet-globe",
+          "add-website-screen",
+          "add-internet-search",
+          "add-online-account",
+          "add-logging-in",
+          "add-logging-out",
+          "add-signing-up-online",
+          "add-downloading-file",
+          "add-uploading-file",
+          "add-online-connected",
+          "add-offline-disconnected",
+          "add-social-network",
+          "add-publishing-post",
+          "add-online-comment",
+          "add-liking-post",
+          "add-sharing-online-photo",
+          "add-following-profile",
+          "add-privacy-lock",
+          "add-spam-messages"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects are in expected row-major order.",
+          "Download points from cloud down into laptop; upload points upward into cloud.",
+          "Online has Wi-Fi waves; offline has a clear diagonal strike. Login lock, logout outward arrow, like heart and sharing arrow are distinct.",
+          "All primary subjects fit their normalized cells; no adjacent-panel leakage noticed."
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-41.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-41",
+        "tilesReviewed": 25,
+        "method": "Viewed every tile in the labelled normalized contact sheet at original image detail; compared to the saved exact subject labels. Checked subject order, semantic cues, cottage gouache style, clipping and neighbouring-cell leakage.",
+        "accepted": true,
+        "sourceSha256": "f17998adf4c94baab857f7460d0ef58219112a9a9d153f7bf0e6dd8f2de47459",
+        "atlas": "images/vocabulary-painted/additional-41.webp",
+        "review": "work/additional-art/imported/reviews/additional-41-contact.png",
+        "acceptedKeys": [
+          "add-actor-stage",
+          "add-actress-stage",
+          "add-film-director",
+          "add-comedy-screen",
+          "add-drama-screen",
+          "add-thriller-screen",
+          "add-horror-screen",
+          "add-science-fiction-screen",
+          "add-documentary-filming",
+          "add-animated-film",
+          "add-reality-show",
+          "add-news-presenter",
+          "add-streaming-screen",
+          "add-television-series",
+          "add-film-episode",
+          "add-story-plot",
+          "add-movie-trailer",
+          "add-voice-dubbing",
+          "add-film-subtitles",
+          "add-turning-book-page",
+          "add-book-cover",
+          "add-ribbon-bookmark",
+          "add-music-album",
+          "add-music-playlist",
+          "add-music-track"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects are in expected row-major order.",
+          "Actor/actress/director and distinct comedy/drama/thriller/horror/science-fiction scenes are recognizable.",
+          "Animation film frames, serial/episode story cues, subtitles band, dubbing microphone and trailer play symbol remain distinct.",
+          "Book cover/page/bookmark and album/playlist/track subjects are clear. All crops retain the main subject."
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-42.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-42",
+        "tilesReviewed": 25,
+        "method": "Viewed every tile in the labelled normalized contact sheet at original image detail; compared to the saved exact subject labels. Checked subject order, semantic cues, cottage gouache style, clipping and neighbouring-cell leakage.",
+        "accepted": true,
+        "sourceSha256": "dd81dfeedc94aaaea5f25da3d29086c973d9524f0363901a86150e2aa59ff75a",
+        "atlas": "images/vocabulary-painted/additional-42.webp",
+        "review": "work/additional-art/imported/reviews/additional-42-contact.png",
+        "acceptedKeys": [
+          "add-buying-market-item",
+          "add-returning-item-refund",
+          "add-exchanging-clothes",
+          "add-trying-on-jacket",
+          "add-sale-discount",
+          "add-full-shop-shelf",
+          "add-empty-shop-shelf",
+          "add-saving-coins",
+          "add-lending-coins",
+          "add-tipping-waiter",
+          "add-money-transfer-phone",
+          "add-window-shopping",
+          "add-ordering-coffee",
+          "add-restaurant-menu",
+          "add-ordering-soup",
+          "add-coffee-with-milk",
+          "add-coffee-without-sugar",
+          "add-vegetarian-meal",
+          "add-vegan-meal",
+          "add-spicy-food",
+          "add-gluten-free-food",
+          "add-nut-allergy-warning",
+          "add-paying-restaurant-bill",
+          "add-paying-separately",
+          "add-takeaway-food"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects are in expected row-major order.",
+          "Oversized versus smaller garment, many versus fewer price-tag coins, stocked versus empty shelves are clear.",
+          "Coffee milk swirl and crossed-sugar cue are correct. Vegetarian plate includes egg/cheese and no meat; vegan plate shows plants/grains/chickpeas and no apparent animal products.",
+          "Crossed-wheat and crossed-nut pictograms are clear; separate payment shows separate receipts and coin piles. No crop leakage noticed."
+        ]
+      }
+    },
+    {
+      "file": "qa-additional-43.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batch": "additional-43",
+        "tilesReviewed": 25,
+        "method": "Viewed every tile in the labelled normalized contact sheet at original image detail; compared to the saved exact subject labels. Checked subject order, semantic cues, cottage gouache style, clipping and neighbouring-cell leakage.",
+        "accepted": true,
+        "sourceSha256": "f831ce652b7d35935d157a949cde37e888bb6879a0c627bb8ee582bd6804f9cd",
+        "atlas": "images/vocabulary-painted/additional-43.webp",
+        "review": "work/additional-art/imported/reviews/additional-43-contact.png",
+        "acceptedKeys": [
+          "add-beginning-painting",
+          "add-finishing-painting",
+          "add-permission-gate",
+          "add-suggesting-idea",
+          "add-changing-chair-colour",
+          "add-continuing-knitting",
+          "add-setting-alarm-clock",
+          "add-providing-food",
+          "add-dead-plant",
+          "add-fly-swatter-action",
+          "add-race-finish",
+          "add-sports-coach",
+          "add-losing-chess",
+          "add-practising-violin",
+          "add-reading-aloud-child",
+          "add-waiting-restaurant-order",
+          "add-opening-window-request",
+          "add-borrowing-pen",
+          "add-agreeing-people",
+          "add-disagreeing-people",
+          "add-asking-repeat",
+          "add-halting-walker",
+          "add-calming-friend",
+          "add-religious-prayer",
+          "add-enough-food"
+        ],
+        "rejectedKeys": [],
+        "observations": [
+          "All 25 subjects are in expected row-major order.",
+          "Beginning canvas versus completed painting, altered chair colour, dried plant versus healthy plant, and fly swatter action are clear.",
+          "Race finish ribbon, coach/players, resigned chess king, violin practice and read-aloud scene are recognizable.",
+          "Agreeing handshake versus raised-palm disagreement are distinct; stopping guide, calming friend and prayer scenes match subjects.",
+          "All main subjects remain inside their crops; dense floral borders and gouache texture match the reference aesthetic."
+        ]
+      }
+    },
+    {
+      "file": "qa-scenes-31-39.json",
+      "review": {
+        "reviewer": "root",
+        "batches": [
+          "additional-31",
+          "additional-32",
+          "additional-33",
+          "additional-34",
+          "additional-35",
+          "additional-36",
+          "additional-37",
+          "additional-38",
+          "additional-39"
+        ],
+        "tilesReviewed": 225,
+        "method": "Viewed every labelled contact sheet after mechanical crop normalization; checked row-major subject, sense, style and neighbour leakage.",
+        "accepted": true,
+        "observations": [
+          "All spatial scenes show the requested relation clearly; into/out of, with/without food and near/far are distinct.",
+          "Health scenes non-graphic; actions and adjective contrasts legible.",
+          "Cottage gouache material details and large-image layout are retained."
+        ]
+      }
+    },
+    {
+      "file": "qa-scenes-40-43.json",
+      "review": {
+        "reviewer": "missing_art_audit",
+        "batches": [
+          "additional-40",
+          "additional-41",
+          "additional-42",
+          "additional-43"
+        ],
+        "tilesReviewed": 100,
+        "accepted": true,
+        "method": "Every tile visually inspected in all four normalized labelled contact sheets.",
+        "reports": [
+          "qa-additional-40.json",
+          "qa-additional-41.json",
+          "qa-additional-42.json",
+          "qa-additional-43.json"
+        ],
+        "observations": [
+          "additional-40: All 25 subjects are in expected row-major order.",
+          "additional-40: Download points from cloud down into laptop; upload points upward into cloud.",
+          "additional-40: Online has Wi-Fi waves; offline has a clear diagonal strike. Login lock, logout outward arrow, like heart and sharing arrow are distinct.",
+          "additional-40: All primary subjects fit their normalized cells; no adjacent-panel leakage noticed.",
+          "additional-41: All 25 subjects are in expected row-major order.",
+          "additional-41: Actor/actress/director and distinct comedy/drama/thriller/horror/science-fiction scenes are recognizable.",
+          "additional-41: Animation film frames, serial/episode story cues, subtitles band, dubbing microphone and trailer play symbol remain distinct.",
+          "additional-41: Book cover/page/bookmark and album/playlist/track subjects are clear. All crops retain the main subject.",
+          "additional-42: All 25 subjects are in expected row-major order.",
+          "additional-42: Oversized versus smaller garment, many versus fewer price-tag coins, stocked versus empty shelves are clear.",
+          "additional-42: Coffee milk swirl and crossed-sugar cue are correct. Vegetarian plate includes egg/cheese and no meat; vegan plate shows plants/grains/chickpeas and no apparent animal products.",
+          "additional-42: Crossed-wheat and crossed-nut pictograms are clear; separate payment shows separate receipts and coin piles. No crop leakage noticed.",
+          "additional-43: All 25 subjects are in expected row-major order.",
+          "additional-43: Beginning canvas versus completed painting, altered chair colour, dried plant versus healthy plant, and fly swatter action are clear.",
+          "additional-43: Race finish ribbon, coach/players, resigned chess king, violin practice and read-aloud scene are recognizable.",
+          "additional-43: Agreeing handshake versus raised-palm disagreement are distinct; stopping guide, calming friend and prayer scenes match subjects.",
+          "additional-43: All main subjects remain inside their crops; dense floral borders and gouache texture match the reference aesthetic."
+        ]
+      }
+    },
+    {
+      "file": "qa-scenes-44-46.json",
+      "review": {
+        "reviewer": "root",
+        "batches": [
+          "additional-44",
+          "additional-45",
+          "additional-46"
+        ],
+        "tilesReviewed": 75,
+        "method": "Viewed all three labelled normalized contact sheets; reviewed every tile for subject, meaning, exact position, cottage gouache detail and cropping.",
+        "accepted": true,
+        "observations": [
+          "Install/uninstall, copy/paste/delete, volume up/down and repair scenes are visually distinct.",
+          "Rule/prohibition/helmet and bias/decision scenes clearly match the requested subjects.",
+          "Actual glass of water, quantities, pencil line and point, family life and emergence scenes retain literal material details."
+        ]
+      }
+    }
+  ]
+}

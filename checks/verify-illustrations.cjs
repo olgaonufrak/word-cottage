@@ -1,7 +1,10 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const {fixture}=require('./fixture.cjs');
 const storage=new Map([['word-cottage-learned','["nouns-0"]'],['word-cottage-personal-words','[]']]);
-const {run,element}=fixture(storage,undefined,true),saved=JSON.stringify([...storage]);
+// Keep the complete historical source-and-meaning check independent of new
+// additions; verify-additional-illustrations checks the combined published set
+// against the same 1119 preserved mappings and every supplementary entry.
+const {run,element}=fixture(storage,undefined,true,false),saved=JSON.stringify([...storage]);
 const pictures=(en,uk)=>JSON.parse(run(`JSON.stringify(lessonIllustrations(${JSON.stringify({en,uk})}))`));
 const imageIdentity=picture=>picture.type==='cottage'?`c:${picture.picture}:${picture.cell}`:`${picture.src.split('?')[0]}:${picture.cell??''}`;
 const painted=JSON.parse(run('JSON.stringify(paintedVocabularyPictures)'));

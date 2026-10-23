@@ -9,6 +9,8 @@
 // node tools/import-painted-collages.cjs --batch painted-01 --input SOURCE.png
 //   [--catalog art/vocabulary-collages/catalog.json] [--size 2000] [--quality 90]
 //   [--grid auto|uniform] [--edges FILE.json] [--inset 2]
+// Measured edges may also contain xByRow or yByColumn: five arrays of six
+// boundaries for source sheets whose painted gutters vary between rows/columns.
 //   [--reject key-with-wrong-generated-subject,another-key]
 //   [--override key=/path/to/replacement.png] (may be repeated)
 //   [--output dist/images/vocabulary-painted] [--work work/painted-art]
@@ -135,12 +137,17 @@ function labelLines(label, length = 31) {
 }
 
 function validateEdges(edges, width) {
-  for (const direction of ['x', 'y']) {
-    const values = edges[direction];
+  function validate(values, direction) {
     if (!Array.isArray(values) || values.length !== 6 || values[0] !== 0 || values[5] !== width ||
       values.some((value, index) => !Number.isInteger(value) || (index && (value - values[index - 1] < width / 10)))) {
       throw new Error('Expected six increasing ' + direction + ' boundaries from 0 to ' + width);
     }
+  }
+  for (const direction of ['x', 'y']) validate(edges[direction], direction);
+  for (const [property, direction] of [['xByRow', 'row x'], ['yByColumn', 'column y']]) {
+    if (edges[property] === undefined) continue;
+    if (!Array.isArray(edges[property]) || edges[property].length !== 5) throw new Error('Expected five measured ' + property + ' arrays');
+    edges[property].forEach((values, index) => validate(values, direction + index));
   }
   return edges;
 }
@@ -184,8 +191,9 @@ async function uniformAtlas(sharp, source, edges, size, inset, quality, target, 
   const cell = size / 5, tiles = [];
   for (let index = 0; index < 25; index++) {
     const x = index % 5, y = Math.floor(index / 5);
-    const left = edges.x[x] + inset, top = edges.y[y] + inset;
-    const width = edges.x[x + 1] - left - inset, height = edges.y[y + 1] - top - inset;
+    const horizontal = edges.xByRow?.[y] || edges.x, vertical = edges.yByColumn?.[x] || edges.y;
+    const left = horizontal[x] + inset, top = vertical[y] + inset;
+    const width = horizontal[x + 1] - left - inset, height = vertical[y + 1] - top - inset;
     if (width <= 0 || height <= 0) throw new Error('Inset is too large for cell ' + index);
     const replacement = overrides.get(index);
     const image = replacement ? sharp(replacement.source) : sharp(source).extract({ left, top, width, height });

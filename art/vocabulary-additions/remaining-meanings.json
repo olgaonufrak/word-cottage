@@ -1,0 +1,1304 @@
+{
+  "description": "Reasoned residual after 525 concrete and 400 scene subjects plus exact reuses; this is an audit, not a claim that every abstract can never be illustrated.",
+  "stats": {
+    "subjects": 400,
+    "entries": 971,
+    "sceneCards": 1072,
+    "combinedNewCards": 1697,
+    "remainingCards": 214
+  },
+  "groups": {
+    "Абстрактне чи залежне від контексту значення; не підмінюється довільним предметом. Потребує окремого точного візуального сценарію.": [
+      {
+        "id": "nouns-21",
+        "en": "case",
+        "uk": "випадок; справа",
+        "category": "nouns"
+      },
+      {
+        "id": "nouns-47",
+        "en": "word",
+        "uk": "слово",
+        "category": "nouns"
+      },
+      {
+        "id": "nouns-62",
+        "en": "member",
+        "uk": "учасник; член",
+        "category": "nouns"
+      },
+      {
+        "id": "nouns-67",
+        "en": "name",
+        "uk": "ім’я",
+        "category": "nouns"
+      },
+      {
+        "id": "nouns-78",
+        "en": "others",
+        "uk": "інші",
+        "category": "nouns"
+      },
+      {
+        "id": "verbs-33",
+        "en": "mean",
+        "uk": "означати",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-37",
+        "en": "seem",
+        "uk": "здаватися",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-53",
+        "en": "happen",
+        "uk": "траплятися",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-62",
+        "en": "include",
+        "uk": "включати",
+        "category": "verbs"
+      },
+      {
+        "id": "adjectives-20",
+        "en": "real",
+        "uk": "справжній",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-29",
+        "en": "able",
+        "uk": "здатний",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-38",
+        "en": "possible",
+        "uk": "можливий",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-42",
+        "en": "true",
+        "uk": "правдивий",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-43",
+        "en": "federal",
+        "uk": "федеральний",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-49",
+        "en": "recent",
+        "uk": "нещодавній",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-50",
+        "en": "certain",
+        "uk": "певний",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-56",
+        "en": "likely",
+        "uk": "ймовірний",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-60",
+        "en": "current",
+        "uk": "поточний",
+        "category": "adjectives"
+      },
+      {
+        "id": "adjectives-80",
+        "en": "general",
+        "uk": "загальний",
+        "category": "adjectives"
+      },
+      {
+        "id": "common-1",
+        "en": "there",
+        "uk": "там",
+        "category": "common"
+      },
+      {
+        "id": "common-7",
+        "en": "all",
+        "uk": "все; усі",
+        "category": "common"
+      },
+      {
+        "id": "common-10",
+        "en": "those",
+        "uk": "ті",
+        "category": "common"
+      },
+      {
+        "id": "common-11",
+        "en": "it",
+        "uk": "воно; це",
+        "category": "common"
+      },
+      {
+        "id": "common-25",
+        "en": "so",
+        "uk": "отже; так",
+        "category": "common"
+      },
+      {
+        "id": "common-26",
+        "en": "after",
+        "uk": "після",
+        "category": "common"
+      },
+      {
+        "id": "common-27",
+        "en": "I",
+        "uk": "я",
+        "category": "common"
+      },
+      {
+        "id": "common-29",
+        "en": "also",
+        "uk": "також",
+        "category": "common"
+      },
+      {
+        "id": "common-30",
+        "en": "you",
+        "uk": "ти; ви",
+        "category": "common"
+      },
+      {
+        "id": "common-32",
+        "en": "back",
+        "uk": "назад",
+        "category": "common"
+      },
+      {
+        "id": "common-35",
+        "en": "how",
+        "uk": "як",
+        "category": "common"
+      },
+      {
+        "id": "common-38",
+        "en": "ex",
+        "uk": "колишній; колишня",
+        "category": "common"
+      },
+      {
+        "id": "common-42",
+        "en": "not",
+        "uk": "не",
+        "category": "common"
+      },
+      {
+        "id": "common-44",
+        "en": "unfortunately",
+        "uk": "на жаль",
+        "category": "common"
+      },
+      {
+        "id": "common-45",
+        "en": "he",
+        "uk": "він",
+        "category": "common"
+      },
+      {
+        "id": "common-46",
+        "en": "when",
+        "uk": "коли",
+        "category": "common"
+      },
+      {
+        "id": "common-47",
+        "en": "our",
+        "uk": "наш",
+        "category": "common"
+      },
+      {
+        "id": "common-49",
+        "en": "me",
+        "uk": "мене; мені",
+        "category": "common"
+      },
+      {
+        "id": "common-51",
+        "en": "itself",
+        "uk": "саме; себе (про предмет)",
+        "category": "common"
+      },
+      {
+        "id": "common-60",
+        "en": "this",
+        "uk": "цей; це",
+        "category": "common"
+      },
+      {
+        "id": "common-64",
+        "en": "just",
+        "uk": "лише; щойно",
+        "category": "common"
+      },
+      {
+        "id": "common-66",
+        "en": "her",
+        "uk": "її; їй",
+        "category": "common"
+      },
+      {
+        "id": "common-67",
+        "en": "him",
+        "uk": "його; йому",
+        "category": "common"
+      },
+      {
+        "id": "common-71",
+        "en": "even",
+        "uk": "навіть",
+        "category": "common"
+      },
+      {
+        "id": "common-77",
+        "en": "these",
+        "uk": "ці",
+        "category": "common"
+      },
+      {
+        "id": "common-78",
+        "en": "we",
+        "uk": "ми",
+        "category": "common"
+      },
+      {
+        "id": "common-79",
+        "en": "your",
+        "uk": "твій; ваш",
+        "category": "common"
+      },
+      {
+        "id": "common-81",
+        "en": "they",
+        "uk": "вони",
+        "category": "common"
+      },
+      {
+        "id": "common-83",
+        "en": "any",
+        "uk": "будь-який",
+        "category": "common"
+      },
+      {
+        "id": "common-84",
+        "en": "his",
+        "uk": "його",
+        "category": "common"
+      },
+      {
+        "id": "common-87",
+        "en": "she",
+        "uk": "вона",
+        "category": "common"
+      },
+      {
+        "id": "common-89",
+        "en": "us",
+        "uk": "нас; нам",
+        "category": "common"
+      },
+      {
+        "id": "common-90",
+        "en": "my",
+        "uk": "мій",
+        "category": "common"
+      },
+      {
+        "id": "common-91",
+        "en": "them",
+        "uk": "їх; їм",
+        "category": "common"
+      },
+      {
+        "id": "a1-greetings-my%20name%20is",
+        "en": "my name is",
+        "uk": "мене звати",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-what's%20your%20name%3F",
+        "en": "what's your name?",
+        "uk": "як тебе звати?",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-where%20are%20you%20from%3F",
+        "en": "where are you from?",
+        "uk": "звідки ти?",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-how%20old%20are%20you%3F",
+        "en": "how old are you?",
+        "uk": "скільки тобі років?",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-i'm%20twenty%20years%20old",
+        "en": "I'm twenty years old",
+        "uk": "мені двадцять років",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-first%20name",
+        "en": "first name",
+        "uk": "ім'я",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-greetings-last%20name",
+        "en": "last name",
+        "uk": "прізвище",
+        "category": "a1-greetings"
+      },
+      {
+        "id": "a1-phrases-how%20do%20you%20spell%20it%3F",
+        "en": "how do you spell it?",
+        "uk": "як це пишеться по літерах?",
+        "category": "a1-phrases"
+      },
+      {
+        "id": "a2-prepositions-before",
+        "en": "before",
+        "uk": "перед; до",
+        "category": "a2-prepositions"
+      },
+      {
+        "id": "a2-prepositions-after",
+        "en": "after",
+        "uk": "після",
+        "category": "a2-prepositions"
+      },
+      {
+        "id": "a2-city-capital",
+        "en": "capital",
+        "uk": "столиця",
+        "category": "a2-city"
+      },
+      {
+        "id": "a2-everyday-expressions-good%20luck",
+        "en": "good luck",
+        "uk": "щасти",
+        "category": "a2-everyday-expressions"
+      },
+      {
+        "id": "a2-everyday-expressions-it%20depends",
+        "en": "it depends",
+        "uk": "це залежить від обставин",
+        "category": "a2-everyday-expressions"
+      },
+      {
+        "id": "a3-travel-exchange%20rate",
+        "en": "exchange rate",
+        "uk": "обмінний курс",
+        "category": "a3-travel"
+      },
+      {
+        "id": "a3-airport-airline",
+        "en": "airline",
+        "uk": "авіакомпанія",
+        "category": "a3-airport"
+      },
+      {
+        "id": "a3-airport-boarding",
+        "en": "boarding",
+        "uk": "посадка в літак",
+        "category": "a3-airport"
+      },
+      {
+        "id": "a3-airport-cancelled",
+        "en": "cancelled",
+        "uk": "скасований",
+        "category": "a3-airport"
+      },
+      {
+        "id": "a3-hotel-wi-fi%20password",
+        "en": "Wi-Fi password",
+        "uk": "пароль до вайфаю",
+        "category": "a3-hotel"
+      },
+      {
+        "id": "a3-hotel-vacancy",
+        "en": "vacancy",
+        "uk": "вільний номер",
+        "category": "a3-hotel"
+      },
+      {
+        "id": "a3-hotel-fully%20booked",
+        "en": "fully booked",
+        "uk": "усі номери заброньовані",
+        "category": "a3-hotel"
+      },
+      {
+        "id": "a3-tourism-package%20holiday",
+        "en": "package holiday",
+        "uk": "пакетний тур",
+        "category": "a3-tourism"
+      },
+      {
+        "id": "a3-reading-contents",
+        "en": "contents",
+        "uk": "зміст (перелік розділів)",
+        "category": "a3-reading"
+      },
+      {
+        "id": "a3-reading-publisher",
+        "en": "publisher",
+        "uk": "видавець; видавництво",
+        "category": "a3-reading"
+      },
+      {
+        "id": "a4-office-department",
+        "en": "department",
+        "uk": "відділ",
+        "category": "a4-office"
+      },
+      {
+        "id": "a4-office-agenda",
+        "en": "agenda",
+        "uk": "порядок денний",
+        "category": "a4-office"
+      },
+      {
+        "id": "a4-office-minutes",
+        "en": "minutes",
+        "uk": "протокол зустрічі",
+        "category": "a4-office"
+      },
+      {
+        "id": "a4-office-overtime",
+        "en": "overtime",
+        "uk": "понаднормова робота",
+        "category": "a4-office"
+      },
+      {
+        "id": "a4-materials-durable",
+        "en": "durable",
+        "uk": "довговічний; зносостійкий",
+        "category": "a4-materials"
+      },
+      {
+        "id": "a4-thoughts-principle",
+        "en": "principle",
+        "uk": "принцип",
+        "category": "a4-thoughts"
+      }
+    ],
+    "Граматичний або вказівний зміст: потрібна мовна ситуація, окремий предмет не передає значення однозначно.": [
+      {
+        "id": "verbs-0",
+        "en": "be",
+        "uk": "бути",
+        "category": "verbs"
+      },
+      {
+        "id": "common-0",
+        "en": "be",
+        "uk": "бути",
+        "category": "common"
+      },
+      {
+        "id": "common-3",
+        "en": "of",
+        "uk": "кого; чого; з (належність)",
+        "category": "common"
+      },
+      {
+        "id": "common-8",
+        "en": "than",
+        "uk": "ніж",
+        "category": "common"
+      },
+      {
+        "id": "common-9",
+        "en": "the",
+        "uk": "означений артикль",
+        "category": "common"
+      },
+      {
+        "id": "common-12",
+        "en": "and",
+        "uk": "і",
+        "category": "common"
+      },
+      {
+        "id": "common-13",
+        "en": "what",
+        "uk": "що",
+        "category": "common"
+      },
+      {
+        "id": "common-15",
+        "en": "that",
+        "uk": "той; те; що",
+        "category": "common"
+      },
+      {
+        "id": "common-16",
+        "en": "if",
+        "uk": "якщо",
+        "category": "common"
+      },
+      {
+        "id": "common-21",
+        "en": "a",
+        "uk": "неозначений артикль",
+        "category": "common"
+      },
+      {
+        "id": "common-31",
+        "en": "who",
+        "uk": "хто",
+        "category": "common"
+      },
+      {
+        "id": "common-36",
+        "en": "for",
+        "uk": "для",
+        "category": "common"
+      },
+      {
+        "id": "common-37",
+        "en": "which",
+        "uk": "який; котрий",
+        "category": "common"
+      },
+      {
+        "id": "common-40",
+        "en": "about",
+        "uk": "про; приблизно",
+        "category": "common"
+      },
+      {
+        "id": "common-48",
+        "en": "as",
+        "uk": "як",
+        "category": "common"
+      },
+      {
+        "id": "common-62",
+        "en": "because",
+        "uk": "тому що",
+        "category": "common"
+      },
+      {
+        "id": "common-69",
+        "en": "but",
+        "uk": "але",
+        "category": "common"
+      },
+      {
+        "id": "common-96",
+        "en": "or",
+        "uk": "або",
+        "category": "common"
+      },
+      {
+        "id": "a1-pronouns-i",
+        "en": "I",
+        "uk": "я",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-you",
+        "en": "you",
+        "uk": "ти; ви",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-he",
+        "en": "he",
+        "uk": "він",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-she",
+        "en": "she",
+        "uk": "вона",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-it",
+        "en": "it",
+        "uk": "воно; це (про річ або тварину)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-we",
+        "en": "we",
+        "uk": "ми",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-they",
+        "en": "they",
+        "uk": "вони",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-me",
+        "en": "me",
+        "uk": "мене; мені",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-him",
+        "en": "him",
+        "uk": "його; йому",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-her",
+        "en": "her",
+        "uk": "її; їй",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-us",
+        "en": "us",
+        "uk": "нас; нам",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-them",
+        "en": "them",
+        "uk": "їх; їм",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-my",
+        "en": "my",
+        "uk": "мій; моя; моє",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-your",
+        "en": "your",
+        "uk": "твій; ваш",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-his",
+        "en": "his",
+        "uk": "його (належність)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-its",
+        "en": "its",
+        "uk": "його; її (належність речі або тварині)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-our",
+        "en": "our",
+        "uk": "наш",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-their",
+        "en": "their",
+        "uk": "їхній",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-mine",
+        "en": "mine",
+        "uk": "мій; моя (без іменника)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-yours",
+        "en": "yours",
+        "uk": "твій; ваш (без іменника)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-ours",
+        "en": "ours",
+        "uk": "наш; наша (без іменника)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-hers",
+        "en": "hers",
+        "uk": "її (без іменника)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-theirs",
+        "en": "theirs",
+        "uk": "їхній; їхня (без іменника)",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-this",
+        "en": "this",
+        "uk": "це; цей",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-that",
+        "en": "that",
+        "uk": "те; той",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-these",
+        "en": "these",
+        "uk": "ці",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-pronouns-those",
+        "en": "those",
+        "uk": "ті",
+        "category": "a1-pronouns"
+      },
+      {
+        "id": "a1-questions-what",
+        "en": "what",
+        "uk": "що; який",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-who",
+        "en": "who",
+        "uk": "хто",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-where",
+        "en": "where",
+        "uk": "де; куди",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-when",
+        "en": "when",
+        "uk": "коли",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-why",
+        "en": "why",
+        "uk": "чому",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-how",
+        "en": "how",
+        "uk": "як",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-which",
+        "en": "which",
+        "uk": "котрий; який із",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-whose",
+        "en": "whose",
+        "uk": "чий",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-how%20much",
+        "en": "how much",
+        "uk": "скільки (незлічувана кількість або ціна)",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-questions-how%20old",
+        "en": "how old",
+        "uk": "скільки років",
+        "category": "a1-questions"
+      },
+      {
+        "id": "a1-verbs-be",
+        "en": "be",
+        "uk": "бути",
+        "category": "a1-verbs"
+      },
+      {
+        "id": "a2-prepositions-for",
+        "en": "for",
+        "uk": "для; протягом",
+        "category": "a2-prepositions"
+      },
+      {
+        "id": "a2-prepositions-about",
+        "en": "about",
+        "uk": "про",
+        "category": "a2-prepositions"
+      },
+      {
+        "id": "a2-conjunctions-and",
+        "en": "and",
+        "uk": "і; та",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-but",
+        "en": "but",
+        "uk": "але",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-or",
+        "en": "or",
+        "uk": "або",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-because",
+        "en": "because",
+        "uk": "тому що",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-so",
+        "en": "so",
+        "uk": "тому; отже",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-if",
+        "en": "if",
+        "uk": "якщо",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-when",
+        "en": "when",
+        "uk": "коли",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-while",
+        "en": "while",
+        "uk": "поки; тоді як",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-although",
+        "en": "although",
+        "uk": "хоча",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-though",
+        "en": "though",
+        "uk": "хоча",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-unless",
+        "en": "unless",
+        "uk": "якщо не",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-until",
+        "en": "until",
+        "uk": "доки не",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-before",
+        "en": "before",
+        "uk": "перед тим як",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-after",
+        "en": "after",
+        "uk": "після того як",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-since",
+        "en": "since",
+        "uk": "відтоді як; оскільки",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-as",
+        "en": "as",
+        "uk": "коли; оскільки",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-whether",
+        "en": "whether",
+        "uk": "чи",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-that",
+        "en": "that",
+        "uk": "що",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-both%20...%20and",
+        "en": "both ... and",
+        "uk": "і ... і",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-either%20...%20or",
+        "en": "either ... or",
+        "uk": "або ... або",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-neither%20...%20nor",
+        "en": "neither ... nor",
+        "uk": "ні ... ні",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-conjunctions-not%20only%20...%20but%20also",
+        "en": "not only ... but also",
+        "uk": "не лише ... а й",
+        "category": "a2-conjunctions"
+      },
+      {
+        "id": "a2-irregular-verbs-be",
+        "en": "be",
+        "uk": "бути",
+        "category": "a2-irregular-verbs"
+      }
+    ],
+    "Модальне або допоміжне дієслово: значення визначається реченням.": [
+      {
+        "id": "verbs-5",
+        "en": "can",
+        "uk": "могти; вміти",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-7",
+        "en": "would",
+        "uk": "би (умовна дія)",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-10",
+        "en": "will",
+        "uk": "допоміжне слово майбутнього часу",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-15",
+        "en": "could",
+        "uk": "міг би; міг",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-23",
+        "en": "may",
+        "uk": "могти (можливість; дозвіл)",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-24",
+        "en": "should",
+        "uk": "слід; варто",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-42",
+        "en": "might",
+        "uk": "могти (ймовірність)",
+        "category": "verbs"
+      },
+      {
+        "id": "verbs-54",
+        "en": "must",
+        "uk": "мусити",
+        "category": "verbs"
+      },
+      {
+        "id": "common-4",
+        "en": "would",
+        "uk": "би (умовна дія)",
+        "category": "common"
+      },
+      {
+        "id": "common-43",
+        "en": "can",
+        "uk": "могти; вміти",
+        "category": "common"
+      },
+      {
+        "id": "common-93",
+        "en": "could",
+        "uk": "міг би; міг",
+        "category": "common"
+      }
+    ],
+    "Відносний час або частотність: картинка без часової точки відліку могла б ввести в оману.": [
+      {
+        "id": "common-2",
+        "en": "now",
+        "uk": "зараз",
+        "category": "common"
+      },
+      {
+        "id": "common-5",
+        "en": "then",
+        "uk": "тоді; потім",
+        "category": "common"
+      },
+      {
+        "id": "common-34",
+        "en": "once",
+        "uk": "одного разу",
+        "category": "common"
+      },
+      {
+        "id": "common-65",
+        "en": "yet",
+        "uk": "ще; поки що",
+        "category": "common"
+      },
+      {
+        "id": "common-68",
+        "en": "ever",
+        "uk": "коли-небудь",
+        "category": "common"
+      },
+      {
+        "id": "a1-time-today",
+        "en": "today",
+        "uk": "сьогодні",
+        "category": "a1-time"
+      },
+      {
+        "id": "a1-time-tomorrow",
+        "en": "tomorrow",
+        "uk": "завтра",
+        "category": "a1-time"
+      },
+      {
+        "id": "a1-time-yesterday",
+        "en": "yesterday",
+        "uk": "вчора",
+        "category": "a1-time"
+      },
+      {
+        "id": "a1-time-now",
+        "en": "now",
+        "uk": "зараз",
+        "category": "a1-time"
+      },
+      {
+        "id": "a1-time-later",
+        "en": "later",
+        "uk": "пізніше",
+        "category": "a1-time"
+      },
+      {
+        "id": "a2-adverbs-always",
+        "en": "always",
+        "uk": "завжди",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-usually",
+        "en": "usually",
+        "uk": "зазвичай",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-often",
+        "en": "often",
+        "uk": "часто",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-sometimes",
+        "en": "sometimes",
+        "uk": "іноді",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-rarely",
+        "en": "rarely",
+        "uk": "рідко",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-never",
+        "en": "never",
+        "uk": "ніколи",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-already",
+        "en": "already",
+        "uk": "уже",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-still",
+        "en": "still",
+        "uk": "досі; усе ще",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-yet",
+        "en": "yet",
+        "uk": "ще (у запереченнях); уже (у питаннях)",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-just",
+        "en": "just",
+        "uk": "щойно; лише",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-soon",
+        "en": "soon",
+        "uk": "скоро",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-now",
+        "en": "now",
+        "uk": "зараз",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-then",
+        "en": "then",
+        "uk": "тоді; потім",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-here",
+        "en": "here",
+        "uk": "тут",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-there",
+        "en": "there",
+        "uk": "там",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-everywhere",
+        "en": "everywhere",
+        "uk": "скрізь",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-quietly",
+        "en": "quietly",
+        "uk": "тихо",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-loudly",
+        "en": "loudly",
+        "uk": "голосно",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-together",
+        "en": "together",
+        "uk": "разом",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-alone",
+        "en": "alone",
+        "uk": "наодинці",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-again",
+        "en": "again",
+        "uk": "знову",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-almost",
+        "en": "almost",
+        "uk": "майже",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-really",
+        "en": "really",
+        "uk": "справді; дуже",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a2-adverbs-probably",
+        "en": "probably",
+        "uk": "імовірно",
+        "category": "a2-adverbs"
+      },
+      {
+        "id": "a3-future-next%20week",
+        "en": "next week",
+        "uk": "наступного тижня",
+        "category": "a3-future"
+      },
+      {
+        "id": "a3-future-next%20month",
+        "en": "next month",
+        "uk": "наступного місяця",
+        "category": "a3-future"
+      },
+      {
+        "id": "a3-future-next%20year",
+        "en": "next year",
+        "uk": "наступного року",
+        "category": "a3-future"
+      },
+      {
+        "id": "a3-future-soon",
+        "en": "soon",
+        "uk": "скоро",
+        "category": "a3-future"
+      },
+      {
+        "id": "a3-future-later",
+        "en": "later",
+        "uk": "пізніше",
+        "category": "a3-future"
+      },
+      {
+        "id": "a3-future-in%20a%20few%20days",
+        "en": "in a few days",
+        "uk": "за кілька днів",
+        "category": "a3-future"
+      }
+    ]
+  }
+}
