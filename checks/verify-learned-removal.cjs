@@ -19,14 +19,41 @@ async function main(){
   assert.match(main.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
   main.element('basics-group').onclick();main.element('learned-words').onclick({type:'click'});
   main.element('back').onclick();assert.equal(main.run('screen'),'home');
-  // Daily overview and all four stages keep their origin after removal and from an empty learned list.
+  // Both groups show only their own IDs; each daily entry covers all four stages, not just its stage.
+  const dailyIds=['a1-time-time','a2-money-money','a3-health-health','a4-office-workplace'];
+  const basicIds=['nouns-0','verbs-0','custom-myword'];
+  function expectList(f,ids){
+    const html=f.element('app').innerHTML;
+    assert.equal((html.match(/class="btn secondary remove-learned"/g)||[]).length,ids.length);
+    for(const id of ids)assert.ok(html.includes(f.run(`wordDetails(words.find(w=>w.id===${JSON.stringify(id)}))`)),id);
+  }
   for(const stage of [0,1,2,3,4]){
-    const daily=fixture(new Map([['word-cottage-learned','["nouns-0"]']]),undefined,true);
+    const groupedStorage=new Map([
+      ['word-cottage-learned',JSON.stringify([...basicIds,...dailyIds])],
+      ['word-cottage-personal-words','[{"en":"myword","uk":"моє слово"}]']
+    ]);
+    const daily=fixture(groupedStorage,undefined,true);
+    daily.element('basics-group').onclick();
+    assert.match(daily.element('app').innerHTML,/<span class="learned-count">3<\/span>/);
+    daily.element('learned-words').onclick({type:'click'});expectList(daily,basicIds);
+    // The two "time" cards have separate IDs: removing the base card keeps the daily card learned.
+    daily.element('remove-learned-0').onclick();expectList(daily,basicIds.slice(1));
+    assert.equal(daily.run("learned.has('a1-time-time')"),true);
+    daily.element('back').onclick();assert.equal(daily.run('screen'),'home');
+    assert.match(daily.element('app').innerHTML,/<span class="learned-count">2<\/span>/);
     daily.run(stage?`showDailyStage(${stage})`:'showDailyStages()');const origin=daily.run('screen');
-    daily.element('daily-learned-words').onclick();daily.element('remove-learned-0').onclick();
+    assert.match(daily.element('app').innerHTML,/<span class="learned-count">4<\/span>/);
+    daily.element('daily-learned-words').onclick({type:'click'});expectList(daily,dailyIds);
+    for(let index=0;index<dailyIds.length;index++){
+      daily.element('remove-learned-0').onclick();expectList(daily,dailyIds.slice(index+1));
+    }
     daily.element('back').onclick();assert.equal(daily.run('screen'),origin);
     assert.match(daily.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
     daily.element('daily-learned-words').onclick();daily.element('learned-start').onclick();assert.equal(daily.run('screen'),origin);
+    assert.deepEqual(JSON.parse(groupedStorage.get('word-cottage-learned')),basicIds.slice(1));
+    const reloaded=fixture(groupedStorage,undefined,true);
+    reloaded.element('everyday-group').onclick();assert.match(reloaded.element('app').innerHTML,/<span class="learned-count">0<\/span>/);
+    reloaded.run('landing()');reloaded.element('landing-learned-words').onclick();expectList(reloaded,basicIds.slice(1));
   }
   const ids=['nouns-0','nouns-1','a1-fruit-apple','a2-money-money','a3-health-health','a4-office-workplace','custom-myword'];
   const storage=new Map([
@@ -41,7 +68,8 @@ async function main(){
     const index=run(`words.filter(w=>learned.has(w.id)).findIndex(w=>w.id===${JSON.stringify(id)})`);
     assert.ok(index>=0);const button=element('remove-learned-'+index);button.onclick();return button;
   };
-  element('basics-group').onclick();element('learned-words').onclick();
+  // The landing list remains global even after visiting a daily stage, including after rerendering.
+  run('showDailyStage(2);landing()');element('landing-learned-words').onclick();
   assert.equal((element('app').innerHTML.match(/class="btn secondary remove-learned"/g)||[]).length,ids.length);
   assert.match(element('app').innerHTML,/Видалити/);
   const oldButton=remove('nouns-0');assert.equal(run('learned.size'),6);assert.equal(element('total').textContent,6);
@@ -51,7 +79,7 @@ async function main(){
   assert.equal(fixture(storage,undefined,true).run("learned.has('nouns-0')"),false);
   // Removed words from the base, every stage and the personal dictionary qualify as new again.
   for(const id of ['nouns-0',...ids.slice(2)]){
-    run('showLearned()');if(id!=='nouns-0')remove(id);
+    run("showLearned(home,'all')");if(id!=='nouns-0')remove(id);
     const category=run(`words.find(w=>w.id===${JSON.stringify(id)}).category`);
     run(`start([${JSON.stringify(category)}],false,true,null,null,'cards')`);
     assert.equal(run(`session.queue.some(w=>w.id===${JSON.stringify(id)})`),true);
@@ -60,7 +88,7 @@ async function main(){
     assert.equal(run('screen'),'exercises');assert.equal(run('session.queue[0].id'),id);
     assert.equal(run(`learned.has(${JSON.stringify(id)})`),false,'Reopening exercises does not mark it learned');
   }
-  run('showLearned()');remove('nouns-1');assert.equal(run('learned.size'),0);assert.equal(element('total').textContent,0);
+  run("showBasics();showLearned(home,'all')");remove('nouns-1');assert.equal(run('learned.size'),0);assert.equal(element('total').textContent,0);
   assert.match(element('app').innerHTML,/id="learned-start"/);assert.doesNotMatch(element('app').innerHTML,/class="learned-word"/);
   assert.equal(storage.get('word-cottage-learned'),'[]');element('learned-start').onclick();assert.equal(run('screen'),'home');
   assert.equal(element('app').innerHTML.includes('<span class="learned-count">0</span>'),true);
@@ -72,6 +100,6 @@ async function main(){
   assert.doesNotMatch(element('app').innerHTML,/<img|<script>/);assert.match(element('app').innerHTML,/&lt;img/);
   remove('custom-unsafe');assert.equal(run("words.some(w=>w.id==='custom-unsafe')"),true);
   run('showDailyStage(4);showLearned()');element('back').onclick();assert.equal(run('screen'),'stage-four');
-  console.log('Passed: per-word unlearning, updated counts and category progress, persisted removal, unchanged dictionary/personal/history/voice data, all stages and personal words reenter cards and six-step study, empty list, relearning, safe labels and return navigation.');
+  console.log('Passed: separate daily/basic learned lists and counts, all-stage daily scope, personal words in basics, independent duplicate IDs, global landing list, per-word unlearning, persisted removal, unchanged dictionary/personal/history/voice data, cards and six-step relearning, empty lists, safe labels and return navigation.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

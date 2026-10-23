@@ -14,6 +14,10 @@ function save(){try{localStorage.setItem('word-cottage-learned',JSON.stringify([
 function updateTotal(){document.getElementById('total').textContent=learned.size;document.getElementById('word-total').textContent=words.length;}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.className='toast-show';clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.className='',4000);}
 function count(cat){return words.filter(w=>w.category===cat&&learned.has(w.id)).length;}
+function learnedWords(group='all'){
+  const categoryIds=new Set(categories.filter(category=>group==='daily'?Boolean(category.stage):!category.stage).map(category=>category.id));
+  return words.filter(word=>learned.has(word.id)&&(group==='all'||categoryIds.has(word.category)));
+}
 function resetPageScroll(){window.scrollTo?.({top:0,behavior:'instant'});}
 const cottagePictures=[
   {src:'images/cottage-1.jpg?v=20261018',columns:5,rows:5,width:1254,height:1254,columnEdges:[0,248,497,754,1005,1254],rowEdges:[0,247,498,743,986,1254]},
@@ -51,11 +55,11 @@ function landing(){
   app.innerHTML=`<section class="cottage-welcome" aria-labelledby="welcome-title"><div class="welcome-copy"><p class="eyebrow">Твій затишний куточок англійської</p><h1 id="welcome-title">Маленькі слова.<br><em>Великі відкриття.</em></h1><p class="sub">Кілька нових слів, чашка чаю і час для себе.<br>Вчи англійську у своєму ритмі.</p><span class="welcome-signature">Make yourself at home.</span></div><div class="cottage-gallery" aria-hidden="true">${welcomePictures.map(welcomePicture).join('')}</div></section><div class="landing-label"><span>З чого почнемо сьогодні?</span></div><section class="group-menu" aria-label="Групи для навчання"><button type="button" class="group-card" id="everyday-group">${cottageTile(0,6,'group-cover')}<span class="group-content"><span class="group-kicker">Крок за кроком · 4 етапи</span><h2>Слова на кожен день</h2><p>Найуживаніші слова для щоденного спілкування.</p><span class="group-open">Відкрити</span></span></button><button type="button" class="group-card" id="basics-group">${cottageTile(3,13,'group-cover')}<span class="group-content"><span class="group-kicker">Перші слова · власний словник</span><h2>Основа для початківця</h2><p>Розділи, пошук слів і твій власний словник.</p><span class="group-open">Відкрити</span></span></button></section><button type="button" class="learned-entry" id="landing-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button>`;
   document.getElementById('everyday-group').onclick=showDailyStages;
   document.getElementById('basics-group').onclick=showBasics;
-  document.getElementById('landing-learned-words').onclick=()=>showLearned(landing);
+  document.getElementById('landing-learned-words').onclick=()=>showLearned(landing,'all');
   updateTotal();resetPageScroll();
 }
 function dailyWordTools(){
-  return `<div class="daily-word-tools"><div class="daily-word-search">${searchForm()}</div><button type="button" class="learned-entry" id="daily-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button></div>`;
+  return `<div class="daily-word-tools"><div class="daily-word-search">${searchForm()}</div><button type="button" class="learned-entry" id="daily-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learnedWords('daily').length}</span></button></div>`;
 }
 function bindDailyWordTools(){
   bindWordSearchForm();document.getElementById('daily-learned-words').onclick=showLearned;
@@ -89,7 +93,7 @@ function showBasics(){
   learningGroup='basics';
   cancelWordSearch();screen='home';session=null;selection=null;
   const listCategories=basicCategories(),basicWordCount=words.filter(word=>listCategories.some(category=>category.id===word.category)).length;
-  app.innerHTML=`<div class="study-top"><button class="back" id="basics-back">‹ Дві групи</button></div><div class="intro"><div><div class="eyebrow">Твій маленький словник</div><h1>Час для <em>нових слів.</em></h1><p class="sub">Обери розділ і почни з однієї картки.</p></div><p class="note">Чашка чаю.<br>Кілька слів.<br>Ще один маленький крок.</p></div><div class="home-layout"><section>${searchForm()}<div class="section-label"><h2>На що сьогодні настрій?</h2><span>${listCategories.length} ${listCategories.length===4?'розділи':'розділів'} · ${basicWordCount} ${wordLabel(basicWordCount)}</span></div><div class="category-grid">${listCategories.map((c,i)=>{const size=words.filter(word=>word.category===c.id).length;return `<button class="category ${c.color}" data-category="${c.id}"><div class="cat-top">${tile(c)}<span class="cat-number">${String(i+1).padStart(2,'0')}</span></div><h3>${c.name}</h3><div class="en">${c.en} · ${size} ${wordLabel(size)}</div><p>${c.note}</p><div class="progress-row"><div class="track"><div class="fill" style="width:${size?count(c.id)/size*100:0}%"></div></div><span>${count(c.id)} / ${size}</span></div></button>`;}).join('')}</div><div class="mix"><span class="mix-symbol" aria-hidden="true">✳</span><div><h3>Змішано</h3><p>Збери слова з різних розділів.</p></div><button class="btn" id="mixed">Перемішати</button></div><button class="learned-entry" id="learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learned.size}</span></button><p class="bottom-note">Обери вправи у шість кроків або звичайні картки. Повторюй у своєму ритмі.</p></section><aside class="side-art" aria-label="Затишна клаптикова ілюстрація з вашого фото"><div class="art-label">Little words,<br>little wonders.<small>ОДНЕ СЛОВО ЗА РАЗ</small></div></aside></div>`;
+  app.innerHTML=`<div class="study-top"><button class="back" id="basics-back">‹ Дві групи</button></div><div class="intro"><div><div class="eyebrow">Твій маленький словник</div><h1>Час для <em>нових слів.</em></h1><p class="sub">Обери розділ і почни з однієї картки.</p></div><p class="note">Чашка чаю.<br>Кілька слів.<br>Ще один маленький крок.</p></div><div class="home-layout"><section>${searchForm()}<div class="section-label"><h2>На що сьогодні настрій?</h2><span>${listCategories.length} ${listCategories.length===4?'розділи':'розділів'} · ${basicWordCount} ${wordLabel(basicWordCount)}</span></div><div class="category-grid">${listCategories.map((c,i)=>{const size=words.filter(word=>word.category===c.id).length;return `<button class="category ${c.color}" data-category="${c.id}"><div class="cat-top">${tile(c)}<span class="cat-number">${String(i+1).padStart(2,'0')}</span></div><h3>${c.name}</h3><div class="en">${c.en} · ${size} ${wordLabel(size)}</div><p>${c.note}</p><div class="progress-row"><div class="track"><div class="fill" style="width:${size?count(c.id)/size*100:0}%"></div></div><span>${count(c.id)} / ${size}</span></div></button>`;}).join('')}</div><div class="mix"><span class="mix-symbol" aria-hidden="true">✳</span><div><h3>Змішано</h3><p>Збери слова з різних розділів.</p></div><button class="btn" id="mixed">Перемішати</button></div><button class="learned-entry" id="learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learnedWords('basics').length}</span></button><p class="bottom-note">Обери вправи у шість кроків або звичайні картки. Повторюй у своєму ритмі.</p></section><aside class="side-art" aria-label="Затишна клаптикова ілюстрація з вашого фото"><div class="art-label">Little words,<br>little wonders.<small>ОДНЕ СЛОВО ЗА РАЗ</small></div></aside></div>`;
   document.getElementById('basics-back').onclick=landing;
   app.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>showSectionWords([button.dataset.category]));
   document.getElementById('mixed').onclick=()=>picker();document.getElementById('learned-words').onclick=showLearned;
@@ -241,17 +245,17 @@ function bindSwipeGesture(card){
   };
   card.onpointercancel=reset;card.onlostpointercapture=reset;
 }
-function showLearned(backTo=home){
+function showLearned(backTo=home,group=learningGroup){
   cancelWordSearch();screen='learned';session=null;selection=null;
   const returnTo=typeof backTo==='function'?backTo:home;
-  const list=words.filter(word=>learned.has(word.id));
+  const list=learnedWords(group);
   app.innerHTML=`<div class="study-top"><button class="back" id="back">${groupBackLabel()}</button></div><section class="word-list-panel"><div class="eyebrow">Твій словник</div><h1>Вивчені слова</h1><p class="sub">${list.length?`${list.length} ${wordLabel(list.length)} уже знайомі. Натисни «Видалити», щоб вчити слово знову.`:'Тут з’являться слова після шести кроків із перевіреною відповіддю або позначки «Знаю» на картці.'}</p>${list.length?`<div class="learned-list">${list.map((word,index)=>`<div class="learned-word">${wordDetails(word)}<button type="button" class="btn secondary remove-learned" id="remove-learned-${index}" aria-label="Видалити з вивчених: ${escapeHTML(word.en)}">Видалити</button></div>`).join('')}</div>`:'<div class="learned-empty"><p>Почни з кількох карток — і твій словник поступово зростатиме.</p><button class="btn" id="learned-start">Обрати розділ</button></div>'}</section>`;
   document.getElementById('back').onclick=returnTo;
   if(returnTo===landing)document.getElementById('back').textContent='‹ На головну';
   if(!list.length)document.getElementById('learned-start').onclick=returnTo;
   list.forEach((word,index)=>document.getElementById('remove-learned-'+index).onclick=()=>{
     if(!learned.delete(word.id))return;
-    save();showLearned(returnTo);
+    save();showLearned(returnTo,group);
     const next=Math.min(index,list.length-2);
     (document.getElementById(next>=0?'remove-learned-'+next:'learned-start'))?.focus?.({preventScroll:true});
   });
