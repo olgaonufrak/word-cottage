@@ -1096,6 +1096,188 @@
       },
       "sourceInset": 2,
       "overrides": {}
+    },
+    "additional-47": {
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "f924aeb9ae90daf1a6e71807aec220f5dc2525f1c3298eaa26da06f16c08ca15",
+      "sourceEdges": {
+        "x": [
+          0,
+          252,
+          501,
+          753,
+          1003,
+          1254
+        ],
+        "y": [
+          0,
+          245,
+          497,
+          734,
+          962,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-48": {
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "a8362908373e58037a6da33adc46c9f47bdbfbf903fffbd9cfaa47f64eda2baf",
+      "sourceEdges": {
+        "x": [
+          0,
+          253,
+          502,
+          753,
+          1003,
+          1254
+        ],
+        "y": [
+          0,
+          249,
+          502,
+          745,
+          972,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-49": {
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "5c239848c0e78039acc6d4a6046fd2048d2b3323bd4f120ec9160ad0e179b46c",
+      "sourceEdges": {
+        "x": [
+          0,
+          250,
+          502,
+          753,
+          1004,
+          1254
+        ],
+        "y": [
+          0,
+          244,
+          492,
+          724,
+          950,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-50": {
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "9c52d784a63e49b4abff931bfd4d142525e99fc5dfd1d0c746caeca8941d778d",
+      "sourceEdges": {
+        "x": [
+          0,
+          252,
+          500,
+          753,
+          1002,
+          1254
+        ],
+        "y": [
+          0,
+          248,
+          495,
+          729,
+          961,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-51": {
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "2aa7134b67e2342fc82bd61078981bf64b7654ce8d021f6e52329e476654db9b",
+      "sourceEdges": {
+        "x": [
+          0,
+          256,
+          504,
+          752,
+          1000,
+          1254
+        ],
+        "y": [
+          0,
+          243,
+          483,
+          725,
+          965,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-52": {
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "ea2a60de62205d9746f010b9237c1f6428402e129899c30b60344ef7488209f9",
+      "sourceEdges": {
+        "x": [
+          0,
+          253,
+          503,
+          752,
+          1001,
+          1254
+        ],
+        "y": [
+          0,
+          243,
+          495,
+          730,
+          975,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
+    },
+    "additional-53": {
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "width": 2000,
+      "height": 2000,
+      "sourceSha256": "14beec120a9e08ba802b1027619d7dcf2df3fbfd71f05a2711b820e963bdde18",
+      "sourceEdges": {
+        "x": [
+          0,
+          251,
+          502,
+          752,
+          1004,
+          1254
+        ],
+        "y": [
+          0,
+          249,
+          502,
+          764,
+          999,
+          1254
+        ]
+      },
+      "sourceInset": 2,
+      "overrides": {}
     }
   },
   "pictures": {
@@ -9423,6 +9605,1482 @@
       "columns": 5,
       "rows": 5,
       "alt": "Йогурт"
+    },
+    "add-context-a": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Неозначений артикль: одне з яблук"
+    },
+    "add-context-able": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Здатна власноруч зробити годівничку"
+    },
+    "add-context-about": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Розмова про човен"
+    },
+    "add-context-after": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Після їжі миють посуд"
+    },
+    "add-context-again": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Знову полити ту саму квітку"
+    },
+    "add-context-agenda": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Порядок денний: теми майбутньої зустрічі"
+    },
+    "add-context-airline": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Авіакомпанія та її літаки"
+    },
+    "add-context-all": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Усі яблука зібрані в кошику"
+    },
+    "add-context-almost": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Майже готовий шарф"
+    },
+    "add-context-alone": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наодинці на садовій лавці"
+    },
+    "add-context-already": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Уже готово: завершений шарф"
+    },
+    "add-context-also": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Також: до яблука додають грушу"
+    },
+    "add-context-although": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хоча дощить, прогулянка приємна"
+    },
+    "add-context-always": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Завжди: дія кожного дня"
+    },
+    "add-context-and": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "І: яблуко та груша разом"
+    },
+    "add-context-any": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Можна вибрати будь-яке яблуко"
+    },
+    "add-context-as": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Як: зробити так само, як інша людина"
+    },
+    "add-context-as-cause": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коли починається дощ, людина зачиняє вікно"
+    },
+    "add-context-back": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Назад: повернення до будинку"
+    },
+    "add-context-be": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Бути: людина присутня в кімнаті"
+    },
+    "add-context-because": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Квітка зів’яла, тому що їй бракує води"
+    },
+    "add-context-before": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Перед їжею миють руки"
+    },
+    "add-context-boarding": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Посадка пасажирів у літак"
+    },
+    "add-context-both-and": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "І яблуко, і груша: обидва варіанти"
+    },
+    "add-context-but": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Але: надворі сонце, а людина засмучена"
+    },
+    "add-context-can": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Уміти їздити на велосипеді"
+    },
+    "add-context-cancelled": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рейс скасований"
+    },
+    "add-context-capital": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Столиця країни позначена зіркою"
+    },
+    "add-context-case": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Розгляд окремого випадку"
+    },
+    "add-context-certain": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Упевненість у правильному виборі"
+    },
+    "add-context-contents": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зміст книжки: перелік розділів"
+    },
+    "add-context-could": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Можливість: можна перейти струмок"
+    },
+    "add-context-current": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Поточний день у щоденнику"
+    },
+    "add-context-department": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Окремий відділ в офісі"
+    },
+    "add-context-durable": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Міцні черевики служать довго"
+    },
+    "add-context-either-or": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Або чай, або кава: обрати одне"
+    },
+    "add-context-even": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Навіть найменша дитина допомагає"
+    },
+    "add-context-ever": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коли-небудь: роздуми про можливу подорож"
+    },
+    "add-context-everywhere": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скрізь у саду ростуть квіти"
+    },
+    "add-context-ex": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Колишній листоноша та його давнє фото"
+    },
+    "add-context-exchange-rate": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обмінний курс між двома валютами"
+    },
+    "add-context-federal": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Регіони та спільний федеральний уряд"
+    },
+    "add-context-first-name": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ім’я Anna у повному імені Anna Smith"
+    },
+    "add-context-for": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Для дитини: подарунок адресований їй"
+    },
+    "add-context-for-duration": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Протягом певного часу: робота в саду"
+    },
+    "add-context-fully-booked": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Усі номери заброньовані"
+    },
+    "add-context-general": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Загальний вигляд саду"
+    },
+    "add-context-good-luck": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Щасти в подорожі"
+    },
+    "add-context-happen": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Несподівана подія в саду"
+    },
+    "add-context-he": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Він: мовець указує на чоловіка"
+    },
+    "add-context-her": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Їй: подарунок для жінки"
+    },
+    "add-context-here": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тут: місце біля мовця"
+    },
+    "add-context-hers": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ця сумка її"
+    },
+    "add-context-him": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Йому: подарунок для чоловіка"
+    },
+    "add-context-his": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Його пальто належить чоловікові"
+    },
+    "add-context-how": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Як зав’язати бант"
+    },
+    "add-context-how-do-you-spell-it": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ім’я Anna по літерах: A N N A"
+    },
+    "add-context-how-much": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скільки коштує баночка меду?"
+    },
+    "add-context-how-old": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скільки років імениннику?"
+    },
+    "add-context-how-old-are-you": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Запитання про вік біля святкового торта"
+    },
+    "add-context-i": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Я: людина вказує на себе"
+    },
+    "add-context-i-m-twenty-years-old": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мені двадцять років: свічки 20 на торті"
+    },
+    "add-context-if": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Якщо піде дощ, розкриємо парасольку"
+    },
+    "add-context-in-a-few-days": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "За кілька днів від сьогодні"
+    },
+    "add-context-include": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Кошик включає хліб, яблуко й напій"
+    },
+    "add-context-it": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Воно: вказівка на котика"
+    },
+    "add-context-it-depends": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вибір залежить від погоди"
+    },
+    "add-context-its": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Його мисочка: річ належить котику"
+    },
+    "add-context-itself": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сам предмет: музична скринька відкривається сама"
+    },
+    "add-context-just": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 15,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Щойно спечений хліб"
+    },
+    "add-context-last-name": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Прізвище Smith у повному імені Anna Smith"
+    },
+    "add-context-later": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пізніше: чаювання відкладають"
+    },
+    "add-context-likely": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ймовірний дощ"
+    },
+    "add-context-loudly": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Голосно: дзвоник чутно здалеку"
+    },
+    "add-context-may": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Дозвіл узяти печиво"
+    },
+    "add-context-me": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мені: людині дарують квітку"
+    },
+    "add-context-mean": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пояснення того, що означає символ"
+    },
+    "add-context-member": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Новий учасник садового гуртка"
+    },
+    "add-context-might": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Можливо, піде дощ"
+    },
+    "add-context-mine": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ця парасолька моя"
+    },
+    "add-context-minutes": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Протокол: запис перебігу зустрічі"
+    },
+    "add-context-must": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Обов’язково застебнути шолом"
+    },
+    "add-context-my": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Моє горнятко належить мені"
+    },
+    "add-context-my-name-is": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Мене звати: Анна представляється"
+    },
+    "add-context-name": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ім’я на бейджі"
+    },
+    "add-context-neither-nor": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ні чай, ні кава: відмова від обох"
+    },
+    "add-context-never": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ніколи: жодного повторення"
+    },
+    "add-context-next-month": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наступний місяць у календарі"
+    },
+    "add-context-next-week": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наступний тиждень у календарі"
+    },
+    "add-context-next-year": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наступний рік після поточного"
+    },
+    "add-context-not": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Не: відмова від запропонованого напою"
+    },
+    "add-context-not-only-but-also": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Не лише яблука, а й груші"
+    },
+    "add-context-now": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зараз: дзвоник лунає цієї миті"
+    },
+    "add-context-of": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Належність: черевичок дитини"
+    },
+    "add-context-often": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Часто: багато повторень за тиждень"
+    },
+    "add-context-once": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Одного разу: один спогад про пікнік"
+    },
+    "add-context-or": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Або яблуко, або груша"
+    },
+    "add-context-others": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Інші учасники садового гуртка"
+    },
+    "add-context-our": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Наш спільний кошик"
+    },
+    "add-context-ours": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ця парасолька наша"
+    },
+    "add-context-overtime": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Понаднормова робота ввечері"
+    },
+    "add-context-package-holiday": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Пакетний тур: переліт, готель і відпочинок"
+    },
+    "add-context-possible": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Можливий прохід через відчинену хвіртку"
+    },
+    "add-context-principle": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Принцип: діяти за послідовним правилом"
+    },
+    "add-context-probably": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Імовірно дощитиме"
+    },
+    "add-context-publisher": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Видавництво готує та друкує книжки"
+    },
+    "add-context-quietly": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Тихо: не розбудити котика"
+    },
+    "add-context-rarely": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Рідко: лише один випадок за тиждень"
+    },
+    "add-context-real": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 18,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Справжнє яблуко поруч із його малюнком"
+    },
+    "add-context-really": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Справді дуже подобається аромат троянди"
+    },
+    "add-context-recent": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Нещодавно посаджене деревце"
+    },
+    "add-context-seem": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Здаватися: пальто схоже на людину"
+    },
+    "add-context-she": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вона: мовець указує на жінку"
+    },
+    "add-context-should": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Варто вдягнутися за погодою"
+    },
+    "add-context-since": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Відтоді як посадили дерево, воно виросло"
+    },
+    "add-context-so": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Отже: дощить, тому потрібна парасолька"
+    },
+    "add-context-sometimes": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Іноді: дія лише в деякі дні"
+    },
+    "add-context-soon": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Скоро: залишилося зовсім трохи часу"
+    },
+    "add-context-still": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Досі триває: людина продовжує в’язати"
+    },
+    "add-context-than": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Порівняння: одна квітка вища, ніж інша"
+    },
+    "add-context-that": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Той чайник на дальньому краю столу"
+    },
+    "add-context-that-complement": {
+      "type": "painted",
+      "atlas": "additional-53",
+      "src": "images/vocabulary-painted/additional-53.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Що: учитель пояснює, що насіння проростає"
+    },
+    "add-context-the": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Означений артикль: конкретне яблуко"
+    },
+    "add-context-their": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 17,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Їхня спільна ковдра для пікніка"
+    },
+    "add-context-theirs": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Цей будиночок їхній"
+    },
+    "add-context-them": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Їм: яблука для групи людей"
+    },
+    "add-context-then": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Потім: спочатку набрати воду, тоді полити"
+    },
+    "add-context-there": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Там: будиночок удалині"
+    },
+    "add-context-these": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ці квіти поруч із мовцем"
+    },
+    "add-context-they": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вони: окрема група людей"
+    },
+    "add-context-this": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Це горнятко поруч із мовцем"
+    },
+    "add-context-those": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ті квіти далеко від мовця"
+    },
+    "add-context-though": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хоча дощить, людина усміхається"
+    },
+    "add-context-today": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 3,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Сьогодні: позначений середній день"
+    },
+    "add-context-together": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Разом несуть кошик"
+    },
+    "add-context-tomorrow": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Завтра: наступний день після сьогодні"
+    },
+    "add-context-true": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Правдиве зізнання про розбиту чашку"
+    },
+    "add-context-unfortunately": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 6,
+      "columns": 5,
+      "rows": 5,
+      "alt": "На жаль: дощ зіпсував пікнік"
+    },
+    "add-context-unless": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 11,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Якщо не полити, квіти зів’януть"
+    },
+    "add-context-until": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 12,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чекати, доки хліб не спечеться"
+    },
+    "add-context-us": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 4,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Нам: подарунок для двох друзів"
+    },
+    "add-context-usually": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Зазвичай: дія майже щодня"
+    },
+    "add-context-vacancy": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вільний номер у готелі"
+    },
+    "add-context-we": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ми: друзі вказують на себе"
+    },
+    "add-context-what": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 13,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Що лежить у кошику?"
+    },
+    "add-context-what-s-your-name": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 9,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Запитання про ім’я співрозмовника"
+    },
+    "add-context-when": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Коли зустрічаємося?"
+    },
+    "add-context-where": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 23,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Де розташований будиночок?"
+    },
+    "add-context-where-are-you-from": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 10,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Звідки ти: розмова про рідне місце"
+    },
+    "add-context-whether": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 14,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чи брати парасольку?"
+    },
+    "add-context-which": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 2,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Котре з трьох горняток обрати?"
+    },
+    "add-context-while": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Одночасно: поки одна людина в’яже, інша читає"
+    },
+    "add-context-who": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 22,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Хто з цих людей?"
+    },
+    "add-context-whose": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 0,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чий шарф залишився на лавці?"
+    },
+    "add-context-why": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Чому квітка зів’яла?"
+    },
+    "add-context-wi-fi-password": {
+      "type": "painted",
+      "atlas": "additional-52",
+      "src": "images/vocabulary-painted/additional-52.webp",
+      "cell": 20,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Картка з паролем до вайфаю"
+    },
+    "add-context-will": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 8,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Майбутня дія: із насіння виросте соняшник"
+    },
+    "add-context-word": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 1,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Одне слово в ілюстрованому словнику"
+    },
+    "add-context-would": {
+      "type": "painted",
+      "atlas": "additional-47",
+      "src": "images/vocabulary-painted/additional-47.webp",
+      "cell": 7,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Умовна дія: мрія про відпочинок"
+    },
+    "add-context-yesterday": {
+      "type": "painted",
+      "atlas": "additional-51",
+      "src": "images/vocabulary-painted/additional-51.webp",
+      "cell": 5,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Вчора: попередній день перед сьогодні"
+    },
+    "add-context-yet": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 16,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ще не завершено: шарф на спицях"
+    },
+    "add-context-you": {
+      "type": "painted",
+      "atlas": "additional-48",
+      "src": "images/vocabulary-painted/additional-48.webp",
+      "cell": 21,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ти: звертання до співрозмовника"
+    },
+    "add-context-your": {
+      "type": "painted",
+      "atlas": "additional-49",
+      "src": "images/vocabulary-painted/additional-49.webp",
+      "cell": 24,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Твій капелюх: повернення власникові"
+    },
+    "add-context-yours": {
+      "type": "painted",
+      "atlas": "additional-50",
+      "src": "images/vocabulary-painted/additional-50.webp",
+      "cell": 19,
+      "columns": 5,
+      "rows": 5,
+      "alt": "Ця парасолька твоя"
     }
   }
 }

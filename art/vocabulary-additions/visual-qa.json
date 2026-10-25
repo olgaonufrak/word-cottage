@@ -1,7 +1,7 @@
 {
   "version": 1,
   "method": "Every finished tile was visually reviewed on its normalized labelled contact sheet for subject, meaning, cottage gouache style and cropping.",
-  "drawingsReviewed": 925,
+  "drawingsReviewed": 1089,
   "acceptedAtlases": [
     "additional-01",
     "additional-02",
@@ -39,7 +39,14 @@
     "additional-43",
     "additional-44",
     "additional-45",
-    "additional-46"
+    "additional-46",
+    "additional-47",
+    "additional-48",
+    "additional-49",
+    "additional-50",
+    "additional-51",
+    "additional-52",
+    "additional-53"
   ],
   "corrections": [
     "add-traffic-lane: car moved fully inside its lane; original source and replacement hashes preserved in atlas manifest."
@@ -768,6 +775,26 @@
           "Actual glass of water, quantities, pencil line and point, family life and emergence scenes retain literal material details."
         ]
       }
+    },
+    {
+      "date": "2026-10-25",
+      "method": "Visual inspection of each generated source and all seven normalized labelled contact sheets for exact subject order, meaning, text, source gutters and complete crop. The introduction scenes my name is and twenty years old were also checked at 136 by 136 pixels.",
+      "drawings": 164,
+      "batches": [
+        "additional-47",
+        "additional-48",
+        "additional-49",
+        "additional-50",
+        "additional-51",
+        "additional-52",
+        "additional-53"
+      ],
+      "notes": [
+        "Every one of the 214 formerly missing cards has an explicit full English/Ukrainian mapping; all 2816 previous mappings remain unchanged.",
+        "ANNA, ANNA SMITH, A N N A and the age 20 are legible and correctly assigned.",
+        "Atlas additional-50 uses manually measured source gutters; the other accepted atlases retain reviewed detected gutters.",
+        "New context scenes are illustrative associations for the recorded meaning, never generic fallbacks for unrelated personal vocabulary."
+      ]
     }
   ]
 }

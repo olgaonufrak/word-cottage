@@ -27,6 +27,13 @@ const initialStorage=new Map([['word-cottage-learned','["nouns-0"]'],['word-cott
 const saved=JSON.stringify([...initialStorage]),f=fixture(initialStorage,undefined,true),original=fixture(new Map(),undefined,true,false);
 const getAll=instance=>JSON.parse(instance.run('JSON.stringify(words.map(word=>({word,pictures:lessonIllustrations(word)})))'));
 const all=getAll(f),old=getAll(original),byId=new Map(all.map(entry=>[entry.word.id,entry]));
+assert.equal(all.filter(entry=>entry.pictures.length).length,3030,'Every built-in word and phrase has a deliberate meaning-specific illustration');
+assert.deepEqual(all.filter(entry=>!entry.pictures.length).map(entry=>entry.word.id),[],'No missing pictures in any group or stage');
+const coverage=readJSON('art/vocabulary-additions/remaining-meanings.json');
+assert.equal(coverage.stats.remainingCards,0,'The coverage audit agrees with the complete runtime dictionary');
+assert.deepEqual(coverage.groups,{},'The former residual list contains no unresolved meanings');
+assert.equal(catalog.stats.illustratedCards,all.length);
+assert.equal(catalog.stats.remainingCards,0);
 const sourceByCell=new Map(Object.entries({...originalManifest.pictures,...manifest.pictures}).map(([key,picture])=>[picture.src+':'+picture.cell,key]));
 const source=picture=>picture.type==='painted'?sourceByCell.get(picture.src.split('?')[0]+':'+picture.cell):picture.type==='svg'?picture.src.split('/').pop().split('.svg')[0]:'c:'+picture.picture+':'+picture.cell;
 const identities=pictures=>pictures.map(picture=>({source:source(picture),alt:picture.alt}));
@@ -112,4 +119,14 @@ for(const step of [1,2,3,4,5]){
   assert.doesNotMatch(f.element('app').innerHTML,/lesson-pictures|images\/vocabulary(?:-[a-z]+)?\//,'Later exercises have no image answer leak');
 }
 assert.equal(JSON.stringify([...initialStorage]),saved,'Art cannot write progress while navigating exercises');
+// The phrases from the missing-picture report must render on the introduction,
+// including the exact phrase shown in the user's mobile screenshot.
+for(const en of ['my name is',"what's your name?",'how do you spell it?','I', 'would','today','tomorrow','yesterday','both ... and','Wi-Fi password','principle']){
+  const sample=all.find(entry=>entry.word.en.toLowerCase()===en.toLowerCase());
+  assert.ok(sample&&sample.pictures.length,en+': exact phrase has its intended scene');
+  f.run(`start([${JSON.stringify(sample.word.category)}],false,false,null,[${JSON.stringify(sample.word.id)}],"steps")`);
+  assert.match(f.element('app').innerHTML,/class="lesson-pictures/,en+': illustration visible on the real introduction path');
+  for(const picture of sample.pictures)assert.ok(f.element('app').innerHTML.includes(picture.src),en+': the mapped scene is rendered');
+}
+assert.equal(JSON.stringify([...initialStorage]),saved,'Introducing the completed phrases does not write browser progress');
 console.log(`Passed: ${newlyIllustrated.length} newly illustrated cards, ${entries.length} exact meanings and ${Object.keys(manifest.pictures).length} new detailed paintings in ${files.size} local atlases; all 1119 original mappings, phrases, pairs, wrong-meaning guards, atlas crops, introduction-only display and browser storage preserved.`);

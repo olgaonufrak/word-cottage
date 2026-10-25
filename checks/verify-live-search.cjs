@@ -26,7 +26,21 @@ async function main(){
   const input=value=>{element('word-search-input').value=value;element('word-search-input').oninput({});};
   const translatedRequests=()=>requests.filter(r=>r.url.hostname==='api.mymemory.translated.net');
   element('basics-group').onclick();
-  assert.doesNotMatch(element('app').innerHTML,/>Знайти<|type="submit"/);
+  const basicsHtml=element('app').innerHTML;
+  assert.match(basicsHtml,/class="[^"]*\bbasics-tools\b[^"]*"/);
+  const tools=['basics-search','mixed','learned-words'];
+  for(const id of tools){
+    assert.equal((basicsHtml.match(new RegExp(`\\bid="${id}"`,'g'))||[]).length,1);
+    assert.match(basicsHtml,new RegExp(`<button\\b[^>]*\\bid="${id}"`));
+    assert.ok(basicsHtml.indexOf(`id="${id}"`)<basicsHtml.indexOf('class="category-grid"'));
+  }
+  assert.ok(basicsHtml.indexOf('id="basics-search"')<basicsHtml.indexOf('id="mixed"'));
+  assert.ok(basicsHtml.indexOf('id="mixed"')<basicsHtml.indexOf('id="learned-words"'));
+  assert.doesNotMatch(basicsHtml,/>Знайти<|type="submit"|id="word-search-input"/);
+  element('mixed').onclick();assert.equal(run('screen'),'picker');assert.equal(run('learningGroup'),'basics');
+  element('back').onclick();assert.equal(run('screen'),'home');
+  element('basics-search').onclick();assert.equal(run('screen'),'search');
+  assert.equal(element('back').textContent,'‹ Усі розділи');
   const first=element('word-search-input');first.value='m';first.selectionStart=1;first.selectionEnd=1;
   first.oninput({});assert.equal(run('screen'),'search');assert.equal(element('word-search-input').value,'m');
   assert.doesNotMatch(element('app').innerHTML,/>Знайти<|натисни «Знайти»/);
@@ -65,9 +79,10 @@ async function main(){
   assert.doesNotMatch(element('online-word-result').innerHTML,/старий результат/);
   input('starlight');const beforeBack=requests.length;element('back').onclick();await advance(800);
   assert.equal(run('screen'),'home');assert.equal(run('wordSearch'),null);assert.equal(requests.length,beforeBack);
-  // Composition is not interrupted on the home page and sends only committed text.
+  // Composition on a daily overview stays in place until committed text opens search.
+  run('showDailyStages()');
   const composing=element('word-search-input');composing.oncompositionstart();composing.value='зор';composing.oninput({isComposing:true});
-  await advance(800);assert.equal(run('screen'),'home');assert.equal(requests.length,beforeBack);
+  await advance(800);assert.equal(run('screen'),'daily-stages');assert.equal(requests.length,beforeBack);
   composing.value='зорепад';composing.oncompositionend();assert.equal(run('screen'),'search');await advance(400);
   assert.match(element('online-word-result').innerHTML,/meteor shower/);
   const composingSearch=element('word-search-input'),beforeComposition=requests.length;
@@ -89,6 +104,6 @@ async function main(){
     element('back').onclick();assert.equal(run('screen'),expected);
   }
   run('cancelWordSearch()');assert.deepEqual([...storage].filter(([key])=>key!=='word-cottage-search-history'),saved);
-  console.log('Passed: automatic search from both screens without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
+  console.log('Passed: three compact basics tools above sections, mixed and search return routes, automatic search without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

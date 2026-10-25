@@ -4,13 +4,13 @@
   "rows": 5,
   "description": "Additional detailed cottage gouache paintings. Exact whole English/Ukrainian meanings preserve homographs and the original illustrated vocabulary. Pictures appear only during introduction.",
   "stats": {
-    "drawings": 925,
-    "atlases": 37,
-    "exactMeanings": 1558,
+    "drawings": 1089,
+    "atlases": 44,
+    "exactMeanings": 1736,
     "originalIllustratedCards": 1119,
-    "newlyIllustratedCards": 1697,
-    "illustratedCards": 2816,
-    "remainingCards": 214
+    "newlyIllustratedCards": 1911,
+    "illustratedCards": 3030,
+    "remainingCards": 0
   },
   "batches": [
     {
@@ -5745,6 +5745,1025 @@
           "key": "add-staying-hotel-room",
           "label": "A traveller settled comfortably in a cottage guestroom armchair for an overnight stay, unpacked bag by bed, slippers on and sunset outside window, calm lodging scene",
           "alt": "Перебування в готельному номері"
+        }
+      ]
+    },
+    {
+      "id": "additional-47",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-case",
+          "label": "a detective studying a single incident file with a magnifying glass and a small picture of a broken vase",
+          "alt": "Розгляд окремого випадку"
+        },
+        {
+          "index": 1,
+          "key": "add-context-word",
+          "label": "an open picture dictionary with one apple and the single clearly written word APPLE below it",
+          "alt": "Одне слово в ілюстрованому словнику"
+        },
+        {
+          "index": 2,
+          "key": "add-context-member",
+          "label": "a gardening club of four people, one new member welcomed into their circle with a small leaf badge",
+          "alt": "Новий учасник садового гуртка"
+        },
+        {
+          "index": 3,
+          "key": "add-context-name",
+          "label": "a woman wearing a clearly legible name badge ANNA and pointing at the badge",
+          "alt": "Ім’я на бейджі"
+        },
+        {
+          "index": 4,
+          "key": "add-context-others",
+          "label": "one gardener in the foreground looking toward three other gardeners together farther away",
+          "alt": "Інші учасники садового гуртка"
+        },
+        {
+          "index": 5,
+          "key": "add-context-be",
+          "label": "a young woman simply standing beside her own full-length reflection, a living person present in the room",
+          "alt": "Бути: людина присутня в кімнаті"
+        },
+        {
+          "index": 6,
+          "key": "add-context-can",
+          "label": "a confident child successfully riding a bicycle independently, visibly balanced and capable",
+          "alt": "Уміти їздити на велосипеді"
+        },
+        {
+          "index": 7,
+          "key": "add-context-would",
+          "label": "a woman daydreaming of a holiday cottage inside a soft thought bubble while sitting at her desk",
+          "alt": "Умовна дія: мрія про відпочинок"
+        },
+        {
+          "index": 8,
+          "key": "add-context-will",
+          "label": "a gardener holding seeds and imagining the future full-grown sunflower in a thought bubble",
+          "alt": "Майбутня дія: із насіння виросте соняшник"
+        },
+        {
+          "index": 9,
+          "key": "add-context-could",
+          "label": "a child considering a low stepping stone across a stream, imagining successfully stepping across in a thought bubble",
+          "alt": "Можливість: можна перейти струмок"
+        },
+        {
+          "index": 10,
+          "key": "add-context-may",
+          "label": "a child asking with an open hand near a biscuit jar, an adult warmly nodding permission",
+          "alt": "Дозвіл узяти печиво"
+        },
+        {
+          "index": 11,
+          "key": "add-context-should",
+          "label": "a person choosing a warm coat after looking at raindrops outside, a sensible recommendation",
+          "alt": "Варто вдягнутися за погодою"
+        },
+        {
+          "index": 12,
+          "key": "add-context-mean",
+          "label": "a teacher explaining a small heart drawing by pointing from the heart to a caring hug pictured beside it",
+          "alt": "Пояснення того, що означає символ"
+        },
+        {
+          "index": 13,
+          "key": "add-context-seem",
+          "label": "a child mistaking a coat on a peg for a person in dim light, both coat and mistaken silhouette visible",
+          "alt": "Здаватися: пальто схоже на людину"
+        },
+        {
+          "index": 14,
+          "key": "add-context-might",
+          "label": "a person looking at clouds with a thought bubble of possible raindrops and a folded umbrella in hand",
+          "alt": "Можливо, піде дощ"
+        },
+        {
+          "index": 15,
+          "key": "add-context-happen",
+          "label": "a surprised gardener seeing an apple unexpectedly drop from a tree into a basket",
+          "alt": "Несподівана подія в саду"
+        },
+        {
+          "index": 16,
+          "key": "add-context-must",
+          "label": "a cyclist fastening a helmet before riding, clearly showing an essential safety action",
+          "alt": "Обов’язково застебнути шолом"
+        },
+        {
+          "index": 17,
+          "key": "add-context-include",
+          "label": "an open picnic basket visibly containing a loaf, apple and bottle, with all items enclosed by its rim",
+          "alt": "Кошик включає хліб, яблуко й напій"
+        },
+        {
+          "index": 18,
+          "key": "add-context-real",
+          "label": "a real ripe apple beside a small painted picture of that same apple on paper, real apple in clear focus",
+          "alt": "Справжнє яблуко поруч із його малюнком"
+        },
+        {
+          "index": 19,
+          "key": "add-context-able",
+          "label": "a craftswoman skillfully building a wooden birdhouse with steady hands and finished joinery",
+          "alt": "Здатна власноруч зробити годівничку"
+        },
+        {
+          "index": 20,
+          "key": "add-context-possible",
+          "label": "an open gate through a low garden fence with a clear accessible path beyond",
+          "alt": "Можливий прохід через відчинену хвіртку"
+        },
+        {
+          "index": 21,
+          "key": "add-context-true",
+          "label": "a child honestly showing a broken cup to a parent, both actual broken cup and a matching truthful drawing visible",
+          "alt": "Правдиве зізнання про розбиту чашку"
+        },
+        {
+          "index": 22,
+          "key": "add-context-federal",
+          "label": "several distinct small regional council buildings linked by paths to one larger central government building",
+          "alt": "Регіони та спільний федеральний уряд"
+        },
+        {
+          "index": 23,
+          "key": "add-context-recent",
+          "label": "a newly planted sapling in freshly turned soil beside a still-damp spade and fresh footprints",
+          "alt": "Нещодавно посаджене деревце"
+        },
+        {
+          "index": 24,
+          "key": "add-context-certain",
+          "label": "a woman confidently checking a matching key in a door lock, sure of the correct key",
+          "alt": "Упевненість у правильному виборі"
+        }
+      ]
+    },
+    {
+      "id": "additional-48",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-likely",
+          "label": "a sky mostly full of dark rain clouds with one small sun opening, person taking an umbrella",
+          "alt": "Ймовірний дощ"
+        },
+        {
+          "index": 1,
+          "key": "add-context-current",
+          "label": "an open daily planner with the middle day clearly marked by a green ribbon and a pen resting on that day",
+          "alt": "Поточний день у щоденнику"
+        },
+        {
+          "index": 2,
+          "key": "add-context-general",
+          "label": "a broad overview of a whole cottage garden with flowers, vegetables, paths and greenhouse all visible",
+          "alt": "Загальний вигляд саду"
+        },
+        {
+          "index": 3,
+          "key": "add-context-there",
+          "label": "a woman pointing toward a red cottage far away across a field, distant cottage clearly emphasized",
+          "alt": "Там: будиночок удалині"
+        },
+        {
+          "index": 4,
+          "key": "add-context-now",
+          "label": "a person ringing a small handbell at this very moment, tiny motion marks around the bell and clock nearby",
+          "alt": "Зараз: дзвоник лунає цієї миті"
+        },
+        {
+          "index": 5,
+          "key": "add-context-of",
+          "label": "a child's small boot beside the child who owns it, ownership connected by the child's hand touching the boot",
+          "alt": "Належність: черевичок дитини"
+        },
+        {
+          "index": 6,
+          "key": "add-context-then",
+          "label": "a two-moment vignette within one square: first filling a watering can, then watering a flower, joined by a curved arrow",
+          "alt": "Потім: спочатку набрати воду, тоді полити"
+        },
+        {
+          "index": 7,
+          "key": "add-context-all",
+          "label": "a gardener embracing one basket containing the entire harvest of apples, none left on the small tree",
+          "alt": "Усі яблука зібрані в кошику"
+        },
+        {
+          "index": 8,
+          "key": "add-context-than",
+          "label": "two sunflowers side by side, one clearly taller than the other, tops compared by two fine horizontal guide marks",
+          "alt": "Порівняння: одна квітка вища, ніж інша"
+        },
+        {
+          "index": 9,
+          "key": "add-context-the",
+          "label": "a woman pointing to one specific red apple among several yellow apples in a bowl, the red apple softly highlighted",
+          "alt": "Означений артикль: конкретне яблуко"
+        },
+        {
+          "index": 10,
+          "key": "add-context-those",
+          "label": "a person pointing at three flowers far away beyond a garden path, distant cluster emphasized",
+          "alt": "Ті квіти далеко від мовця"
+        },
+        {
+          "index": 11,
+          "key": "add-context-it",
+          "label": "a small ginger cat sitting on a cushion with a subtle pointing hand directed at the animal",
+          "alt": "Воно: вказівка на котика"
+        },
+        {
+          "index": 12,
+          "key": "add-context-and",
+          "label": "an apple and a pear together in one small bowl, both equally prominent and connected by a delicate ampersand",
+          "alt": "І: яблуко та груша разом"
+        },
+        {
+          "index": 13,
+          "key": "add-context-what",
+          "label": "a curious person opening a covered basket, a small question mark above the still partly hidden contents",
+          "alt": "Що лежить у кошику?"
+        },
+        {
+          "index": 14,
+          "key": "add-context-that",
+          "label": "a person pointing toward one distant blue teapot at the far end of a table",
+          "alt": "Той чайник на дальньому краю столу"
+        },
+        {
+          "index": 15,
+          "key": "add-context-if",
+          "label": "a conditional two-part vignette: rainy cloud on left, person opening an umbrella on right, linked with a curved arrow",
+          "alt": "Якщо піде дощ, розкриємо парасольку"
+        },
+        {
+          "index": 16,
+          "key": "add-context-a",
+          "label": "a person choosing any single apple from a bowl of several similar apples, no particular apple emphasized",
+          "alt": "Неозначений артикль: одне з яблук"
+        },
+        {
+          "index": 17,
+          "key": "add-context-so",
+          "label": "rain-soaked garden on left leading with an arrow to a woman taking an umbrella on right, clear consequence",
+          "alt": "Отже: дощить, тому потрібна парасолька"
+        },
+        {
+          "index": 18,
+          "key": "add-context-after",
+          "label": "two ordered moments: a finished meal with an empty plate, then washing that plate in a sink",
+          "alt": "Після їжі миють посуд"
+        },
+        {
+          "index": 19,
+          "key": "add-context-i",
+          "label": "a friendly young woman pointing to her own chest while facing the viewer",
+          "alt": "Я: людина вказує на себе"
+        },
+        {
+          "index": 20,
+          "key": "add-context-also",
+          "label": "a woman holding one apple and happily adding a pear to her basket too",
+          "alt": "Також: до яблука додають грушу"
+        },
+        {
+          "index": 21,
+          "key": "add-context-you",
+          "label": "a foreground speaker gently extending an open hand toward the viewer across a tea table",
+          "alt": "Ти: звертання до співрозмовника"
+        },
+        {
+          "index": 22,
+          "key": "add-context-who",
+          "label": "three different people at a garden gate, a visitor asking who with one small question mark above the group",
+          "alt": "Хто з цих людей?"
+        },
+        {
+          "index": 23,
+          "key": "add-context-back",
+          "label": "a walker returning along a path toward the cottage they came from, a curved backward arrow by the path",
+          "alt": "Назад: повернення до будинку"
+        },
+        {
+          "index": 24,
+          "key": "add-context-once",
+          "label": "a keepsake photograph of a single special picnic in an open memory album, one ribbon bookmark",
+          "alt": "Одного разу: один спогад про пікнік"
+        }
+      ]
+    },
+    {
+      "id": "additional-49",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-how",
+          "label": "two hands carefully demonstrating how to tie a simple bow, a learner watching attentively",
+          "alt": "Як зав’язати бант"
+        },
+        {
+          "index": 1,
+          "key": "add-context-for",
+          "label": "a woman wrapping a present and offering it toward a child, clear recipient and giving gesture",
+          "alt": "Для дитини: подарунок адресований їй"
+        },
+        {
+          "index": 2,
+          "key": "add-context-which",
+          "label": "a woman choosing between exactly three different mugs, finger hovering over one, small question mark",
+          "alt": "Котре з трьох горняток обрати?"
+        },
+        {
+          "index": 3,
+          "key": "add-context-ex",
+          "label": "a retired village postman holding an old postal cap beside a framed photograph of himself working years ago",
+          "alt": "Колишній листоноша та його давнє фото"
+        },
+        {
+          "index": 4,
+          "key": "add-context-about",
+          "label": "two people discussing a sailboat with a shared speech bubble containing a tiny sailboat picture",
+          "alt": "Розмова про човен"
+        },
+        {
+          "index": 5,
+          "key": "add-context-not",
+          "label": "a child politely refusing a cup with a gently raised palm, cup crossed out in a small thought bubble",
+          "alt": "Не: відмова від запропонованого напою"
+        },
+        {
+          "index": 6,
+          "key": "add-context-unfortunately",
+          "label": "a disappointed person looking at a picnic ruined by rain, drooping sandwich basket and grey cloud",
+          "alt": "На жаль: дощ зіпсував пікнік"
+        },
+        {
+          "index": 7,
+          "key": "add-context-he",
+          "label": "a woman speaker gesturing toward one man standing beside a cottage, man clearly emphasized",
+          "alt": "Він: мовець указує на чоловіка"
+        },
+        {
+          "index": 8,
+          "key": "add-context-when",
+          "label": "a visitor pointing at a clock while asking a gardener about a meeting, small question mark",
+          "alt": "Коли зустрічаємося?"
+        },
+        {
+          "index": 9,
+          "key": "add-context-our",
+          "label": "two friends holding their shared picnic basket together, both hands touching the same basket",
+          "alt": "Наш спільний кошик"
+        },
+        {
+          "index": 10,
+          "key": "add-context-as",
+          "label": "two bakers making the same kneading gesture side by side, one copying the other's method",
+          "alt": "Як: зробити так само, як інша людина"
+        },
+        {
+          "index": 11,
+          "key": "add-context-me",
+          "label": "a woman receiving a flower from a friend while pointing gently to herself",
+          "alt": "Мені: людині дарують квітку"
+        },
+        {
+          "index": 12,
+          "key": "add-context-itself",
+          "label": "a small hinged wooden music box opening its own spring-driven lid, winding key visible, no person touching it",
+          "alt": "Сам предмет: музична скринька відкривається сама"
+        },
+        {
+          "index": 13,
+          "key": "add-context-this",
+          "label": "a person pointing closely at one mug directly beside their hand on a table",
+          "alt": "Це горнятко поруч із мовцем"
+        },
+        {
+          "index": 14,
+          "key": "add-context-because",
+          "label": "wilted flower on left and dry empty watering can on right, causal connection shown with a fine arrow from empty can to flower",
+          "alt": "Квітка зів’яла, тому що їй бракує води"
+        },
+        {
+          "index": 15,
+          "key": "add-context-just",
+          "label": "a baker setting one freshly baked loaf on a cooling rack, visible warm steam and oven door just closed",
+          "alt": "Щойно спечений хліб"
+        },
+        {
+          "index": 16,
+          "key": "add-context-yet",
+          "label": "a half-knitted scarf still on needles beside an unfinished basket of yarn and a patiently waiting person",
+          "alt": "Ще не завершено: шарф на спицях"
+        },
+        {
+          "index": 17,
+          "key": "add-context-her",
+          "label": "a woman receiving a gift from a friend, clear gesture toward her hands",
+          "alt": "Їй: подарунок для жінки"
+        },
+        {
+          "index": 18,
+          "key": "add-context-him",
+          "label": "a man receiving a wrapped gift from a friend, clear gesture toward his hands",
+          "alt": "Йому: подарунок для чоловіка"
+        },
+        {
+          "index": 19,
+          "key": "add-context-ever",
+          "label": "a person considering a future journey, long winding path dotted with small possible travel moments and a question mark",
+          "alt": "Коли-небудь: роздуми про можливу подорож"
+        },
+        {
+          "index": 20,
+          "key": "add-context-but",
+          "label": "sunny cheerful window on one side and a sad person with a broken umbrella inside, clear contrast",
+          "alt": "Але: надворі сонце, а людина засмучена"
+        },
+        {
+          "index": 21,
+          "key": "add-context-even",
+          "label": "a group of experienced gardeners carrying baskets, even the smallest child proudly carrying a tiny basket too",
+          "alt": "Навіть найменша дитина допомагає"
+        },
+        {
+          "index": 22,
+          "key": "add-context-these",
+          "label": "a person holding exactly three nearby flowers close to the viewer, all clearly within reach",
+          "alt": "Ці квіти поруч із мовцем"
+        },
+        {
+          "index": 23,
+          "key": "add-context-we",
+          "label": "two friends facing the viewer and gesturing toward themselves as one group",
+          "alt": "Ми: друзі вказують на себе"
+        },
+        {
+          "index": 24,
+          "key": "add-context-your",
+          "label": "a person handing a clearly matching hat back to its owner opposite them",
+          "alt": "Твій капелюх: повернення власникові"
+        }
+      ]
+    },
+    {
+      "id": "additional-50",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-they",
+          "label": "a foreground speaker pointing toward three people chatting together farther away",
+          "alt": "Вони: окрема група людей"
+        },
+        {
+          "index": 1,
+          "key": "add-context-any",
+          "label": "a basket of differently colored apples with an open welcoming hand inviting a free choice of any one",
+          "alt": "Можна вибрати будь-яке яблуко"
+        },
+        {
+          "index": 2,
+          "key": "add-context-his",
+          "label": "a man standing with his own brown coat draped on his arm, touching the coat to claim ownership",
+          "alt": "Його пальто належить чоловікові"
+        },
+        {
+          "index": 3,
+          "key": "add-context-she",
+          "label": "a man speaker gesturing toward one woman standing beside a cottage, woman clearly emphasized",
+          "alt": "Вона: мовець указує на жінку"
+        },
+        {
+          "index": 4,
+          "key": "add-context-us",
+          "label": "two friends jointly receiving a large basket from a neighbor, both reaching for it",
+          "alt": "Нам: подарунок для двох друзів"
+        },
+        {
+          "index": 5,
+          "key": "add-context-my",
+          "label": "a woman holding her own favorite blue mug close to her chest and indicating herself",
+          "alt": "Моє горнятко належить мені"
+        },
+        {
+          "index": 6,
+          "key": "add-context-them",
+          "label": "a gardener giving apples to a separate group of three people opposite her",
+          "alt": "Їм: яблука для групи людей"
+        },
+        {
+          "index": 7,
+          "key": "add-context-or",
+          "label": "two distinct choices on a table, a red apple on one side and a green pear on the other, a hand choosing just one",
+          "alt": "Або яблуко, або груша"
+        },
+        {
+          "index": 8,
+          "key": "add-context-my-name-is",
+          "label": "a friendly young woman introducing herself, pointing at a clear name badge reading ANNA while greeting another person",
+          "alt": "Мене звати: Анна представляється"
+        },
+        {
+          "index": 9,
+          "key": "add-context-what-s-your-name",
+          "label": "two people meeting, one asking with an open hand toward the other's blank name badge, small question mark",
+          "alt": "Запитання про ім’я співрозмовника"
+        },
+        {
+          "index": 10,
+          "key": "add-context-where-are-you-from",
+          "label": "two travelers chatting beside a small globe, one pointing from a home cottage on a map toward the other traveler",
+          "alt": "Звідки ти: розмова про рідне місце"
+        },
+        {
+          "index": 11,
+          "key": "add-context-how-old-are-you",
+          "label": "two friends talking beside a birthday cake, one pointing at a little age card with a question mark",
+          "alt": "Запитання про вік біля святкового торта"
+        },
+        {
+          "index": 12,
+          "key": "add-context-i-m-twenty-years-old",
+          "label": "a smiling young adult at a birthday cake with two clear numeral candles reading 20",
+          "alt": "Мені двадцять років: свічки 20 на торті"
+        },
+        {
+          "index": 13,
+          "key": "add-context-first-name",
+          "label": "a hand holding a two-line name card reading ANNA on the top line and SMITH on the second, top line softly highlighted",
+          "alt": "Ім’я Anna у повному імені Anna Smith"
+        },
+        {
+          "index": 14,
+          "key": "add-context-last-name",
+          "label": "a hand holding a two-line name card reading ANNA on the top line and SMITH on the second, bottom line softly highlighted",
+          "alt": "Прізвище Smith у повному імені Anna Smith"
+        },
+        {
+          "index": 15,
+          "key": "add-context-how-do-you-spell-it",
+          "label": "a person carefully arranging four distinct wooden letter blocks A N N A in order while a friend watches",
+          "alt": "Ім’я Anna по літерах: A N N A"
+        },
+        {
+          "index": 16,
+          "key": "add-context-its",
+          "label": "a ginger cat touching its own small food bowl beside its cushion, clear animal ownership",
+          "alt": "Його мисочка: річ належить котику"
+        },
+        {
+          "index": 17,
+          "key": "add-context-their",
+          "label": "a separate group of three friends holding their one shared picnic blanket together",
+          "alt": "Їхня спільна ковдра для пікніка"
+        },
+        {
+          "index": 18,
+          "key": "add-context-mine",
+          "label": "a woman pointing to herself while holding a single red umbrella firmly as her own",
+          "alt": "Ця парасолька моя"
+        },
+        {
+          "index": 19,
+          "key": "add-context-yours",
+          "label": "one person offering an umbrella handle toward its owner opposite them, clearly returning it",
+          "alt": "Ця парасолька твоя"
+        },
+        {
+          "index": 20,
+          "key": "add-context-ours",
+          "label": "two friends under a single shared umbrella, both holding its handle together",
+          "alt": "Ця парасолька наша"
+        },
+        {
+          "index": 21,
+          "key": "add-context-hers",
+          "label": "a woman beside her red handbag on a chair, her hand resting on the bag",
+          "alt": "Ця сумка її"
+        },
+        {
+          "index": 22,
+          "key": "add-context-theirs",
+          "label": "a separate family of three posing with their shared small cottage behind them",
+          "alt": "Цей будиночок їхній"
+        },
+        {
+          "index": 23,
+          "key": "add-context-where",
+          "label": "a visitor studying a small village map with a cottage marked by a pin and a question mark",
+          "alt": "Де розташований будиночок?"
+        },
+        {
+          "index": 24,
+          "key": "add-context-why",
+          "label": "a puzzled child examining a wilted flower, thinking of the dry soil and asking with a question mark",
+          "alt": "Чому квітка зів’яла?"
+        }
+      ]
+    },
+    {
+      "id": "additional-51",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-whose",
+          "label": "two people looking at a forgotten scarf on a bench, a small question mark over the scarf",
+          "alt": "Чий шарф залишився на лавці?"
+        },
+        {
+          "index": 1,
+          "key": "add-context-how-much",
+          "label": "a shopper pointing to a jar of honey on a market counter, a hanging price tag carrying a question mark",
+          "alt": "Скільки коштує баночка меду?"
+        },
+        {
+          "index": 2,
+          "key": "add-context-how-old",
+          "label": "a birthday cake next to an age card with a large question mark and a smiling person",
+          "alt": "Скільки років імениннику?"
+        },
+        {
+          "index": 3,
+          "key": "add-context-today",
+          "label": "a three-day paper calendar strip with the central day highlighted green and a small sun above that middle day",
+          "alt": "Сьогодні: позначений середній день"
+        },
+        {
+          "index": 4,
+          "key": "add-context-tomorrow",
+          "label": "a three-day calendar strip with the central day marked by a green dot and the next day to its right warmly highlighted, arrow forward one day",
+          "alt": "Завтра: наступний день після сьогодні"
+        },
+        {
+          "index": 5,
+          "key": "add-context-yesterday",
+          "label": "a three-day calendar strip with the central day marked by a green dot and the preceding day to its left highlighted coral, arrow backward one day",
+          "alt": "Вчора: попередній день перед сьогодні"
+        },
+        {
+          "index": 6,
+          "key": "add-context-later",
+          "label": "a person setting a covered tea tray aside for later, small clock in a thought bubble showing a later hour",
+          "alt": "Пізніше: чаювання відкладають"
+        },
+        {
+          "index": 7,
+          "key": "add-context-before",
+          "label": "two ordered moments: washing hands first, then eating bread at a table, a small sequencing arrow",
+          "alt": "Перед їжею миють руки"
+        },
+        {
+          "index": 8,
+          "key": "add-context-while",
+          "label": "one person knitting while another reads beside them at the same table under one shared clock",
+          "alt": "Одночасно: поки одна людина в’яже, інша читає"
+        },
+        {
+          "index": 9,
+          "key": "add-context-although",
+          "label": "a gardener happily walking under an umbrella despite visible rain, smile and raindrops equally clear",
+          "alt": "Хоча дощить, прогулянка приємна"
+        },
+        {
+          "index": 10,
+          "key": "add-context-though",
+          "label": "a gardener happily walking under an umbrella despite visible rain, smile and raindrops equally clear",
+          "alt": "Хоча дощить, людина усміхається"
+        },
+        {
+          "index": 11,
+          "key": "add-context-unless",
+          "label": "a gardener standing by dry flowers with a watering can, thought bubble of flowers drooping if left unwatered",
+          "alt": "Якщо не полити, квіти зів’януть"
+        },
+        {
+          "index": 12,
+          "key": "add-context-until",
+          "label": "a person patiently waiting beside a closed oven with bread baking inside and a small kitchen timer",
+          "alt": "Чекати, доки хліб не спечеться"
+        },
+        {
+          "index": 13,
+          "key": "add-context-since",
+          "label": "a small sapling and its later grown tree connected along a path, gardener's old and present portraits at the ends",
+          "alt": "Відтоді як посадили дерево, воно виросло"
+        },
+        {
+          "index": 14,
+          "key": "add-context-whether",
+          "label": "a person at a cottage doorway pondering whether to take an umbrella, two small thought bubbles with sun and rain",
+          "alt": "Чи брати парасольку?"
+        },
+        {
+          "index": 15,
+          "key": "add-context-both-and",
+          "label": "two open hands each holding a fruit, an apple and a pear, both accepted into one basket",
+          "alt": "І яблуко, і груша: обидва варіанти"
+        },
+        {
+          "index": 16,
+          "key": "add-context-either-or",
+          "label": "two cups, one tea and one coffee, chooser's hand suspended between them with a single empty saucer awaiting one cup",
+          "alt": "Або чай, або кава: обрати одне"
+        },
+        {
+          "index": 17,
+          "key": "add-context-neither-nor",
+          "label": "tea and coffee offered together, a person politely declining both with two raised palms",
+          "alt": "Ні чай, ні кава: відмова від обох"
+        },
+        {
+          "index": 18,
+          "key": "add-context-not-only-but-also",
+          "label": "a woman adding a basket of pears beside an already full apple basket on a market table",
+          "alt": "Не лише яблука, а й груші"
+        },
+        {
+          "index": 19,
+          "key": "add-context-capital",
+          "label": "a map-like country silhouette with one prominent central city marked by a star and a stately parliament building, smaller towns around",
+          "alt": "Столиця країни позначена зіркою"
+        },
+        {
+          "index": 20,
+          "key": "add-context-always",
+          "label": "a seven-day garden journal strip with a watering-can symbol checked on every one of the seven days",
+          "alt": "Завжди: дія кожного дня"
+        },
+        {
+          "index": 21,
+          "key": "add-context-usually",
+          "label": "a seven-day garden journal strip with six days checked for watering and one unmarked day",
+          "alt": "Зазвичай: дія майже щодня"
+        },
+        {
+          "index": 22,
+          "key": "add-context-often",
+          "label": "a seven-day garden journal strip with five days checked for watering and two unmarked days",
+          "alt": "Часто: багато повторень за тиждень"
+        },
+        {
+          "index": 23,
+          "key": "add-context-sometimes",
+          "label": "a seven-day garden journal strip with three days checked for watering and four unmarked days",
+          "alt": "Іноді: дія лише в деякі дні"
+        },
+        {
+          "index": 24,
+          "key": "add-context-rarely",
+          "label": "a seven-day garden journal strip with just one day checked for watering and six unmarked days",
+          "alt": "Рідко: лише один випадок за тиждень"
+        }
+      ]
+    },
+    {
+      "id": "additional-52",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-never",
+          "label": "a seven-day garden journal strip with all seven day boxes unmarked and a small crossed-out watering-can symbol below",
+          "alt": "Ніколи: жодного повторення"
+        },
+        {
+          "index": 1,
+          "key": "add-context-already",
+          "label": "a freshly completed knitted scarf folded neatly beside empty needles, pleased knitter checking it done",
+          "alt": "Уже готово: завершений шарф"
+        },
+        {
+          "index": 2,
+          "key": "add-context-still",
+          "label": "a patient knitter continuing a long half-finished scarf, same knitting position and visible unfinished yarn",
+          "alt": "Досі триває: людина продовжує в’язати"
+        },
+        {
+          "index": 3,
+          "key": "add-context-soon",
+          "label": "an almost-finished hourglass with just a tiny amount of sand left in the top, kettle beginning to steam nearby",
+          "alt": "Скоро: залишилося зовсім трохи часу"
+        },
+        {
+          "index": 4,
+          "key": "add-context-here",
+          "label": "a woman pointing directly at the ground beneath her feet, a small green spot at her standing place",
+          "alt": "Тут: місце біля мовця"
+        },
+        {
+          "index": 5,
+          "key": "add-context-everywhere",
+          "label": "a small cottage garden covered in scattered blooming daisies across every path, bed and corner",
+          "alt": "Скрізь у саду ростуть квіти"
+        },
+        {
+          "index": 6,
+          "key": "add-context-quietly",
+          "label": "a person tiptoeing gently past a sleeping cat, finger softly to lips, calm scene",
+          "alt": "Тихо: не розбудити котика"
+        },
+        {
+          "index": 7,
+          "key": "add-context-loudly",
+          "label": "a town crier ringing a large handbell with strong visible ringing motion, listeners farther away turning toward it",
+          "alt": "Голосно: дзвоник чутно здалеку"
+        },
+        {
+          "index": 8,
+          "key": "add-context-together",
+          "label": "three friends jointly carrying one large picnic basket on a garden path",
+          "alt": "Разом несуть кошик"
+        },
+        {
+          "index": 9,
+          "key": "add-context-alone",
+          "label": "one person sitting peacefully alone on a garden bench with one mug and a book",
+          "alt": "Наодинці на садовій лавці"
+        },
+        {
+          "index": 10,
+          "key": "add-context-again",
+          "label": "a person watering the same flower a second time, a gentle circular repeat arrow surrounding the watering can",
+          "alt": "Знову полити ту саму квітку"
+        },
+        {
+          "index": 11,
+          "key": "add-context-almost",
+          "label": "a knitted scarf nearly complete with only one small unfinished corner and a tiny ball of yarn left",
+          "alt": "Майже готовий шарф"
+        },
+        {
+          "index": 12,
+          "key": "add-context-really",
+          "label": "a delighted person smelling a rose with vivid joyful expression, small heart and sparkle emphasizing strong real delight",
+          "alt": "Справді дуже подобається аромат троянди"
+        },
+        {
+          "index": 13,
+          "key": "add-context-probably",
+          "label": "a person looking at a mostly cloudy sky, choosing an umbrella with a thoughtful expression and a small question mark",
+          "alt": "Імовірно дощитиме"
+        },
+        {
+          "index": 14,
+          "key": "add-context-good-luck",
+          "label": "one friend wishing another well before a journey, warmly waving with a small four-leaf clover offered for luck",
+          "alt": "Щасти в подорожі"
+        },
+        {
+          "index": 15,
+          "key": "add-context-it-depends",
+          "label": "a traveler choosing between a sunhat and umbrella while looking at a window showing mixed sun and clouds",
+          "alt": "Вибір залежить від погоди"
+        },
+        {
+          "index": 16,
+          "key": "add-context-exchange-rate",
+          "label": "a currency exchange counter with two distinctly colored banknotes linked by opposite arrows and a small calculator",
+          "alt": "Обмінний курс між двома валютами"
+        },
+        {
+          "index": 17,
+          "key": "add-context-airline",
+          "label": "a passenger airplane and a small fleet of matching planes with the same simple leaf tail emblem near an airline counter, no brand",
+          "alt": "Авіакомпанія та її літаки"
+        },
+        {
+          "index": 18,
+          "key": "add-context-boarding",
+          "label": "travelers climbing mobile boarding stairs into an airplane door, boarding passes in hand",
+          "alt": "Посадка пасажирів у літак"
+        },
+        {
+          "index": 19,
+          "key": "add-context-cancelled",
+          "label": "an airport flight display with a clear red diagonal cancellation cross over a single plane symbol, disappointed traveler beside it",
+          "alt": "Рейс скасований"
+        },
+        {
+          "index": 20,
+          "key": "add-context-wi-fi-password",
+          "label": "a guest reading a small card with a Wi-Fi symbol and a row of password dots beside a tiny key drawing, phone nearby",
+          "alt": "Картка з паролем до вайфаю"
+        },
+        {
+          "index": 21,
+          "key": "add-context-vacancy",
+          "label": "a welcoming hotel receptionist presenting one available brass room key, tidy empty room visible through an open door",
+          "alt": "Вільний номер у готелі"
+        },
+        {
+          "index": 22,
+          "key": "add-context-fully-booked",
+          "label": "a hotel reception key rack with all numbered hooks empty, arriving guest shown a polite apologetic gesture",
+          "alt": "Усі номери заброньовані"
+        },
+        {
+          "index": 23,
+          "key": "add-context-package-holiday",
+          "label": "a travel agent presenting one ribbon-bound holiday folder containing small plane, hotel and beach pictures as one combined offer",
+          "alt": "Пакетний тур: переліт, готель і відпочинок"
+        },
+        {
+          "index": 24,
+          "key": "add-context-next-week",
+          "label": "a two-row weekly calendar with current day marked in first row and the full following seven-day row highlighted green",
+          "alt": "Наступний тиждень у календарі"
+        }
+      ]
+    },
+    {
+      "id": "additional-53",
+      "tiles": [
+        {
+          "index": 0,
+          "key": "add-context-next-month",
+          "label": "two successive calendar month pages side by side, right next-month page highlighted with a forward arrow",
+          "alt": "Наступний місяць у календарі"
+        },
+        {
+          "index": 1,
+          "key": "add-context-next-year",
+          "label": "two annual planners with covers clearly marked 2026 and 2027, arrow pointing from 2026 to highlighted 2027",
+          "alt": "Наступний рік після поточного"
+        },
+        {
+          "index": 2,
+          "key": "add-context-in-a-few-days",
+          "label": "a five-day calendar strip with today green at the first box and the fourth box highlighted, three gentle stepping dots between",
+          "alt": "За кілька днів від сьогодні"
+        },
+        {
+          "index": 3,
+          "key": "add-context-contents",
+          "label": "an open book at its contents page with neatly aligned short chapter rows, dot leaders and tiny page numbers, no readable prose",
+          "alt": "Зміст книжки: перелік розділів"
+        },
+        {
+          "index": 4,
+          "key": "add-context-publisher",
+          "label": "a small publishing workshop with editor at a desk, printing press and stacks of matching finished books",
+          "alt": "Видавництво готує та друкує книжки"
+        },
+        {
+          "index": 5,
+          "key": "add-context-department",
+          "label": "an office floor plan with three clearly separate work areas, one team's room softly highlighted and staff inside",
+          "alt": "Окремий відділ в офісі"
+        },
+        {
+          "index": 6,
+          "key": "add-context-agenda",
+          "label": "a meeting table with a large planner showing three ordered illustrated discussion topics and a clock",
+          "alt": "Порядок денний: теми майбутньої зустрічі"
+        },
+        {
+          "index": 7,
+          "key": "add-context-minutes",
+          "label": "a note-taker recording a meeting in a bound notebook, three seated participants and completed checkmarks beside notes",
+          "alt": "Протокол: запис перебігу зустрічі"
+        },
+        {
+          "index": 8,
+          "key": "add-context-overtime",
+          "label": "one office worker still at a lit desk while the window is dark and wall clock shows late evening, empty desks nearby",
+          "alt": "Понаднормова робота ввечері"
+        },
+        {
+          "index": 9,
+          "key": "add-context-durable",
+          "label": "well-made leather walking boots still intact beside a long rocky trail, subtle scuffs but strong seams and soles",
+          "alt": "Міцні черевики служать довго"
+        },
+        {
+          "index": 10,
+          "key": "add-context-principle",
+          "label": "a carpenter following a simple straightedge and square carefully, small framed balance symbol nearby suggesting a guiding rule",
+          "alt": "Принцип: діяти за послідовним правилом"
+        },
+        {
+          "index": 11,
+          "key": "add-context-that-complement",
+          "label": "a teacher telling a pupil that a seed grows into a plant, speech bubble encloses a seed-to-sprout scene",
+          "alt": "Що: учитель пояснює, що насіння проростає"
+        },
+        {
+          "index": 12,
+          "key": "add-context-as-cause",
+          "label": "two concurrent moments in one cottage: rain starts at the window as a person closes that window, single shared clock",
+          "alt": "Коли починається дощ, людина зачиняє вікно"
+        },
+        {
+          "index": 13,
+          "key": "add-context-for-duration",
+          "label": "a gardener working in the garden beside a clock whose softly highlighted arc shows a span of time",
+          "alt": "Протягом певного часу: робота в саду"
         }
       ]
     }
@@ -15185,6 +16204,1074 @@
           "alt": "Ніс — орган нюху"
         }
       ]
+    },
+    {
+      "en": "case",
+      "uk": "випадок; справа",
+      "picture": "add-context-case",
+      "alt": "Розгляд окремого випадку"
+    },
+    {
+      "en": "word",
+      "uk": "слово",
+      "picture": "add-context-word",
+      "alt": "Одне слово в ілюстрованому словнику"
+    },
+    {
+      "en": "member",
+      "uk": "учасник; член",
+      "picture": "add-context-member",
+      "alt": "Новий учасник садового гуртка"
+    },
+    {
+      "en": "name",
+      "uk": "ім’я",
+      "picture": "add-context-name",
+      "alt": "Ім’я на бейджі"
+    },
+    {
+      "en": "others",
+      "uk": "інші",
+      "picture": "add-context-others",
+      "alt": "Інші учасники садового гуртка"
+    },
+    {
+      "en": "be",
+      "uk": "бути",
+      "picture": "add-context-be",
+      "alt": "Бути: людина присутня в кімнаті"
+    },
+    {
+      "en": "can",
+      "uk": "могти; вміти",
+      "picture": "add-context-can",
+      "alt": "Уміти їздити на велосипеді"
+    },
+    {
+      "en": "would",
+      "uk": "би (умовна дія)",
+      "picture": "add-context-would",
+      "alt": "Умовна дія: мрія про відпочинок"
+    },
+    {
+      "en": "will",
+      "uk": "допоміжне слово майбутнього часу",
+      "picture": "add-context-will",
+      "alt": "Майбутня дія: із насіння виросте соняшник"
+    },
+    {
+      "en": "could",
+      "uk": "міг би; міг",
+      "picture": "add-context-could",
+      "alt": "Можливість: можна перейти струмок"
+    },
+    {
+      "en": "may",
+      "uk": "могти (можливість; дозвіл)",
+      "picture": "add-context-may",
+      "alt": "Дозвіл узяти печиво"
+    },
+    {
+      "en": "should",
+      "uk": "слід; варто",
+      "picture": "add-context-should",
+      "alt": "Варто вдягнутися за погодою"
+    },
+    {
+      "en": "mean",
+      "uk": "означати",
+      "picture": "add-context-mean",
+      "alt": "Пояснення того, що означає символ"
+    },
+    {
+      "en": "seem",
+      "uk": "здаватися",
+      "picture": "add-context-seem",
+      "alt": "Здаватися: пальто схоже на людину"
+    },
+    {
+      "en": "might",
+      "uk": "могти (ймовірність)",
+      "picture": "add-context-might",
+      "alt": "Можливо, піде дощ"
+    },
+    {
+      "en": "happen",
+      "uk": "траплятися",
+      "picture": "add-context-happen",
+      "alt": "Несподівана подія в саду"
+    },
+    {
+      "en": "must",
+      "uk": "мусити",
+      "picture": "add-context-must",
+      "alt": "Обов’язково застебнути шолом"
+    },
+    {
+      "en": "include",
+      "uk": "включати",
+      "picture": "add-context-include",
+      "alt": "Кошик включає хліб, яблуко й напій"
+    },
+    {
+      "en": "real",
+      "uk": "справжній",
+      "picture": "add-context-real",
+      "alt": "Справжнє яблуко поруч із його малюнком"
+    },
+    {
+      "en": "able",
+      "uk": "здатний",
+      "picture": "add-context-able",
+      "alt": "Здатна власноруч зробити годівничку"
+    },
+    {
+      "en": "possible",
+      "uk": "можливий",
+      "picture": "add-context-possible",
+      "alt": "Можливий прохід через відчинену хвіртку"
+    },
+    {
+      "en": "true",
+      "uk": "правдивий",
+      "picture": "add-context-true",
+      "alt": "Правдиве зізнання про розбиту чашку"
+    },
+    {
+      "en": "federal",
+      "uk": "федеральний",
+      "picture": "add-context-federal",
+      "alt": "Регіони та спільний федеральний уряд"
+    },
+    {
+      "en": "recent",
+      "uk": "нещодавній",
+      "picture": "add-context-recent",
+      "alt": "Нещодавно посаджене деревце"
+    },
+    {
+      "en": "certain",
+      "uk": "певний",
+      "picture": "add-context-certain",
+      "alt": "Упевненість у правильному виборі"
+    },
+    {
+      "en": "likely",
+      "uk": "ймовірний",
+      "picture": "add-context-likely",
+      "alt": "Ймовірний дощ"
+    },
+    {
+      "en": "current",
+      "uk": "поточний",
+      "picture": "add-context-current",
+      "alt": "Поточний день у щоденнику"
+    },
+    {
+      "en": "general",
+      "uk": "загальний",
+      "picture": "add-context-general",
+      "alt": "Загальний вигляд саду"
+    },
+    {
+      "en": "there",
+      "uk": "там",
+      "picture": "add-context-there",
+      "alt": "Там: будиночок удалині"
+    },
+    {
+      "en": "now",
+      "uk": "зараз",
+      "picture": "add-context-now",
+      "alt": "Зараз: дзвоник лунає цієї миті"
+    },
+    {
+      "en": "of",
+      "uk": "кого; чого; з (належність)",
+      "picture": "add-context-of",
+      "alt": "Належність: черевичок дитини"
+    },
+    {
+      "en": "then",
+      "uk": "тоді; потім",
+      "picture": "add-context-then",
+      "alt": "Потім: спочатку набрати воду, тоді полити"
+    },
+    {
+      "en": "all",
+      "uk": "все; усі",
+      "picture": "add-context-all",
+      "alt": "Усі яблука зібрані в кошику"
+    },
+    {
+      "en": "than",
+      "uk": "ніж",
+      "picture": "add-context-than",
+      "alt": "Порівняння: одна квітка вища, ніж інша"
+    },
+    {
+      "en": "the",
+      "uk": "означений артикль",
+      "picture": "add-context-the",
+      "alt": "Означений артикль: конкретне яблуко"
+    },
+    {
+      "en": "those",
+      "uk": "ті",
+      "picture": "add-context-those",
+      "alt": "Ті квіти далеко від мовця"
+    },
+    {
+      "en": "it",
+      "uk": "воно; це",
+      "picture": "add-context-it",
+      "alt": "Воно: вказівка на котика"
+    },
+    {
+      "en": "and",
+      "uk": "і",
+      "picture": "add-context-and",
+      "alt": "І: яблуко та груша разом"
+    },
+    {
+      "en": "what",
+      "uk": "що",
+      "picture": "add-context-what",
+      "alt": "Що лежить у кошику?"
+    },
+    {
+      "en": "that",
+      "uk": "той; те; що",
+      "picture": "add-context-that",
+      "alt": "Той чайник на дальньому краю столу"
+    },
+    {
+      "en": "if",
+      "uk": "якщо",
+      "picture": "add-context-if",
+      "alt": "Якщо піде дощ, розкриємо парасольку"
+    },
+    {
+      "en": "a",
+      "uk": "неозначений артикль",
+      "picture": "add-context-a",
+      "alt": "Неозначений артикль: одне з яблук"
+    },
+    {
+      "en": "so",
+      "uk": "отже; так",
+      "picture": "add-context-so",
+      "alt": "Отже: дощить, тому потрібна парасолька"
+    },
+    {
+      "en": "after",
+      "uk": "після",
+      "picture": "add-context-after",
+      "alt": "Після їжі миють посуд"
+    },
+    {
+      "en": "I",
+      "uk": "я",
+      "picture": "add-context-i",
+      "alt": "Я: людина вказує на себе"
+    },
+    {
+      "en": "also",
+      "uk": "також",
+      "picture": "add-context-also",
+      "alt": "Також: до яблука додають грушу"
+    },
+    {
+      "en": "you",
+      "uk": "ти; ви",
+      "picture": "add-context-you",
+      "alt": "Ти: звертання до співрозмовника"
+    },
+    {
+      "en": "who",
+      "uk": "хто",
+      "picture": "add-context-who",
+      "alt": "Хто з цих людей?"
+    },
+    {
+      "en": "back",
+      "uk": "назад",
+      "picture": "add-context-back",
+      "alt": "Назад: повернення до будинку"
+    },
+    {
+      "en": "once",
+      "uk": "одного разу",
+      "picture": "add-context-once",
+      "alt": "Одного разу: один спогад про пікнік"
+    },
+    {
+      "en": "how",
+      "uk": "як",
+      "picture": "add-context-how",
+      "alt": "Як зав’язати бант"
+    },
+    {
+      "en": "for",
+      "uk": "для",
+      "picture": "add-context-for",
+      "alt": "Для дитини: подарунок адресований їй"
+    },
+    {
+      "en": "which",
+      "uk": "який; котрий",
+      "picture": "add-context-which",
+      "alt": "Котре з трьох горняток обрати?"
+    },
+    {
+      "en": "ex",
+      "uk": "колишній; колишня",
+      "picture": "add-context-ex",
+      "alt": "Колишній листоноша та його давнє фото"
+    },
+    {
+      "en": "about",
+      "uk": "про; приблизно",
+      "picture": "add-context-about",
+      "alt": "Розмова про човен"
+    },
+    {
+      "en": "not",
+      "uk": "не",
+      "picture": "add-context-not",
+      "alt": "Не: відмова від запропонованого напою"
+    },
+    {
+      "en": "unfortunately",
+      "uk": "на жаль",
+      "picture": "add-context-unfortunately",
+      "alt": "На жаль: дощ зіпсував пікнік"
+    },
+    {
+      "en": "he",
+      "uk": "він",
+      "picture": "add-context-he",
+      "alt": "Він: мовець указує на чоловіка"
+    },
+    {
+      "en": "when",
+      "uk": "коли",
+      "picture": "add-context-when",
+      "alt": "Коли зустрічаємося?"
+    },
+    {
+      "en": "our",
+      "uk": "наш",
+      "picture": "add-context-our",
+      "alt": "Наш спільний кошик"
+    },
+    {
+      "en": "as",
+      "uk": "як",
+      "picture": "add-context-as",
+      "alt": "Як: зробити так само, як інша людина"
+    },
+    {
+      "en": "me",
+      "uk": "мене; мені",
+      "picture": "add-context-me",
+      "alt": "Мені: людині дарують квітку"
+    },
+    {
+      "en": "itself",
+      "uk": "саме; себе (про предмет)",
+      "picture": "add-context-itself",
+      "alt": "Сам предмет: музична скринька відкривається сама"
+    },
+    {
+      "en": "this",
+      "uk": "цей; це",
+      "picture": "add-context-this",
+      "alt": "Це горнятко поруч із мовцем"
+    },
+    {
+      "en": "because",
+      "uk": "тому що",
+      "picture": "add-context-because",
+      "alt": "Квітка зів’яла, тому що їй бракує води"
+    },
+    {
+      "en": "just",
+      "uk": "лише; щойно",
+      "picture": "add-context-just",
+      "alt": "Щойно спечений хліб"
+    },
+    {
+      "en": "yet",
+      "uk": "ще; поки що",
+      "picture": "add-context-yet",
+      "alt": "Ще не завершено: шарф на спицях"
+    },
+    {
+      "en": "her",
+      "uk": "її; їй",
+      "picture": "add-context-her",
+      "alt": "Їй: подарунок для жінки"
+    },
+    {
+      "en": "him",
+      "uk": "його; йому",
+      "picture": "add-context-him",
+      "alt": "Йому: подарунок для чоловіка"
+    },
+    {
+      "en": "ever",
+      "uk": "коли-небудь",
+      "picture": "add-context-ever",
+      "alt": "Коли-небудь: роздуми про можливу подорож"
+    },
+    {
+      "en": "but",
+      "uk": "але",
+      "picture": "add-context-but",
+      "alt": "Але: надворі сонце, а людина засмучена"
+    },
+    {
+      "en": "even",
+      "uk": "навіть",
+      "picture": "add-context-even",
+      "alt": "Навіть найменша дитина допомагає"
+    },
+    {
+      "en": "these",
+      "uk": "ці",
+      "picture": "add-context-these",
+      "alt": "Ці квіти поруч із мовцем"
+    },
+    {
+      "en": "we",
+      "uk": "ми",
+      "picture": "add-context-we",
+      "alt": "Ми: друзі вказують на себе"
+    },
+    {
+      "en": "your",
+      "uk": "твій; ваш",
+      "picture": "add-context-your",
+      "alt": "Твій капелюх: повернення власникові"
+    },
+    {
+      "en": "they",
+      "uk": "вони",
+      "picture": "add-context-they",
+      "alt": "Вони: окрема група людей"
+    },
+    {
+      "en": "any",
+      "uk": "будь-який",
+      "picture": "add-context-any",
+      "alt": "Можна вибрати будь-яке яблуко"
+    },
+    {
+      "en": "his",
+      "uk": "його",
+      "picture": "add-context-his",
+      "alt": "Його пальто належить чоловікові"
+    },
+    {
+      "en": "she",
+      "uk": "вона",
+      "picture": "add-context-she",
+      "alt": "Вона: мовець указує на жінку"
+    },
+    {
+      "en": "us",
+      "uk": "нас; нам",
+      "picture": "add-context-us",
+      "alt": "Нам: подарунок для двох друзів"
+    },
+    {
+      "en": "my",
+      "uk": "мій",
+      "picture": "add-context-my",
+      "alt": "Моє горнятко належить мені"
+    },
+    {
+      "en": "them",
+      "uk": "їх; їм",
+      "picture": "add-context-them",
+      "alt": "Їм: яблука для групи людей"
+    },
+    {
+      "en": "or",
+      "uk": "або",
+      "picture": "add-context-or",
+      "alt": "Або яблуко, або груша"
+    },
+    {
+      "en": "my name is",
+      "uk": "мене звати",
+      "picture": "add-context-my-name-is",
+      "alt": "Мене звати: Анна представляється"
+    },
+    {
+      "en": "what's your name?",
+      "uk": "як тебе звати?",
+      "picture": "add-context-what-s-your-name",
+      "alt": "Запитання про ім’я співрозмовника"
+    },
+    {
+      "en": "where are you from?",
+      "uk": "звідки ти?",
+      "picture": "add-context-where-are-you-from",
+      "alt": "Звідки ти: розмова про рідне місце"
+    },
+    {
+      "en": "how old are you?",
+      "uk": "скільки тобі років?",
+      "picture": "add-context-how-old-are-you",
+      "alt": "Запитання про вік біля святкового торта"
+    },
+    {
+      "en": "I'm twenty years old",
+      "uk": "мені двадцять років",
+      "picture": "add-context-i-m-twenty-years-old",
+      "alt": "Мені двадцять років: свічки 20 на торті"
+    },
+    {
+      "en": "first name",
+      "uk": "ім'я",
+      "picture": "add-context-first-name",
+      "alt": "Ім’я Anna у повному імені Anna Smith"
+    },
+    {
+      "en": "last name",
+      "uk": "прізвище",
+      "picture": "add-context-last-name",
+      "alt": "Прізвище Smith у повному імені Anna Smith"
+    },
+    {
+      "en": "how do you spell it?",
+      "uk": "як це пишеться по літерах?",
+      "picture": "add-context-how-do-you-spell-it",
+      "alt": "Ім’я Anna по літерах: A N N A"
+    },
+    {
+      "en": "it",
+      "uk": "воно; це (про річ або тварину)",
+      "picture": "add-context-it",
+      "alt": "Воно: вказівка на котика"
+    },
+    {
+      "en": "my",
+      "uk": "мій; моя; моє",
+      "picture": "add-context-my",
+      "alt": "Моє горнятко належить мені"
+    },
+    {
+      "en": "his",
+      "uk": "його (належність)",
+      "picture": "add-context-his",
+      "alt": "Його пальто належить чоловікові"
+    },
+    {
+      "en": "its",
+      "uk": "його; її (належність речі або тварині)",
+      "picture": "add-context-its",
+      "alt": "Його мисочка: річ належить котику"
+    },
+    {
+      "en": "their",
+      "uk": "їхній",
+      "picture": "add-context-their",
+      "alt": "Їхня спільна ковдра для пікніка"
+    },
+    {
+      "en": "mine",
+      "uk": "мій; моя (без іменника)",
+      "picture": "add-context-mine",
+      "alt": "Ця парасолька моя"
+    },
+    {
+      "en": "yours",
+      "uk": "твій; ваш (без іменника)",
+      "picture": "add-context-yours",
+      "alt": "Ця парасолька твоя"
+    },
+    {
+      "en": "ours",
+      "uk": "наш; наша (без іменника)",
+      "picture": "add-context-ours",
+      "alt": "Ця парасолька наша"
+    },
+    {
+      "en": "hers",
+      "uk": "її (без іменника)",
+      "picture": "add-context-hers",
+      "alt": "Ця сумка її"
+    },
+    {
+      "en": "theirs",
+      "uk": "їхній; їхня (без іменника)",
+      "picture": "add-context-theirs",
+      "alt": "Цей будиночок їхній"
+    },
+    {
+      "en": "this",
+      "uk": "це; цей",
+      "picture": "add-context-this",
+      "alt": "Це горнятко поруч із мовцем"
+    },
+    {
+      "en": "that",
+      "uk": "те; той",
+      "picture": "add-context-that",
+      "alt": "Той чайник на дальньому краю столу"
+    },
+    {
+      "en": "what",
+      "uk": "що; який",
+      "picture": "add-context-what",
+      "alt": "Що лежить у кошику?"
+    },
+    {
+      "en": "where",
+      "uk": "де; куди",
+      "picture": "add-context-where",
+      "alt": "Де розташований будиночок?"
+    },
+    {
+      "en": "why",
+      "uk": "чому",
+      "picture": "add-context-why",
+      "alt": "Чому квітка зів’яла?"
+    },
+    {
+      "en": "which",
+      "uk": "котрий; який із",
+      "picture": "add-context-which",
+      "alt": "Котре з трьох горняток обрати?"
+    },
+    {
+      "en": "whose",
+      "uk": "чий",
+      "picture": "add-context-whose",
+      "alt": "Чий шарф залишився на лавці?"
+    },
+    {
+      "en": "how much",
+      "uk": "скільки (незлічувана кількість або ціна)",
+      "picture": "add-context-how-much",
+      "alt": "Скільки коштує баночка меду?"
+    },
+    {
+      "en": "how old",
+      "uk": "скільки років",
+      "picture": "add-context-how-old",
+      "alt": "Скільки років імениннику?"
+    },
+    {
+      "en": "today",
+      "uk": "сьогодні",
+      "picture": "add-context-today",
+      "alt": "Сьогодні: позначений середній день"
+    },
+    {
+      "en": "tomorrow",
+      "uk": "завтра",
+      "picture": "add-context-tomorrow",
+      "alt": "Завтра: наступний день після сьогодні"
+    },
+    {
+      "en": "yesterday",
+      "uk": "вчора",
+      "picture": "add-context-yesterday",
+      "alt": "Вчора: попередній день перед сьогодні"
+    },
+    {
+      "en": "later",
+      "uk": "пізніше",
+      "picture": "add-context-later",
+      "alt": "Пізніше: чаювання відкладають"
+    },
+    {
+      "en": "for",
+      "uk": "для; протягом",
+      "picture": "add-context-for-duration",
+      "alt": "Протягом певного часу: робота в саду"
+    },
+    {
+      "en": "about",
+      "uk": "про",
+      "picture": "add-context-about",
+      "alt": "Розмова про човен"
+    },
+    {
+      "en": "before",
+      "uk": "перед; до",
+      "picture": "add-context-before",
+      "alt": "Перед їжею миють руки"
+    },
+    {
+      "en": "and",
+      "uk": "і; та",
+      "picture": "add-context-and",
+      "alt": "І: яблуко та груша разом"
+    },
+    {
+      "en": "so",
+      "uk": "тому; отже",
+      "picture": "add-context-so",
+      "alt": "Отже: дощить, тому потрібна парасолька"
+    },
+    {
+      "en": "while",
+      "uk": "поки; тоді як",
+      "picture": "add-context-while",
+      "alt": "Одночасно: поки одна людина в’яже, інша читає"
+    },
+    {
+      "en": "although",
+      "uk": "хоча",
+      "picture": "add-context-although",
+      "alt": "Хоча дощить, прогулянка приємна"
+    },
+    {
+      "en": "though",
+      "uk": "хоча",
+      "picture": "add-context-though",
+      "alt": "Хоча дощить, людина усміхається"
+    },
+    {
+      "en": "unless",
+      "uk": "якщо не",
+      "picture": "add-context-unless",
+      "alt": "Якщо не полити, квіти зів’януть"
+    },
+    {
+      "en": "until",
+      "uk": "доки не",
+      "picture": "add-context-until",
+      "alt": "Чекати, доки хліб не спечеться"
+    },
+    {
+      "en": "before",
+      "uk": "перед тим як",
+      "picture": "add-context-before",
+      "alt": "Перед їжею миють руки"
+    },
+    {
+      "en": "after",
+      "uk": "після того як",
+      "picture": "add-context-after",
+      "alt": "Після їжі миють посуд"
+    },
+    {
+      "en": "since",
+      "uk": "відтоді як; оскільки",
+      "picture": "add-context-since",
+      "alt": "Відтоді як посадили дерево, воно виросло"
+    },
+    {
+      "en": "as",
+      "uk": "коли; оскільки",
+      "picture": "add-context-as-cause",
+      "alt": "Коли починається дощ, людина зачиняє вікно"
+    },
+    {
+      "en": "whether",
+      "uk": "чи",
+      "picture": "add-context-whether",
+      "alt": "Чи брати парасольку?"
+    },
+    {
+      "en": "that",
+      "uk": "що",
+      "picture": "add-context-that-complement",
+      "alt": "Що: учитель пояснює, що насіння проростає"
+    },
+    {
+      "en": "both ... and",
+      "uk": "і ... і",
+      "picture": "add-context-both-and",
+      "alt": "І яблуко, і груша: обидва варіанти"
+    },
+    {
+      "en": "either ... or",
+      "uk": "або ... або",
+      "picture": "add-context-either-or",
+      "alt": "Або чай, або кава: обрати одне"
+    },
+    {
+      "en": "neither ... nor",
+      "uk": "ні ... ні",
+      "picture": "add-context-neither-nor",
+      "alt": "Ні чай, ні кава: відмова від обох"
+    },
+    {
+      "en": "not only ... but also",
+      "uk": "не лише ... а й",
+      "picture": "add-context-not-only-but-also",
+      "alt": "Не лише яблука, а й груші"
+    },
+    {
+      "en": "capital",
+      "uk": "столиця",
+      "picture": "add-context-capital",
+      "alt": "Столиця країни позначена зіркою"
+    },
+    {
+      "en": "always",
+      "uk": "завжди",
+      "picture": "add-context-always",
+      "alt": "Завжди: дія кожного дня"
+    },
+    {
+      "en": "usually",
+      "uk": "зазвичай",
+      "picture": "add-context-usually",
+      "alt": "Зазвичай: дія майже щодня"
+    },
+    {
+      "en": "often",
+      "uk": "часто",
+      "picture": "add-context-often",
+      "alt": "Часто: багато повторень за тиждень"
+    },
+    {
+      "en": "sometimes",
+      "uk": "іноді",
+      "picture": "add-context-sometimes",
+      "alt": "Іноді: дія лише в деякі дні"
+    },
+    {
+      "en": "rarely",
+      "uk": "рідко",
+      "picture": "add-context-rarely",
+      "alt": "Рідко: лише один випадок за тиждень"
+    },
+    {
+      "en": "never",
+      "uk": "ніколи",
+      "picture": "add-context-never",
+      "alt": "Ніколи: жодного повторення"
+    },
+    {
+      "en": "already",
+      "uk": "уже",
+      "picture": "add-context-already",
+      "alt": "Уже готово: завершений шарф"
+    },
+    {
+      "en": "still",
+      "uk": "досі; усе ще",
+      "picture": "add-context-still",
+      "alt": "Досі триває: людина продовжує в’язати"
+    },
+    {
+      "en": "yet",
+      "uk": "ще (у запереченнях); уже (у питаннях)",
+      "picture": "add-context-yet",
+      "alt": "Ще не завершено: шарф на спицях"
+    },
+    {
+      "en": "just",
+      "uk": "щойно; лише",
+      "picture": "add-context-just",
+      "alt": "Щойно спечений хліб"
+    },
+    {
+      "en": "soon",
+      "uk": "скоро",
+      "picture": "add-context-soon",
+      "alt": "Скоро: залишилося зовсім трохи часу"
+    },
+    {
+      "en": "here",
+      "uk": "тут",
+      "picture": "add-context-here",
+      "alt": "Тут: місце біля мовця"
+    },
+    {
+      "en": "everywhere",
+      "uk": "скрізь",
+      "picture": "add-context-everywhere",
+      "alt": "Скрізь у саду ростуть квіти"
+    },
+    {
+      "en": "quietly",
+      "uk": "тихо",
+      "picture": "add-context-quietly",
+      "alt": "Тихо: не розбудити котика"
+    },
+    {
+      "en": "loudly",
+      "uk": "голосно",
+      "picture": "add-context-loudly",
+      "alt": "Голосно: дзвоник чутно здалеку"
+    },
+    {
+      "en": "together",
+      "uk": "разом",
+      "picture": "add-context-together",
+      "alt": "Разом несуть кошик"
+    },
+    {
+      "en": "alone",
+      "uk": "наодинці",
+      "picture": "add-context-alone",
+      "alt": "Наодинці на садовій лавці"
+    },
+    {
+      "en": "again",
+      "uk": "знову",
+      "picture": "add-context-again",
+      "alt": "Знову полити ту саму квітку"
+    },
+    {
+      "en": "almost",
+      "uk": "майже",
+      "picture": "add-context-almost",
+      "alt": "Майже готовий шарф"
+    },
+    {
+      "en": "really",
+      "uk": "справді; дуже",
+      "picture": "add-context-really",
+      "alt": "Справді дуже подобається аромат троянди"
+    },
+    {
+      "en": "probably",
+      "uk": "імовірно",
+      "picture": "add-context-probably",
+      "alt": "Імовірно дощитиме"
+    },
+    {
+      "en": "good luck",
+      "uk": "щасти",
+      "picture": "add-context-good-luck",
+      "alt": "Щасти в подорожі"
+    },
+    {
+      "en": "it depends",
+      "uk": "це залежить від обставин",
+      "picture": "add-context-it-depends",
+      "alt": "Вибір залежить від погоди"
+    },
+    {
+      "en": "exchange rate",
+      "uk": "обмінний курс",
+      "picture": "add-context-exchange-rate",
+      "alt": "Обмінний курс між двома валютами"
+    },
+    {
+      "en": "airline",
+      "uk": "авіакомпанія",
+      "picture": "add-context-airline",
+      "alt": "Авіакомпанія та її літаки"
+    },
+    {
+      "en": "boarding",
+      "uk": "посадка в літак",
+      "picture": "add-context-boarding",
+      "alt": "Посадка пасажирів у літак"
+    },
+    {
+      "en": "cancelled",
+      "uk": "скасований",
+      "picture": "add-context-cancelled",
+      "alt": "Рейс скасований"
+    },
+    {
+      "en": "Wi-Fi password",
+      "uk": "пароль до вайфаю",
+      "picture": "add-context-wi-fi-password",
+      "alt": "Картка з паролем до вайфаю"
+    },
+    {
+      "en": "vacancy",
+      "uk": "вільний номер",
+      "picture": "add-context-vacancy",
+      "alt": "Вільний номер у готелі"
+    },
+    {
+      "en": "fully booked",
+      "uk": "усі номери заброньовані",
+      "picture": "add-context-fully-booked",
+      "alt": "Усі номери заброньовані"
+    },
+    {
+      "en": "package holiday",
+      "uk": "пакетний тур",
+      "picture": "add-context-package-holiday",
+      "alt": "Пакетний тур: переліт, готель і відпочинок"
+    },
+    {
+      "en": "next week",
+      "uk": "наступного тижня",
+      "picture": "add-context-next-week",
+      "alt": "Наступний тиждень у календарі"
+    },
+    {
+      "en": "next month",
+      "uk": "наступного місяця",
+      "picture": "add-context-next-month",
+      "alt": "Наступний місяць у календарі"
+    },
+    {
+      "en": "next year",
+      "uk": "наступного року",
+      "picture": "add-context-next-year",
+      "alt": "Наступний рік після поточного"
+    },
+    {
+      "en": "in a few days",
+      "uk": "за кілька днів",
+      "picture": "add-context-in-a-few-days",
+      "alt": "За кілька днів від сьогодні"
+    },
+    {
+      "en": "contents",
+      "uk": "зміст (перелік розділів)",
+      "picture": "add-context-contents",
+      "alt": "Зміст книжки: перелік розділів"
+    },
+    {
+      "en": "publisher",
+      "uk": "видавець; видавництво",
+      "picture": "add-context-publisher",
+      "alt": "Видавництво готує та друкує книжки"
+    },
+    {
+      "en": "department",
+      "uk": "відділ",
+      "picture": "add-context-department",
+      "alt": "Окремий відділ в офісі"
+    },
+    {
+      "en": "agenda",
+      "uk": "порядок денний",
+      "picture": "add-context-agenda",
+      "alt": "Порядок денний: теми майбутньої зустрічі"
+    },
+    {
+      "en": "minutes",
+      "uk": "протокол зустрічі",
+      "picture": "add-context-minutes",
+      "alt": "Протокол: запис перебігу зустрічі"
+    },
+    {
+      "en": "overtime",
+      "uk": "понаднормова робота",
+      "picture": "add-context-overtime",
+      "alt": "Понаднормова робота ввечері"
+    },
+    {
+      "en": "durable",
+      "uk": "довговічний; зносостійкий",
+      "picture": "add-context-durable",
+      "alt": "Міцні черевики служать довго"
+    },
+    {
+      "en": "principle",
+      "uk": "принцип",
+      "picture": "add-context-principle",
+      "alt": "Принцип: діяти за послідовним правилом"
     }
   ]
 }

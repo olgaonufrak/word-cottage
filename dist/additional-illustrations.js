@@ -21903,6 +21903,2498 @@ const additionalVocabularyEntries=[
         "alt": "Ніс — орган нюху"
       }
     ]
+  },
+  {
+    "en": "case",
+    "uk": "випадок; справа",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Розгляд окремого випадку"
+      }
+    ]
+  },
+  {
+    "en": "word",
+    "uk": "слово",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Одне слово в ілюстрованому словнику"
+      }
+    ]
+  },
+  {
+    "en": "member",
+    "uk": "учасник; член",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Новий учасник садового гуртка"
+      }
+    ]
+  },
+  {
+    "en": "name",
+    "uk": "ім’я",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ім’я на бейджі"
+      }
+    ]
+  },
+  {
+    "en": "others",
+    "uk": "інші",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Інші учасники садового гуртка"
+      }
+    ]
+  },
+  {
+    "en": "be",
+    "uk": "бути",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Бути: людина присутня в кімнаті"
+      }
+    ]
+  },
+  {
+    "en": "can",
+    "uk": "могти; вміти",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Уміти їздити на велосипеді"
+      }
+    ]
+  },
+  {
+    "en": "would",
+    "uk": "би (умовна дія)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Умовна дія: мрія про відпочинок"
+      }
+    ]
+  },
+  {
+    "en": "will",
+    "uk": "допоміжне слово майбутнього часу",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Майбутня дія: із насіння виросте соняшник"
+      }
+    ]
+  },
+  {
+    "en": "could",
+    "uk": "міг би; міг",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Можливість: можна перейти струмок"
+      }
+    ]
+  },
+  {
+    "en": "may",
+    "uk": "могти (можливість; дозвіл)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Дозвіл узяти печиво"
+      }
+    ]
+  },
+  {
+    "en": "should",
+    "uk": "слід; варто",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Варто вдягнутися за погодою"
+      }
+    ]
+  },
+  {
+    "en": "mean",
+    "uk": "означати",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Пояснення того, що означає символ"
+      }
+    ]
+  },
+  {
+    "en": "seem",
+    "uk": "здаватися",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Здаватися: пальто схоже на людину"
+      }
+    ]
+  },
+  {
+    "en": "might",
+    "uk": "могти (ймовірність)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Можливо, піде дощ"
+      }
+    ]
+  },
+  {
+    "en": "happen",
+    "uk": "траплятися",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Несподівана подія в саду"
+      }
+    ]
+  },
+  {
+    "en": "must",
+    "uk": "мусити",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Обов’язково застебнути шолом"
+      }
+    ]
+  },
+  {
+    "en": "include",
+    "uk": "включати",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Кошик включає хліб, яблуко й напій"
+      }
+    ]
+  },
+  {
+    "en": "real",
+    "uk": "справжній",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Справжнє яблуко поруч із його малюнком"
+      }
+    ]
+  },
+  {
+    "en": "able",
+    "uk": "здатний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Здатна власноруч зробити годівничку"
+      }
+    ]
+  },
+  {
+    "en": "possible",
+    "uk": "можливий",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Можливий прохід через відчинену хвіртку"
+      }
+    ]
+  },
+  {
+    "en": "true",
+    "uk": "правдивий",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Правдиве зізнання про розбиту чашку"
+      }
+    ]
+  },
+  {
+    "en": "federal",
+    "uk": "федеральний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Регіони та спільний федеральний уряд"
+      }
+    ]
+  },
+  {
+    "en": "recent",
+    "uk": "нещодавній",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Нещодавно посаджене деревце"
+      }
+    ]
+  },
+  {
+    "en": "certain",
+    "uk": "певний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-47.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Упевненість у правильному виборі"
+      }
+    ]
+  },
+  {
+    "en": "likely",
+    "uk": "ймовірний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ймовірний дощ"
+      }
+    ]
+  },
+  {
+    "en": "current",
+    "uk": "поточний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Поточний день у щоденнику"
+      }
+    ]
+  },
+  {
+    "en": "general",
+    "uk": "загальний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Загальний вигляд саду"
+      }
+    ]
+  },
+  {
+    "en": "there",
+    "uk": "там",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Там: будиночок удалині"
+      }
+    ]
+  },
+  {
+    "en": "now",
+    "uk": "зараз",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Зараз: дзвоник лунає цієї миті"
+      }
+    ]
+  },
+  {
+    "en": "of",
+    "uk": "кого; чого; з (належність)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Належність: черевичок дитини"
+      }
+    ]
+  },
+  {
+    "en": "then",
+    "uk": "тоді; потім",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Потім: спочатку набрати воду, тоді полити"
+      }
+    ]
+  },
+  {
+    "en": "all",
+    "uk": "все; усі",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Усі яблука зібрані в кошику"
+      }
+    ]
+  },
+  {
+    "en": "than",
+    "uk": "ніж",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Порівняння: одна квітка вища, ніж інша"
+      }
+    ]
+  },
+  {
+    "en": "the",
+    "uk": "означений артикль",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Означений артикль: конкретне яблуко"
+      }
+    ]
+  },
+  {
+    "en": "those",
+    "uk": "ті",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ті квіти далеко від мовця"
+      }
+    ]
+  },
+  {
+    "en": "it",
+    "uk": "воно; це",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Воно: вказівка на котика"
+      }
+    ]
+  },
+  {
+    "en": "and",
+    "uk": "і",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "І: яблуко та груша разом"
+      }
+    ]
+  },
+  {
+    "en": "what",
+    "uk": "що",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Що лежить у кошику?"
+      }
+    ]
+  },
+  {
+    "en": "that",
+    "uk": "той; те; що",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Той чайник на дальньому краю столу"
+      }
+    ]
+  },
+  {
+    "en": "if",
+    "uk": "якщо",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Якщо піде дощ, розкриємо парасольку"
+      }
+    ]
+  },
+  {
+    "en": "a",
+    "uk": "неозначений артикль",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Неозначений артикль: одне з яблук"
+      }
+    ]
+  },
+  {
+    "en": "so",
+    "uk": "отже; так",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Отже: дощить, тому потрібна парасолька"
+      }
+    ]
+  },
+  {
+    "en": "after",
+    "uk": "після",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Після їжі миють посуд"
+      }
+    ]
+  },
+  {
+    "en": "I",
+    "uk": "я",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Я: людина вказує на себе"
+      }
+    ]
+  },
+  {
+    "en": "also",
+    "uk": "також",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Також: до яблука додають грушу"
+      }
+    ]
+  },
+  {
+    "en": "you",
+    "uk": "ти; ви",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ти: звертання до співрозмовника"
+      }
+    ]
+  },
+  {
+    "en": "who",
+    "uk": "хто",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Хто з цих людей?"
+      }
+    ]
+  },
+  {
+    "en": "back",
+    "uk": "назад",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Назад: повернення до будинку"
+      }
+    ]
+  },
+  {
+    "en": "once",
+    "uk": "одного разу",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Одного разу: один спогад про пікнік"
+      }
+    ]
+  },
+  {
+    "en": "how",
+    "uk": "як",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Як зав’язати бант"
+      }
+    ]
+  },
+  {
+    "en": "for",
+    "uk": "для",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Для дитини: подарунок адресований їй"
+      }
+    ]
+  },
+  {
+    "en": "which",
+    "uk": "який; котрий",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Котре з трьох горняток обрати?"
+      }
+    ]
+  },
+  {
+    "en": "ex",
+    "uk": "колишній; колишня",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Колишній листоноша та його давнє фото"
+      }
+    ]
+  },
+  {
+    "en": "about",
+    "uk": "про; приблизно",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Розмова про човен"
+      }
+    ]
+  },
+  {
+    "en": "not",
+    "uk": "не",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Не: відмова від запропонованого напою"
+      }
+    ]
+  },
+  {
+    "en": "unfortunately",
+    "uk": "на жаль",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "На жаль: дощ зіпсував пікнік"
+      }
+    ]
+  },
+  {
+    "en": "he",
+    "uk": "він",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Він: мовець указує на чоловіка"
+      }
+    ]
+  },
+  {
+    "en": "when",
+    "uk": "коли",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Коли зустрічаємося?"
+      }
+    ]
+  },
+  {
+    "en": "our",
+    "uk": "наш",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Наш спільний кошик"
+      }
+    ]
+  },
+  {
+    "en": "as",
+    "uk": "як",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Як: зробити так само, як інша людина"
+      }
+    ]
+  },
+  {
+    "en": "me",
+    "uk": "мене; мені",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Мені: людині дарують квітку"
+      }
+    ]
+  },
+  {
+    "en": "itself",
+    "uk": "саме; себе (про предмет)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Сам предмет: музична скринька відкривається сама"
+      }
+    ]
+  },
+  {
+    "en": "this",
+    "uk": "цей; це",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Це горнятко поруч із мовцем"
+      }
+    ]
+  },
+  {
+    "en": "because",
+    "uk": "тому що",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Квітка зів’яла, тому що їй бракує води"
+      }
+    ]
+  },
+  {
+    "en": "just",
+    "uk": "лише; щойно",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Щойно спечений хліб"
+      }
+    ]
+  },
+  {
+    "en": "yet",
+    "uk": "ще; поки що",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ще не завершено: шарф на спицях"
+      }
+    ]
+  },
+  {
+    "en": "her",
+    "uk": "її; їй",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Їй: подарунок для жінки"
+      }
+    ]
+  },
+  {
+    "en": "him",
+    "uk": "його; йому",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Йому: подарунок для чоловіка"
+      }
+    ]
+  },
+  {
+    "en": "ever",
+    "uk": "коли-небудь",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Коли-небудь: роздуми про можливу подорож"
+      }
+    ]
+  },
+  {
+    "en": "but",
+    "uk": "але",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Але: надворі сонце, а людина засмучена"
+      }
+    ]
+  },
+  {
+    "en": "even",
+    "uk": "навіть",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Навіть найменша дитина допомагає"
+      }
+    ]
+  },
+  {
+    "en": "these",
+    "uk": "ці",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ці квіти поруч із мовцем"
+      }
+    ]
+  },
+  {
+    "en": "we",
+    "uk": "ми",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ми: друзі вказують на себе"
+      }
+    ]
+  },
+  {
+    "en": "your",
+    "uk": "твій; ваш",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Твій капелюх: повернення власникові"
+      }
+    ]
+  },
+  {
+    "en": "they",
+    "uk": "вони",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Вони: окрема група людей"
+      }
+    ]
+  },
+  {
+    "en": "any",
+    "uk": "будь-який",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Можна вибрати будь-яке яблуко"
+      }
+    ]
+  },
+  {
+    "en": "his",
+    "uk": "його",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Його пальто належить чоловікові"
+      }
+    ]
+  },
+  {
+    "en": "she",
+    "uk": "вона",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Вона: мовець указує на жінку"
+      }
+    ]
+  },
+  {
+    "en": "us",
+    "uk": "нас; нам",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Нам: подарунок для двох друзів"
+      }
+    ]
+  },
+  {
+    "en": "my",
+    "uk": "мій",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Моє горнятко належить мені"
+      }
+    ]
+  },
+  {
+    "en": "them",
+    "uk": "їх; їм",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Їм: яблука для групи людей"
+      }
+    ]
+  },
+  {
+    "en": "or",
+    "uk": "або",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Або яблуко, або груша"
+      }
+    ]
+  },
+  {
+    "en": "my name is",
+    "uk": "мене звати",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Мене звати: Анна представляється"
+      }
+    ]
+  },
+  {
+    "en": "what's your name?",
+    "uk": "як тебе звати?",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Запитання про ім’я співрозмовника"
+      }
+    ]
+  },
+  {
+    "en": "where are you from?",
+    "uk": "звідки ти?",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Звідки ти: розмова про рідне місце"
+      }
+    ]
+  },
+  {
+    "en": "how old are you?",
+    "uk": "скільки тобі років?",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Запитання про вік біля святкового торта"
+      }
+    ]
+  },
+  {
+    "en": "I'm twenty years old",
+    "uk": "мені двадцять років",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Мені двадцять років: свічки 20 на торті"
+      }
+    ]
+  },
+  {
+    "en": "first name",
+    "uk": "ім'я",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ім’я Anna у повному імені Anna Smith"
+      }
+    ]
+  },
+  {
+    "en": "last name",
+    "uk": "прізвище",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Прізвище Smith у повному імені Anna Smith"
+      }
+    ]
+  },
+  {
+    "en": "how do you spell it?",
+    "uk": "як це пишеться по літерах?",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ім’я Anna по літерах: A N N A"
+      }
+    ]
+  },
+  {
+    "en": "it",
+    "uk": "воно; це (про річ або тварину)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Воно: вказівка на котика"
+      }
+    ]
+  },
+  {
+    "en": "my",
+    "uk": "мій; моя; моє",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Моє горнятко належить мені"
+      }
+    ]
+  },
+  {
+    "en": "his",
+    "uk": "його (належність)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Його пальто належить чоловікові"
+      }
+    ]
+  },
+  {
+    "en": "its",
+    "uk": "його; її (належність речі або тварині)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Його мисочка: річ належить котику"
+      }
+    ]
+  },
+  {
+    "en": "their",
+    "uk": "їхній",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Їхня спільна ковдра для пікніка"
+      }
+    ]
+  },
+  {
+    "en": "mine",
+    "uk": "мій; моя (без іменника)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ця парасолька моя"
+      }
+    ]
+  },
+  {
+    "en": "yours",
+    "uk": "твій; ваш (без іменника)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ця парасолька твоя"
+      }
+    ]
+  },
+  {
+    "en": "ours",
+    "uk": "наш; наша (без іменника)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ця парасолька наша"
+      }
+    ]
+  },
+  {
+    "en": "hers",
+    "uk": "її (без іменника)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ця сумка її"
+      }
+    ]
+  },
+  {
+    "en": "theirs",
+    "uk": "їхній; їхня (без іменника)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Цей будиночок їхній"
+      }
+    ]
+  },
+  {
+    "en": "this",
+    "uk": "це; цей",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Це горнятко поруч із мовцем"
+      }
+    ]
+  },
+  {
+    "en": "that",
+    "uk": "те; той",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Той чайник на дальньому краю столу"
+      }
+    ]
+  },
+  {
+    "en": "what",
+    "uk": "що; який",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Що лежить у кошику?"
+      }
+    ]
+  },
+  {
+    "en": "where",
+    "uk": "де; куди",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Де розташований будиночок?"
+      }
+    ]
+  },
+  {
+    "en": "why",
+    "uk": "чому",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-50.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Чому квітка зів’яла?"
+      }
+    ]
+  },
+  {
+    "en": "which",
+    "uk": "котрий; який із",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Котре з трьох горняток обрати?"
+      }
+    ]
+  },
+  {
+    "en": "whose",
+    "uk": "чий",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Чий шарф залишився на лавці?"
+      }
+    ]
+  },
+  {
+    "en": "how much",
+    "uk": "скільки (незлічувана кількість або ціна)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Скільки коштує баночка меду?"
+      }
+    ]
+  },
+  {
+    "en": "how old",
+    "uk": "скільки років",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Скільки років імениннику?"
+      }
+    ]
+  },
+  {
+    "en": "today",
+    "uk": "сьогодні",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Сьогодні: позначений середній день"
+      }
+    ]
+  },
+  {
+    "en": "tomorrow",
+    "uk": "завтра",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Завтра: наступний день після сьогодні"
+      }
+    ]
+  },
+  {
+    "en": "yesterday",
+    "uk": "вчора",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Вчора: попередній день перед сьогодні"
+      }
+    ]
+  },
+  {
+    "en": "later",
+    "uk": "пізніше",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Пізніше: чаювання відкладають"
+      }
+    ]
+  },
+  {
+    "en": "for",
+    "uk": "для; протягом",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Протягом певного часу: робота в саду"
+      }
+    ]
+  },
+  {
+    "en": "about",
+    "uk": "про",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Розмова про човен"
+      }
+    ]
+  },
+  {
+    "en": "before",
+    "uk": "перед; до",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Перед їжею миють руки"
+      }
+    ]
+  },
+  {
+    "en": "and",
+    "uk": "і; та",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "І: яблуко та груша разом"
+      }
+    ]
+  },
+  {
+    "en": "so",
+    "uk": "тому; отже",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Отже: дощить, тому потрібна парасолька"
+      }
+    ]
+  },
+  {
+    "en": "while",
+    "uk": "поки; тоді як",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Одночасно: поки одна людина в’яже, інша читає"
+      }
+    ]
+  },
+  {
+    "en": "although",
+    "uk": "хоча",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Хоча дощить, прогулянка приємна"
+      }
+    ]
+  },
+  {
+    "en": "though",
+    "uk": "хоча",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Хоча дощить, людина усміхається"
+      }
+    ]
+  },
+  {
+    "en": "unless",
+    "uk": "якщо не",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Якщо не полити, квіти зів’януть"
+      }
+    ]
+  },
+  {
+    "en": "until",
+    "uk": "доки не",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Чекати, доки хліб не спечеться"
+      }
+    ]
+  },
+  {
+    "en": "before",
+    "uk": "перед тим як",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Перед їжею миють руки"
+      }
+    ]
+  },
+  {
+    "en": "after",
+    "uk": "після того як",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-48.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Після їжі миють посуд"
+      }
+    ]
+  },
+  {
+    "en": "since",
+    "uk": "відтоді як; оскільки",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Відтоді як посадили дерево, воно виросло"
+      }
+    ]
+  },
+  {
+    "en": "as",
+    "uk": "коли; оскільки",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Коли починається дощ, людина зачиняє вікно"
+      }
+    ]
+  },
+  {
+    "en": "whether",
+    "uk": "чи",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Чи брати парасольку?"
+      }
+    ]
+  },
+  {
+    "en": "that",
+    "uk": "що",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Що: учитель пояснює, що насіння проростає"
+      }
+    ]
+  },
+  {
+    "en": "both ... and",
+    "uk": "і ... і",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "І яблуко, і груша: обидва варіанти"
+      }
+    ]
+  },
+  {
+    "en": "either ... or",
+    "uk": "або ... або",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Або чай, або кава: обрати одне"
+      }
+    ]
+  },
+  {
+    "en": "neither ... nor",
+    "uk": "ні ... ні",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ні чай, ні кава: відмова від обох"
+      }
+    ]
+  },
+  {
+    "en": "not only ... but also",
+    "uk": "не лише ... а й",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Не лише яблука, а й груші"
+      }
+    ]
+  },
+  {
+    "en": "capital",
+    "uk": "столиця",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Столиця країни позначена зіркою"
+      }
+    ]
+  },
+  {
+    "en": "always",
+    "uk": "завжди",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Завжди: дія кожного дня"
+      }
+    ]
+  },
+  {
+    "en": "usually",
+    "uk": "зазвичай",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Зазвичай: дія майже щодня"
+      }
+    ]
+  },
+  {
+    "en": "often",
+    "uk": "часто",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Часто: багато повторень за тиждень"
+      }
+    ]
+  },
+  {
+    "en": "sometimes",
+    "uk": "іноді",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Іноді: дія лише в деякі дні"
+      }
+    ]
+  },
+  {
+    "en": "rarely",
+    "uk": "рідко",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-51.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Рідко: лише один випадок за тиждень"
+      }
+    ]
+  },
+  {
+    "en": "never",
+    "uk": "ніколи",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ніколи: жодного повторення"
+      }
+    ]
+  },
+  {
+    "en": "already",
+    "uk": "уже",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Уже готово: завершений шарф"
+      }
+    ]
+  },
+  {
+    "en": "still",
+    "uk": "досі; усе ще",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Досі триває: людина продовжує в’язати"
+      }
+    ]
+  },
+  {
+    "en": "yet",
+    "uk": "ще (у запереченнях); уже (у питаннях)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Ще не завершено: шарф на спицях"
+      }
+    ]
+  },
+  {
+    "en": "just",
+    "uk": "щойно; лише",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-49.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Щойно спечений хліб"
+      }
+    ]
+  },
+  {
+    "en": "soon",
+    "uk": "скоро",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Скоро: залишилося зовсім трохи часу"
+      }
+    ]
+  },
+  {
+    "en": "here",
+    "uk": "тут",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Тут: місце біля мовця"
+      }
+    ]
+  },
+  {
+    "en": "everywhere",
+    "uk": "скрізь",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Скрізь у саду ростуть квіти"
+      }
+    ]
+  },
+  {
+    "en": "quietly",
+    "uk": "тихо",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Тихо: не розбудити котика"
+      }
+    ]
+  },
+  {
+    "en": "loudly",
+    "uk": "голосно",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Голосно: дзвоник чутно здалеку"
+      }
+    ]
+  },
+  {
+    "en": "together",
+    "uk": "разом",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Разом несуть кошик"
+      }
+    ]
+  },
+  {
+    "en": "alone",
+    "uk": "наодинці",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Наодинці на садовій лавці"
+      }
+    ]
+  },
+  {
+    "en": "again",
+    "uk": "знову",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Знову полити ту саму квітку"
+      }
+    ]
+  },
+  {
+    "en": "almost",
+    "uk": "майже",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 11,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Майже готовий шарф"
+      }
+    ]
+  },
+  {
+    "en": "really",
+    "uk": "справді; дуже",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 12,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Справді дуже подобається аромат троянди"
+      }
+    ]
+  },
+  {
+    "en": "probably",
+    "uk": "імовірно",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 13,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Імовірно дощитиме"
+      }
+    ]
+  },
+  {
+    "en": "good luck",
+    "uk": "щасти",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 14,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Щасти в подорожі"
+      }
+    ]
+  },
+  {
+    "en": "it depends",
+    "uk": "це залежить від обставин",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 15,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Вибір залежить від погоди"
+      }
+    ]
+  },
+  {
+    "en": "exchange rate",
+    "uk": "обмінний курс",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 16,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Обмінний курс між двома валютами"
+      }
+    ]
+  },
+  {
+    "en": "airline",
+    "uk": "авіакомпанія",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 17,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Авіакомпанія та її літаки"
+      }
+    ]
+  },
+  {
+    "en": "boarding",
+    "uk": "посадка в літак",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 18,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Посадка пасажирів у літак"
+      }
+    ]
+  },
+  {
+    "en": "cancelled",
+    "uk": "скасований",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 19,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Рейс скасований"
+      }
+    ]
+  },
+  {
+    "en": "Wi-Fi password",
+    "uk": "пароль до вайфаю",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 20,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Картка з паролем до вайфаю"
+      }
+    ]
+  },
+  {
+    "en": "vacancy",
+    "uk": "вільний номер",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 21,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Вільний номер у готелі"
+      }
+    ]
+  },
+  {
+    "en": "fully booked",
+    "uk": "усі номери заброньовані",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 22,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Усі номери заброньовані"
+      }
+    ]
+  },
+  {
+    "en": "package holiday",
+    "uk": "пакетний тур",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 23,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Пакетний тур: переліт, готель і відпочинок"
+      }
+    ]
+  },
+  {
+    "en": "next week",
+    "uk": "наступного тижня",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-52.webp?v=20261023-additional-gouache",
+        "cell": 24,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Наступний тиждень у календарі"
+      }
+    ]
+  },
+  {
+    "en": "next month",
+    "uk": "наступного місяця",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 0,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Наступний місяць у календарі"
+      }
+    ]
+  },
+  {
+    "en": "next year",
+    "uk": "наступного року",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 1,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Наступний рік після поточного"
+      }
+    ]
+  },
+  {
+    "en": "in a few days",
+    "uk": "за кілька днів",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 2,
+        "columns": 5,
+        "rows": 5,
+        "alt": "За кілька днів від сьогодні"
+      }
+    ]
+  },
+  {
+    "en": "contents",
+    "uk": "зміст (перелік розділів)",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 3,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Зміст книжки: перелік розділів"
+      }
+    ]
+  },
+  {
+    "en": "publisher",
+    "uk": "видавець; видавництво",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 4,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Видавництво готує та друкує книжки"
+      }
+    ]
+  },
+  {
+    "en": "department",
+    "uk": "відділ",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 5,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Окремий відділ в офісі"
+      }
+    ]
+  },
+  {
+    "en": "agenda",
+    "uk": "порядок денний",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 6,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Порядок денний: теми майбутньої зустрічі"
+      }
+    ]
+  },
+  {
+    "en": "minutes",
+    "uk": "протокол зустрічі",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 7,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Протокол: запис перебігу зустрічі"
+      }
+    ]
+  },
+  {
+    "en": "overtime",
+    "uk": "понаднормова робота",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 8,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Понаднормова робота ввечері"
+      }
+    ]
+  },
+  {
+    "en": "durable",
+    "uk": "довговічний; зносостійкий",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 9,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Міцні черевики служать довго"
+      }
+    ]
+  },
+  {
+    "en": "principle",
+    "uk": "принцип",
+    "pictures": [
+      {
+        "type": "painted",
+        "src": "images/vocabulary-painted/additional-53.webp?v=20261023-additional-gouache",
+        "cell": 10,
+        "columns": 5,
+        "rows": 5,
+        "alt": "Принцип: діяти за послідовним правилом"
+      }
+    ]
   }
 ];
 const additionalVocabularyKey=word=>[word.en,word.uk].map(value=>String(value).normalize('NFKC').toLowerCase().trim().replace(/\s+/gu,' ')).join('\u0000');

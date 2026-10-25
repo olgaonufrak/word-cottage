@@ -14,7 +14,8 @@ async function main(){
     return {ok:true,status:200,json:async()=>({})};
   },true),{run,element}=f;
   const history=()=>JSON.parse(run('JSON.stringify(searchHistory)'));
-  element('basics-group').onclick();assert.equal(element('search-history').innerHTML,'');
+  element('basics-group').onclick();element('basics-search').onclick();
+  assert.equal(run('screen'),'search');assert.equal(element('search-history').innerHTML,'');
   // Typing without a completed lookup must not save partial text.
   element('word-search-input').value='mo';element('word-search-input').oninput({});
   element('word-search-input').value='moon';element('word-search-input').oninput({});
@@ -25,10 +26,13 @@ async function main(){
   await run("lookupWord('  APPLE  ')");assert.deepEqual(history(),['APPLE','moonlight']);
   assert.deepEqual(JSON.parse(storage.get(KEY)),history());
   await run("lookupWord('місячне світло')");assert.equal(history()[0],'місячне світло');
-  // A history item starts its lookup immediately from either screen, without Find.
-  run('showBasics()');element('search-history-query-0').onclick();await flush();
+  // Reopening search from the compact basics tile retains history and starts recall immediately.
+  run('showBasics()');element('basics-search').onclick();
+  element('search-history-query-0').onclick();await flush();
   assert.equal(run('screen'),'search');assert.equal(element('word-search-input').value,'місячне світло');
   assert.match(element('online-word-result').innerHTML,/moonlight/);
+  element('back').onclick();assert.equal(run('screen'),'home');assert.equal(run('learningGroup'),'basics');
+  element('basics-search').onclick();assert.match(element('search-history').innerHTML,/місячне світло/);
   element('search-history-query-1').onclick();await flush();assert.equal(element('word-search-input').value,'APPLE');
   element('search-history-remove-0').onclick();assert.equal(history().some(q=>q.toLowerCase()==='apple'),false);
   const reloaded=fixture(storage,undefined,true);assert.deepEqual(JSON.parse(reloaded.run('JSON.stringify(searchHistory)')),history());
@@ -48,12 +52,12 @@ async function main(){
   element('search-history-remove-0').onclick();hold=false;resolveTranslation(response('зоряне світло'));await deleting;assert.deepEqual(history(),[]);
   // Broken or untrusted saved data cannot break the page or introduce markup.
   for(const value of ['not json','{}','null',JSON.stringify([null,{},'','   ','a'.repeat(81),'<img src=x onerror=alert(1)>','Moonlight','moonlight','мама'])]){
-    const bad=fixture(new Map([[KEY,value]]),undefined,true);bad.run('showBasics()');
+    const bad=fixture(new Map([[KEY,value]]),undefined,true);bad.run('showBasics()');bad.element('basics-search').onclick();
     assert.doesNotMatch(bad.element('search-history').innerHTML,/<img|onerror/);
     if(value.startsWith('['))assert.deepEqual(JSON.parse(bad.run('JSON.stringify(searchHistory)')),['Moonlight','мама']);
     else assert.equal(bad.run('searchHistory.length'),0);
   }
-  const quoted=fixture(new Map([[KEY,JSON.stringify(['say "hello"'])]]),undefined,true);quoted.run('showBasics()');
+  const quoted=fixture(new Map([[KEY,JSON.stringify(['say "hello"'])]]),undefined,true);quoted.run('showBasics()');quoted.element('basics-search').onclick();
   assert.match(quoted.element('search-history').innerHTML,/say &quot;hello&quot;/);
   // Storage errors keep the page usable; existing personal words and learned IDs stay untouched.
   run("localStorage.setItem=()=>{throw Error('storage unavailable')};rememberSearchQuery('moonlight')");assert.deepEqual(history(),['moonlight']);
