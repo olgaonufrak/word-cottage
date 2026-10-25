@@ -79,31 +79,45 @@ async function main(){
   assert.doesNotMatch(element('online-word-result').innerHTML,/старий результат/);
   input('starlight');const beforeBack=requests.length;element('back').onclick();await advance(800);
   assert.equal(run('screen'),'home');assert.equal(run('wordSearch'),null);assert.equal(requests.length,beforeBack);
-  // Composition on a daily overview stays in place until committed text opens search.
+  // Composition in search opened from daily tools sends only committed text.
   run('showDailyStages()');
+  element('daily-search').onclick();assert.equal(run('screen'),'search');
   const composing=element('word-search-input');composing.oncompositionstart();composing.value='зор';composing.oninput({isComposing:true});
-  await advance(800);assert.equal(run('screen'),'daily-stages');assert.equal(requests.length,beforeBack);
+  await advance(800);assert.equal(run('screen'),'search');assert.equal(requests.length,beforeBack);
   composing.value='зорепад';composing.oncompositionend();assert.equal(run('screen'),'search');await advance(400);
   assert.match(element('online-word-result').innerHTML,/meteor shower/);
   const composingSearch=element('word-search-input'),beforeComposition=requests.length;
   composingSearch.oncompositionstart();composingSearch.value='moon';composingSearch.oninput({isComposing:true});await advance(800);
   assert.equal(requests.length,beforeComposition);composingSearch.value='moonlight';composingSearch.oncompositionend();await advance(400);
   assert.match(element('online-word-result').innerHTML,/місячне світло/);
-  // Shared daily tools preserve the overview or exact stage through automatic search and history recall.
+  // Two compact daily tools preserve the overview or exact stage through search and history recall.
   for(const stage of [0,1,2,3,4]){
     run(stage?`showDailyStage(${stage})`:'showDailyStages()');
     const expected=run('screen'),label=stage?`‹ Розділи Етапу ${stage}`:'‹ Усі етапи';
-    assert.match(element('app').innerHTML,/id="daily-learned-words"/);
-    assert.match(element('app').innerHTML,/id="word-search-input"/);
+    const dailyHtml=element('app').innerHTML;
+    const dailyTools=dailyHtml.match(/<nav\b[^>]*class="[^"]*\bdaily-word-tools\b[^"]*"[^>]*>([\s\S]*?)<\/nav>/);
+    assert.ok(dailyTools);assert.match(dailyTools[0],/class="[^"]*\bbasics-tools\b[^"]*"/);
+    assert.equal((dailyTools[1].match(/<button\b/g)||[]).length,2);
+    const sectionsIndex=dailyHtml.indexOf(stage?'class="stage-section-grid"':'class="daily-stages"');
+    assert.ok(sectionsIndex>=0);
+    for(const id of ['daily-search','daily-learned-words']){
+      assert.equal((dailyHtml.match(new RegExp(`\\bid="${id}"`,'g'))||[]).length,1);
+      assert.match(dailyTools[1],new RegExp(`<button\\b[^>]*\\bid="${id}"`));
+      assert.ok(dailyHtml.indexOf(`id="${id}"`)<sectionsIndex);
+    }
+    assert.ok(dailyTools[1].indexOf('id="daily-search"')<dailyTools[1].indexOf('id="daily-learned-words"'));
+    assert.doesNotMatch(dailyHtml,/id="word-search-input"|id="word-search-form"/);
+    element('daily-search').onclick();assert.equal(run('screen'),'search');
     input('moonlight');assert.equal(run('screen'),'search');assert.equal(element('back').textContent,label);
     await advance(400);assert.match(element('online-word-result').innerHTML,/місячне світло/);
     element('back').onclick();assert.equal(run('screen'),expected);
+    element('daily-search').onclick();assert.equal(run('screen'),'search');
     element('search-history-query-0').onclick();await flush();assert.equal(element('back').textContent,label);
     element('back').onclick();assert.equal(run('screen'),expected);
     element('daily-learned-words').onclick();assert.equal(run('screen'),'learned');
     element('back').onclick();assert.equal(run('screen'),expected);
   }
   run('cancelWordSearch()');assert.deepEqual([...storage].filter(([key])=>key!=='word-cottage-search-history'),saved);
-  console.log('Passed: three compact basics tools above sections, mixed and search return routes, automatic search without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
+  console.log('Passed: compact basics and daily tools above sections, mixed and all daily search return routes, automatic search without Find, immediate local matches, debounced English/Ukrainian translation, both audio buttons and IPA, Enter without duplicate requests, stale-response rejection, clear/back cancellation, committed composition and preserved progress.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

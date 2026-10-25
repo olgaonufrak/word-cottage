@@ -59,10 +59,11 @@ function landing(){
   updateTotal();resetPageScroll();
 }
 function dailyWordTools(){
-  return `<div class="daily-word-tools"><div class="daily-word-search">${searchForm()}</div><button type="button" class="learned-entry" id="daily-learned-words"><span><strong>Вивчені слова</strong><small>Твій словник знайомих слів</small></span><span class="learned-count">${learnedWords('daily').length}</span></button></div>`;
+  return `<nav class="basics-tools daily-word-tools" aria-label="Інструменти щоденного словника"><button type="button" class="basics-tool" id="daily-search"><svg class="basics-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="basics-tool-label">Пошук слів</span></button><button type="button" class="basics-tool" id="daily-learned-words"><span class="learned-count">${learnedWords('daily').length}</span><span class="basics-tool-label">Вивчені слова</span></button></nav>`;
 }
 function bindDailyWordTools(){
-  bindWordSearchForm();document.getElementById('daily-learned-words').onclick=showLearned;
+  document.getElementById('daily-search').onclick=()=>{showSearch();resetPageScroll();document.getElementById('word-search-input').focus?.({preventScroll:true});};
+  document.getElementById('daily-learned-words').onclick=showLearned;
 }
 function showDailyStages(){
   cancelWordSearch();learningGroup='daily';dailyView='stages';screen='daily-stages';session=null;selection=null;
