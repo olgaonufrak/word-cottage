@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6eb">
+  <meta name="description" content="Візуальний план гри Word Cottage: 36 зображень, які можна переглядати крок за кроком у браузері.">
+  <title>Гра Word Cottage — візуальний план</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div><a class="brand" href="../">Word Cottage</a><h1>Візуальний план гри</h1></div>
+    <a class="phone-link" href="#33">На телефоні</a>
+  </header>
+  <main>
+    <div class="screen-heading">
+      <h2 id="screen-title">Перший вхід</h2>
+      <span id="counter" role="status" aria-live="polite" aria-atomic="true">1 / 36</span>
+    </div>
+    <figure class="image-stage" id="image-stage" tabindex="0" aria-label="Зображення концепції гри">
+      <img id="screen-image" src="images/01-welcome.jpg" width="1024" height="683" alt="Перший вхід — екран 1 візуального плану гри" fetchpriority="high">
+    </figure>
+    <p class="load-status" id="load-status" role="status" hidden>Завантаження зображення…</p>
+    <div class="error" id="load-error" role="alert" hidden>
+      <p>Не вдалося завантажити зображення. Спробуйте ще раз.</p>
+      <button type="button" id="retry">Повторити</button>
+    </div>
+    <div class="image-tools" id="image-tools" hidden>
+      <button type="button" id="zoom" aria-pressed="false" aria-controls="image-stage">Збільшити</button>
+      <a id="open-image" href="images/01-welcome.jpg" target="_blank" rel="noopener">Відкрити зображення ↗</a>
+    </div>
+    <nav class="navigation" id="navigation" aria-label="Перегляд екранів" hidden>
+      <button type="button" id="previous" disabled aria-label="Попереднє зображення">← Назад</button>
+      <label class="screen-picker"><span class="sr-only">Обрати екран</span><select id="screen-select" aria-label="Обрати екран"></select></label>
+      <button type="button" id="next" aria-label="Наступне зображення">Далі →</button>
+    </nav>
+    <noscript>
+      <p>Відкривайте зображення зі списку нижче.</p>
+      <ol class="fallback-list">
+        <li><a href="images/01-welcome.jpg">Перший вхід</a></li>
+        <li><a href="images/02-home-groups.jpg">Вибір навчальної групи</a></li>
+        <li><a href="images/03-world-map.jpg">Мапа всіх зон</a></li>
+        <li><a href="images/04-foundation.jpg">Основа для початківця</a></li>
+        <li><a href="images/05-stage-one.jpg">Етап 1</a></li>
+        <li><a href="images/06-stage-two.jpg">Етап 2</a></li>
+        <li><a href="images/07-stage-three.jpg">Етап 3</a></li>
+        <li><a href="images/08-stage-four.jpg">Етап 4</a></li>
+        <li><a href="images/09-chapter-topics.jpg">Відкрита глава</a></li>
+        <li><a href="images/10-section-list.jpg">Повний список слів</a></li>
+        <li><a href="images/11-quantity-swipe.jpg">Кількість і відбір</a></li>
+        <li><a href="images/12-intro.jpg">Крок 1. Знайомство</a></li>
+        <li><a href="images/13-matching-neutral.jpg">Знайди пару без підказок</a></li>
+        <li><a href="images/14-matching-confirmed.jpg">Підтверджена пара</a></li>
+        <li><a href="images/15-spelling-error.jpg">Крок 3. Помилка</a></li>
+        <li><a href="images/16-spelling-hint.jpg">Підказка</a></li>
+        <li><a href="images/17-gap.jpg">Крок 4. Пропуск</a></li>
+        <li><a href="images/18-sentence-builder.jpg">Крок 5. Складання</a></li>
+        <li><a href="images/19-own-sentence.jpg">Крок 6. Власне речення</a></li>
+        <li><a href="images/20-lesson-result.jpg">Результат заняття</a></li>
+        <li><a href="images/21-garden-sprouts.jpg">Сад після заняття</a></li>
+        <li><a href="images/22-resume-lesson.jpg">Продовження заняття</a></li>
+        <li><a href="images/23-daily-review.jpg">Наступний день</a></li>
+        <li><a href="images/24-audio-review.jpg">R1. Аудіювання</a></li>
+        <li><a href="images/25-review-growth.jpg">Квітка та золотий листок</a></li>
+        <li><a href="images/26-cafe-quest.jpg">Сюжетна пригода</a></li>
+        <li><a href="images/27-special-words.jpg">Особливі типи слів</a></li>
+        <li><a href="images/28-chapter-reward.jpg">Завершення глави</a></li>
+        <li><a href="images/29-shop-inventory.jpg">Крамниця прикрас</a></li>
+        <li><a href="images/30-place-item.jpg">Розміщення предмета</a></li>
+        <li><a href="images/31-personal-word.jpg">Особисте слово</a></li>
+        <li><a href="images/32-learned-words.jpg">Вивчені слова та фільтри</a></li>
+        <li><a href="images/33-mobile-garden.jpg">Телефон. Сад</a></li>
+        <li><a href="images/34-mobile-matching.jpg">Телефон. Знайди пару</a></li>
+        <li><a href="images/35-mobile-writing.jpg">Телефон. Введення</a></li>
+        <li><a href="images/36-mobile-cottage.jpg">Телефон. Будиночок</a></li>
+      </ol>
+    </noscript>
+  </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #38432a; background: #faf6eb; }
+* { box-sizing: border-box; }
+body { margin: 0; padding-bottom: env(safe-area-inset-bottom); }
+button, select { font: inherit; }
+a { color: #536335; text-underline-offset: 3px; }
+button, select, .phone-link { min-height: 44px; border: 1px solid #b6bba3; border-radius: 12px; background: #fffdf7; color: #38432a; }
+button { padding: 10px 16px; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+:focus-visible { outline: 3px solid #9c593d; outline-offset: 3px; }
+[hidden] { display: none !important; }
+.header { max-width: 1120px; margin: auto; padding: 18px 20px 8px; display: flex; gap: 12px; justify-content: space-between; align-items: center; }
+.brand { font-family: Georgia, serif; font-size: 21px; text-decoration: none; color: #98583d; }
+h1 { font-size: 14px; font-weight: 500; margin: 5px 0 0; }
+.phone-link { display: flex; align-items: center; text-align: center; padding: 8px 12px; text-decoration: none; font-size: 14px; }
+main { max-width: 1120px; margin: auto; padding: 0 20px; }
+.screen-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 16px 0 12px; }
+h2 { font-size: 18px; font-weight: 600; margin: 0; }
+#counter { flex: 0 0 auto; font-variant-numeric: tabular-nums; font-size: 14px; }
+.image-stage { margin: 0; overflow: auto; border-radius: 14px; background: #eee8d9; border: 1px solid #e3ddce; }
+.image-stage img { display: block; width: 100%; height: auto; margin: auto; }
+.image-stage.portrait { max-width: 420px; margin-inline: auto; }
+.image-stage.zoomed { max-width: none; max-height: 72vh; max-height: 72svh; }
+.image-stage.zoomed img { width: 1024px; max-width: none; }
+.image-stage.zoomed.portrait img { width: 768px; }
+.image-tools { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin: 12px 0; font-size: 14px; }
+.image-tools button { padding: 8px 14px; }
+.navigation { position: sticky; bottom: 0; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; background: #faf6eb; z-index: 1; }
+#next { background: #596b39; border-color: #596b39; color: #fffdf7; }
+.screen-picker { min-width: 0; }
+select { width: 100%; padding: 8px; text-overflow: ellipsis; }
+.error, .load-status { text-align: center; }
+.error { padding: 12px; border-radius: 12px; background: #f5e4d7; }
+.fallback-list { line-height: 2; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) {
+  .header { padding: 14px 12px 4px; }
+  main { padding: 0 10px; }
+  h2 { font-size: 16px; }
+  .screen-heading { margin: 12px 2px 10px; }
+  .navigation { gap: 6px; }
+  .navigation button { padding-inline: 10px; font-size: 14px; }
+  select { font-size: 14px; }
+  .image-tools { gap: 10px; font-size: 13px; }
+  .image-stage { border-radius: 10px; }
+}
