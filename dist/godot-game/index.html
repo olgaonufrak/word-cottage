@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ec">
+  <title>Word Cottage — гра в Godot</title>
+  <link rel="license" href="LICENSE_GODOT.txt">
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #faf6ec; color: #34442f; font-family: system-ui, sans-serif; }
+    #canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+    #loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; background: #faf6ec; z-index: 2; }
+    .loading-card { max-width: 360px; }
+    h1 { color: #9a5239; font-family: Georgia, serif; font-size: 36px; font-weight: normal; }
+    p { line-height: 1.6; }
+    progress { width: 100%; height: 12px; accent-color: #596e3c; }
+    a { color: #596e3c; text-underline-offset: 3px; }
+    button { font: inherit; min-height: 44px; border: 0; border-radius: 12px; background: #596e3c; color: white; padding: 10px 20px; cursor: pointer; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  </style>
+
+</head>
+<body>
+  <canvas id="canvas" tabindex="0" aria-label="Гра Word Cottage. Знайди пари та вирости соняшник.">Ваш браузер не підтримує Canvas.</canvas>
+  <div id="game-status" class="sr-only" role="status" aria-live="polite"></div>
+  <div id="loading" role="status" aria-live="polite"><div class="loading-card">
+    <h1>Word Cottage</h1>
+    <p id="loading-message">Готуємо твій маленький сад…<br>Перший запуск може тривати трохи довше.</p>
+    <progress id="progress" max="100"></progress>
+    <p><a href="../">До навчального сайту</a></p>
+    <button id="retry" type="button" hidden>Спробувати ще раз</button>
+  </div></div>
+  <noscript><p>Для запуску гри увімкніть JavaScript. <a href="../game-preview/">Переглянути зображення гри</a></p></noscript>
+  <script src="index.js"></script>
+  <script>
+    'use strict';
+    const loading = document.getElementById('loading');
+    const message = document.getElementById('loading-message');
+    const progress = document.getElementById('progress');
+    const retry = document.getElementById('retry');
+    retry.addEventListener('click', () => location.reload());
+    window.wordCottageStatus = text => { document.getElementById('game-status').textContent = text; };
+    window.wordCottageSpeak = word => {
+      if (!window.speechSynthesis) return;
+      speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-GB';
+      utterance.rate = 0.85;
+      const voices = speechSynthesis.getVoices().filter(voice => /^en[-_]/i.test(voice.lang));
+      const preferred = voices.find(voice => /^en[-_]GB/i.test(voice.lang)) || voices[0];
+      if (preferred) utterance.voice = preferred;
+      speechSynthesis.speak(utterance);
+    };
+    document.addEventListener('visibilitychange', () => { if (document.hidden && window.speechSynthesis) speechSynthesis.cancel(); });
+    const engine = new Engine({"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2574624,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4});
+    function fail(error) {
+      console.error(error);
+      loading.hidden = false;
+      loading.style.display = 'flex';
+      message.textContent = 'Не вдалося запустити сад. Спробуйте оновити сторінку або відкрити її в іншому браузері.';
+      progress.hidden = true;
+      retry.hidden = false;
+    }
+    window.addEventListener('unhandledrejection', event => fail(event.reason));
+    window.addEventListener('error', event => { if (loading.style.display !== 'none') fail(event.message); });
+    if (Engine.getMissingFeatures({threads: false}).length) {
+      fail('WebAssembly or WebGL 2.0 is unavailable.');
+    } else {
+      engine.startGame({
+        canvas: document.getElementById('canvas'),
+        onProgress(current, total) {
+          if (total > 0) progress.value = Math.round(current / total * 100);
+          else progress.removeAttribute('value');
+        },
+        onExit(code) { if (code !== 0) fail('Game exited with code ' + code); }
+      }).then(() => { loading.style.display = 'none'; document.getElementById('canvas').focus(); }).catch(fail);
+    }
+  </script>
+</body>
+</html>

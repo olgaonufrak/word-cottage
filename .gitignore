@@ -10,3 +10,8 @@ node_modules/
 work/
 Thumbs.db
 desktop.ini
+
+# Godot imports, editor state, and local engine binaries.
+godot-prototype/.godot/
+godot-prototype/.local/
+godot-prototype/export_credentials.cfg
