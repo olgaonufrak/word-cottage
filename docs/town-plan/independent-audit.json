@@ -1,0 +1,46 @@
+{
+  "auditDate": "2026-10-28",
+  "auditor": "independent agent using current checks/fixture.cjs + original runtime helpers",
+  "status": "PASS",
+  "assertions": 184099,
+  "errors": [],
+  "totals": {
+    "cards": 3030,
+    "steps": 18180,
+    "sections": 102,
+    "defaultScopes": 629,
+    "pairCards": 54,
+    "extraBuilders": 54,
+    "duplicateTokenBuilders": 20,
+    "formChanges": 190,
+    "oneTokenExceptions": [
+      "a1-phrases-ok"
+    ],
+    "recognitionCorrectPositions": {
+      "first": 1004,
+      "second": 1008,
+      "third": 1018
+    }
+  },
+  "checks": [
+    "Exact original 3030 ID/order/EN/UK/category preservation",
+    "Exact current wordLesson sentence,target,forms,variants,extra contexts for every ID",
+    "Six correct step types and numbered order on each card",
+    "629 exact scope memberships, examples, original-case tokens and normalized known vocabulary",
+    "Three recognition answers from actual corpus with one correct ID, distinct EN and first UK meaning",
+    "54 pair members preserved; pair recognition remains in relation category and excludes shared target member",
+    "Gap target and Ukrainian cue match current actual runtime, including forms and 54 extra-context builders",
+    "Token multiset and separate indexed instances preserve all repeated words; no extra distractors; initial order differs unless OK",
+    "Own-sentence references pass actual current ownSentenceResult in their exact default session scope",
+    "Self-check remains non-learned; input file source SHA-256 values match current files"
+  ],
+  "inputSha256": {
+    "sourceCatalog": "29622769eb897a5dbdb7c85e1812db1f14db4051ea1921e4a8355cb1a3231fec",
+    "cardExercises": "71da80adf8f5834a5576f2f8ad757e4f97e4704c7eed6f9baba7942cd33e1366"
+  },
+  "limits": [
+    "This is structural/content consistency QA of a plan, not evidence that the future town game is implemented.",
+    "Existing dictionary and context wording is preserved; this audit does not independently certify the grammar/semantic quality of every source sentence.",
+    "No real-browser UI or physical-device audio test was performed for this data-only audit."
+  ]
+}

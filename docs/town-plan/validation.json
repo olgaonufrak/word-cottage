@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-28",
+  "zones": 5,
+  "districts": 19,
+  "projects": 102,
+  "cards": 3030,
+  "packs5": 629,
+  "constructionTransitions": 408,
+  "uniqueEnglish": 2474,
+  "sourcesMatched": true,
+  "sourceWordIds": 3030,
+  "plannedWordIds": 3030,
+  "packAssignments": 3030,
+  "exerciseCards": 3030,
+  "exerciseSteps": 18180,
+  "htmlWords": 3030,
+  "exactEnglishAndUkrainian": true,
+  "sourceHashes": [
+    {
+      "path": "dist/data.js",
+      "sha256": "8e9e1e43d2434a9914de51ed97d6e6524da46e0c245a87b885f9b72265088cfc"
+    },
+    {
+      "path": "dist/stage1-data.js",
+      "sha256": "926ec4353d7e63c62f1d0cad307afd4fef0df5b3a01312b96d59400fd51f2129"
+    },
+    {
+      "path": "dist/stage2-data.js",
+      "sha256": "b3bd8006d09581aca9792d54f7156759e87227a81f9e6042417ef889d1099d1f"
+    },
+    {
+      "path": "dist/stage3-data.js",
+      "sha256": "870c7c34f492dec3148b192b857b1fc52b90416456cba84ed27ddad34b7b1cc2"
+    },
+    {
+      "path": "dist/stage4-data.js",
+      "sha256": "4035a74bfc4cc78565b18dea9dff50487d263e79e105b8c99647305d3c0ecfeb"
+    },
+    {
+      "path": "dist/context-data.js",
+      "sha256": "d63d49622a7af8c6d8fcfd17de90ad5ee8996c1e4eda1a9f85999442fd88296c"
+    }
+  ]
+}
