@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "feature": "whole-image-viewport-viewer",
+  "imagesUnchanged": 45,
+  "browserViewports": [
+    {"width": 320, "height": 568, "wholeImageContained": true, "controlsOutsideImage": true},
+    {"width": 390, "height": 844, "wholeImageContained": true, "controlsOutsideImage": true},
+    {"width": 844, "height": 390, "wholeImageContained": true, "controlsOutsideImage": true}
+  ],
+  "objectFitContain": true,
+  "singleImageElement": true,
+  "automaticViewerOpen": true,
+  "originalPixelWidthZoom": true,
+  "nextResetsZoomAndScroll": true,
+  "escapeRestoresControlsAndFocus": true,
+  "menuButtonAndReopen": true,
+  "errorAndRetryInsideViewer": true,
+  "nextRecoversFromMissingImage": true,
+  "note": "Фактична браузерна перевірка з локальним HTTP-сервером, включно з окремою тестовою 404-відповіддю. Не перевірка фізичного iPhone."
+}
