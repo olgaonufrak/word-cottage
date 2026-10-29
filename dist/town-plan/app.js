@@ -50,7 +50,7 @@
     if (window.TOWN_EXERCISES_BY_SECTION?.[category]) return Promise.resolve(window.TOWN_EXERCISES_BY_SECTION[category]);
     if (!pending.has(category)) pending.set(category, new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = `exercises/${encodeURIComponent(category)}.js`;
+      script.src = `exercises/${encodeURIComponent(category)}.js?v=20261029`;
       script.onload = () => {
         if (window.TOWN_EXERCISES_BY_SECTION?.[category]) resolve(window.TOWN_EXERCISES_BY_SECTION[category]);
         else { pending.delete(category); script.remove(); reject(new Error('empty')); }
@@ -79,7 +79,7 @@
       body += (step.extraBuilders || []).map(item => `<p><b>Додаткове речення пари:</b> ${escape(item.translation)}<br>Плитки: ${item.tokensShuffled.map(escape).join(' · ')}<br>Відповідь: ${escape(item.expectedSentence)}</p>`).join('');
       if (!step.shuffleChangePossible) body += '<p>Цей наявний контекст має лише один токен: перемішування неможливе. Це окремий короткий випадок, який не слід маскувати під багатослівний пазл.</p>';
     } else if (step.type === 'own-sentence') {
-      body = `<p>${escape(step.promptUk)}</p><p>Приклад: ${escape(step.reference.sentence)}<br>${escape(step.reference.translation)}</p><p>Доступні відомі конструкції: ${(step.referenceVariants || []).map(escape).join(' · ')}</p><p>Перевірка залежить від фактично обраного набору й знайомої лексики. Довільне нове речення не має загальної автоматичної перевірки. Самоперевірка залишає картку для повторення й не видає автоматично позначку «вивчено».</p>`;
+      body = `<p>${escape(step.promptUk)}</p><p>Приклад: ${escape(step.reference.sentence)}<br>${escape(step.reference.translation)}</p><p>Доступні відомі конструкції: ${(step.referenceVariants || []).map(escape).join(' · ')}</p><p>Перевірка враховує поточний автоматичний етап розділу та знайому лексику. Довільне нове речення не має загальної автоматичної перевірки. Самоперевірка не видає автоматично позначку «вивчено»: ця картка повертається у вправи, доки її не підтверджено.</p>`;
     }
     return `<section class="exercise-step"><strong>${step.step}. ${escape(step.prompt)}</strong>${body}</section>`;
   }

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "zones": 5,
   "districts": 19,
   "projects": 102,
@@ -15,6 +15,11 @@
   "exerciseSteps": 18180,
   "htmlWords": 3030,
   "exactEnglishAndUkrainian": true,
+  "automaticAllSectionCards": true,
+  "playerWordSelection": false,
+  "unknownWordSearch": false,
+  "personalWordAddition": false,
+  "allProjectsRequireNofN": true,
   "sourceHashes": [
     {
       "path": "dist/data.js",

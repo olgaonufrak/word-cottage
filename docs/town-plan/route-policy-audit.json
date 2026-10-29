@@ -1,0 +1,33 @@
+{
+  "auditDate": "2026-10-29",
+  "status": "PASS",
+  "baseCommit": "74b7ceceac723800cbe30ccf6322bb2852d48768",
+  "assertions": 14857,
+  "counts": {
+    "cards": 3030,
+    "sections": 102,
+    "packs": 629,
+    "steps": 18180,
+    "requiredUniqueIds": 3030
+  },
+  "checks": {
+    "sourceCatalogUnchanged": true,
+    "idsEnglishUkrainianOrderUnchanged": true,
+    "lessonsAndAnswersUnchanged": true,
+    "onlyAutocheckScopePolicyChangedInSteps": true,
+    "automaticMandatoryPacks": true,
+    "completedProjectRequiresAllSectionIds": true,
+    "legacyLearnedReferenceOnly": true,
+    "noUnknownWordSearch": true,
+    "noPersonalWordAddition": true,
+    "forbiddenSessionPolicyStrings": 0,
+    "actualLearningSiteFilesUnchanged": 11,
+    "generatedHtmlRows": 3030,
+    "publicExerciseDataMatches": true,
+    "generatedSectionChunks": 102,
+    "sectionChunkCardsExact": 3030,
+    "removedPolicyPhrasesAbsent": true
+  },
+  "errors": [],
+  "note": "Compared against the previous committed plan; all source vocabulary, lesson answers and tokens are unchanged. Added automatic campaign route policy only; section chunks match the updated card specification."
+}
