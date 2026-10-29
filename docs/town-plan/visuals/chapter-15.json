@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ch15-01",
+    "chapter": 15,
+    "number": 1,
+    "title": "Завершення тільки після всіх слів",
+    "caption": "На 17/18 чайна стійка залишається незавершеною. Гра веде до останньої обов’язкової картки.",
+    "brief": "Show the town project validation through actual gameplay. The SAME riverside tea stall is almost finished but one portion of its awning and one empty shelf remain visibly under construction, modest scaffolding. Avatar stands facing it. Top cream panel says exactly \"17/18\". A small neutral progress line is 17 of 18, visibly not full. Main bottom cream quest panel text exactly \"Залишилося 1 слово\" with a single teal button \"Продовжити\". Do not show a completion badge, unlocked star, 18/18 or any reward. Three bottom nav buttons \"Мапа\", \"Слова\", \"Дім\". Keep the river, shop, path and avatar coherent, actual game screenshot, no before-after panels.",
+    "prompt": "Use case: ui-mockup. Asset: ONE individual finished 9:16 portrait mobile Word Cottage GAMEPLAY screenshot. Input image1 is STYLE reference only. Match its crisp high-quality 16-bit pixelart, dimensional 2.5D top-down perspective, richly layered lush emerald foliage, turquoise river, peach-orange tiled roofs, cream parchment with dark wooden borders, teal buttons, tiny white and yellow flowers, virtually no lavender. Same brown-haired player with teal backpack and brown boots. Make actual playable exploration and interaction, polished large touch-target UI. All Ukrainian text spelled precisely as given, minimal text and no invented English text. NO photo, vectorflatdashboard, blurred3D, browser/phoneframe, adposter or montage. Learning all source words is compulsory. No curriculum selection checkboxes, no quantity picker, no skip, no external word search, no random currency. Scene: Show the town project validation through actual gameplay. The SAME riverside tea stall is almost finished but one portion of its awning and one empty shelf remain visibly under construction, modest scaffolding. Avatar stands facing it. Top cream panel says exactly \"17/18\". A small neutral progress line is 17 of 18, visibly not full. Main bottom cream quest panel text exactly \"Залишилося 1 слово\" with a single teal button \"Продовжити\". Do not show a completion badge, unlocked star, 18/18 or any reward. Three bottom nav buttons \"Мапа\", \"Слова\", \"Дім\". Keep the river, shop, path and avatar coherent, actual game screenshot, no before-after panels.",
+    "generatedPath": "C:\\Users\\hp\\.codex\\generated_images\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\exec-67438d50-772d-454c-b137-e4fd74918c70.png",
+    "file": "images/ch15-01.jpg",
+    "width": 948,
+    "height": 1660,
+    "sourcePath": "C:\\Users\\hp\\.codex\\visualizations\\2026\\10\\25\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\town-plan-visuals-2026-10-29\\ch15-01.png",
+    "bytes": 538722
+  },
+  {
+    "id": "ch15-02",
+    "chapter": 15,
+    "number": 2,
+    "title": "Точне відновлення заняття",
+    "caption": "Після повернення збережено крок 3/6 і введені літери cof. Додаткова винагорода за повернення не нараховується.",
+    "brief": "Show the player resuming a saved spelling task at the tea merchant's small riverside counter. The saved typed partial answer must be exactly \"cof\" in a large cream input field. Ukrainian question cue is \"кава\", header \"Крок 3/6\" and separate card-count \"0/18\". Small readable label \"Заняття відновлено\". Button \"Перевірити\". DO NOT print the full English answer coffee anywhere, on any sign, cup, book, placeholder or label; only the Ukrainian cue and partial input cof. Input focused with caret after f. No award or construction animation. Keep landscape unobstructed and keyboard omitted on this resume summary frame, unlike keyboard accessibility shot. Three bottomnavbuttons Мапа/Слова/Дім. Single playable portrait screenshot.",
+    "prompt": "Use case: ui-mockup. Asset: ONE individual finished 9:16 portrait mobile Word Cottage GAMEPLAY screenshot. Input image1 is STYLE reference only. Match its crisp high-quality 16-bit pixelart, dimensional 2.5D top-down perspective, richly layered lush emerald foliage, turquoise river, peach-orange tiled roofs, cream parchment with dark wooden borders, teal buttons, tiny white and yellow flowers, virtually no lavender. Same brown-haired player with teal backpack and brown boots. Make actual playable exploration and interaction, polished large touch-target UI. All Ukrainian text spelled precisely as given, minimal text and no invented English text. NO photo, vectorflatdashboard, blurred3D, browser/phoneframe, adposter or montage. Learning all source words is compulsory. No curriculum selection checkboxes, no quantity picker, no skip, no external word search, no random currency. Scene: Show the player resuming a saved spelling task at the tea merchant's small riverside counter. The saved typed partial answer must be exactly \"cof\" in a large cream input field. Ukrainian question cue is \"кава\", header \"Крок 3/6\" and separate card-count \"0/18\". Small readable label \"Заняття відновлено\". Button \"Перевірити\". DO NOT print the full English answer coffee anywhere, on any sign, cup, book, placeholder or label; only the Ukrainian cue and partial input cof. Input focused with caret after f. No award or construction animation. Keep landscape unobstructed and keyboard omitted on this resume summary frame, unlike keyboard accessibility shot. Three bottomnavbuttons Мапа/Слова/Дім. Single playable portrait screenshot.",
+    "generatedPath": "C:\\Users\\hp\\.codex\\generated_images\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\exec-d595ffcc-70e0-4d65-b27c-6cdd9aada595.png",
+    "file": "images/ch15-02.jpg",
+    "width": 948,
+    "height": 1659,
+    "sourcePath": "C:\\Users\\hp\\.codex\\visualizations\\2026\\10\\25\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\town-plan-visuals-2026-10-29\\ch15-02.png",
+    "bytes": 519926
+  },
+  {
+    "id": "ch15-03",
+    "chapter": 15,
+    "number": 3,
+    "title": "Повністю розвинене містечко",
+    "caption": "Фінальний стан основної кампанії: 3030/3030 карток і 102/102 тематичних проєкти. Місто доступне для прогулянок та повторення.",
+    "brief": "Show a rich full-campaign finished town overview in a SINGLE portrait mobile game screenshot. No grid or multiple panels. All five learning zones blend into ONE coherent town, connected winding paths and turquoise river: the player's homestead, red-orange market stalls, central clocktower and library, cultural waterfront travel bureau, then eco-workshop and hilltop observatory/research harbor. Many tiny residents work, walk, read, trade. All thematic construction complete. IMPORTANT only exact top counters \"3030/3030\" and \"102/102\" on two clean cream badges. Main bottom panel \"Містечко збудовано\" and teal button \"Гуляти\". Colorful town has dimensional crisp pixelart depth, river cascade, lanterns, roofs. Not 102 identical houses, no locked areas, no giant arbitrary buildings. Same brownhair tealbackpack player in nearforeground. Bottom navigation Мапа/Слова/Дім. No other counters or reward currency.",
+    "prompt": "Use case: ui-mockup. Asset: ONE individual finished 9:16 portrait mobile Word Cottage GAMEPLAY screenshot. Input image1 is STYLE reference only. Match its crisp high-quality 16-bit pixelart, dimensional 2.5D top-down perspective, richly layered lush emerald foliage, turquoise river, peach-orange tiled roofs, cream parchment with dark wooden borders, teal buttons, tiny white and yellow flowers, virtually no lavender. Same brown-haired player with teal backpack and brown boots. Make actual playable exploration and interaction, polished large touch-target UI. All Ukrainian text spelled precisely as given, minimal text and no invented English text. NO photo, vectorflatdashboard, blurred3D, browser/phoneframe, adposter or montage. Learning all source words is compulsory. No curriculum selection checkboxes, no quantity picker, no skip, no external word search, no random currency. Scene: Show a rich full-campaign finished town overview in a SINGLE portrait mobile game screenshot. No grid or multiple panels. All five learning zones blend into ONE coherent town, connected winding paths and turquoise river: the player's homestead, red-orange market stalls, central clocktower and library, cultural waterfront travel bureau, then eco-workshop and hilltop observatory/research harbor. Many tiny residents work, walk, read, trade. All thematic construction complete. IMPORTANT only exact top counters \"3030/3030\" and \"102/102\" on two clean cream badges. Main bottom panel \"Містечко збудовано\" and teal button \"Гуляти\". Colorful town has dimensional crisp pixelart depth, river cascade, lanterns, roofs. Not 102 identical houses, no locked areas, no giant arbitrary buildings. Same brownhair tealbackpack player in nearforeground. Bottom navigation Мапа/Слова/Дім. No other counters or reward currency.",
+    "generatedPath": "C:\\Users\\hp\\.codex\\generated_images\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\exec-6bac6827-b8ac-4384-a8d5-5b3a2a1ffeeb.png",
+    "file": "images/ch15-03.jpg",
+    "width": 948,
+    "height": 1659,
+    "sourcePath": "C:\\Users\\hp\\.codex\\visualizations\\2026\\10\\25\\01a17503-145c-76c1-9bf7-c4f3cfe07a53\\town-plan-visuals-2026-10-29\\ch15-03.png",
+    "bytes": 683151
+  }
+]

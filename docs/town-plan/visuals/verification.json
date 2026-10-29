@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "images": 45,
+  "chapters": 15,
+  "imagesPerChapter": 3,
+  "jpegBytes": 25704638,
+  "allJpegDecoded": true,
+  "allDimensionsAndByteCountsMatched": true,
+  "allSelectedPngSourcesExist": true,
+  "relativeAssetsResolved": true,
+  "planLinksAndHeadingAnchors": 15,
+  "sourceLearningFilesUnchanged": true,
+  "browser": {
+    "width320": {"documentWidth": 305, "horizontalPageOverflow": false},
+    "width390": {"documentWidth": 375, "horizontalPageOverflow": false},
+    "chapterSelection": true,
+    "threeScenesPerChapter": true,
+    "nextAcrossChapterBoundary": true,
+    "lastScene45NextDisabled": true,
+    "zoomOverflowContainedInFigure": true,
+    "sceneRestoredOnReload": true,
+    "linksToAndFromPlan": true,
+    "singleImageElement": true,
+    "consoleErrorsObserved": 0
+  },
+  "note": "Перевірка концептів і статичної галереї; не перевірка реалізації майбутньої повної гри або фізичного телефона."
+}
