@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-30",
+  "revision": "open-pixel-v3",
+  "activeImages": 45,
+  "chapters": 15,
+  "imagesPerChapter": 3,
+  "jpegDecoded": 45,
+  "newHashesComparedToBaseline": 45,
+  "allActivePathsNewVersion": true,
+  "allBytesAndDimensionsMatched": true,
+  "allRelativeAssetsExist": true,
+  "bytes": 25688482,
+  "viewerCodeUnchanged": true
+}

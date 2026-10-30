@@ -1,0 +1,294 @@
+[
+  {
+    "id": "ch05-01",
+    "chapter": 5,
+    "number": 1,
+    "title": "Початок розділу",
+    "caption": "Натискання на локацію запускає всі 18 карток Drinks and Beverages у встановленому порядку.",
+    "oldFile": "images/ch05-01.jpg",
+    "scene": "Entry to Drinks and Beverages at ONE simple tea kiosk, mostly open courtyard. Clean section plaque \"Drinks and Beverages\", \"0/18\", sentence \"Усі 18 слів обов’язкові\", one button \"Почати розділ\". No individual vocabulary rows with checkboxes, no amount choice or skip. One small merchant and player.",
+    "file": "images/ch05-01-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch05-01.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nEntry to Drinks and Beverages at ONE simple tea kiosk, mostly open courtyard. Clean section plaque \"Drinks and Beverages\", \"0/18\", sentence \"Усі 18 слів обов’язкові\", one button \"Почати розділ\". No individual vocabulary rows with checkboxes, no amount choice or skip. One small merchant and player.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-c8fc5960-38e4-4c35-9b34-b1f06a29ebd8.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 576742,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch05-02",
+    "chapter": 5,
+    "number": 2,
+    "title": "Автоматичне завдання",
+    "caption": "Система сама видає чергову картку; тут показаний крок знайомства зі словом water.",
+    "oldFile": "images/ch05-02.jpg",
+    "scene": "Automatically issued introduction card at an airy tea stall. Label \"Картка 2/18\", header \"Знайомство\". Display \"water\", \"вода\", speaker and real context \"I drink water.\" plus small Ukrainian \"Я п’ю воду.\". Button \"Далі\". 2/18 is explicitly card INDEX, not learned total. ONE stall, broad grass, no other shop blocks.",
+    "file": "images/ch05-02-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch05-02.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nAutomatically issued introduction card at an airy tea stall. Label \"Картка 2/18\", header \"Знайомство\". Display \"water\", \"вода\", speaker and real context \"I drink water.\" plus small Ukrainian \"Я п’ю воду.\". Button \"Далі\". 2/18 is explicitly card INDEX, not learned total. ONE stall, broad grass, no other shop blocks.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-6303f875-d3bc-44eb-aa39-8889301b3f2b.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 540917,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch05-03",
+    "chapter": 5,
+    "number": 3,
+    "title": "Перехід до наступного етапу",
+    "caption": "Перші п’ять карток підтверджені. Розділ триває, а стійка отримує перші чашки.",
+    "oldFile": "images/ch05-03.jpg",
+    "scene": "After the first automatic pack: exactly \"5/18\", message \"Перші 5 слів підтверджено\", small next-stage label \"Далі: 6–10\", button \"Продовжити\". The tea project has only a basic counter and a few cups, still unfinished, roomy grass around it. Do not show whole-section complete, star reward or 18/18.",
+    "file": "images/ch05-03-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch05-03.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nAfter the first automatic pack: exactly \"5/18\", message \"Перші 5 слів підтверджено\", small next-stage label \"Далі: 6–10\", button \"Продовжити\". The tea project has only a basic counter and a few cups, still unfinished, roomy grass around it. Do not show whole-section complete, star reward or 18/18.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-4d5898fd-82a1-4a29-b5b9-78688ba89ac6.png",
+    "editPrompts": [
+      "Use case: precise-object-edit. Edit this existing coarse-pixel Word Cottage screenshot with TWO focused corrections. Preserve the entire spacious open grass, paths, river, player, all text, counts 5/18, UI panels and bottom navigation exactly. 1) Completely REMOVE the extra small white house at upper right and its fence/lantern, replace with uninterrupted open green meadow matching neighboring flat pixel grass. 2) The tea project at 5/18 must be visibly UNFINISHED: remove the striped canopy/roof, its tall supports and back-wall/shelves. Keep only ONE low simple wooden counter with three cups and merchant behind it, a few spare boards on grass. No finished building yet. All text remains 'Перші 5 слів підтверджено', '5/18', 'Далі: 6–10', 'Продовжити'. Maintain coarse obvious 240x420-style square pixels, no new structures or decoration, same portrait composition."
+    ],
+    "originalGeneratedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-7d9ee3a9-d3d4-4f1a-87c4-ab4f101362a8.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 562157,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch06-01",
+    "chapter": 6,
+    "number": 1,
+    "title": "Знайомство зі словом",
+    "caption": "Мешканець чайної стійки знайомить зі словом tea та його контекстом.",
+    "oldFile": "images/ch06-01.jpg",
+    "scene": "Introduction step at ONE small tea stall in an open field. Header \"Знайомство\", \"Крок 1/6\". Readable card \"tea\", \"чай\", speaker icon, exact context \"I drink tea.\" and Ukrainian \"Я п’ю чай.\". One cup as teaching illustration, button \"Далі\". Very simple surrounding scenery.",
+    "file": "images/ch06-01-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch06-01.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nIntroduction step at ONE small tea stall in an open field. Header \"Знайомство\", \"Крок 1/6\". Readable card \"tea\", \"чай\", speaker icon, exact context \"I drink tea.\" and Ukrainian \"Я п’ю чай.\". One cup as teaching illustration, button \"Далі\". Very simple surrounding scenery.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-228cd070-d043-45ff-839d-0d441721e106.png",
+    "editPrompts": [
+      "Use case: precise-object-edit. In this existing spacious coarse-pixel Word Cottage introduction screenshot, remove ONLY the extra small white cottage in the UPPER RIGHT and its nearby fence. Replace the entire removed cottage/fence footprint with quiet open flat green meadow that matches adjacent grass. Preserve the ONE tea stall, merchant, player, river, bridge, trees, all UI positions, all text exactly: Знайомство, Крок 1/6, tea, чай, I drink tea., Я п’ю чай., Далі, Мапа, Слова, Дім. Do not change the cup illustration or audio icon. Do not add any other building. Keep the large pixel grid and portrait dimensions unchanged. This is a surgical simplification, not a new composition."
+    ],
+    "originalGeneratedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-4ad114d4-47d9-417f-8430-d989405f231c.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 576745,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch06-02",
+    "chapter": 6,
+    "number": 2,
+    "title": "Підпиши замовлення",
+    "caption": "Гравець вводить англійське слово за українською підказкою без готової відповіді.",
+    "oldFile": "images/ch06-02.jpg",
+    "scene": "Spelling task. ONE simple stall with merchant, player at small writing desk, ample plain grass around. Header \"Напиши англійською\", \"Крок 3/6\". Ukrainian cue \"кава\"; completely EMPTY input with caret, button \"Перевірити\". Never show coffee or its letters on signs or props. No decorative book piles, many bottles or surrounding buildings.",
+    "file": "images/ch06-02-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch06-02.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nSpelling task. ONE simple stall with merchant, player at small writing desk, ample plain grass around. Header \"Напиши англійською\", \"Крок 3/6\". Ukrainian cue \"кава\"; completely EMPTY input with caret, button \"Перевірити\". Never show coffee or its letters on signs or props. No decorative book piles, many bottles or surrounding buildings.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-7367cf7d-92cc-42c1-8497-1856223154ad.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 578882,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch06-03",
+    "chapter": 6,
+    "number": 3,
+    "title": "Місток речень",
+    "caption": "Із трьох наданих слів потрібно скласти реальне речення I drink tea.",
+    "oldFile": "images/ch06-03.jpg",
+    "scene": "Sentence construction at ONE simple footbridge across a narrow calm stream and open meadow. Header \"Склади речення\", \"Крок 5/6\"; Ukrainian cue \"Я п’ю чай.\". Exactly THREE empty slots and exactly THREE identical cream tiles in scrambled order \"tea.\", \"I\", \"drink\". No extra distractor, no English sentence printed in correct order elsewhere. Sparse scenery, clear tap targets.",
+    "file": "images/ch06-03-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch06-03.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nSentence construction at ONE simple footbridge across a narrow calm stream and open meadow. Header \"Склади речення\", \"Крок 5/6\"; Ukrainian cue \"Я п’ю чай.\". Exactly THREE empty slots and exactly THREE identical cream tiles in scrambled order \"tea.\", \"I\", \"drink\". No extra distractor, no English sentence printed in correct order elsewhere. Sparse scenery, clear tap targets.\nFinal reminder: DO NOT add ANY extra cottage or building in the background. Open plain meadow only beyond the ONE task location. There must be no inherited dense old-town architecture.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-0666a175-4070-48fd-86eb-9b9b6187c862.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 580612,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch07-01",
+    "chapter": 7,
+    "number": 1,
+    "title": "Фруктовий ринок пар",
+    "caption": "Однакові нейтральні плитки не підказують відповідь кольором.",
+    "oldFile": "images/ch07-01.jpg",
+    "scene": "Fruit matching at ONE small market stall surrounded by open grass. Header \"Знайди пару\"; three simple picture tiles in order APPLE, PEAR, BANANA; three identical cream word tiles in order \"banana\", \"apple\", \"pear\". No connecting lines, selection, matching background colors or aligned correct positions. One merchant and player, no multiple neighboring stalls.",
+    "file": "images/ch07-01-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch07-01.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nFruit matching at ONE small market stall surrounded by open grass. Header \"Знайди пару\"; three simple picture tiles in order APPLE, PEAR, BANANA; three identical cream word tiles in order \"banana\", \"apple\", \"pear\". No connecting lines, selection, matching background colors or aligned correct positions. One merchant and player, no multiple neighboring stalls.\nFinal reminder: DO NOT add ANY extra cottage or building in the background. Open plain meadow only beyond the ONE task location. There must be no inherited dense old-town architecture.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-6c0af3d5-8a8c-4d57-aed2-7ff274d8840c.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 576065,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch07-02",
+    "chapter": 7,
+    "number": 2,
+    "title": "Риболовля на слух",
+    "caption": "Гравець слухає слово й обирає одну з трьох рівноцінних табличок.",
+    "oldFile": "images/ch07-02.jpg",
+    "scene": "Listening fishing beside ONE small open pond/river landing with plain meadow around. Header \"Послухай слово\"; speaker/repeat control and \"Повільніше\". Three identical neutral cream candidate capsules \"milk\", \"water\", \"tea\". No target transcript elsewhere, no word illustration or fishing line pointing to a particular choice; bobber stays below all options. Simple player sprite and few trees.",
+    "file": "images/ch07-02-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch07-02.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nListening fishing beside ONE small open pond/river landing with plain meadow around. Header \"Послухай слово\"; speaker/repeat control and \"Повільніше\". Three identical neutral cream candidate capsules \"milk\", \"water\", \"tea\". No target transcript elsewhere, no word illustration or fishing line pointing to a particular choice; bobber stays below all options. Simple player sprite and few trees.\nFinal reminder: DO NOT add ANY extra cottage or building in the background. Open plain meadow only beyond the ONE task location. There must be no inherited dense old-town architecture.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-ae85517c-f464-4b90-a8d7-088d9f1469ad.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 562455,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch07-03",
+    "chapter": 7,
+    "number": 3,
+    "title": "Поштове доручення",
+    "caption": "Треба вибрати доречну англійську репліку за українською підказкою.",
+    "oldFile": "images/ch07-03.jpg",
+    "scene": "Postal greeting task. ONE tiny post counter in a quiet clearing and player delivering envelope. Ukrainian prompt \"доброго ранку\". Three identical neutral choices in scrambled order \"Goodbye\", \"Good morning\", \"Good night\". Header \"Поштове доручення\". No highlighted answer or colored address hint. Keep the scene open and minimal.",
+    "file": "images/ch07-03-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch07-03.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nPostal greeting task. ONE tiny post counter in a quiet clearing and player delivering envelope. Ukrainian prompt \"доброго ранку\". Three identical neutral choices in scrambled order \"Goodbye\", \"Good morning\", \"Good night\". Header \"Поштове доручення\". No highlighted answer or colored address hint. Keep the scene open and minimal.\nFinal reminder: no extra houses/buildings in background. Keep broad open empty meadow. For the construction 1/18 scene only a low bare counter, NO canopy/roof, NO back-wall.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-5d919d34-f872-4a60-aa16-551221c963be.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 511619,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch08-01",
+    "chapter": 8,
+    "number": 1,
+    "title": "Чайна стійка: перший внесок",
+    "caption": "Після першої підтвердженої картки з’являються стійка та перші чашки.",
+    "oldFile": "images/ch08-01.jpg",
+    "scene": "Construction stage S1. Establish a reusable camera/layout for THREE growth scenes: ONE small tea plot in a broad empty meadow beside a simple river edge, player in foreground. At \"1/18\", show only low wooden counter and first two cups, spare boards. Header \"Чайна стійка\", state \"Перша зміна\", button \"Продовжити\". No crowd, no completed house or visitors. Keep plot position/camera fixed for the next two scenes.",
+    "file": "images/ch08-01-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch08-01.png",
+    "prompt": "Use case: style-transfer. Generate ONE completely redrawn portrait 9:16 Word Cottage gameplay screenshot. Image 1 is the PRIMARY approved reference for SPACIOUS composition, simple game sprites and CLEARLY VISIBLE LARGE PIXELS. Image 2, when provided, is only the OLD scene CONTENT reference: retain its learning meaning and the exact requested words/counts, but DISCARD its cramped scenery, densely packed buildings, micro-detail and ornamental layout. Rebuild the composition, do not merely apply a pixel filter to the old illustration.\n\nCRITICAL unified art direction: look like a native 240 by 420 pixel game framebuffer enlarged with nearest-neighbor. Consistent coarse square pixel clusters and stair-step outlines, 2–3 flat shades per material, a restrained approximately 32-color palette. Chunky pixel lettering, simple readable sprites. Warm green open meadows, broad tan paths, teal river, orange tiled roofs, cream UI and teal buttons. Brown-haired small player sprite with teal backpack and brown boots. Friendly actual playable game, with simple colored volume. Very little purple and no lavender fields. No photographic texture, painterly fine details, blurred 3D or high-resolution illustration disguised as pixel art.\n\nMAKE SPACE: outdoor scenes have broad calm grass or path clearings BETWEEN every object, about half the visible WORLD area is open walkable ground. Task scenes show ONE small main stall/building only; neighborhood views at most THREE modest separated landmarks; world maps at most FIVE modest separated landmarks. Even a fully developed town must be an open playable place, not tightly packed city blocks. No distant rows of tiny houses used to refill empty space. At most 8–10 simple scattered trees in a full map, fewer in task closeups; at most three tiny flower clusters. Plain grass with very sparse blocky tufts, no decorative confetti. A simple river segment and at most one bridge if required by the scene, no elaborate cliffs, multiple waterfalls or bridge networks. Interiors have ample empty floor and few pieces of furniture. UI panels remain readable with large touch targets and wide gaps; simplify decoration around them.\n\nKeep ONLY the exact scene-specific labels below. Do NOT copy map labels, counters or navigation badges from the style reference into unrelated scenes. Bottom game navigation, when visible, reads exactly \"Мапа\", \"Слова\", \"Дім\". No browser chrome, phone/monitor frame, outside margins, collage, triptych, caption poster or extra screens. The generated artwork itself fills the portrait canvas.\n\nLearning invariants: no manual curriculum-word selection, checkboxes, quantity picker, skip button or unknown-word search. All section words are mandatory. Completion only at N/N. Answer candidate tiles always have identical neutral cream backgrounds, borders, type and size, no preselected answer and no matching colors or position hints. An audio quiz must not print the English answer outside its candidate tiles. A spelling quiz must not print the full answer anywhere; only an exact partial input when specified. Introduction/journal cards may display the word and its real context. Confirmed word totals and the CURRENT CARD INDEX must be explicitly distinguished when stated. Do not invent rewards or double-award construction points during review.\n\nSCENE-SPECIFIC CONTENT (only these labels, no inherited counters):\nConstruction stage S1. Establish a reusable camera/layout for THREE growth scenes: ONE small tea plot in a broad empty meadow beside a simple river edge, player in foreground. At \"1/18\", show only low wooden counter and first two cups, spare boards. Header \"Чайна стійка\", state \"Перша зміна\", button \"Продовжити\". No crowd, no completed house or visitors. Keep plot position/camera fixed for the next two scenes.\nFinal reminder: no extra houses/buildings in background. Keep broad open empty meadow. For the construction 1/18 scene only a low bare counter, NO canopy/roof, NO back-wall.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-ce392217-0caa-4952-a4eb-2cae9e00dd45.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 491012,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch08-02",
+    "chapter": 8,
+    "number": 2,
+    "title": "Чайна стійка: облаштування",
+    "caption": "За 12 із 18 карток об’єкт уже облаштований, але розділ ще не завершений.",
+    "oldFile": "images/ch08-02.jpg",
+    "scene": "Construction S3 at \"12/18\". SAME plot, camera, river, player and sparse trees as NEW ch08-01. Upgrade counter to modest wooden frame, a few shelves and half-finished orange roof; some scaffolding, still unfinished. Header \"Чайна стійка\", state \"Облаштування\", button \"Продовжити\". Preserve open meadow, do not add neighboring buildings, visitors or ornamental clutter.",
+    "file": "images/ch08-02-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch08-02.png",
+    "prompt": "Use case: precise-object-edit. Input image 1 is the EDIT TARGET: the newly approved spacious coarse-pixel tea-plot screenshot at 1/18. Update ONLY the construction stage and two exact state texts. Preserve every surrounding tree, shrub, river, rock, path, open grass clearing, plot outline, player's position, pixel size, palette and camera/layout exactly. Keep the same sparse spacious world and do not add people, visitors or extra structures.\nChange top-right state text from 'Перша зміна 1/18' to 'Облаштування 12/18', with all letters and numbers exact and readable. Keep title 'Чайна стійка' and bottom button 'Продовжити'. On the same counter footprint in the center, construct one MODEST wooden stall FRAME and a couple of shelves. The roof is only HALF BUILT: a small red-orange tile section on the right, open rafters/scaffolding on the left, clearly unfinished. Keep the original counter and two cups. Remove a few of the loose boards as they have been used. Do not finish the stall, do not add a merchant or customers; this is construction stage S3. Keep lots of open grass visible. One portrait image, no collage, no browser frame. Coarse square pixel grid must remain unchanged.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-7c9fccc0-4f33-4317-8015-42beda41ddd7.png",
+    "referencePaths": [
+      "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-ce392217-0caa-4952-a4eb-2cae9e00dd45.png"
+    ],
+    "constructionReference": "ch08-01",
+    "width": 941,
+    "height": 1671,
+    "bytes": 506507,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  },
+  {
+    "id": "ch08-03",
+    "chapter": 8,
+    "number": 3,
+    "title": "Чайна стійка: 18/18",
+    "caption": "Повний вигляд будівлі відкривається після всіх 18 підтверджених карток.",
+    "oldFile": "images/ch08-03.jpg",
+    "scene": "Construction S4 at \"18/18\". SAME plot, camera, river, player and sparse trees as NEW ch08-01 and ch08-02. Finish the ONE small tea kiosk, roof and a few cups, remove scaffolding. Header \"Чайна стійка\", state \"Розділ завершено\", button \"До містечка\". Still no visitors unlocked through review yet. Keep the same ample open meadow around it.",
+    "file": "images/ch08-03-open-v3.jpg",
+    "sourcePath": "C:/Users/hp/.codex/visualizations/2026/10/25/01a17503-145c-76c1-9bf7-c4f3cfe07a53/town-plan-open-pixel-v3/ch08-03.png",
+    "prompt": "Use case: precise-object-edit. Input image 1 is the EDIT TARGET: the newly approved spacious coarse-pixel tea-plot at 12/18. Change ONLY the central stall's final construction state and exact UI state texts. Keep the same camera, player, tree positions, river, rocks, paths, huge open grass clearing, colors and coarse pixel grid. Do not add any other buildings, people, visitors, dense decorations or scenery.\nFinish the ONE modest tea kiosk on its existing footprint: complete the orange tiled roof across the remaining open half, finish the back wall and two simple shelves, add a small kettle and a few jars/cups. Remove construction scaffolding, loose boards and toolbox crate, leaving plain ground where they were. The kiosk remains SMALL, with plenty of open land around it.\nTop-left title stays 'Чайна стійка'. Replace top-right state with exact 'Розділ завершено' and count '18/18', all readable inside the same cream badge (two lines if needed). Replace bottom button 'Продовжити' with exact 'До містечка'. This is the final construction S4 only; NO review visitor or crowd yet. Portrait screenshot unchanged, same open pixel-art environment, no montage.",
+    "visualRevision": "open-pixel-v3",
+    "generatedSource": "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-3855f87f-6a6d-4f2b-a400-ed3d6d39ce03.png",
+    "referencePaths": [
+      "C:\\Users\\hp\\.codex\\generated_images\\01a18d7d-0c0b-7ca1-8b1d-bdf90b84f499\\exec-7c9fccc0-4f33-4317-8015-42beda41ddd7.png"
+    ],
+    "constructionReference": "ch08-02",
+    "width": 941,
+    "height": 1671,
+    "bytes": 482107,
+    "qa": {
+      "reviewed": true,
+      "spacious": true,
+      "coarsePixelGrid": true,
+      "learningLabelsChecked": true
+    }
+  }
+]
